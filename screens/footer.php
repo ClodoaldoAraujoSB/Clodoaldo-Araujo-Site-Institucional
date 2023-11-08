@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="../vendor/composer/twbs/bootstrp/assets/js/color-modes.js"></script>
+  <head><script src="../bootstrp/assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -143,7 +143,7 @@
   </footer>
 </div>
 
-<script src="../vendor/composer/twbs/bootstrp/assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
 </html>
