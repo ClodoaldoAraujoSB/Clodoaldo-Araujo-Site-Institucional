@@ -1,0 +1,4 @@
+CREATE TABLE Diplomas (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    conteudo TEXT
+);
