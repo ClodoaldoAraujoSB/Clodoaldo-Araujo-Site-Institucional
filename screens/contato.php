@@ -14,12 +14,20 @@
         }
 
         .container-form {
+            margin: 0 auto;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .row {
+            width: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .row {
+        .col {
             width: 80%;
         }
 
@@ -39,13 +47,19 @@
             <div class="row">
                 <div class="col">
                     <div class="mb-3">
-                        <input type="nome" class="form-control" id="nome_form" placeholder="Nome">
+                        <input type="text" class="form-control" id="nome_form" placeholder="Nome">
                     </div>
                     <div class="mb-3">
                         <input type="email" class="form-control" id="email_form" placeholder="Email">
                     </div>
                     <div class="mb-3">
-                        <input type="telefone" class="form-control" id="telefone_form" placeholder="Telefone">
+                        <input type="tel" class="form-control" id="telefone_form" placeholder="Telefone">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="cidade_form" placeholder="Cidade">
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" id="cidade_form" placeholder="Idade">
                     </div>
                     <div class="mb-3">
                         <textarea class="form-control" id="comentario_form" placeholder="Comentario" rows="3"></textarea>
@@ -54,9 +68,9 @@
                         <input type="submit" class="form-control" id="submit_form" value="Enviar">
                     </div>
                 </div>
-                <div class="col">
-                    <!-- Informações sobre outras maneiras de contato -->
-                </div>
+            </div>
+            <div class="row">
+
             </div>
         </div>
 
