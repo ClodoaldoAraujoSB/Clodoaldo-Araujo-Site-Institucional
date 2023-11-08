@@ -64,14 +64,12 @@
         
         modal.style.display = 'block';
         expandedImg.src = imgElement.src;
-        expandedImg.style.height = '80%'; // Mantém a proporção
-        expandedImg.style.width = 'auto'; // Largura desejada
-        
-        // Centraliza horizontalmente
+        expandedImg.style.height = '80%'; 
+        expandedImg.style.width = 'auto'; 
+          
+        // Centraliza horizontalmente e verticalmente
         expandedImg.style.display = 'block';
         expandedImg.style.margin = '0 auto';
-        
-        // Centraliza verticalmente
         expandedImg.style.position = 'relative';
         expandedImg.style.top = '50%';
         expandedImg.style.transform = 'translateY(-50%)';
