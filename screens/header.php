@@ -21,26 +21,26 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Quem sou eu?</a>
+                    <a class="nav-link" href="quem_sou.php">Quem sou eu?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
+                    <a class="nav-link" href="contato.php">Contato</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Empresas </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Super Business</a></li>
-                        <li><a class="dropdown-item" href="#">Rota da Inovação</a></li>
-                        <li><a class="dropdown-item" href="#">Ca3</a></li>
-                        <li><a class="dropdown-item" href="#">Ca3 Steel</a></li>
-                        <li><a class="dropdown-item" href="#">Spyder Race</a></li>
-                        <li><a class="dropdown-item" href="#">iSteel</a></li>
-                        <li><a class="dropdown-item" href="#">Startup School</a></li>
-                        <li><a class="dropdown-item" href="#">Point Pixel</a></li>
-                        <li><a class="dropdown-item" href="#">Circuit Loud</a></li>
+                        <li><a class="dropdown-item" href="super_business.php">Super Business</a></li>
+                        <li><a class="dropdown-item" href="rota_da_inovacao.php">Rota da Inovação</a></li>
+                        <li><a class="dropdown-item" href="ca3.php">Ca3</a></li>
+                        <li><a class="dropdown-item" href="ca3_steel.php">Ca3 Steel</a></li>
+                        <li><a class="dropdown-item" href="spyder_race.php">Spyder Race</a></li>
+                        <li><a class="dropdown-item" href="isteel.php">iSteel</a></li>
+                        <li><a class="dropdown-item" href="startup_school.php">Startup School</a></li>
+                        <li><a class="dropdown-item" href="point_pixel.php">Point Pixel</a></li>
+                        <li><a class="dropdown-item" href="circuit.php">Circuit Loud</a></li>
                     </ul>
                 </li>
             </ul>
