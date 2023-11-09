@@ -28,8 +28,8 @@
       }
 
       .div_lista_empresas button {
-        width: 150px;
-        height: 50px;
+        width: 400px;
+        height: 100px;
         margin: 10px;
       }
 
@@ -46,19 +46,24 @@
     <!-- LISTA DE EMPRESAS - INICIO -->
     <div class="lista_empresas">
       <div class="div_lista_empresas">
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../img/logo-super business.png" alt="ca3" style="height: 30px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../img/logo-super business.png" alt="ca3 steel" style="height: 30px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#circuitModal"><img src="../img/logo-super business.png" alt="circuit" style="height: 30px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#isteelModal"><img src="../img/logo-isteel.png" alt="isteel" style="height: 30px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#jacModal"><img src="../img/logo-jac.png" alt="jac" style="height: 30px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../img/logo-super business.png" alt="ca3" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../img/logo-super business.png" alt="ca3 steel" style="height: 70px;"></button>
       </div>
-      <br>
       <div class="div_lista_empresas">
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#point_pixelModal"><img src="../img/logo-super business.png" alt="Point Pixel" style="height: 30px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#rota_da_inovacaoModal"><img src="../img/logo-rota.png" alt="Rota da Inovaçao" style="height: 30px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#spyder_raceModal"><img src="../img/logo-spyderrace.png" alt="Spyder Race" style="height: 30px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#startup_schoolModal"><img src="../img/logo-startup.png" alt="Startup School" style="height: 30px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#super_businessModal"><img src="../img/logo-super business.png" alt="Super Business" style="height: 30px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#circuitModal"><img src="../img/logo-super business.png" alt="circuit" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#isteelModal"><img src="../img/logo-isteel.png" alt="isteel" style="height: 70px;"></button>
+      </div>
+      <div class="div_lista_empresas">
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#jacModal"><img src="../img/logo-jac.png" alt="jac" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#point_pixelModal"><img src="../img/logo-super business.png" alt="Point Pixel" style="height: 70px;"></button>
+      </div>
+      <div class="div_lista_empresas">
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#rota_da_inovacaoModal"><img src="../img/logo-rota.png" alt="Rota da Inovaçao" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#spyder_raceModal"><img src="../img/logo-spyderrace.png" alt="Spyder Race" style="height: 70px;"></button>
+      </div>
+      <div class="div_lista_empresas">
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#startup_schoolModal"><img src="../img/logo-startup.png" alt="Startup School" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#super_businessModal"><img src="../img/logo-super business.png" alt="Super Business" style="height: 70px;"></button>
       </div>
     </div>
     <!-- LISTA DE EMPRESAS - FIM -->
