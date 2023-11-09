@@ -29,19 +29,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contato.php">Contato</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Empresas </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="super_business.php">Super Business</a></li>
-                        <li><a class="dropdown-item" href="rota_da_inovacao.php">Rota da Inovação</a></li>
-                        <li><a class="dropdown-item" href="ca3.php">Ca3</a></li>
-                        <li><a class="dropdown-item" href="ca3_steel.php">Ca3 Steel</a></li>
-                        <li><a class="dropdown-item" href="spyder_race.php">Spyder Race</a></li>
-                        <li><a class="dropdown-item" href="isteel.php">iSteel</a></li>
-                        <li><a class="dropdown-item" href="startup_school.php">Startup School</a></li>
-                        <li><a class="dropdown-item" href="point_pixel.php">Point Pixel</a></li>
-                        <li><a class="dropdown-item" href="circuit.php">Circuit Loud</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="empresas.php">Empresas</a>
                 </li>
             </ul>
             </div>

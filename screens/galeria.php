@@ -112,7 +112,7 @@
                 <img src="../img/1.jpg" alt="Imagem 2" onclick="expandImage(this)">
             </div>
             <div class="image">
-                <img src="../img/2.jpg" alt="Imagem 3" onclick="expandImage(this)">
+                <img src="../img/4.jpg" alt="Imagem 3" onclick="expandImage(this)">
             </div>
         </div>
         <!-- GALERIA FINAL -->
