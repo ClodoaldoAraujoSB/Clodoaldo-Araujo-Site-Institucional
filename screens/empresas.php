@@ -1,9 +1,24 @@
+<?php
+
+  include_once("ca3.php");
+  include_once("ca3_steel.php");
+  include_once("circuit.php");
+  include_once("isteel.php");
+  include_once("jac.php");
+  include_once("point_pixel.php");
+  include_once("rota_da_inovacao.php");
+  include_once("spyder_race.php");
+  include_once("startup_school.php");
+  include_once("super_business.php");
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Empresas || Clodoaldo Araújo</title>
+    <title>Pagina Inicial || Clodoaldo Araújo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
@@ -12,9 +27,18 @@
 
     <!-- LISTA DE EMPRESAS - INICIO -->
 
-    
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../img/2.jpg" alt="Imagem 2" style="height: 50px;"></button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../img/2.jpg" alt="Imagem 2" style="height: 50px;"></button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#circuitModal"><img src="../img/2.jpg" alt="Imagem 2" style="height: 50px;"></button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#isteelModal"><img src="../img/2.jpg" alt="Imagem 2" style="height: 50px;"></button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#jacModal"><img src="../img/2.jpg" alt="Imagem 2" style="height: 50px;"></button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#point_pixelModal"><img src="../img/2.jpg" alt="Imagem 2" style="height: 50px;"></button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rota_da_inovacaoModal"><img src="../img/2.jpg" alt="Imagem 2" style="height: 50px;"></button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#spyder_raceModal"><img src="../img/2.jpg" alt="Imagem 2" style="height: 50px;"></button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#startup_schoolModal"><img src="../img/2.jpg" alt="Imagem 2" style="height: 50px;"></button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#super_businessModal"><img src="../img/2.jpg" alt="Imagem 2" style="height: 50px;"></button>
 
-    <!-- LISTA DE EMPRESAS - FINAL -->
+    <!-- LISTA DE EMPRESAS - FIM -->
 
     <!-- RODAPÉ -->
     <?php include("footer.php"); ?>
