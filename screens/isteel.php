@@ -36,7 +36,11 @@
             </div>
           </div>
           <div class="modal-body text-light" style="text-align: center;">
-            ...
+          iSteel é uma empresa brasileira de tecnologia. Desenvolvemos um aplicativo para celular com uma plataforma web que conecta empresas do ramo de ferro e aço aos consumidores e empresas transportadoras ou motoristas autônomos.
+          <br>
+          O objetivo do aplicativo é facilitar a compra e venda de aço, sendo uma solução totalmente inovadora para o setor, automatizando o processo comercial e de logística dos distribuidores e garantindo um atendimento ágil e de qualidade para todos os clientes.
+          <br>
+          O iSteel para lojistas permite a gestão completa dos pedidos. Além de receber os pedidos através dele, também dá acesso a estatísticas de vendas, dados de pagamentos e opções de transportes, automatizando todo o processo comercial e logístico.
           </div>
           <div class="modal-footer" id="btn-empresa">
             <button type="button" class="btn btn-light text-dark">Save changes</button>

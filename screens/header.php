@@ -13,26 +13,32 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Clodoaldo Araújo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="quem_sou.php">Quem sou eu?</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contato.php">Contato</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="empresas.php">Empresas</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown" style="flex-direction: row-reverse;">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quem_sou.php">Quem sou eu?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="empresas.php">Empresas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mapa_mundi.php">Países que visitei</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.php">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.php">Contato</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
