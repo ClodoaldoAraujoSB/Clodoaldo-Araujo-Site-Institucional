@@ -22,11 +22,11 @@
 
 <!-- MODAL - INICIO -->
 <div class="modal fade" id="circuitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialo modal-dialog-centered modal-lg">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content bg-dark">
           <div class="modal-header" style="border: 0px;">
             <div id="div_lateral_titulo">
-                <img src="../img/logo-super business.png" alt="Logo Super Business" style="height: 30px;">
+                <img src="../img/logo-isteel.png" alt="Logo Super Business" style="height: 30px;">
             </div>
             <div id="div_centro_titulo">
                 <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Circuit Launch</h1>
