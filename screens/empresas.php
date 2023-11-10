@@ -46,16 +46,16 @@
     <!-- LISTA DE EMPRESAS - INICIO -->
     <div class="lista_empresas">
       <div class="div_lista_empresas">
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../img/logo-super business.png" alt="ca3" style="height: 70px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../img/logo-super business.png" alt="ca3 steel" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../img/logo-ca3.png" alt="ca3" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../img/logo-ca3_steel.png" alt="ca3 steel" style="height: 70px;"></button>
       </div>
       <div class="div_lista_empresas">
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#circuitModal"><img src="../img/logo-super business.png" alt="circuit" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#circuitModal"><img src="../img/logo-circuit.png" alt="circuit" style="height: 70px;"></button>
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#isteelModal"><img src="../img/logo-isteel.png" alt="isteel" style="height: 70px;"></button>
       </div>
       <div class="div_lista_empresas">
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#jacModal"><img src="../img/logo-jac.png" alt="jac" style="height: 70px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#point_pixelModal"><img src="../img/logo-super business.png" alt="Point Pixel" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#point_pixelModal"><img src="../img/logo-point_pixel.png" alt="Point Pixel" style="height: 70px;"></button>
       </div>
       <div class="div_lista_empresas">
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#rota_da_inovacaoModal"><img src="../img/logo-rota.png" alt="Rota da Inovaçao" style="height: 70px;"></button>
