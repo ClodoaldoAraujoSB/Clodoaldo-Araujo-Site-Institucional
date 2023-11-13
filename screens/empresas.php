@@ -55,7 +55,7 @@
       </div>
       <div class="div_lista_empresas">
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#jacModal"><img src="../img/logo-jac.png" alt="jac" style="height: 70px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#point_pixelModal"><img src="../img/logo-point_pixel.png" alt="Point Pixel" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#point_pixelModal"><img src="../img/logo-point_pixel.png" alt="Point Pixel" style="height: 40px;"></button>
       </div>
       <div class="div_lista_empresas">
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#rota_da_inovacaoModal"><img src="../img/logo-rota.png" alt="Rota da Inovaçao" style="height: 70px;"></button>
