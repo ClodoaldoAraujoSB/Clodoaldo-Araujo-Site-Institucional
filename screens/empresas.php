@@ -62,7 +62,7 @@
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#spyder_raceModal"><img src="../img/logo-spyderrace.png" alt="Spyder Race" style="height: 70px;"></button>
       </div>
       <div class="div_lista_empresas">
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#startup_schoolModal"><img src="../img/logo-startup.png" alt="Startup School" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#startup_schoolModal"><img src="../img/logo ss_resized.png" alt="Startup School" style="height: 100px; width: 140px"></button>
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#super_businessModal"><img src="../img/logo-super business.png" alt="Super Business" style="height: 70px;"></button>
       </div>
     </div>
