@@ -63,6 +63,25 @@ include_once("ca3_steel.php");
         height: 250px; 
         }
 
+        .lst-image {
+          filter: blur(3px);
+          display: inline-block;
+          margin: 1px;
+          cursor: pointer;
+        }
+
+        .overlay {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 24px;
+          font-weight: bold;
+          color: white;
+          text-align: center;
+          filter: none;
+        }
+
         .modal {
         display: none;
         position: fixed;
@@ -222,13 +241,15 @@ include_once("ca3_steel.php");
     </div>
     <div class="gallery">
         <div class="image">
-            <img src="../img/3.jpg" alt="Imagem 1" onclick="expandImage(this)">
+            <img src="../img/4.jpg" alt="Imagem 1" onclick="expandImage(this)">
         </div>
         <div class="image">
-            <img src="../img/1.jpg" alt="Imagem 2" onclick="expandImage(this)">
+            <img src="../img/5.jpg" alt="Imagem 2" onclick="expandImage(this)">
         </div>
-        <div class="image">
-            <img src="../img/4.jpg" alt="Imagem 3" onclick="expandImage(this)">
+        <div class="lst-image">
+        <div class="overlay">+50</div>
+        <a href="galeria.php">
+            <img src="../img/6.jpg" alt="Imagem 3">
         </div>
     </div>
 
