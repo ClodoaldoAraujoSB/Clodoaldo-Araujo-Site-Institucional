@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="modal-body text-light" style="text-align: center;">
-            ...
+          A Startup School Ventures tem como propósito transformar o mercado de inovação e tecnologia, através de governança, AI e educação. Ela pretende desenvolver soluções para os desafios encontrados no mercado em cada setor de atuação, causando impacto positivo na sociedade.
           </div>
           <div class="modal-footer" id="btn-empresa">
             <button type="button" class="btn btn-light text-dark">Save changes</button>
