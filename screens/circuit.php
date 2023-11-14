@@ -36,7 +36,8 @@
             </div>
           </div>
           <div class="modal-body text-light" style="text-align: center;">
-            ...
+          O Circuit Launch existe devido a uma mudança fundamental nas regras sobre onde você deve localizar seu negócio de hardware eletrônico. Até recentemente, as empresas sentiram-se pressionadas a transferir as suas operações para um centro de produção estrangeiro. Frequentemente, essa mudança incluía prender a empresa a um relacionamento específico com fornecedor ou fabricante. Felizmente, as condições mudaram. O rápido avanço dos equipamentos de microfabricação significa que a prototipagem, os testes e a produção em pequenas tiragens agora podem ser feitos internamente. E para a produção em massa, os melhores fornecedores e fabricantes do mundo estão a estabelecer escritórios locais nos vários centros de inovação e capital. A produção não é mais o principal motivador da localização da sua empresa.
+
           </div>
           <div class="modal-footer" id="btn-empresa">
             <button type="button" class="btn btn-light text-dark">Save changes</button>

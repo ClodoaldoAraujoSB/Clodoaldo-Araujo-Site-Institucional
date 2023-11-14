@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="modal-body text-light" style="text-align: center;">
-            ...
+          Apresentada pelo empresário Clodoaldo Araújo, vencedor da quinta temporada do programa Aprendiz – O Sócio. Na série “Rota da Inovação”, o empreendedor mostrará novidades, passando pelos mais diversos campos de pesquisa: arquitetura, negócios, varejo, engenharia, entre outros, por meio de viagens realizadas.
           </div>
           <div class="modal-footer" id="btn-empresa">
             <button type="button" class="btn btn-light text-dark">Save changes</button>
