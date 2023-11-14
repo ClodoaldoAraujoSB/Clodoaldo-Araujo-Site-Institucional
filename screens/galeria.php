@@ -1,13 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Galeria || Clodoaldo Araújo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Galeria de Imagens</title>
 
     <style>
-        
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .grid-container {
+            width: 24%;
+            display: grid;
+            /*grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));*/
+            padding: 10px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
         .titulo_principal {
             padding: 20px;
             text-align: center;
@@ -60,78 +80,94 @@
 
     <script>
 
-        function expandImage(imgElement) {
-        var modal = document.getElementById('modal');
-        var expandedImg = document.getElementById('expanded-image');
-        
-        modal.style.display = 'block';
-        expandedImg.src = imgElement.src;
-        expandedImg.style.height = '80%'; 
-        expandedImg.style.width = 'auto'; 
-          
-        // Centraliza horizontalmente e verticalmente
-        expandedImg.style.display = 'block';
-        expandedImg.style.margin = '0 auto';
-        expandedImg.style.position = 'relative';
-        expandedImg.style.top = '50%';
-        expandedImg.style.transform = 'translateY(-50%)';
-        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const galeria = document.getElementById('galeria');
+            var modalElement = document.getElementById('modal');
 
-        function closeModal() {
-        var modal = document.getElementById('modal');
-        modal.style.display = 'none';
-        }
+            // Arrays para armazenar as informações
+            const array1 = [];
+            const array2 = [];
+            const array3 = [];
+            const array4 = [];
+
+            // Função para adicionar evento de clique a uma imagem
+            function addClickEvent(img) {
+                img.onclick = function () {
+                    var modal = document.getElementById('modal');
+                    var expandedImg = document.getElementById('expanded-image');
+
+                    modal.style.display = 'block';
+                    expandedImg.src = img.src;
+                    expandedImg.style.height = '80%';
+                    expandedImg.style.width = 'auto';
+
+                    // Centraliza horizontalmente e verticalmente
+                    expandedImg.style.display = 'block';
+                    expandedImg.style.margin = '0 auto';
+                    expandedImg.style.position = 'relative';
+                    expandedImg.style.top = '50%';
+                    expandedImg.style.transform = 'translateY(-50%)';
+                };
+            }
+
+            // Faz uma solicitação AJAX para obter os dados das imagens
+            fetch('get_images.php')
+                .then(response => response.json())
+                .then(data => {
+                    // Manipula os dados e armazena nas arrays
+                    data.forEach((array, index) => {
+                        if (index === 0) {
+                            array1.push(...array);
+                        } else if (index === 1) {
+                            array2.push(...array);
+                        } else if (index === 2) {
+                            array3.push(...array);
+                        } else if (index === 3) {
+                            array4.push(...array);
+                        }
+
+                        // Exibe as imagens na página (substitua conforme necessário)
+                        const div = document.createElement('div');
+                        div.classList.add('grid-container');
+
+                        array.forEach(image => {
+                            const img = document.createElement('img');
+                            img.src = '../img/' + image;
+                            div.appendChild(img);
+
+                            // Adiciona o evento de clique à imagem
+                            addClickEvent(img);
+                        });
+                        galeria.appendChild(div);
+                    });
+                })
+                .catch(error => console.error('Erro:', error));
+
+            function closeModal() {
+                var modal = document.getElementById('modal');
+                modal.style.display = 'none';
+            }
+
+            modalElement.addEventListener('click', function (event) {
+                if (event.target === modalElement) {
+                    closeModal();
+                }
+            });
+        });
 
     </script>
 
 </head>
-    <body>
-        <!-- MENU SUPERIOR - INICIO -->
-        <?php include("header.php"); ?>
-        <!-- MENU SUPERIOR - FINAL -->
+<body>
 
-        <!-- TITULO - INICIO -->
-        <h1 class="titulo_principal">Galeria</h1>
-        <!-- TITULO - FINAL -->
+    <div id="galeria" style="display: flex;"></div>
 
-        <!-- GALERIA INICIAL -->
-        <div class="gallery">
-            <div class="image">
-                <img src="../img/1.jpg" alt="Imagem 1" onclick="expandImage(this)">
-            </div>
-            <div class="image">
-                <img src="../img/2.jpg" alt="Imagem 2" onclick="expandImage(this)">
-            </div>
-            <div class="image">
-                <img src="../img/3.jpg" alt="Imagem 3" onclick="expandImage(this)">
-            </div>
-        </div>
-        <div class="gallery">
-            <div class="image">
-                <img src="../img/3.jpg" alt="Imagem 1" onclick="expandImage(this)">
-            </div>
-            <div class="image">
-                <img src="../img/1.jpg" alt="Imagem 2" onclick="expandImage(this)">
-            </div>
-            <div class="image">
-                <img src="../img/4.jpg" alt="Imagem 3" onclick="expandImage(this)">
-            </div>
-        </div>
-        <!-- GALERIA FINAL -->
+    <!-- IMAGEM DESTACADA - INICIO -->
+    <div class="modal" id="modal">
+        <span class="close" onclick="closeModal()"></span>
+        <img class="modal-content" id="expanded-image">
+    </div>
+    <!-- IMAGEM DESTACADA - FINAL -->
 
-        <!-- IMAGEM DESTACADA - INICIO -->
-        <div class="modal" id="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="expanded-image">
-        </div>
-        <!-- IMAGEM DESTACADA - FINAL -->
-
-        <script src="script.js"></script>
-
-        <!-- RODAPÉ - INICIO -->
-        <?php include("footer.php"); ?>
-        <!-- RODAPÉ - FINAL -->
-    
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    </body>
+</body>
 </html>
