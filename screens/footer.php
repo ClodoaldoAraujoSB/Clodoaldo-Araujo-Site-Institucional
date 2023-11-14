@@ -132,7 +132,7 @@
       <a class="navbar-brand" href="#" style="font-size: 20px">Clodoaldo Araújo</a>
     </div>
     <div style="width: 30%; text-align: center;">
-      <a class="navbar-brand" href="#" style="font-size: 15px">Politica de Privacidade</a>
+      <a class="navbar-brand" href="../screens/politica-de-privacidade.php" style="font-size: 15px">Politica de Privacidade</a>
     </div>  
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex" style="width: 35%;">
       <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
