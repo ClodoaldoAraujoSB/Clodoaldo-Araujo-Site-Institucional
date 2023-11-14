@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="modal-body text-light" style="text-align: center;">
-            ...
+          Spyder Race é um dos mais populares protótipos de automóveis nacionais. Desenvolvido pela empresa PW1-Tecnologia em Protótipos de propriedade do paulista Peter William Januário, utiliza como base tecnologia nacional, como motor, câmbio entre outros componentes. Possui inclusive uma categoria própria dentro do automobilismo.
           </div>
           <div class="modal-footer" id="btn-empresa">
             <button type="button" class="btn btn-light text-dark">Save changes</button>
