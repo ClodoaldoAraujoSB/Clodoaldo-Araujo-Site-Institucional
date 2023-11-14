@@ -26,7 +26,7 @@
         <div class="modal-content bg-dark">
           <div class="modal-header" style="border: 0px;">
             <div id="div_lateral_titulo">
-                <img src="../img/logos/logo-point_pixel.png" alt="Logo Super Business" style="height: 30px;">
+                <img src="../logos/logo-point_pixel.png" alt="Logo Super Business" style="height: 30px;">
             </div>
             <div id="div_centro_titulo">
                 <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Point Pixel</h1>
