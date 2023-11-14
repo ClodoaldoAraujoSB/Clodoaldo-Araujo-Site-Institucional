@@ -2,6 +2,7 @@
 
 include_once("ca3.php");
 include_once("ca3_steel.php");
+include_once("circuit.php");
 
 ?>
 
@@ -203,9 +204,9 @@ include_once("ca3_steel.php");
     <h1 style="text-align: center; margin-top: 40px;"> Minhas empresas </h1>
     <div class="lista_empresas">
       <div class="div_lista_empresas">
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../img/logo-super business.png" alt="ca3" style="height: 70px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../img/logo-super business.png" alt="ca3 steel" style="height: 70px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../img/logo-super business.png" alt="ca3 steel" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../img/logo-ca3.png" alt="ca3" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../img/logo-ca3_steel.png" alt="ca3 steel" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#circuitModal"><img src="../img/logo-circuit.png" alt="circuit" style="height: 70px;"></button>
       </div>
       <div style="text-align: center;">
         <a><button>Ir para as empresas</button></a>

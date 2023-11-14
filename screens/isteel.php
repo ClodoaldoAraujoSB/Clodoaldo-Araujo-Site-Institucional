@@ -26,7 +26,7 @@
         <div class="modal-content bg-dark">
           <div class="modal-header" style="border: 0px;">
             <div id="div_lateral_titulo">
-                <img src="../img/logo-isteel.png" alt="Logo Super Business" style="height: 30px;">
+                <img src="../img/logos/logo-isteel.png" alt="Logo Super Business" style="height: 30px;">
             </div>
             <div id="div_centro_titulo">
                 <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">iSteel</h1>

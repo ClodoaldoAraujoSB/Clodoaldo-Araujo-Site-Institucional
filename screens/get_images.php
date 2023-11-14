@@ -1,7 +1,15 @@
 <?php
-            
-    $images = scandir("../img"); // Lista as imagens na pasta
-    $images = array_diff($images, array(".", "..")); // Remove "." e ".." da lista
-    echo json_encode(array_values($images)); // Retorna as imagens como um JSON            
+
+    $imageDir = '../img/';
+    $files = scandir($imageDir);
+    $images = array_values(array_diff($files, array('..', '.')));
+
+    // Divida os nomes dos arquivos em quatro arrays
+    $arrays = array_fill(0, 4, array());
+    foreach ($images as $index => $image) {
+        array_push($arrays[$index % 4], $image);
+    }
+
+    echo json_encode($arrays);         
             
 ?>
