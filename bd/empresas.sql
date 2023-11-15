@@ -1,4 +1,0 @@
-CREATE TABLE Empresas (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nome TEXT
-);

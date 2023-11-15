@@ -1,8 +1,8 @@
 <?php
 
-include_once("ca3.php");
-include_once("ca3_steel.php");
-include_once("circuit.php");
+include_once("empresas/ca3.php");
+include_once("empresas/ca3_steel.php");
+include_once("empresas/circuit.php");
 
 ?>
 

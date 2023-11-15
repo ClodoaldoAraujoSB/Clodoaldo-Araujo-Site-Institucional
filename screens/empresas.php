@@ -1,14 +1,14 @@
 <?php
-  include_once("ca3.php");
-  include_once("ca3_steel.php");
-  include_once("circuit.php");
-  include_once("isteel.php");
-  include_once("jac.php");
-  include_once("point_pixel.php");
-  include_once("rota_da_inovacao.php");
-  include_once("spyder_race.php");
-  include_once("startup_school.php");
-  include_once("super_business.php");
+  include_once("empresas/ca3.php");
+  include_once("empresas/ca3_steel.php");
+  include_once("empresas/circuit.php");
+  include_once("empresas/isteel.php");
+  include_once("empresas/jac.php");
+  include_once("empresas/point_pixel.php");
+  include_once("empresas/rota_da_inovacao.php");
+  include_once("empresas/spyder_race.php");
+  include_once("empresas/startup_school.php");
+  include_once("empresas/super_business.php");
 ?>
 
 <!doctype html>

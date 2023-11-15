@@ -30,7 +30,7 @@
                         <a class="nav-link" href="empresas.php">Empresas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="mapa_mundi.php">Países que visitei</a>
+                        <a class="nav-link" href="lista_e-book.php">E-books</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="galeria.php">Galeria</a>
