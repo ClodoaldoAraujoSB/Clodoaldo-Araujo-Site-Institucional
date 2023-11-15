@@ -35,12 +35,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
           </div>
-          <div class="modal-body text-light" style="text-align: center;">
-            ...
+          <div class="modal-body text-light" style="text-align: center;">  
+          A Super Business é reconhecida como referência em empreendedorismo, liderança, inovação e estratégias de marketing. Comprometida em fornecer recursos e insights valiosos, a empresa atende àqueles que buscam aprimorar suas habilidades de liderança, alcançar impacto significativo e prosperar no cenário empresarial. A Super Business se destaca como um guia essencial para indivíduos e organizações que aspiram ao sucesso nos negócios, proporcionando uma fonte confiável de conhecimento e orientação em suas jornadas empreendedoras.
           </div>
-          <div class="modal-footer" id="btn-empresa">
+          <!--<div class="modal-footer" id="btn-empresa">
             <button type="button" class="btn btn-light text-dark">Save changes</button>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>

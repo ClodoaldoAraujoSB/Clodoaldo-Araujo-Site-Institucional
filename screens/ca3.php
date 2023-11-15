@@ -38,9 +38,9 @@
           <div class="modal-body text-light" style="text-align: center;">
           A empresa Ca3 Laminacao De Ferro E Aco, aberta em 21/01/2021, é uma filial do tipo Sociedade Empresária Limitada que está situada em Limeira – SP. Sua atividade econômica principal é a fabricação de outros produtos de metal não especificados anteriormente.
           </div>
-          <div class="modal-footer" id="btn-empresa">
+          <!--<div class="modal-footer" id="btn-empresa">
             <button type="button" class="btn btn-light text-dark">Save changes</button>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>

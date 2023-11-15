@@ -38,9 +38,9 @@
           <div class="modal-body text-light" style="text-align: center;">
             ...
           </div>
-          <div class="modal-footer" id="btn-empresa">
+          <!--<div class="modal-footer" id="btn-empresa">
             <button type="button" class="btn btn-light text-dark">Save changes</button>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>

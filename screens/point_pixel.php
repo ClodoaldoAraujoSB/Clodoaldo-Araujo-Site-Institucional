@@ -36,11 +36,11 @@
             </div>
           </div>
           <div class="modal-body text-light" style="text-align: center;">
-            ...
+          A Point Pixel oferece às empresas um trabalho completo de conteúdo, design e estratégia de forma única e integrada. A empresa acredita que a qualidade e o sucesso do serviço estão interligados, defendendo a ideia de que ambos devem caminhar juntos para proporcionar resultados eficazes.
           </div>
-          <div class="modal-footer" id="btn-empresa">
+          <!--<div class="modal-footer" id="btn-empresa">
             <button type="button" class="btn btn-light text-dark">Save changes</button>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>

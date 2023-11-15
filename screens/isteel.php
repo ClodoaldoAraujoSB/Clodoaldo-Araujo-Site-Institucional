@@ -42,9 +42,9 @@
           <br>
           O iSteel para lojistas permite a gestão completa dos pedidos. Além de receber os pedidos através dele, também dá acesso a estatísticas de vendas, dados de pagamentos e opções de transportes, automatizando todo o processo comercial e logístico.
           </div>
-          <div class="modal-footer" id="btn-empresa">
+          <!--<div class="modal-footer" id="btn-empresa">
             <button type="button" class="btn btn-light text-dark">Save changes</button>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>

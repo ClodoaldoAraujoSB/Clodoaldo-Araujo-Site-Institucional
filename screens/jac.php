@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="modal-body text-light" style="text-align: center;">
-            ...
+          A Jac é reconhecida por seu compromisso em transformar vidas por meio de cursos de autoconhecimento. Sua missão é proporcionar experiências educacionais que inspiram o desenvolvimento pessoal, promovendo uma jornada de descobertas e crescimento interior para seus clientes. A Jac oferece uma variedade de cursos cuidadosamente elaborados, abordando temas que incluem a vida pessoal, relacionamentos e vida profissional dos participantes.
           </div>
           <div class="modal-footer" id="btn-empresa">
             <a href="http://jacdescubrase.com.br/" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-light text-dark">Saiba Mais</button></a>
