@@ -39,7 +39,7 @@
           A Startup School Ventures tem como propósito transformar o mercado de inovação e tecnologia, através de governança, AI e educação. Ela pretende desenvolver soluções para os desafios encontrados no mercado em cada setor de atuação, causando impacto positivo na sociedade.
           </div>
           <div class="modal-footer" id="btn-empresa">
-            <button type="button" class="btn btn-light text-dark">Save changes</button>
+            <a href="https://startupschool.ventures/" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-light text-dark">Saiba Mais</button></a>
           </div>
         </div>
       </div>

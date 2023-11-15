@@ -39,7 +39,7 @@
             ...
           </div>
           <div class="modal-footer" id="btn-empresa">
-            <button type="button" class="btn btn-light text-dark">Save changes</button>
+            <a href="http://jacdescubrase.com.br/" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-light text-dark">Saiba Mais</button></a>
           </div>
         </div>
       </div>

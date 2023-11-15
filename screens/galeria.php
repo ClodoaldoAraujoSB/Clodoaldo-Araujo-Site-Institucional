@@ -160,7 +160,14 @@
 </head>
 <body>
 
-    <div id="galeria" style="display: flex;"></div>
+    <!-- MENU SUPERIOR -->
+    <?php include("header.php"); ?>
+
+    <!-- GALERIA - INICIO -->
+    <div>
+        <div id="galeria" style="display: flex;"></div>
+    </div>
+    <!-- GALERIA - FINAL -->
 
     <!-- IMAGEM DESTACADA - INICIO -->
     <div class="modal" id="modal">
@@ -168,6 +175,9 @@
         <img class="modal-content" id="expanded-image">
     </div>
     <!-- IMAGEM DESTACADA - FINAL -->
+
+    <!-- RODAPÉ -->
+    <?php include("footer.php"); ?>
 
 </body>
 </html>

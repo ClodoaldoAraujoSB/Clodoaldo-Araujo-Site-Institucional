@@ -39,7 +39,7 @@
           Apresentada pelo empresário Clodoaldo Araújo, vencedor da quinta temporada do programa Aprendiz – O Sócio. Na série “Rota da Inovação”, o empreendedor mostrará novidades, passando pelos mais diversos campos de pesquisa: arquitetura, negócios, varejo, engenharia, entre outros, por meio de viagens realizadas.
           </div>
           <div class="modal-footer" id="btn-empresa">
-            <button type="button" class="btn btn-light text-dark">Save changes</button>
+            <a href="https://rotadainovacao.com.br/" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-light text-dark">Saiba Mais</button></a>
           </div>
         </div>
       </div>
