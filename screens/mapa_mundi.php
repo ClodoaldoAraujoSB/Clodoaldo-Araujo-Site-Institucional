@@ -10,7 +10,7 @@
     <?php include("header.php"); ?>
 
     <div class="row g-0 text-center" style="margin-right: 130px">
-        <div class="col-sm-6 col-md-8"><img src="../img/mapamundilaranja.avif"></div>
+        <div class="col-sm-6 col-md-8"><img src="../logos/mapamundilaranja.avif"></div>
         <div class="col-6 col-md-4" style="margin-top: 50px;">Lorem ipsum dolor sit amet. Et consectetur ullam aut omnis autem sed fuga tempora non laudantium accusantium qui illum quis 33 consequatur asperiores. Id accusamus dolor qui facere dolorum ut blanditiis sint sit voluptates quos aut accusamus sint et maxime rerum quo autem nemo. Aut ipsum vitae qui galisum soluta 33 ducimus amet et optio dicta ex quidem eveniet aut reprehenderit consequatur ea aliquam quaerat.
 
 At necessitatibus molestiae rem illum velit ea harum repellendus sit nisi eius et dolor voluptates. Aut dolorum aliquid qui commodi natus et sint reprehenderit est ratione rerum.
