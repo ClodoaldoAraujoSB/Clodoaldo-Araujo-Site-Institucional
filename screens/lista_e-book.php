@@ -79,7 +79,7 @@
                 ...
             </div>
             <div class="modal-footer" id="btn-empresa">
-                <a href=""><button type="button" class="btn btn-light text-dark">Compre nosso e-book</button></a>
+                <a href="login/index.php"><button type="button" class="btn btn-light text-dark">Compre nosso e-book</button></a>
                 <a href=""><button type="button" class="btn btn-light text-dark">Baixe nossas ferramentas gratuitas</button></a>
             </div>
             </div>

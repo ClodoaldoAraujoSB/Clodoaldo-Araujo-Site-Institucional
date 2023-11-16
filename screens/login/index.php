@@ -1,17 +1,30 @@
 <?php
 
-function criar($nome, $email, $ano_nasc, $telefone, $cidade) {
-    include("../../bd/bd.php");
-    $conn->query("INSERT INTO usuario (nome, email, idade, telefone, cidade) VALUES ('$nome', '$email', $ano_nasc, '$telefone', '$cidade')");
-    $conn->close();
-}
+    session_start();
 
-function buscar($email) {
-    include("../../bd/bd.php");
-    $sql = $conn->query("SELECT email FROM usuario WHERE email = '$email'");
-    return $sql["email"][0];
-    $conn->close();
-}
+    function criar($nome, $email, $ano_nasc, $telefone, $cidade) {
+        include("../../bd/bd.php");
+        $conn->query("INSERT INTO usuario (nome, email, idade, telefone, cidade) VALUES ('$nome', '$email', $ano_nasc, '$telefone', '$cidade')");
+        $conn->close();
+    }
+
+    function buscar($email) {
+        include("../../bd/bd.php");
+        $result = $conn->query("SELECT email FROM usuario WHERE email = '$email'");
+        if ($result) {
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                $emailEncontrado = $row['email'];
+            } else {
+                $emailEncontrado = null;
+            }
+            $result->free();
+        } else {
+            $emailEncontrado = null;
+        }
+        $conn->close();
+        return $emailEncontrado;
+    }
 
     if (!empty($_POST["nome"]) && !empty($_POST["email"]) && !empty($_POST["ano_nasc"]) && !empty($_POST["telefone"]) && !empty($_POST["cidade"])) {
         $nome = $_POST["nome"];
@@ -20,27 +33,29 @@ function buscar($email) {
         $telefone = $_POST["telefone"];
         $cidade = $_POST["cidade"];
 
-        $email = buscar($email_confirmation);
-        if ( !empty($email) ) {
-            // Coloque um input na tela falando que este email já está sendo utilizado   
-        }
-        else {
+        $email_confirmation = buscar($email);
+        if (!empty($email_confirmation)) {
+            // Coloque um input na tela falando que este email já está sendo utilizado
+        } else {
             criar($nome, $email, $ano_nasc, $telefone, $cidade);
         }
-    }
-    else if (!empty($_POST["email_confirmation"])) {
+    } else if (!empty($_POST["email_confirmation"])) {
         $email_confirmation = $_POST["email_confirmation"];
-        
         $email = buscar($email_confirmation);
-        if ( !empty($email) ) {
-            // Leve para a proxima pagina   
-        }
-        else {
+        if (!empty($email)) {
+            
+            $_SESSION['autorizado'] = true;
+
+            header("Location: ../ferramentas_ebook.php");
+        } else {
             // coloque um input na tela falando que não está cadastrado
         }
     }
+    else {
 
+    }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,6 +66,7 @@ function buscar($email) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Modern Login Page | AsmrProg</title>
+
 </head>
 
 <body>
