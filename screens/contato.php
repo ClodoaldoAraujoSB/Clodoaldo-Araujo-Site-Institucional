@@ -43,29 +43,53 @@
         <h1 class="titulo_principal">Entre em contato comigo</h1>
         <!-- TITULO - FINAL -->
 
+        <?php
+
+            include('../bd/bd.php');
+            
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+                $nome = $_POST["nome"];
+                $email = $_POST["email"];
+                $telefone = $_POST["telefone"];
+                $cidade = $_POST["cidade"];
+                $idade = $_POST["idade"];
+                $comentario = $_POST["comentario"];
+
+                $conn->query("INSERT INTO contato (nome, email, telefone, cidade, idade, comentario) VALUES ( '$nome', '$email', '$telefone', '$cidade', '$idade', '$comentario')");
+                $conn->close();
+
+                echo '<script>alert("Formulário enviado com sucesso!");</script>';
+
+            }
+
+            ?>
+
         <div class="container-form">
             <div class="row">
                 <div class="col">
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="nome_form" placeholder="Nome">
+                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                        <input type="text" class="form-control" id="nome_form" name="nome" placeholder="Nome">
                     </div>
                     <div class="mb-3">
-                        <input type="email" class="form-control" id="email_form" placeholder="Email">
+                        <input type="email" class="form-control" id="email_form" name="email" placeholder="Email">
                     </div>
                     <div class="mb-3">
-                        <input type="tel" class="form-control" id="telefone_form" placeholder="Telefone">
+                        <input type="tel" class="form-control" id="telefone_form" name="telefone" placeholder="Telefone">
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="cidade_form" placeholder="Cidade">
+                        <input type="text" class="form-control" id="cidade_form" name="cidade" placeholder="Cidade">
                     </div>
                     <div class="mb-3">
-                        <input type="number" class="form-control" id="cidade_form" placeholder="Idade">
+                        <input type="number" class="form-control" id="cidade_form" name="idade" placeholder="Idade">
                     </div>
                     <div class="mb-3">
-                        <textarea class="form-control" id="comentario_form" placeholder="Comentario" rows="3"></textarea>
+                        <textarea class="form-control" id="comentario_form" name="comentario" placeholder="Comentario" rows="3"></textarea>
                     </div>
                     <div class="mb-3">
                         <input type="submit" class="form-control" id="submit_form" value="Enviar">
+                        </form>
                     </div>
                 </div>
             </div>

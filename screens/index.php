@@ -154,25 +154,25 @@ include_once("empresas/circuit.php");
         <div class="carousel-item active" data-bs-interval="10000">
           <img src="../logos/Linkedin.JPG" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
+            <!--<h5>First slide label</h5>
             <p>Some representative placeholder content for the first slide.</p>
-            <a><button>Botão</button></a>
+            <a><button>Botão</button></a>-->
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="2000">
           <img src="../logos/Linkedin.JPG" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
+            <!--<h5>Second slide label</h5>
             <p>Some representative placeholder content for the second slide.</p>
-            <a><button>Botão</button></a>
+            <a><button>Botão</button></a>-->
           </div>
         </div>
         <div class="carousel-item">
           <img src="../logos/Linkedin.JPG" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
+            <!--<h5>Third slide label</h5>
             <p>Some representative placeholder content for the third slide.</p>
-            <a><button>Botão</button></a>
+            <a><button>Botão</button></a>-->
           </div>
         </div>
       </div>
