@@ -10,7 +10,8 @@
     <!-- MENU SUPERIOR -->
     <?php include("header.php"); ?>
 
-        <p>Política de Privacidade da Super Business
+        <h3>Política de Privacidade da Super Business</h3>
+        <br>
 A Superbusiness (“nós”, “nosso” ou “nossa”) se preocupa com a proteção de suas informações pessoais. Esta Política de Privacidade explica como coletamos, usamos, divulgamos e protegemos suas informações quando você utiliza nossos serviços de cursos de empreendedorismo, tanto presenciais quanto a distância (os “Serviços”). Ao acessar ou utilizar os Serviços, você concorda com os termos desta Política de Privacidade.
 
 1. Informações que Coletamos
@@ -46,7 +47,7 @@ Podemos atualizar esta Política de Privacidade periodicamente para refletir mud
 
 7. Contato
 Se você tiver alguma dúvida ou preocupação sobre esta Política de Privacidade ou sobre suas informações pessoais, entre em contato conosco pelo seguinte endereço de e-mail: contato@superbusiness.com.br
-Obrigado por escolher a Rota da Inovação. Estamos comprometidos em proteger sua privacidade e fornecer cursos de empreendedorismo de alta qualidade.</p>
+Obrigado por escolher a Superbusiness. Estamos comprometidos em proteger sua privacidade e fornecer cursos de empreendedorismo de alta qualidade.</p>
 
     <!-- RODAPÉ -->
     <?php include("footer.php"); ?>
