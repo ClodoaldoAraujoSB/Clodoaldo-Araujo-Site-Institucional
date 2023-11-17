@@ -1,11 +1,83 @@
-<!doctype html>
+<?php
+
+include("../bd/bd.php");
+
+$sql_contatos = $conn->query("SELECT * FROM usuario");
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Leads || Clodoaldo Araújo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatorio de contatos | Admin - Clodoaldo</title>
+
+    <style>
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        }
+
+        th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        }
+
+        th {
+        background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+        background-color: #f9f9f9;
+        }
+    </style>
+
 </head>
-  <body>
-    <!-- MENU SUPERIOR -->
-    <?php include("header.php"); ?>
+<body>
+
+  <!-- MENU SUPERIOR -->
+  <?php include("header.php"); ?>
+
+  <!-- TABELA - INICIO -->
+  <h1 style="text-align: center; margin-top: 70px;">Relatorio de contatos</h1>
+
+  <table>
+      <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Ano de Nascimento</th>
+            <th>Telefone</th>
+            <th>Cidade</th>
+          </tr>
+      </thead>
+      <tbody>
+          
+          <?php
+          
+          foreach ( $sql_contatos as $contato ) {
+              echo "<tr>";
+
+              echo "<td>" . $contato["nome"] . "</td>";
+              echo "<td>" . $contato["email"] . "</td>";
+              echo "<td>" . $contato["ano_nasc"] . "</td>";
+              echo "<td>" . $contato["telefone"] . "</td>";
+              echo "<td>" . $contato["cidade"] . "</td>";
+
+              echo "</tr>";
+          }
+          
+          ?>
+
+      </tbody>
+  </table>
+  <!-- TABELA - FINAL -->
+  
+  <!-- RODAPÉ -->
+  <?php include("footer.php"); ?>
+
+</body>
+</html>

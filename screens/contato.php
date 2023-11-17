@@ -56,7 +56,10 @@
                 $idade = $_POST["idade"];
                 $comentario = $_POST["comentario"];
 
-                $conn->query("INSERT INTO contato (nome, email, telefone, cidade, idade, comentario) VALUES ( '$nome', '$email', '$telefone', '$cidade', '$idade', '$comentario')");
+                date_default_timezone_set('America/Sao_Paulo');
+                $data_envio = date('d-m-Y H:i:s');
+
+                $conn->query("INSERT INTO contato (nome, email, telefone, cidade, idade, comentario, data_envio) VALUES ( '$nome', '$email', '$telefone', '$cidade', '$idade', '$comentario', '$data_envio')");
                 $conn->close();
 
                 echo '<script>alert("Formulário enviado com sucesso!");</script>';

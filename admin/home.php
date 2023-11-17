@@ -24,7 +24,6 @@ if(isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
 </html>
 
 <?php
-  unset($_SESSION['autorizado']);
 }
 else {
   echo "Acesso não autorizado";

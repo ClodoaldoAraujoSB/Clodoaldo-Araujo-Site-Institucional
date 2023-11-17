@@ -4,7 +4,7 @@
 
     function criar($nome, $email, $ano_nasc, $telefone, $cidade) {
         include("../../bd/bd.php");
-        $conn->query("INSERT INTO usuario (nome, email, idade, telefone, cidade) VALUES ('$nome', '$email', $ano_nasc, '$telefone', '$cidade')");
+        $conn->query("INSERT INTO usuario (nome, email, ano_nasc, telefone, cidade) VALUES ('$nome', '$email', '$ano_nasc', '$telefone', '$cidade')");
         $conn->close();
     }
 
