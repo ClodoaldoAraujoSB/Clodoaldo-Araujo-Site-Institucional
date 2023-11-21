@@ -1,8 +1,9 @@
 <?php
 
-include("../bd/bd.php");
-
-$sql_contatos = $conn->query("SELECT * FROM contato");
+session_start();
+if(isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
+    include("../bd/bd.php");
+    $sql_contatos = $conn->query("SELECT * FROM contato");
 
 ?>
 
@@ -37,6 +38,8 @@ $sql_contatos = $conn->query("SELECT * FROM contato");
 
 </head>
 <body>
+    <!-- MENU SUPERIOR -->
+    <?php include("header.php"); ?>
 
     <h1 style="text-align: center; margin-top: 70px;">Relatorio de contatos</h1>
 
@@ -75,5 +78,17 @@ $sql_contatos = $conn->query("SELECT * FROM contato");
         </tbody>
     </table>
 
+    <!-- RODAPÉ -->
+    <?php include("footer.php"); ?>
+
 </body>
 </html>
+
+<?php
+
+}
+else {
+  echo "Acesso não autorizado";
+}
+
+?>
