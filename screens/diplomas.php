@@ -87,7 +87,7 @@
     <!-- DIPLOMAS - INICIO -->
     <div class="container">
       <div class="row">
-        <div class="col-6"><img src="../img/1997.jpg" width="75%" onclick="openModal('../img/1997.jpg')"></div>
+        <div class="col-6"><img src="../logos/1997.jpg" width="75%" onclick="openModal('../logos/1997.jpg')"></div>
         <div class="col-6">
           <div class="p-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
         </div>
@@ -96,10 +96,10 @@
         <div class="col-6">
           <div class="p-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
         </div>
-        <div class="col-6"><img src="../img/2004.jpg" width="75%" onclick="openModal('../img/2004.jpg')"></div>
+        <div class="col-6"><img src="../logos/2004.jpg" width="75%" onclick="openModal('../logos/2004.jpg')"></div>
       </div>
       <div class="row">
-        <div class="col-6"><img src="../img/1999.jpg" width="75%" onclick="openModal('../img/1999.jpg')"></div>
+        <div class="col-6"><img src="../logos/1999.jpg" width="75%" onclick="openModal('../logos/1999.jpg')"></div>
         <div class="col-6">
           <div class="p-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
         </div>
@@ -108,10 +108,10 @@
         <div class="col-6">
           <div class="p-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
         </div>
-        <div class="col-6"><img src="../img/032001.jpg" width="75%" onclick="openModal('../img/032001.jpg')"></div>
+        <div class="col-6"><img src="../logos/032001.jpg" width="75%" onclick="openModal('../logos/032001.jpg')"></div>
       </div>
       <div class="row">
-        <div class="col-6"><img src="../img/2001.jpg" width="75%" onclick="openModal('../img/2001.jpg')"></div>
+        <div class="col-6"><img src="../logos/2001.jpg" width="75%" onclick="openModal('../logos/2001.jpg')"></div>
         <div class="col-6">
           <div class="p-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
         </div>
@@ -120,10 +120,10 @@
         <div class="col-6">
           <div class="p-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
         </div>
-        <div class="col-6"><img src="../img/102003.jpg" width="75%" onclick="openModal('../img/102003.jpg')"></div>
+        <div class="col-6"><img src="../logos/102003.jpg" width="75%" onclick="openModal('../logos/102003.jpg')"></div>
       </div>
       <div class="row">
-        <div class="col-6"><img src="../img/081999.jpg" width="75%" onclick="openModal('../img/081999.jpg')"></div>
+        <div class="col-6"><img src="../logos/081999.jpg" width="75%" onclick="openModal('../logos/081999.jpg')"></div>
         <div class="col-6">
           <div class="p-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
         </div>
