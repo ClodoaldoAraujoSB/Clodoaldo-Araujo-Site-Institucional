@@ -8,9 +8,15 @@
 
     <style>
 
+        body{
+            background-color: #c9d6ff;
+            background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+        }
+
         .titulo_principal {
             text-align: center;
             padding: 20px;
+            font-family: Montserrat, sans serif;
         }
 
         .container-form {
@@ -29,6 +35,16 @@
 
         .col {
             width: 80%;
+        }
+
+        input[type="submit"] {
+            background-color: #BE0009;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+                background-color: white;
+                color: #BE0009;
         }
 
     </style>

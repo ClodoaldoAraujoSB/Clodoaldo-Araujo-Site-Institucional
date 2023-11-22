@@ -19,6 +19,11 @@ include_once("empresas/circuit.php");
       .container-quem-sou {
         display: flex;
         margin-top: 40px;
+        font-family: Montserrat, sans-serif;
+      }
+      
+      h1 {
+        font-family: Montserrat, sans-serif;
       }
 
       .div-quem-sou {
@@ -192,7 +197,7 @@ include_once("empresas/circuit.php");
       <div class="div-quem-sou">
         <h2 style="text-align: center;">Quem eu sou?</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <a><button style="align-items: center;">Botão</button></a>
+        <a href="../screens/quem_sou.php"><button type="button" class="btn btn-dark">Quem eu sou?</button></a>
       </div>
       <div class="div-quem-sou">
         <img src="../img/fotoimprensa3.jpg" alt="Imagem 2" style="width: 100%;">
@@ -209,7 +214,7 @@ include_once("empresas/circuit.php");
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#circuitModal"><img src="../logos/logo-circuit.png" alt="circuit" style="height: 70px;"></button>
       </div>
       <div style="text-align: center;">
-        <a><button>Ir para as empresas</button></a>
+        <a href="../screens/empresas.php"><button type="button" class="btn btn-dark">Empresas</button></a>
       </div>
     </div>
     <!-- EMPRESAS - FINAL -->
@@ -217,12 +222,12 @@ include_once("empresas/circuit.php");
     <!-- PAISES QUE EU VISITEI - INICIO -->
     <div class="container-quem-sou">
       <div class="div-quem-sou">
-        <img src="../img/fotoimprensa3.jpg" alt="Imagem 2" style="width: 100%;">
+        <img src="../img/mapa_mundi.avif" alt="Imagem 2" style="width: 100%;">
       </div>
       <div class="div-quem-sou">
         <h2 style="text-align: center;">Paises que eu visitei</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <a><button style="align-items: center;">Botão</button></a>
+          <a href="../screens/mapa_mundi.php"><button type="button" class="btn btn-dark">Países que eu visitei</button></a>
       </div>
     </div>
     <!-- PAISES QUE EU VISITEI - FINAL -->

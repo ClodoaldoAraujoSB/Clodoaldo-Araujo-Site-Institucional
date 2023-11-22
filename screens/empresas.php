@@ -21,6 +21,10 @@
 
     <style>
 
+      h1 {
+        font-family: Montserrat, sans-serif;
+      }
+
       .div_lista_empresas {
         display: flex;
         justify-content: center; 
