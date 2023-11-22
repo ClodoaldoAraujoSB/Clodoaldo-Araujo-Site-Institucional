@@ -8,6 +8,19 @@
 
     <style>
       
+      body {
+        background-color: #c9d6ff;
+        background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+      }
+
+      h2 {
+        font-family: Montserrat, sans-serif;
+      }
+
+      p {
+        font-family: Montserrat, sans-serif;
+      }
+
       .container-quem-sou {
         display: flex;
         margin-top: 40px;
@@ -28,6 +41,7 @@
         flex-direction: column;
         align-items: center; /* Centraliza os itens horizontalmente */
         justify-content: center;
+        font-family: Montserrat, sans serif;
       }
     </style>
 
@@ -40,9 +54,9 @@
         <h2 style="text-align: center;">Quem eu sou?</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <div class="buttons">
-            <a href="../screens/diplomas.php"><button>Meus diplomas e certificados</button></a>
+            <a href="../screens/diplomas.php"><button type="button" class="btn btn-dark">Meus diplomas e certificados</button></a>
             <br>
-            <a href="../screens/mapa_mundi.php"><button>Países que visitei</button></a>
+            <a href="../screens/mapa_mundi.php"><button type="button" class="btn btn-dark">Países que visitei</button></a>
         </div>
       </div>
       <div class="div-quem-sou">
