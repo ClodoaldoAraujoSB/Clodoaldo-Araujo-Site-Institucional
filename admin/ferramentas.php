@@ -13,8 +13,10 @@
     }
 
     .file-form {
-        margin-top: 100px;
-        margin-left: 100px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
     }
     
     .form-field {
@@ -31,8 +33,7 @@
         color: #BE0009;
     }
 
-    input[type="submit"] {width: 300px}
-
+    input[type="submit"] {width: 375px}
 </style>
 
 <body>
