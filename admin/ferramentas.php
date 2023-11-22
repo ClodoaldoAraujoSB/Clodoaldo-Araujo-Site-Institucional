@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <title>Envio de Arquivo</title>
 </head>
+
+<style>
+
+    body {
+        background-color: #c9d6ff;
+        background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    }
+
+    .file-form {
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+    
+    .form-field {
+        margin: 12px;
+    }
+
+    input[type="submit"] {
+        background-color: #BE0009;
+        color: white;
+    }
+
+    input[type="submit"]:hover {
+        background-color: white;
+        color: #BE0009;
+    }
+
+    input[type="submit"] {width: 300px}
+
+</style>
+
 <body>
-  <?php //include('header.php'); ?>
+  <?php include("../admin/header.php"); ?>
 
     <h2>Envio de Arquivo</h2>
 
@@ -35,18 +66,18 @@
         }
     }
     ?>
-    <br>
-    <form method="post" enctype="multipart/form-data">
+    <form class="file-form" method="post" enctype="multipart/form-data">
         <label for="nome">Nome:</label>
-        <input type="text" name="nome" required><br>
+        <input class="form-field" type="text" name="nome" required><br>
 
         <label for="descricao">Descrição:</label>
-        <input type="text" name="descricao" required><br>
+        <input class="form-field" type="text" name="descricao" required><br>
 
         <label for="arquivo">Arquivo:</label>
-        <input type="file" name="arquivo" required><br>
+        <input class="form-field" type="file" name="arquivo" required><br>
 
-        <input type="submit" value="Enviar Arquivo">
+        <input type="submit" class="form-control" id="submit_form" value="Enviar">
     </form>
 </body>
 </html>
+<?php include("../admin/footer.php"); ?>
