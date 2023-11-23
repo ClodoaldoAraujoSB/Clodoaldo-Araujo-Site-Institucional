@@ -39,7 +39,7 @@
                         <a class="nav-link" style="color: #FFFFFF" href="empresas.php">Empresas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #FFFFFF" href="lista_e-book.php">E-books</a>
+                        <a class="nav-link" style="color: #FFFFFF" href="lista_e-book.php">Meus cursos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color: #FFFFFF" href="galeria.php">Galeria</a>

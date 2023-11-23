@@ -1,3 +1,18 @@
+<?php
+
+include_once("cursos/conselho.php");
+include_once("cursos/ebook.php");
+include_once("cursos/empreendedores_elite.php");
+include_once("cursos/jac.php");
+include_once("cursos/mapa_sucesso.php");
+include_once("cursos/master_mind.php");
+include_once("cursos/missao_china.php");
+include_once("cursos/missao_turquia.php");
+include_once("cursos/mma.php");
+include_once("cursos/pilares_milhao.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,32 +22,21 @@
     <link rel="stylesheet" href="style.css">
     <title>Galeria de Imagens</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
     <style>
 
-        .container-menu {
-            margin: 50px;
+        .h1 {
+            text-align: center;
+        }
+
+        .col {
             display: flex;
-            align-items: center;
             justify-content: center;
         }
 
-        #btn-empresa {
-            border: 0px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #div_centro_titulo {
-            width: 30%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #div_lateral_titulo {
-            width: 40%;
+        .row {
+            margin-bottom: 40px;
         }
 
     </style>
@@ -43,16 +47,115 @@
     <!-- MENU SUPERIOR -->
     <?php include("header.php"); ?>
 
+    <!-- TITULO - INICIO -->
+    <h1 class="h1" style="margin-top: 40px; margin-bottom: 40px;">Meus cursos</h1>
+
     <!-- CARDS - INICIO -->
-    <div class="container-menu">
+    <div class="container">
         <div class="row">
             <div class="col">
                 <div class="card" style="width: 18rem;">
                     <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">O Conselho</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#conselhoModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
                         <h5 class="card-title">E-book</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal">Saiba Mais</button>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ebookModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Empreendedores de Elite</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#empreendedores_eliteModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Jac - Descubra-se</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#jacModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mapa do Sucesso</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#mapa_sucessoModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Master Mind</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#master_mindModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Missão China</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#missao_chinaModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Missão Turquia</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#missao_turquiaModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">MMA</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#mmaModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mx-auto">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pilares do Milhão</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#pilares_milhaoModal">Saiba Mais</button>
                     </div>
                 </div>
             </div>
@@ -60,36 +163,8 @@
     </div>
     <!-- CARDS - FINAL -->
 
-    <!-- MODAL - INICIO -->
-    <div class="modal fade" id="ca3_steelModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-dark">
-            <div class="modal-header" style="border: 0px;">
-                <!--<div id="div_lateral_titulo">
-                    <img src="../logos/logo-ca3_steel.png" alt="Logo Super Business" style="height: 30px;">
-                </div>-->
-                <div id="div_centro_titulo">
-                    <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">E-book</h1>
-                </div>
-                <!--<div id="div_lateral_titulo" style="text-align: right;">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>-->
-            </div>
-            <div class="modal-body text-light" style="text-align: center;">
-                ...
-            </div>
-            <div class="modal-footer" id="btn-empresa">
-                <a href="login/index.php"><button type="button" class="btn btn-light text-dark">Compre nosso e-book</button></a>
-                <a href=""><button type="button" class="btn btn-light text-dark">Baixe nossas ferramentas gratuitas</button></a>
-            </div>
-            </div>
-        </div>
-        </div>
-    <!-- MODAL - FINAL -->
-
     <!-- RODAPÉ -->
     <?php include("footer.php"); ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
