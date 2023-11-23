@@ -10,7 +10,7 @@ if(isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
     ?>
 
     <!doctype html>
-    <html lang="en">
+    <html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -19,6 +19,7 @@
                 $emailEncontrado = null;
             }
             $result->free();
+        
         } else {
             $emailEncontrado = null;
         }
@@ -47,18 +48,17 @@
             $_SESSION['autorizado'] = true;
 
             header("Location: ../ferramentas_ebook.php");
-        } else {
-            // coloque um input na tela falando que não está cadastrado
-        }
-    }
-    else {
 
+    } else {
+        // coloque um input na tela falando que não está cadastrado
     }
+}
+
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">

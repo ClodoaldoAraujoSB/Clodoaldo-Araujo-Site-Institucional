@@ -52,6 +52,9 @@
           <br>
           <li class="nav-item">
             <a href="videos.php"><button type="button" class="btn btn-outline-light">Videos</button></a>
+          <br>
+          <li class="nav-item">
+            <a href="../screens/index.php"><button type="button" class="btn btn-outline-light">Sair</button></a>
           </li>
         </ul>
       </div>
