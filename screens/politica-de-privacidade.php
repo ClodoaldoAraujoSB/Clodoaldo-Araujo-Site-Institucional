@@ -48,7 +48,21 @@
         <p><b>3.3.</b>Requisitos Legais: Quando formos obrigados a divulgar informações de acordo com a lei aplicável, regulamentos governamentais ou processos judiciais.</p>
       </div>
 
-      <p><b></b></p>
+      <b>4. Segurança das Informações</b>
+      <p>Tomamos medidas razoáveis para proteger suas informações pessoais contra acesso não autorizado, uso indevido ou divulgação. No entanto, nenhum método de transmissão pela internet ou armazenamento eletrônico é 100% seguro, e não podemos garantir a segurança absoluta de suas informações.</p>
+
+      <b>5. Seus Direitos de Privacidade</b>
+      <p>Você tem direitos relacionados à privacidade de suas informações pessoais, incluindo o direito de acessar, corrigir e excluir seus dados. Para exercer esses direitos ou fazer qualquer pergunta sobre nossas práticas de privacidade, entre em contato conosco por meio das informações fornecidas na seção “Contato” abaixo.</p>
+
+      <b>6. Alterações a Esta Política de Privacidade</b>
+      <p>Podemos atualizar esta Política de Privacidade periodicamente para refletir mudanças em nossas práticas de privacidade. Quaisquer alterações significativas serão notificadas por meio de nosso site ou por outros meios de comunicação.</p>
+
+      <b>7. Contato</b>
+      <p>Se você tiver alguma dúvida ou preocupação sobre esta Política de Privacidade ou sobre suas informações pessoais, entre em contato conosco pelo seguinte endereço de e-mail: contato@superbusiness.com.br</p>
+
+      <!--<div class="container">-->
+        <p>Obrigado por escolher a <b>Superbusiness</b>. Estamos comprometidos em proteger sua privacidade e fornecer cursos de empreendedorismo de alta qualidade.</p>
+      <!--</div>-->
 
     </div>
 

@@ -11,6 +11,13 @@
         body{
             background-color: #c9d6ff;
             background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1; /* Cresce para ocupar o espaço restante */
         }
 
         .titulo_principal {
@@ -116,6 +123,8 @@
 
             </div>
         </div>
+
+        <div class="content"></div>
 
         <!-- RODAPÉ - INICIO -->
         <?php include("footer.php"); ?>
