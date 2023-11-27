@@ -36,7 +36,7 @@
         padding: 0px 10px 0px 10px;
       }
 
-      button {
+      .button-header {
         font-size: 15px;
         color: #e1e1e1;
         font-family: inherit;
@@ -51,18 +51,18 @@
         transition-property: color;
       }
 
-      button:focus,
-      button:hover {
+      .button-header:focus,
+      .button-header:hover {
         color: #fff;
       }
 
-      button:focus:after,
-      button:hover:after {
+      .button-header:focus:after,
+      .button-header:hover:after {
         width: 100%;
         left: 0%;
       }
 
-      button:after {
+      .button-header:after {
         content: "";
         pointer-events: none;
         bottom: -2px;
@@ -76,7 +76,7 @@
         transition-property: width, left;
       }
 
-      button svg {
+      .button-header svg {
         fill: #fff;
         margin: 2px;
       }
@@ -92,12 +92,12 @@
       </div>
       <div class="navbar-menu">
         <ul class="list-menu">
-          <li class="item-menu"><a href="index.php"><button>Home</button></a></li>
-          <li class="item-menu"><a href="quem_sou.php"><button>Quem eu sou?</button></a></li>
-          <li class="item-menu"><a href="empresas.php"><button>Minhas empresas</button></a></li>
-          <li class="item-menu"><a href="cursos.php"><button>Meus cursos</button></a></li>
-          <li class="item-menu"><a href="galeria.php"><button>Galeria</button></a></li>
-          <li class="item-menu"><a href="contato.php"><button>Contato</button></a></li>
+          <li class="item-menu"><a href="index.php"><button class="button-header">Home</button></a></li>
+          <li class="item-menu"><a href="quem_sou.php"><button class="button-header">Quem eu sou?</button></a></li>
+          <li class="item-menu"><a href="empresas.php"><button class="button-header">Minhas empresas</button></a></li>
+          <li class="item-menu"><a href="cursos.php"><button class="button-header">Meus cursos</button></a></li>
+          <li class="item-menu"><a href="galeria.php"><button class="button-header">Galeria</button></a></li>
+          <li class="item-menu"><a href="contato.php"><button class="button-header">Contato</button></a></li>
         </ul>
       </div>
     </nav>
