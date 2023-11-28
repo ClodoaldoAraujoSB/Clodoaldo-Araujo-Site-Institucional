@@ -1,60 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Envio de Arquivo</title>
-</head>
-
-<style>
-
-    body {
-        background-color: #c9d6ff;
-        background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-    }
-
-    .file-form {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        margin-top: 50px;
-    }
-    
-    .form-field {
-        margin: 12px;
-    }
-
-    input[type="submit"] {
-        background-color: #BE0009;
-        color: white;
-    }
-
-    input[type="submit"]:hover {
-        background-color: white;
-        color: #BE0009;
-    }
-
-    input[type="submit"] {width: 375px}
-</style>
-
-    <script>
-
-        function ferramentaAceita() {
-            alert("Ferramenta adicionada");
-        }
-
-        function ferramentaRecusada() {
-            alert("Ferramenta não adicionada");
-        }
-
-    </script>
-
-<body>
-  <?php include("../admin/header.php"); ?>
-
-    <h2>Envio de Arquivo</h2>
-
-    <?php
+<?php
     include('../bd/bd.php');
+
+    $sql_ferramentas = $conn->query("SELECT * FROM ferramentas"); 
+
     // Verifica se o formulário foi enviado
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Obtém os dados do formulário
@@ -85,7 +33,83 @@
             echo '<script> ferramentaRecusada() </script>';
         }
     }
-    ?>
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Envio de Arquivo</title>
+
+    <style>
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        body {
+            background-color: #c9d6ff;
+            background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+        }
+
+        .file-form {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        
+        .form-field {
+            margin: 12px;
+        }
+
+        input[type="submit"] {
+            background-color: #BE0009;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: white;
+            color: #BE0009;
+        }
+
+        input[type="submit"] {width: 375px}
+    </style>
+
+    <script>
+
+        function ferramentaAceita() {
+            alert("Ferramenta adicionada");
+        }
+
+        function ferramentaRecusada() {
+            alert("Ferramenta não adicionada");
+        }
+
+    </script>
+
+</head>
+<body>
+  <?php include("../admin/header.php"); ?>
+
+    <h2>Envio de Arquivo</h2>
+
     <form class="file-form" method="post" enctype="multipart/form-data">
         
         <label for="nome">Nome:</label>
@@ -105,6 +129,37 @@
 
         <input type="submit" class="form-control" id="submit_form" value="Enviar">
     </form>
+
+    <table style="margin-top: 30px;">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Nome do Arquivo</th>
+                <th>Arquivo</th>
+                <th>Imagem</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <?php
+            
+            foreach ( $sql_ferramentas as $ferramenta ) {
+                echo "<tr>";
+
+                echo "<td>" . $ferramenta["nome"] . "</td>";
+                echo "<td>" . $ferramenta["descricao"] . "</td>";
+                echo "<td>" . $ferramenta["nome_arquivo"] . "</td>";
+                echo "<td>" . $ferramenta["arquivo"] . "</td>";
+                echo "<td><img src=../" . $ferramenta["imagem"] .  "></td>";
+
+                echo "</tr>";
+            }
+            
+            ?>
+
+        </tbody>
+    </table>
 
     <?php include("../admin/footer.php"); ?>
 </body>
