@@ -7,30 +7,37 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Obtém os dados do formulário
         $nome = $_POST["nome"];
-        $descricao = $_POST["descricao"];
-        $nome_arquivo = $_POST["nome_arquivo"];
 
-        // Configurações para o upload do arquivo
-        $diretorioDestino = "../ferramentas/";
-        $diretorioDestino_img = "../ferramentas/img/";
-        $caminhoCompleto_arquivo = $diretorioDestino . basename($_FILES["arquivo"]["name"]);
-        $caminhoCompleto_imagem = $diretorioDestino_img . basename($_FILES["imagem"]["name"]);
+        $sql_verifica_nome = $conn->query("SELECT nome FROM ferramentas WHERE nome = '" . $nome . "'");
 
-        // Move o arquivo para o diretório de destino
-        if (move_uploaded_file($_FILES["arquivo"]["tmp_name"], $caminhoCompleto_arquivo)) {
-            move_uploaded_file($_FILES["imagem"]["tmp_name"], $caminhoCompleto_imagem);
+        if ($sql_verifica_nome->num_rows <= 0) {
+            $nome_arquivo = $_POST["nome_arquivo"];
+            $descricao = $_POST["descricao"];
 
-            $diretorioDestino = "ferramentas/";
-            $diretorioDestino_img = "ferramentas/img/";
+            // Configurações para o upload do arquivo
+            $diretorioDestino = "../ferramentas/";
+            $diretorioDestino_img = "../ferramentas/img/";
             $caminhoCompleto_arquivo = $diretorioDestino . basename($_FILES["arquivo"]["name"]);
             $caminhoCompleto_imagem = $diretorioDestino_img . basename($_FILES["imagem"]["name"]);
 
-            $query = "INSERT INTO ferramentas (nome, descricao, imagem, arquivo, nome_arquivo) VALUES ('$nome', '$descricao', '$caminhoCompleto_imagem', '$caminhoCompleto_arquivo', '$nome_arquivo')";
-            $conn->query($query);
-            // Lembre-se de ajustar os detalhes da conexão e da consulta conforme necessário
-            echo '<script> ferramentaAceita() </script>';
-        } else {
-            echo '<script> ferramentaRecusada() </script>';
+            // Move o arquivo para o diretório de destino
+            if (move_uploaded_file($_FILES["arquivo"]["tmp_name"], $caminhoCompleto_arquivo)) {
+                move_uploaded_file($_FILES["imagem"]["tmp_name"], $caminhoCompleto_imagem);
+
+                $diretorioDestino = "ferramentas/";
+                $diretorioDestino_img = "ferramentas/img/";
+                $caminhoCompleto_arquivo = $diretorioDestino . basename($_FILES["arquivo"]["name"]);
+                $caminhoCompleto_imagem = $diretorioDestino_img . basename($_FILES["imagem"]["name"]);
+
+                $query = "INSERT INTO ferramentas (nome, descricao, imagem, arquivo, nome_arquivo) VALUES ('$nome', '$descricao', '$caminhoCompleto_imagem', '$caminhoCompleto_arquivo', '$nome_arquivo')";
+                $conn->query($query);
+                // Lembre-se de ajustar os detalhes da conexão e da consulta conforme necessário
+                echo '<script> ferramentaAceita() </script>';
+
+
+            } else {
+                echo '<script> ferramentaRecusada() </script>';
+            }
         }
     }
 ?>
@@ -61,6 +68,10 @@
 
         tr:nth-child(even) {
             background-color: #f9f9f9;
+        }
+
+        img {
+            width: 300px;
         }
 
         body {
