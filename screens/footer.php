@@ -44,7 +44,7 @@
         padding: 0px 10px 0px 10px;
       }
 
-      button {
+      .footer-button {
         font-size: 15px;
         color: #e1e1e1;
         font-family: inherit;
@@ -59,18 +59,18 @@
         transition-property: color;
       }
 
-      button:focus,
-      button:hover {
+      .footer-button:focus,
+      .footer-button:hover {
         color: #fff;
       }
 
-      button:focus:after,
-      button:hover:after {
+      .footer-button:focus:after,
+      .footer-button:hover:after {
         width: 100%;
         left: 0%;
       }
 
-      button:after {
+      .footer-button:after {
         content: "";
         pointer-events: none;
         bottom: -2px;
@@ -84,7 +84,7 @@
         transition-property: width, left;
       }
 
-      button svg {
+      .footer-button svg {
         fill: #fff;
         margin: 2px;
       }
@@ -114,18 +114,18 @@
 
     <footer class="footer-site">
       <div class="footer-icone-principal">
-        <a href="index.php"><button>Clodoaldo Araújo</button></a>
+        <a href="index.php"><button class="footer-button">Clodoaldo Araújo</button></a>
       </div>
       <div class="footer-center">
-        <a href="politica-de-privacidade.php"><button>Politica de privacidade</button></a>
+        <a href="politica-de-privacidade.php"><button class="footer-button">Politica de privacidade</button></a>
       </div>
       <div class="footer-menu">
         <ul class="list-menu">
-          <li class="item-menu"><a href="#"><button><svg width="20" height="20"><use xlink:href="#whatsapp"/></svg></button></a></li>
-          <li class="item-menu"><a href="#"><button><svg width="20" height="20"><use xlink:href="#instagram"/></svg></button></a></li>
-          <li class="item-menu"><a href="#"><button><svg width="20" height="20"><use xlink:href="#facebook"/></svg></button></a></li>
-          <li class="item-menu"><a href="#"><button><svg width="20" height="20"><use xlink:href="#linkedin"/></svg></button></a></li>
-          <li class="item-menu"><a href="#"><button><svg width="20" height="20"><use xlink:href="#email"/></svg></button></a></li>
+          <li class="item-menu"><a href="#"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#whatsapp"/></svg></button></a></li>
+          <li class="item-menu"><a href="#"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#instagram"/></svg></button></a></li>
+          <li class="item-menu"><a href="#"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#facebook"/></svg></button></a></li>
+          <li class="item-menu"><a href="#"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#linkedin"/></svg></button></a></li>
+          <li class="item-menu"><a href="#"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#email"/></svg></button></a></li>
         </ul>
       </div>
     </footer>

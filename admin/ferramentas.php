@@ -1,6 +1,8 @@
 <?php
-    include('../bd/bd.php');
 
+session_start();
+if(isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
+    include('../bd/bd.php');
     $sql_ferramentas = $conn->query("SELECT * FROM ferramentas"); 
 
     // Verifica se o formulário foi enviado
@@ -175,3 +177,12 @@
     <?php include("../admin/footer.php"); ?>
 </body>
 </html>
+
+<?php
+
+}
+else {
+  echo "Acesso não autorizado";
+}
+
+?>
