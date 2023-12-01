@@ -93,6 +93,7 @@
       <div class="navbar-menu">
         <ul class="list-menu">
           <li class="item-menu"><a href="index.php"><button class="button-header">Home</button></a></li>
+          <li class="item-menu"><a href="ferramentas_ebook.php"><button class="button-header">Ferramentas grátis</button></a></li>
           <li class="item-menu"><a href="quem_sou.php"><button class="button-header">Quem eu sou?</button></a></li>
           <li class="item-menu"><a href="empresas.php"><button class="button-header">Minhas empresas</button></a></li>
           <li class="item-menu"><a href="cursos.php"><button class="button-header">Meus cursos</button></a></li>

@@ -1,12 +1,9 @@
 <?php
 session_start();
-if(isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
-    // Página permitida
-
+if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
     include("../bd/bd.php");
     $sql_ferramenta = $conn->query("SELECT * FROM ferramentas");
     $conn->close();
-
     ?>
 
     <!doctype html>
@@ -54,13 +51,13 @@ if(isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                 <div class="card mb-3" style="width: 70%;">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="../<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="...">
+                            <img src="../<?php echo $ferramenta["arquivo"] ?>" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body" id="card-ferramenta">
                                 <h5 class="card-title"> <?php echo $ferramenta["nome"]; ?> </h5>
                                 <p class="card-text"> <?php echo $ferramenta["descricao"]; ?> </p>
-                                <a href="../<?php echo $ferramenta["arquivo"] ?>" download="<?php echo $ferramenta["nome_arquivo"] ?>" onclick="mostrarObrigado()" class="btn btn-primary">Baixe aqui</a>
+                                <a href="<?php echo $ferramenta["arquivo"] ?>" download="<?php echo $ferramenta["arquivo"] ?>" onclick="mostrarObrigado()" class="btn btn-primary">Baixe aqui</a>
                             </div>
                         </div>
                     </div>
@@ -80,10 +77,11 @@ if(isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
     </html>
 
     <?php
-    // Limpar a variável de sessão para evitar reutilização
-    unset($_SESSION['autorizado']);
-} else {
-    // Página não permitida
-    echo "Acesso não autorizado!";
-}
+        // Limpar a variável de sessão para evitar reutilização
+        unset($_SESSION['autorizado']);
+    } else {
+        // Redireciona para a página de login se não estiver autenticado
+        header("Location: ../screens/login/index.php");
+        exit();
+    }
 ?>

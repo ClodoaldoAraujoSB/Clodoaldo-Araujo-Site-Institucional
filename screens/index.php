@@ -4,6 +4,15 @@ include_once("empresas/ca3.php");
 include_once("empresas/ca3_steel.php");
 include_once("empresas/circuit.php");
 
+// Verifica se o botão foi clicado
+if(isset($_POST['rocketLaunch'])){
+  echo '<script>
+          document.addEventListener("DOMContentLoaded", function() {
+              document.getElementById("popup-container").style.display = "block";
+          });
+      </script>';
+}
+
 ?>
 
 <!doctype html>
@@ -118,6 +127,64 @@ include_once("empresas/circuit.php");
         cursor: pointer;
         }
 
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+
+        #popup {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transform: scale(0.8);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #popup.show {
+            transform: perspective(800px) rotateX(0deg) scale(1);
+        }
+
+        #closeBtn {
+            background-color: #c10109;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .texto-de-abertura {
+          padding: 10px 20px;
+        }
+
+        .dez-ferramentas {
+        display: flex;
+        align-items: center;
+    }
+
+    .titulo-btn-dez-ferramentas {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 36px;
+      color: #c10109;
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+      text-align: center;
+      line-height: 2;
+    }
+
+    .dez-ferramentas-img img {
+        width: 40%; /* Defina o tamanho da imagem conforme necessário */
+        height: 40%;
+    }
     </style>
 
     <script>
@@ -144,12 +211,40 @@ include_once("empresas/circuit.php");
         modal.style.display = 'none';
       }
 
-    </script>
+      document.addEventListener("DOMContentLoaded", function () {
+            // Mostrar o popup ao carregar a página
+            document.getElementById("overlay").style.display = "flex";
 
-  </head>
-  <body>
-    <!-- MENU SUPERIOR -->
-    <?php include("header.php"); ?>
+            // Adicionar evento de clique ao botão de fechar
+            document.getElementById("closeBtn").addEventListener("click", function () {
+                // Adicionar classe para aplicar os efeitos de rotação e perspectiva
+                document.getElementById("popup").classList.add("show");
+                // Ocultar o popup ao clicar no botão
+                document.getElementById("overlay").style.display = "none";
+                // Emitir som de foguete
+                playRocketSound();
+            });
+        });
+
+        function playRocketSound() {
+            // Criar elemento de áudio
+            var audio = new Audio('../sounds/rocket_sound.mp3');
+            // Reproduzir o som
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+  <!-- MENU SUPERIOR -->
+  <?php include("header.php"); ?>
+  <!--INÍCIO POPUP-->
+    <div id="overlay">
+        <div id="popup">
+            <h1><b>VOCÊ QUER SER MILIONÁRIO? VENHA COMIGO</b></h1>
+            <button id="closeBtn">QUERO!</button>
+        </div>
+    </div>
+<!--FIM POPUP-->
 
     <!-- CARROSEL - INICIO -->
     <div id="carouselExampleDark" class="carousel carousel-dark slide">
@@ -195,10 +290,33 @@ include_once("empresas/circuit.php");
     </div>
     <!-- CARROSEL - FINAL -->
 
+    <!--INÍCIO TEXTO DE ABERTURA-->
+        <div class="texto-de-abertura">
+          <p>What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        </div>
+    <!--FIM TEXTO DE ABERTURA-->
+
+    <!--INÍCIO 10 FERRAMENTAS-->
+    <div class="dez-ferramentas">
+      <div class="dez-ferramentas-img">
+      <img src="../logos/dez-ferramentas.jpg" alt="" width="75%" height="75%">
+      </div>
+      <div class="titulo-btn-dez-ferramentas">
+      <h1><b>100 FERRAMENTAS GRATUITAS</b> QUE TE DARÃO O PRIMEIRO MILHÃO</h1>
+      <a href="../screens/ferramentas_ebook.php"><button class="btn btn-dark">Ferramentas grátis aqui!</button></a>
+      </div>
+      </div>
+    </div>
+    <!--FIM 10 FERRAMENTAS-->
+
     <!-- QUEM EU SOU? - INICIO -->
     <div class="container-quem-sou">
       <div class="div-quem-sou">
-        <h2 style="text-align: center;">Quem eu sou?</h2>
+        <h2 style="text-align: center;">Mentor</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <a href="../screens/quem_sou.php"><button type="button" class="btn btn-dark">Quem eu sou?</button></a>
       </div>
