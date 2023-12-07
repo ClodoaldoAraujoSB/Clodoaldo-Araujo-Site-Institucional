@@ -81,6 +81,10 @@
         margin: 2px;
       }
 
+      .index-button {
+        font-weight: bolder;
+      }
+
     </style>  
 
   </head>
@@ -88,7 +92,7 @@
 
     <nav class="navbar-site">
       <div class="navbar-icone-principal">
-        <a href="index.php"><button>Clodoaldo Araújo</button></a>
+        <a href="index.php"><button class="index-button">Clodoaldo Araújo</button></a>
       </div>
       <div class="navbar-menu">
         <ul class="list-menu">
