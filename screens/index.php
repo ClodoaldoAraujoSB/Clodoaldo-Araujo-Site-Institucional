@@ -236,7 +236,6 @@ if (isset($_POST['rocketLaunch'])) {
       border: none;
       outline: none;
       z-index: 1;
-      /* Garante que os botões estejam acima dos cartões */
     }
 
     #prevBtn {
