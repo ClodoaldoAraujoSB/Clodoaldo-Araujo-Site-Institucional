@@ -1,10 +1,34 @@
 <?php
 session_start();
 if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
+    
     include("../bd/bd.php");
     $sql_ferramenta = $conn->query("SELECT * FROM ferramentas");
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        if (empty($_POST["select_pesquisa"])) {
+            $opcao = 0;
+        } else {
+            $opcao = $_POST["select_pesquisa"];
+        }
+
+        $texto = $_POST["input_pesquisa"];
+
+        if ($opcao == 0 && empty($texto)) {
+            $sql_ferramenta = $conn->query("SELECT * FROM ferramentas");
+        } else if ($opcao == 0 && !empty($texto)) {
+            $sql_ferramenta = $conn->query("SELECT * FROM ferramentas WHERE nome LIKE '%" . $texto . "%'");
+        } else if ($opcao != 0 && empty($texto)) {
+            $sql_ferramenta = $conn->query("SELECT * FROM ferramentas WHERE modulo = " . $opcao);
+        } else if ($opcao != 0 && !empty($texto)) {
+            $sql_ferramenta = $conn->query("SELECT * FROM ferramentas WHERE modulo = " . $opcao . " AND nome LIKE '%" . $texto . "%'");
+        }
+    }
+
     $conn->close();
-    ?>
+    
+?>
 
     <!doctype html>
     <html lang="pt-br">
@@ -16,11 +40,71 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
     
         <style>
 
+            .titulo_ferramentas {
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            .session_pesquisa {
+                margin: 20px 0px 20px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container_pesquisa {
+                width: 100%;
+                display: flex;
+            }
+
+            .select_pesquisa {
+                width: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .busca_pesquisa {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container_ferramentas{
+                padding: 20px 5px 5px 5px;
+                border: 1px solid #c10109;
+                border-radius: 10px;
+                margin: 20px;
+            }
+
             .container-list {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-wrap: wrap;
+            }
+
+            .form_pesquisa {
+                display: flex;
+                width: 100%;
+            }
+
+            .btn_form_pesquisa {
+                width: 5%;
+                margin: 0px 10px 0px 10px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .text_form_pesquisa {
+                width: 70%;
+                margin: 0px 10px 0px 10px;
+            }
+
+            .drop_form_pesquisa {
+                width: 25%;
+                margin: 0px 10px 0px 10px;
             }
 
         </style>
@@ -39,33 +123,69 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
         <?php include("header.php"); ?>
 
         <!-- TITULO -->
-        <h1 style="text-align: center">Lista de Ferramentas</h1>
+        <h1 class="titulo_ferramentas">Ferramentas</h1>
+
+        <!-- CAMPO DE PESQUISA - INICIO -->
+        <div class="session_pesquisa">
+            <div class="container_pesquisa">
+                <div class="busca_pesquisa">
+                    <form class="form_pesquisa" action="ferramentas_ebook.php" method="POST">
+                        <div class="drop_form_pesquisa">
+                            <select class="form-select" aria-label="Seleção de topico" id="select_pesquisa" name="select_pesquisa">
+                                <option selected disabled>Categoria:</option>
+                                <option value="1">Financeiro</option>
+                                <option value="2">Operacional</option>
+                            </select>
+                        </div>
+                        <div class="text_form_pesquisa">
+                            <input type="text" class="form-control" id="input_pesquisa" name="input_pesquisa" placeholder="Digite a ferramenta que procura:">
+                        </div>
+                        <div class="btn_form_pesquisa">
+                            <input class="btn" style="background: #c10109; color: white;" type="submit" value="Pesquisa">
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </div>
 
         <!-- LISTA DE FERRAMENTAS -->
-        <div class="container">
-            <div class="container-list">
-            <?php
-            foreach ($sql_ferramenta as $ferramenta) {
-            ?>
-
-                <div class="card mb-3" style="width: 70%;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="../<?php echo $ferramenta["arquivo"] ?>" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body" id="card-ferramenta">
-                                <h5 class="card-title"> <?php echo $ferramenta["nome"]; ?> </h5>
-                                <p class="card-text"> <?php echo $ferramenta["descricao"]; ?> </p>
-                                <a href="<?php echo $ferramenta["arquivo"] ?>" download="<?php echo $ferramenta["arquivo"] ?>" onclick="mostrarObrigado()" class="btn btn-primary">Baixe aqui</a>
+        <div class="session_ferramentas">
+            <div class="container_ferramentas">
+                <div class="container-list">
+                    <div class="row" style="display: flex; justify-content: center;">
+                    <?php
+                    $contador = 0;
+                    foreach ($sql_ferramenta as $ferramenta) {
+                        $contador++;
+                    ?>
+                        <div class="col" style="display: flex; justify-content: center; max-width: 500px;">
+                            <div class="card mb-3" style="width: 90%;">
+                                <div class="row g-0">
+                                    <div class="col">
+                                        <div style="display: flex; justify-content: center;">
+                                            <img src="../<?php echo $ferramenta["arquivo"] ?>" class="img-fluid rounded-start" alt="...">
+                                        </div>
+                                        <div class="card-body" id="card-ferramenta" style="display: flex; flex-direction: column; align-items: center; text-align:center;">
+                                            <h5 class="card-title"> <?php echo $ferramenta["nome"]; ?> </h5>
+                                            <p class="card-text"> <?php echo $ferramenta["descricao"]; ?> </p>
+                                            <a href="<?php echo $ferramenta["arquivo"] ?>" download="<?php echo $ferramenta["arquivo"] ?>" onclick="mostrarObrigado()" class="btn" style="background: #c10109; color: white;">Baixe aqui</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    <?php
+                        if ($contador == 3) {
+                        ?>
+                            </div>
+                            <div class="row" style="display: flex; justify-content: center;">
+                        <?php
+                            $contador = 0;
+                        }
+                    }
+                    ?>
                     </div>
                 </div>
-            
-            <?php
-            }
-            ?>
             </div>
         </div>
 
@@ -78,7 +198,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
 
     <?php
         // Limpar a variável de sessão para evitar reutilização
-        unset($_SESSION['autorizado']);
+        // unset($_SESSION['autorizado']);
     } else {
         // Redireciona para a página de login se não estiver autenticado
         header("Location: ../screens/login/index.php");

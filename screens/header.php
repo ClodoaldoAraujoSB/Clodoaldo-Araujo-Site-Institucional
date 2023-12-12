@@ -9,31 +9,37 @@
 
     <style>
 
-      .navbar-site {
+      .header-menu{
+        display: flex;
+        justify-content: center;
         padding: 20px;
         background-color: #c10109;
-
       }
 
-      .navbar-icone-principal {
-        width: 39%;
-        display: inline-block;
+      .navbar-site{
+        width: 100%;
       }
 
-      .navbar-menu {
-        width: 60%;
-        display: inline-block;
+      .navbar-icone-principal{
+        width: 20%;
+        float: left;
+      }
+
+      .navbar-menu{
+        width: 70%;
         float: right;
-      }
-
-      .list-menu {
         display: flex;
-        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
       }
 
-      .item-menu {
-        display: inline-block;
-        padding: 0px 10px 0px 10px;
+      .list_menu{
+        margin: 0px;
+      }
+
+      .item_menu{
+        margin: 0px;
       }
 
       .button-header {
@@ -89,23 +95,25 @@
 
   </head>
   <body>
-
-    <nav class="navbar-site">
-      <div class="navbar-icone-principal">
-        <a href="index.php"><button class="index-button">Clodoaldo Araújo</button></a>
-      </div>
-      <div class="navbar-menu">
-        <ul class="list-menu">
-          <li class="item-menu"><a href="index.php"><button class="button-header">Home</button></a></li>
-          <li class="item-menu"><a href="ferramentas_ebook.php"><button class="button-header">Ferramentas grátis</button></a></li>
-          <li class="item-menu"><a href="quem_sou.php"><button class="button-header">Quem eu sou?</button></a></li>
-          <li class="item-menu"><a href="empresas.php"><button class="button-header">Minhas empresas</button></a></li>
-          <li class="item-menu"><a href="cursos.php"><button class="button-header">Meus cursos</button></a></li>
-          <li class="item-menu"><a href="galeria.php"><button class="button-header">Galeria</button></a></li>
-          <li class="item-menu"><a href="contato.php"><button class="button-header">Contato</button></a></li>
-        </ul>
-      </div>
-    </nav>
-    
+    <div class="header-menu">
+      <nav class="navbar-site">
+        <div class="navbar-icone-principal">
+          <div class="list-menu" style="display: flex; justify-content: center;">
+            <div class="item-menu"><a href="index.php"><button class="button-header">Clodoaldo Araújo</button></a></div>
+          </div>
+        </div>
+        <div class="navbar-menu">
+          <div class="list-menu">
+            <div class="item-menu"><a href="index.php"><button class="button-header">Home</button></a></div>
+            <div class="item-menu"><a href="ferramentas_ebook.php"><button class="button-header">Ferramentas grátis</button></a></div>
+            <div class="item-menu"><a href="quem_sou.php"><button class="button-header">Sobre</button></a></div>
+            <div class="item-menu"><a href="empresas.php"><button class="button-header">Empresas</button></a></div>
+            <div class="item-menu"><a href="cursos.php"><button class="button-header">Cursos</button></a></div>
+            <div class="item-menu"><a href="galeria.php"><button class="button-header">Galeria</button></a></div>
+            <div class="item-menu"><a href="contato.php"><button class="button-header">Contato</button></a></div>
+          </div>
+        </div>  
+      </nav>
+    </div>
   </body>
 </html>

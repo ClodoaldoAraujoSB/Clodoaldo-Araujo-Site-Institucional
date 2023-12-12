@@ -163,6 +163,9 @@
     <!-- MENU SUPERIOR -->
     <?php include("header.php"); ?>
 
+    <!-- TITULO -->
+    <!--<h6 style="color: transparent;">.</h6>-->
+
     <!-- GALERIA - INICIO -->
     <div>
         <div id="galeria" style="display: flex;"></div>
