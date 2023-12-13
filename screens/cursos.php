@@ -107,7 +107,7 @@ include_once("cursos/pilares_milhao.php");
             display: block;
             color: #fff;
             text-decoration: none;
-            padding: 5px 0;
+            padding: 20px 0;
         }
 
         /* Exibição do painel ao passar o mouse sobre o botão */
@@ -213,10 +213,75 @@ include_once("cursos/pilares_milhao.php");
             margin-left: 50px;
         }
 
+        .informacoes-curso:hover {
+            transform: scale(1.1);
+        }
+
         .informacoes-curso h6 {
             position: relative;
             left: 100px;
             bottom: 25px
+        }
+
+        .titulo-catalogo {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #catalog-container {
+            position: relative;
+            overflow: hidden;
+            width: 100vw;
+            /* 100% da largura da viewport */
+            margin: 0 150px;
+        }
+
+        .catalogo-wrapper {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .informacoes-curso {
+            margin: 0 30px;
+            /* Ajuste conforme necessário */
+            box-sizing: border-box;
+        }
+
+        .informacoes-curso:hover {
+            transform: scale(1.1);
+        }
+
+        .catalogo-cursos img {
+            border: 2px solid #c10109;
+        }
+
+        .informacoes-curso h6 {
+            position: relative;
+            left: 100px;
+            bottom: 25px;
+        }
+
+        #prevBtn,
+        #nextBtn {
+            position: fixed;
+            bottom: 25%;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: none;
+            outline: none;
+            z-index: 1;
+            border-radius: 100px;
+            background-color: #c10109;
+        }
+
+        #prevBtn {
+            left: 0;
+        }
+
+        #nextBtn {
+            right: 0;
         }
     </style>
 
@@ -230,25 +295,53 @@ include_once("cursos/pilares_milhao.php");
     <!--<h1 class="h1" style="margin-top: 40px; margin-bottom: 40px;">Meus cursos</h1>-->
 
     <script>
-        // Lista de cursos (pode ser obtida de um banco de dados ou de outra fonte)
-        const courses = ['o conselho', 'ebook', 'empreendedores de elite', 'jac jornada do autoconhecimento', 'mapa do sucesso', 'master mind', 'missão turquia', 'missão china', 'mma mindset metas ação', 'pilares para o milhão'];
+
+        const coursesData = [
+            { name: 'o conselho', category: 'online' },
+            { name: 'ebook', category: 'online' },
+            { name: 'empreendedores de elite', category: 'presencial' },
+            { name: 'jac jornada do autoconhecimento', category: 'online' },
+            { name: 'mapa do sucesso', category: 'presencial' },
+            { name: 'master mind', category: 'online' },
+            { name: 'missão turquia', category: 'presencial' },
+            { name: 'missão china', category: 'presencial' },
+            { name: 'mma mindset metas ação', category: 'online' },
+            { name: 'pilares para o milhão', category: 'online' }
+        ];
 
         function showSuggestions() {
             const input = document.getElementById('search-box');
             const suggestionsContainer = document.getElementById('suggestions-container');
+            const categoryFilter = document.getElementById('category-filter').value.toLowerCase();
+
             suggestionsContainer.innerHTML = '';
 
             const inputValue = input.value.toLowerCase();
 
-            const matchingCourses = courses.filter(course => course.toLowerCase().includes(inputValue));
+            const matchingCourses = coursesData.filter(course => {
+                const matchesInput = course.name.toLowerCase().includes(inputValue);
+                const matchesCategory = categoryFilter === 'todos' || course.category === categoryFilter;
+                return matchesInput && matchesCategory;
+            });
 
             matchingCourses.forEach(course => {
                 const suggestion = document.createElement('div');
                 suggestion.classList.add('suggestion');
-                suggestion.textContent = course;
+                suggestion.textContent = course.name;
                 suggestion.addEventListener('click', () => {
-                    input.value = course;
+                    input.value = course.name;
                     suggestionsContainer.style.display = 'none';
+
+                    // Esconda todas as divs de informação do curso
+                    document.querySelectorAll('.informacoes-curso').forEach(div => {
+                        div.style.display = 'none';
+                    });
+
+                    // Exiba a div de informação do curso correto com base no nome do curso
+                    const informacoesCurso = getInformacoesCurso(course.name);
+                    if (informacoesCurso) {
+                        informacoesCurso.style.display = 'block';
+                    }
                 });
                 suggestionsContainer.appendChild(suggestion);
             });
@@ -260,12 +353,24 @@ include_once("cursos/pilares_milhao.php");
             }
         }
 
+        function getInformacoesCurso(cursoName) {
+            switch (cursoName) {
+                case 'empreendedores de elite':
+                    return document.getElementById('informacoes-curso-elite');
+                case 'mapa do sucesso':
+                    return document.getElementById('informacoes-curso-mapadosucesso');
+                case 'mma mindset metas ação':
+                    return document.getElementById('informacoes-curso-mma');
+                default:
+                    return null;
+            }
+        }
+
         function searchCourses() {
             const input = document.getElementById('search-box');
             const selectedCourse = input.value;
 
             // Implemente aqui a lógica para realizar a pesquisa de cursos com base na palavra-chave inserida.
-
             console.log(`Realizando a pesquisa por cursos relacionados a: ${selectedCourse}`);
         }
         // Adiciona um manipulador de eventos para ocultar as sugestões quando o usuário clicar fora da área da barra de pesquisa
@@ -277,6 +382,27 @@ include_once("cursos/pilares_milhao.php");
                 suggestionsContainer.style.display = 'none';
             }
         });
+
+        let currentIndex = 0;
+
+        function moveCatalog(direction) {
+            const courseList = document.getElementById('catalogo-cursos');
+            const courseCards = document.querySelectorAll('.informacoes-curso');
+            const cardWidth = courseCards[0].offsetWidth + 30; // Considerando a largura do cartão mais a margem
+
+            currentIndex = (currentIndex + direction + courseCards.length) % courseCards.length;
+
+            // Verifica se chegou ao último slide e redefine o índice para 0
+            if (currentIndex === courseCards.length - 1 && direction === 1) {
+                currentIndex = 0;
+            } else if (currentIndex === 0 && direction === -1) {
+                // Verifica se está no primeiro slide e redefine o índice para o último
+                currentIndex = courseCards.length - 1;
+            }
+
+            const translateValue = -currentIndex * cardWidth + 'px';
+            courseList.style.transform = 'translateX(' + translateValue + ')';
+        }
     </script>
 
     <!-- INÍCIO BARRA DE PESQUISA -->
@@ -286,15 +412,55 @@ include_once("cursos/pilares_milhao.php");
     </div>
     <!-- FIM BARRA DE PESQUISA -->
 
-    <!-- INÍCIO BOTÃO CATEGORIAS -->
-    <div class="curso-btn">
-        <ion-icon name="filter-outline"></ion-icon>Categorias
-        <!-- Painel de categorias -->
-        <div class="categorias">
-            <a href="curso_presencial.php">Presencial</a>
-            <a href="curso_online.php">Online</a>
+    <!-- INÍCIO CURSOS PESQUISADOS -->
+    <div id="informacoes-curso-mapadosucesso" class="informacoes-curso curso-item" style="display: none;">
+        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+        <h5><b>Curso Mapa do sucesso</b></h5>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.</p>
+        <div class="preco-curso">
+            <h5>R$297,00</h5>
+            <h6><s>R$500,00</s></h6>
         </div>
+        <a href="#" class="botao-comprar-curso">Comprar</a>
     </div>
+
+    <div id="informacoes-curso-elite" class="informacoes-curso curso-item" style="display: none;">
+        <img src="../logos/ede.jpg" alt="" width="135px" height="135px">
+        <h5><b>Curso Empreendedores de Elite</b></h5>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.</p>
+        <div class="preco-curso">
+            <h5>R$3000,00</h5>
+            <h6><s>R$4200,00</s></h6>
+        </div>
+        <a href="#" class="botao-comprar-curso">Comprar</a>
+    </div>
+
+    <div id="informacoes-curso-mma" class="informacoes-curso curso-item" style="display: none;">
+        <img src="../logos/mma.jpg" alt="" width="135px" height="135px">
+        <h5><b>Curso MMA Mindset Metas Ação</b></h5>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.</p>
+        <div class="preco-curso">
+            <h5>R$5000,00</h5>
+            <h6><s>R$7000,00</s></h6>
+        </div>
+        <a href="#" class="botao-comprar-curso">Comprar</a>
+    </div>
+    <!-- FIM CURSOS PESQUISADOS -->
+
+    <!-- INÍCIO BOTÃO CATEGORIAS -->
+    <label for="category-filter">Filtrar por:</label>
+    <select id="category-filter">
+        <option value="todos">Todos</option>
+        <option value="presencial">Presencial</option>
+        <option value="online">Online</option>
+    </select>
+
     <!-- FIM BOTÃO CATEGORIAS -->
 
     <!-- INÍCIO BANNER -->
@@ -526,6 +692,135 @@ include_once("cursos/pilares_milhao.php");
         </div>
     </div>
     <!-- FIM CATÁLOGO CURSOS -->
+
+    <!-- INÍCIO CURSOS ONLINE -->
+    <h4 class="titulo-catalogo">Cursos Online</h4>
+
+    <!-- INÍCIO CATÁLOGO CURSOS -->
+    <div id="catalog-container">
+        <div class="catalogo-wrapper" id="catalogo-cursos">
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+        </div>
+        <button id="prevBtn" onclick="moveCatalog(-1)">❮</button>
+        <button id="nextBtn" onclick="moveCatalog(1)">❯</button>
+    </div>
+    <!-- FIM CURSOS PRESENCIAIS -->
+
+        <!-- INÍCIO CATÁLOGO CURSOS -->
+        <div id="catalog-container">
+        <div class="catalogo-wrapper" id="catalogo-cursos">
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+        </div>
+        <button id="prevBtn" onclick="moveCatalog(-1)">❮</button>
+        <button id="nextBtn" onclick="moveCatalog(1)">❯</button>
+    </div>
+    <!-- FIM CURSOS PRESENCIAIS -->
 
     <!-- RODAPÉ -->
     <?php include("footer.php"); ?>

@@ -14,7 +14,169 @@
         crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <body>
-        <!-- MENU SUPERIOR -->
+
+    <style>
+        body {
+            margin: 0;
+            /* Remover margens padrão do corpo da página */
+            overflow-x: hidden;
+            /* Impede a barra de rolagem horizontal */
+        }
+
+        .content {
+            flex: 1; /* Cresce para ocupar o espaço restante */
+        }
+
+        .titulo-catalogo {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #catalog-container {
+            position: relative;
+            overflow: hidden;
+            width: 100vw;
+            /* 100% da largura da viewport */
+            margin: 0 150px;
+        }
+
+        .catalogo-wrapper {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .informacoes-curso {
+            margin: 0 30px;
+            /* Ajuste conforme necessário */
+            box-sizing: border-box;
+        }
+
+        .informacoes-curso:hover {
+            transform: scale(1.1);
+        }
+
+        .catalogo-cursos img {
+            border: 2px solid #c10109;
+        }
+
+        .informacoes-curso h6 {
+            position: relative;
+            left: 100px;
+            bottom: 25px;
+        }
+
+        #prevBtn,
+        #nextBtn {
+            position: fixed;
+            top: 25%;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: none;
+            outline: none;
+            z-index: 1;
+            border-radius: 100px;
+            background-color: #c10109;
+        }
+
+        #prevBtn {
+            left: 0;
+        }
+
+        #nextBtn {
+            right: 0;
+        }
+    </style>
+
+    <script>
+        let currentIndex = 0;
+
+        function moveCatalog(direction) {
+            const courseList = document.getElementById('catalogo-cursos');
+            const courseCards = document.querySelectorAll('.informacoes-curso');
+            const cardWidth = courseCards[0].offsetWidth + 30; // Considerando a largura do cartão mais a margem
+
+            currentIndex = (currentIndex + direction + courseCards.length) % courseCards.length;
+            const translateValue = -currentIndex * cardWidth + 'px';
+            courseList.style.transform = 'translateX(' + translateValue + ')';
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- MENU SUPERIOR -->
     <?php include("header.php"); ?>
-    </body>
+
+    <h4 class="titulo-catalogo">Cursos Online</h4>
+
+    <!-- INÍCIO CATÁLOGO CURSOS -->
+    <div id="catalog-container">
+        <div class="catalogo-wrapper" id="catalogo-cursos">
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+        </div>
+        <button id="prevBtn" onclick="moveCatalog(-1)">❮</button>
+        <button id="nextBtn" onclick="moveCatalog(1)">❯</button>
+    </div>
+
+    <div class="content"></div>
+
+    <!-- RODAPÉ -->
+    <?php include("footer.php"); ?>
+</body>
+
+</html>

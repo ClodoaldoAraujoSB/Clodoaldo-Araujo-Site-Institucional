@@ -139,6 +139,8 @@ if (isset($_POST['rocketLaunch'])) {
       background: rgba(0, 0, 0, 0.5);
       align-items: center;
       justify-content: center;
+      z-index: 1000;
+      /* Ajuste o valor de z-index conforme necessário */
     }
 
     #popup {
@@ -148,6 +150,8 @@ if (isset($_POST['rocketLaunch'])) {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       transform: scale(0.8);
       transition: transform 0.5s ease-in-out;
+      z-index: 1001;
+      /* Valor maior que o z-index do overlay */
     }
 
     #popup.show {
