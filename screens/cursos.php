@@ -228,7 +228,7 @@ include_once("cursos/pilares_milhao.php");
             font-weight: bold;
         }
 
-        #catalog-container {
+        .catalogo-container {
             position: relative;
             overflow: hidden;
             width: 100vw;
@@ -238,7 +238,12 @@ include_once("cursos/pilares_milhao.php");
 
         .catalogo-wrapper {
             display: flex;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.5s ease-in-out;
+            /* Ajustado o tempo da transição */
+        }
+
+        .catalogo-cursos {
+            display: flex;
         }
 
         .informacoes-curso {
@@ -261,10 +266,10 @@ include_once("cursos/pilares_milhao.php");
             bottom: 25px;
         }
 
-        #prevBtn,
-        #nextBtn {
-            position: fixed;
-            bottom: 25%;
+        .prevBtn,
+        .nextBtn {
+            position: absolute;
+            top: 50%;
             font-size: 18px;
             cursor: pointer;
             background-color: #f1f1f1;
@@ -274,13 +279,15 @@ include_once("cursos/pilares_milhao.php");
             z-index: 1;
             border-radius: 100px;
             background-color: #c10109;
+            color: #fff;
+            transform: translateY(-50%);
         }
 
-        #prevBtn {
+        .prevBtn {
             left: 0;
         }
 
-        #nextBtn {
+        .nextBtn {
             right: 0;
         }
     </style>
@@ -383,25 +390,25 @@ include_once("cursos/pilares_milhao.php");
             }
         });
 
-        let currentIndex = 0;
+        let currentIndexOnline = 0;
+        let currentIndexPresencial = 0;
 
-        function moveCatalog(direction) {
-            const courseList = document.getElementById('catalogo-cursos');
-            const courseCards = document.querySelectorAll('.informacoes-curso');
+        function moveCatalog(direction, catalogType) {
+            const catalogWrapper = document.getElementById(`catalogo-cursos-${catalogType}`);
+            const courseCards = document.querySelectorAll(`.informacoes-curso-${catalogType}`);
             const cardWidth = courseCards[0].offsetWidth + 30; // Considerando a largura do cartão mais a margem
+            let currentIndex;
 
-            currentIndex = (currentIndex + direction + courseCards.length) % courseCards.length;
-
-            // Verifica se chegou ao último slide e redefine o índice para 0
-            if (currentIndex === courseCards.length - 1 && direction === 1) {
-                currentIndex = 0;
-            } else if (currentIndex === 0 && direction === -1) {
-                // Verifica se está no primeiro slide e redefine o índice para o último
-                currentIndex = courseCards.length - 1;
+            if (catalogType === 'online') {
+                currentIndex = currentIndexOnline;
+                currentIndexOnline = (currentIndex + direction + courseCards.length) % courseCards.length;
+            } else if (catalogType === 'presencial') {
+                currentIndex = currentIndexPresencial;
+                currentIndexPresencial = (currentIndex + direction + courseCards.length) % courseCards.length;
             }
 
             const translateValue = -currentIndex * cardWidth + 'px';
-            courseList.style.transform = 'translateX(' + translateValue + ')';
+            catalogWrapper.style.transform = 'translateX(' + translateValue + ')';
         }
     </script>
 
@@ -698,132 +705,137 @@ include_once("cursos/pilares_milhao.php");
 
     <!-- INÍCIO CATÁLOGO CURSOS -->
     <div id="catalog-container">
-        <div class="catalogo-wrapper" id="catalogo-cursos">
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
+        <div class="catalogo-wrapper" id="catalogo-cursos-online">
+            <div class="catalogo-cursos">
+                <!-- Adicione a classe 'informacoes-curso-online' para distinguir os cursos online -->
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
             </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
+            <button id="prevBtn" onclick="moveCatalog(-1, 'online')">❮</button>
+            <button id="nextBtn" onclick="moveCatalog(1, 'online')">❯</button>
         </div>
-        <button id="prevBtn" onclick="moveCatalog(-1)">❮</button>
-        <button id="nextBtn" onclick="moveCatalog(1)">❯</button>
-    </div>
-    <!-- FIM CURSOS PRESENCIAIS -->
+        <!-- FIM CURSOS PRESENCIAIS -->
+        <h4 class="titulo-catalogo">Cursos Online</h4>
 
         <!-- INÍCIO CATÁLOGO CURSOS -->
         <div id="catalog-container">
-        <div class="catalogo-wrapper" id="catalogo-cursos">
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
+            <div class="catalogo-wrapper" id="catalogo-cursos-presencial">
+                <div class="catalogo-cursos">
+                    <!-- Adicione a classe 'informacoes-curso-presencial' para distinguir os cursos presenciais -->
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                </div>
+                <button id="prevBtn" onclick="moveCatalog(-1, 'presencial')">❮</button>
+                <button id="nextBtn" onclick="moveCatalog(1, 'presencial')">❯</button>
             </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-            <div class="informacoes-curso">
-                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
-                <h5><b>Curso Mapa do sucesso</b></h5>
-                <h5>R$297,00</h5>
-                <h6><s>R$500,00</s></h6>
-            </div>
-        </div>
-        <button id="prevBtn" onclick="moveCatalog(-1)">❮</button>
-        <button id="nextBtn" onclick="moveCatalog(1)">❯</button>
-    </div>
-    <!-- FIM CURSOS PRESENCIAIS -->
+            <!-- FIM CURSOS PRESENCIAIS -->
 
-    <!-- RODAPÉ -->
-    <?php include("footer.php"); ?>
+            <!-- RODAPÉ -->
+            <?php include("footer.php"); ?>
 
 </body>
 
