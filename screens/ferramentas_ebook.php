@@ -55,6 +55,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
             .container_pesquisa {
                 width: 100%;
                 display: flex;
+                margin: 0px 20px 0px 20px;
             }
 
             .select_pesquisa {
@@ -163,12 +164,12 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                                 <div class="row g-0">
                                     <div class="col">
                                         <div style="display: flex; justify-content: center;">
-                                            <img src="../<?php echo $ferramenta["arquivo"] ?>" class="img-fluid rounded-start" alt="...">
+                                            <img src="../<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="...">
                                         </div>
                                         <div class="card-body" id="card-ferramenta" style="display: flex; flex-direction: column; align-items: center; text-align:center;">
                                             <h5 class="card-title"> <?php echo $ferramenta["nome"]; ?> </h5>
                                             <p class="card-text"> <?php echo $ferramenta["descricao"]; ?> </p>
-                                            <a href="<?php echo $ferramenta["arquivo"] ?>" download="<?php echo $ferramenta["arquivo"] ?>" onclick="mostrarObrigado()" class="btn" style="background: #c10109; color: white;">Baixe aqui</a>
+                                            <a href="../<?php echo $ferramenta["arquivo"] ?>" download="<?php echo $ferramenta["nome_arquivo"] ?>" onclick="mostrarObrigado()" class="btn" style="background: #c10109; color: white;">Baixe aqui</a>
                                         </div>
                                     </div>
                                 </div>

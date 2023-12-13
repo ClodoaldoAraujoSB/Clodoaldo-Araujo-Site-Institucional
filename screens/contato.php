@@ -93,7 +93,7 @@
 
         <div class="container-form">
             <div class="row">
-                <div class="col">
+                <div class="col" style="margin-top: 16px;">
                     <div class="mb-3">
                         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                         <input type="text" class="form-control" id="nome_form" name="nome" placeholder="Nome">
@@ -120,7 +120,9 @@
                 </div>
             </div>
             <div class="row">
-
+                <div class="col">
+                    <img src="../img/107.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
             </div>
         </div>
 
