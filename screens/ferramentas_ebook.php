@@ -13,7 +13,11 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
             $opcao = $_POST["select_pesquisa"];
         }
 
-        $texto = $_POST["input_pesquisa"];
+        if (empty($_POST["input_pesquisa"])) {
+            $texto = "";
+        } else {
+            $texto = $_POST["input_pesquisa"];
+        }
 
         if ($opcao == 0 && empty($texto)) {
             $sql_ferramenta = $conn->query("SELECT * FROM ferramentas");
@@ -86,20 +90,34 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                 flex-wrap: wrap;
             }
 
+            .div_pesquisa {
+                width: 85%;
+            }
+
+            .div_todos {
+                width: 15%;
+            }
+
             .form_pesquisa {
                 display: flex;
                 width: 100%;
             }
+            .form_todos {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
 
             .btn_form_pesquisa {
-                width: 5%;
+                width: 10%;
                 margin: 0px 10px 0px 10px;
                 display: flex;
                 justify-content: center;
             }
 
             .text_form_pesquisa {
-                width: 70%;
+                width: 65%;
                 margin: 0px 10px 0px 10px;
             }
 
@@ -130,21 +148,30 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
         <div class="session_pesquisa">
             <div class="container_pesquisa">
                 <div class="busca_pesquisa">
-                    <form class="form_pesquisa" action="ferramentas_ebook.php" method="POST">
-                        <div class="drop_form_pesquisa">
-                            <select class="form-select" aria-label="Seleção de topico" id="select_pesquisa" name="select_pesquisa">
-                                <option selected disabled>Categoria:</option>
-                                <option value="1">Financeiro</option>
-                                <option value="2">Operacional</option>
-                            </select>
-                        </div>
-                        <div class="text_form_pesquisa">
-                            <input type="text" class="form-control" id="input_pesquisa" name="input_pesquisa" placeholder="Digite a ferramenta que procura:">
-                        </div>
-                        <div class="btn_form_pesquisa">
-                            <input class="btn" style="background: #c10109; color: white;" type="submit" value="Pesquisa">
-                        </div>    
-                    </form>
+                    <div class="div_pesquisa">
+                        <form class="form_pesquisa" action="ferramentas_ebook.php" method="POST">
+                            <div class="drop_form_pesquisa">
+                                <select class="form-select" aria-label="Seleção de topico" id="select_pesquisa" name="select_pesquisa">
+                                    <option selected disabled>Categoria:</option>
+                                    <option value="1">Financeiro</option>
+                                    <option value="2">Operacional</option>
+                                </select>
+                            </div>
+                            <div class="text_form_pesquisa">
+                                <input type="text" class="form-control" id="input_pesquisa" name="input_pesquisa" placeholder="Digite a ferramenta que procura:">
+                            </div>
+                            <div class="btn_form_pesquisa">
+                                <input class="btn" style="background: #c10109; color: white;" type="submit" value="Pesquisa">
+                            </div>    
+                        </form>
+                    </div>
+                    <div class="div_todos">
+                        <form class="form_todos" action="ferramentas_ebook.php" method="POST">
+                            <div>
+                                <input class="btn" style="background: #c10109; color: white;" type="submit" value="Todas as ferramentas">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -166,9 +193,9 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                                         <div style="display: flex; justify-content: center;">
                                             <img src="../<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="...">
                                         </div>
-                                        <div class="card-body" id="card-ferramenta" style="display: flex; flex-direction: column; align-items: center; text-align:center;">
+                                        <div class="card-body" id="card-ferramenta"> <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
                                             <h5 class="card-title"> <?php echo $ferramenta["nome"]; ?> </h5>
-                                            <p class="card-text"> <?php echo $ferramenta["descricao"]; ?> </p>
+                                            <!--<p class="card-text"> <?//php echo $ferramenta["descricao"]; ?> </p>-->
                                             <a href="../<?php echo $ferramenta["arquivo"] ?>" download="<?php echo $ferramenta["nome_arquivo"] ?>" onclick="mostrarObrigado()" class="btn" style="background: #c10109; color: white;">Baixe aqui</a>
                                         </div>
                                     </div>
