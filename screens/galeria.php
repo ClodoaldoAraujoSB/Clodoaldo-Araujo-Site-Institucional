@@ -164,7 +164,7 @@
     <?php include("header.php"); ?>
 
     <!-- TITULO -->
-    <!--<h6 style="color: transparent;">.</h6>-->
+    <h1 style="text-align: center; margin: 0px; padding-top: 16px;">Galeria</h1>
 
     <!-- GALERIA - INICIO -->
     <div>
