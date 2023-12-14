@@ -17,7 +17,7 @@
       }
 
       .navbar-site{
-        width: 100%;
+        width: 80%;
       }
 
       .navbar-icone-principal{
@@ -31,7 +31,7 @@
         display: flex;
         align-items: center;
         text-align: center;
-        justify-content: center;
+        justify-content: flex-end;
       }
 
       .list_menu{
@@ -39,6 +39,15 @@
       }
 
       .item_menu{
+        margin: 0px;
+      }
+
+      .texto_menu {
+        font-size: 15px;
+        text-transform: capitalize;
+      }
+
+      .item_menu_logo {
         margin: 0px;
       }
 
@@ -98,19 +107,19 @@
     <div class="header-menu">
       <nav class="navbar-site">
         <div class="navbar-icone-principal">
-          <div class="list-menu" style="display: flex; justify-content: center;">
-            <div class="item-menu"><a href="index.php"><button class="button-header">Clodoaldo Araújo</button></a></div>
+          <div class="list-menu" style="display: flex; justify-content: flex-start;">
+            <div class="item_menu_logo"><a href="index.php"><button class="button-header"><b>CLODOALDO ARAÚJO</b></button></a></div>
           </div>
         </div>
         <div class="navbar-menu">
           <div class="list-menu">
-            <div class="item-menu"><a href="index.php"><button class="button-header">Home</button></a></div>
-            <div class="item-menu"><a href="ferramentas_ebook.php"><button class="button-header">Ferramentas grátis</button></a></div>
-            <div class="item-menu"><a href="quem_sou.php"><button class="button-header">Sobre</button></a></div>
-            <div class="item-menu"><a href="empresas.php"><button class="button-header">Empresas</button></a></div>
-            <div class="item-menu"><a href="cursos.php"><button class="button-header">Cursos</button></a></div>
-            <div class="item-menu"><a href="galeria.php"><button class="button-header">Galeria</button></a></div>
-            <div class="item-menu"><a href="contato.php"><button class="button-header">Contato</button></a></div>
+            <div class="item-menu"><a href="index.php"><button class="button-header"><p class="texto_menu" style="margin: 0px;">home</p></button></a></div>
+            <div class="item-menu"><a href="ferramentas_ebook.php"><button class="button-header"><p class="texto_menu" style="margin: 0px;">ferramentas grátis</p></button></a></div>
+            <div class="item-menu"><a href="quem_sou.php"><button class="button-header"><p class="texto_menu" style="margin: 0px;">sobre</p></button></a></div>
+            <div class="item-menu"><a href="empresas.php"><button class="button-header"><p class="texto_menu" style="margin: 0px;">empresas</p></button></a></div>
+            <div class="item-menu"><a href="cursos.php"><button class="button-header"><p class="texto_menu" style="margin: 0px;">cursos</p></button></a></div>
+            <div class="item-menu"><a href="galeria.php"><button class="button-header"><p class="texto_menu" style="margin: 0px;">galeria</p></button></a></div>
+            <div class="item-menu"><a href="contato.php"><button class="button-header"><p class="texto_menu" style="margin: 0px;">contato</p></button></a></div>
           </div>
         </div>  
       </nav>

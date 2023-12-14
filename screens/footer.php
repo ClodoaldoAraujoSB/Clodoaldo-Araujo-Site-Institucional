@@ -12,7 +12,12 @@
       .footer-site {
         padding: 20px;
         background-color: #c10109;
+        display: flex;
+        justify-content: center;
+      }
 
+      .content-footer {
+        width: 80%;
       }
 
       .footer-icone-principal {
@@ -26,6 +31,11 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+      }
+
+      .texto_politica {
+        font-size: 15px;
+        text-transform: capitalize;
       }
 
       .footer-menu {
@@ -113,20 +123,22 @@
     </svg>
 
     <footer class="footer-site">
-      <div class="footer-icone-principal">
-        <a href="index.php"><button class="footer-button">Clodoaldo Araújo</button></a>
-      </div>
-      <div class="footer-center">
-        <a href="politica-de-privacidade.php"><button class="footer-button">Politica de privacidade</button></a>
-      </div>
-      <div class="footer-menu">
-        <ul class="list-menu">
-          <li class="item-menu"><a href="#"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#whatsapp"/></svg></button></a></li>
-          <li class="item-menu"><a href="#"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#instagram"/></svg></button></a></li>
-          <li class="item-menu"><a href="#"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#facebook"/></svg></button></a></li>
-          <li class="item-menu"><a href="#"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#linkedin"/></svg></button></a></li>
-          <li class="item-menu"><a href="#"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#email"/></svg></button></a></li>
-        </ul>
+      <div class="content-footer">
+        <div class="footer-icone-principal">
+          <a href="index.php"><button class="footer-button">Clodoaldo Araújo</button></a>
+        </div>
+        <div class="footer-center">
+          <a href="politica-de-privacidade.php"><button class="footer-button"><p class="texto_politica" style="margin: 0px;">Politica de privacidade</p></button></a>
+        </div>
+        <div class="footer-menu">
+          <ul class="list-menu">
+            <li class="item-menu"><a href="https://wa.me/5519994636818"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#whatsapp"/></svg></button></a></li>
+            <li class="item-menu"><a href="https://www.instagram.com/clodoaldoaraujoo/?igshid=MzRlODBiNWFlZA%3D%3D"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#instagram"/></svg></button></a></li>
+            <li class="item-menu"><a href="https://www.facebook.com/clodoaldo.araujo/"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#facebook"/></svg></button></a></li>
+            <li class="item-menu"><a href="https://www.linkedin.com/in/clodoaldoaraujo/"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#linkedin"/></svg></button></a></li>
+            <li class="item-menu"><a href="contato.php"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#email"/></svg></button></a></li>
+          </ul>
+        </div>
       </div>
     </footer>
     

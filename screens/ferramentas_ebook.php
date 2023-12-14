@@ -24,9 +24,9 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
         } else if ($opcao == 0 && !empty($texto)) {
             $sql_ferramenta = $conn->query("SELECT * FROM ferramentas WHERE nome LIKE '%" . $texto . "%'");
         } else if ($opcao != 0 && empty($texto)) {
-            $sql_ferramenta = $conn->query("SELECT * FROM ferramentas WHERE modulo = " . $opcao);
+            $sql_ferramenta = $conn->query("SELECT * FROM ferramentas WHERE categoria = " . $opcao);
         } else if ($opcao != 0 && !empty($texto)) {
-            $sql_ferramenta = $conn->query("SELECT * FROM ferramentas WHERE modulo = " . $opcao . " AND nome LIKE '%" . $texto . "%'");
+            $sql_ferramenta = $conn->query("SELECT * FROM ferramentas WHERE categoria = " . $opcao . " AND nome LIKE '%" . $texto . "%'");
         }
     }
 
@@ -126,6 +126,30 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                 margin: 0px 10px 0px 10px;
             }
 
+            .card_ferramenta{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .titulo-ferramenta {
+                padding: 10px 0px 10px 0px;
+            }
+
+            .botao-ferramenta {
+
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            .content {
+                flex: 1; /* Cresce para ocupar o espaço restante */
+            }
+
         </style>
 
         <script>
@@ -153,8 +177,11 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                             <div class="drop_form_pesquisa">
                                 <select class="form-select" aria-label="Seleção de topico" id="select_pesquisa" name="select_pesquisa">
                                     <option selected disabled>Categoria:</option>
-                                    <option value="1">Financeiro</option>
-                                    <option value="2">Operacional</option>
+                                    <option value="0">Todos</option>
+                                    <option value="1">Meta e Planejamento</option>
+                                    <option value="2">Empreendedorismo</option>
+                                    <option value="3">Liderança</option>
+                                    <option value="4">Negociação e Vendas</option>
                                 </select>
                             </div>
                             <div class="text_form_pesquisa">
@@ -165,13 +192,13 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                             </div>    
                         </form>
                     </div>
-                    <div class="div_todos">
+                    <!-- <div class="div_todos">
                         <form class="form_todos" action="ferramentas_ebook.php" method="POST">
                             <div>
                                 <input class="btn" style="background: #c10109; color: white;" type="submit" value="Todas as ferramentas">
                             </div>
                         </form>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -186,24 +213,27 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                     foreach ($sql_ferramenta as $ferramenta) {
                         $contador++;
                     ?>
-                        <div class="col" style="display: flex; justify-content: center; max-width: 500px;">
-                            <div class="card mb-3" style="width: 90%;">
-                                <div class="row g-0">
-                                    <div class="col">
+                        <div class="col" style="display: flex; justify-content: center; width: 225px;">
+                            <div class="card mb-3" style="width: 90%; flex-direction: column; border: 0px;">
+                                <div class="row g-0" style="flex-grow: 1;">
+                                    <div class="col" style="display: flex; flex-direction: column;">
                                         <div style="display: flex; justify-content: center;">
-                                            <img src="../<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="...">
+                                            <img src="../<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="height: 100px; width: 225px;">
                                         </div>
-                                        <div class="card-body" id="card-ferramenta"> <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
-                                            <h5 class="card-title"> <?php echo $ferramenta["nome"]; ?> </h5>
-                                            <!--<p class="card-text"> <?//php echo $ferramenta["descricao"]; ?> </p>-->
-                                            <a href="../<?php echo $ferramenta["arquivo"] ?>" download="<?php echo $ferramenta["nome_arquivo"] ?>" onclick="mostrarObrigado()" class="btn" style="background: #c10109; color: white;">Baixe aqui</a>
+                                        <div class="card-body card_ferramenta" id="card-ferramenta" style="padding: 0px;"> <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
+                                            <div class="titulo-ferramenta">
+                                                <h5 class="card-title"> <?php echo $ferramenta["nome"]; ?> </h5>
+                                            </div>
+                                            <div class="botão-ferramenta">
+                                                <a href="../<?php echo $ferramenta["arquivo"] ?>" download="<?php echo $ferramenta["nome_arquivo"] ?>" onclick="mostrarObrigado()" class="btn" style="background: #c10109; color: white;">Baixe aqui</a>
+                                            </div>    
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     <?php
-                        if ($contador == 3) {
+                        if ($contador == 5) {
                         ?>
                             </div>
                             <div class="row" style="display: flex; justify-content: center;">
@@ -216,6 +246,8 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                 </div>
             </div>
         </div>
+
+        <div class="content"></div>
 
         <!-- RODAPÉ -->
         <?php include("footer.php"); ?>
