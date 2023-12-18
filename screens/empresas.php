@@ -48,7 +48,7 @@
     <?php include("header.php"); ?>
 
     <!-- TITULO - INICIO -->
-    <h1 style="text-align: center;"> Minhas Empresas: </h1>
+    <h5 style="text-align: center; padding-top: 20px;">Empresas</h5>
 
     <!-- TEXTO - INICIO -->
 

@@ -50,7 +50,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
             }
 
             .session_pesquisa {
-                margin: 20px 0px 20px 0px;
+                margin: 0px 0px 20px 0px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -76,22 +76,28 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                 align-items: center;
             }
 
-            .container_ferramentas{
+            .session_ferramentas {
+                display: flex;
+                justify-content: center;
+            }
+
+            .container_ferramentas {
+                width: 87%;
                 padding: 20px 5px 5px 5px;
                 border: 1px solid #c10109;
-                border-radius: 10px;
-                margin: 20px;
+                margin-bottom: 20px;
+                border-radius: 20px;
             }
 
             .container-list {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                flex-wrap: wrap;
+                flex-direction: column;
             }
 
             .div_pesquisa {
-                width: 85%;
+                width: 90%;
             }
 
             .div_todos {
@@ -110,20 +116,20 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
             }
 
             .btn_form_pesquisa {
-                width: 10%;
-                margin: 0px 10px 0px 10px;
+                width: 8%;
+                margin: 0px 0px 0px 10px;
                 display: flex;
                 justify-content: center;
             }
 
             .text_form_pesquisa {
-                width: 65%;
+                width: 77%;
                 margin: 0px 10px 0px 10px;
             }
 
             .drop_form_pesquisa {
-                width: 25%;
-                margin: 0px 10px 0px 10px;
+                width: 15%;
+                margin: 0px 10px 0px 0px;
             }
 
             .card_ferramenta{
@@ -165,8 +171,23 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
         <!-- MENU SUPERIOR -->
         <?php include("header.php"); ?>
 
-        <!-- TITULO -->
-        <h1 class="titulo_ferramentas">Ferramentas</h1>
+        <!-- TITULO
+            <h1 class="titulo_ferramentas">Ferramentas</h1>
+        -->
+
+        <div class="session_pesquisa" style="margin: 10px 0px 0px 0px;">
+            <div class="container_pesquisa">
+                <div class="busca_pesquisa">
+                    <div class="div_pesquisa">
+                        <div class="drop_form_pesquisa">
+                            <h6 style="margin: 0px 0px 2px 0px;">Ferramentas</h6>    
+                        </div>
+                        <div class="text_form_pesquisa"></div>
+                        <div class="btn_form_pesquisa"></div>    
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- CAMPO DE PESQUISA - INICIO -->
         <div class="session_pesquisa">
@@ -192,13 +213,6 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                             </div>    
                         </form>
                     </div>
-                    <!-- <div class="div_todos">
-                        <form class="form_todos" action="ferramentas_ebook.php" method="POST">
-                            <div>
-                                <input class="btn" style="background: #c10109; color: white;" type="submit" value="Todas as ferramentas">
-                            </div>
-                        </form>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -222,10 +236,10 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                                         </div>
                                         <div class="card-body card_ferramenta" id="card-ferramenta" style="padding: 0px;"> <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
                                             <div class="titulo-ferramenta">
-                                                <h5 class="card-title"> <?php echo $ferramenta["nome"]; ?> </h5>
+                                                <h5 class="card-title" style="font-size: 18px;"> <?php echo $ferramenta["nome"]; ?> </h5>
                                             </div>
                                             <div class="botão-ferramenta">
-                                                <a href="../<?php echo $ferramenta["arquivo"] ?>" download="<?php echo $ferramenta["nome_arquivo"] ?>" onclick="mostrarObrigado()" class="btn" style="background: #c10109; color: white;">Baixe aqui</a>
+                                                <a href="../<?php echo $ferramenta["arquivo"] ?>" download="<?php echo $ferramenta["nome_arquivo"] ?>" onclick="mostrarObrigado()" class="btn" style="background: #c10109; color: white; border-radius: 7px; padding: 0px 10px 2px 10px;">Download</a>
                                             </div>    
                                         </div>
                                     </div>

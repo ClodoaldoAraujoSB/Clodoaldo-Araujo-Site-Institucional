@@ -17,12 +17,16 @@
       }
 
       .content-footer {
-        width: 80%;
+        width: 93%;
       }
 
       .footer-icone-principal {
         width: 38%;
         display: inline-block;
+      }
+      
+      .b_footer_icone_principal {
+        color: #c10109;
       }
 
       .footer-center {
@@ -52,6 +56,21 @@
       .item-menu {
         display: inline-block;
         padding: 0px 10px 0px 10px;
+      }
+
+      .footer-button-logo {
+        font-size: 15px;
+        color: #e1e1e1;
+        font-family: inherit;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+        border: none;
+        background: none;
+        text-transform: uppercase;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: color;
       }
 
       .footer-button {
@@ -125,18 +144,18 @@
     <footer class="footer-site">
       <div class="content-footer">
         <div class="footer-icone-principal">
-          <a href="index.php"><button class="footer-button">Clodoaldo Araújo</button></a>
+          <a href="index.php"><button class="footer-button-logo" style="background-color: #fff;"><b class="b_footer_icone_principal">Clodoaldo Araújo</b></button></a>
         </div>
         <div class="footer-center">
           <a href="politica-de-privacidade.php"><button class="footer-button"><p class="texto_politica" style="margin: 0px;">Politica de privacidade</p></button></a>
         </div>
         <div class="footer-menu">
           <ul class="list-menu">
-            <li class="item-menu"><a href="https://wa.me/5519994636818"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#whatsapp"/></svg></button></a></li>
-            <li class="item-menu"><a href="https://www.instagram.com/clodoaldoaraujoo/?igshid=MzRlODBiNWFlZA%3D%3D"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#instagram"/></svg></button></a></li>
-            <li class="item-menu"><a href="https://www.facebook.com/clodoaldo.araujo/"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#facebook"/></svg></button></a></li>
-            <li class="item-menu"><a href="https://www.linkedin.com/in/clodoaldoaraujo/"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#linkedin"/></svg></button></a></li>
-            <li class="item-menu"><a href="contato.php"><button class="footer-button"><svg width="20" height="20"><use xlink:href="#email"/></svg></button></a></li>
+            <li class="item-menu"><a href="https://wa.me/5519994636818"><button class="footer-button"><svg width="15" height="15"><use xlink:href="#whatsapp"/></svg></button></a></li>
+            <li class="item-menu"><a href="https://www.instagram.com/clodoaldoaraujoo/?igshid=MzRlODBiNWFlZA%3D%3D"><button class="footer-button"><svg width="15" height="15"><use xlink:href="#instagram"/></svg></button></a></li>
+            <li class="item-menu"><a href="https://www.facebook.com/clodoaldo.araujo/"><button class="footer-button"><svg width="15" height="15"><use xlink:href="#facebook"/></svg></button></a></li>
+            <li class="item-menu"><a href="https://www.linkedin.com/in/clodoaldoaraujo/"><button class="footer-button"><svg width="15" height="15"><use xlink:href="#linkedin"/></svg></button></a></li>
+            <li class="item-menu"><a href="contato.php"><button class="footer-button"><svg width="15" height="15"><use xlink:href="#email"/></svg></button></a></li>
           </ul>
         </div>
       </div>

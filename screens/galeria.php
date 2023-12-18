@@ -17,8 +17,8 @@
         .grid-container {
             width: 24%;
             display: grid;
-            /*grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));*/
             padding: 10px;
+            justify-items: center;
         }
 
         img {
@@ -164,11 +164,11 @@
     <?php include("header.php"); ?>
 
     <!-- TITULO -->
-    <h1 style="text-align: center; margin: 0px; padding-top: 16px;">Galeria</h1>
+    <h5 style="text-align: center; margin: 0px; padding-top: 16px;">Galeria</h5>
 
     <!-- GALERIA - INICIO -->
     <div>
-        <div id="galeria" style="display: flex;"></div>
+        <div id="galeria" style="display: flex; justify-content: center;"></div>
     </div>
     <!-- GALERIA - FINAL -->
 

@@ -17,7 +17,7 @@
       }
 
       .navbar-site{
-        width: 80%;
+        width: 90%;
       }
 
       .navbar-icone-principal{
@@ -25,7 +25,7 @@
         float: left;
       }
 
-      .navbar-menu{
+      .navbar-menu {
         width: 70%;
         float: right;
         display: flex;
@@ -34,12 +34,16 @@
         justify-content: flex-end;
       }
 
-      .list_menu{
+      .list_menu {
         margin: 0px;
       }
 
-      .item_menu{
+      .item_menu {
         margin: 0px;
+      }
+
+      .itemMenu {
+        padding: 0px 0px 0px 20px;
       }
 
       .texto_menu {
@@ -49,6 +53,26 @@
 
       .item_menu_logo {
         margin: 0px;
+        background-color: #fff;
+      }
+
+      .b_icone_principal {
+        color: #c10109;
+      }
+
+      .button-header-logo {
+        font-size: 15px;
+        color: #e1e1e1;
+        font-family: inherit;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+        border: none;
+        background: none;
+        text-transform: uppercase;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: color;
       }
 
       .button-header {
@@ -108,18 +132,18 @@
       <nav class="navbar-site">
         <div class="navbar-icone-principal">
           <div class="list-menu" style="display: flex; justify-content: flex-start;">
-            <div class="item_menu_logo"><a href="index.php"><button class="button-header"><b>CLODOALDO ARAÚJO</b></button></a></div>
+            <div class="item_menu_logo"><a href="index.php"><button class="button-header-logo"><b class="b_icone_principal">CLODOALDO ARAÚJO</b></button></a></div>
           </div>
         </div>
         <div class="navbar-menu">
           <div class="list-menu">
-            <div class="item-menu"><a href="index.php"><button class="button-header"><p class="texto_menu" style="margin: 0px;">home</p></button></a></div>
-            <div class="item-menu"><a href="ferramentas_ebook.php"><button class="button-header"><p class="texto_menu" style="margin: 0px;">ferramentas grátis</p></button></a></div>
-            <div class="item-menu"><a href="quem_sou.php"><button class="button-header"><p class="texto_menu" style="margin: 0px;">sobre</p></button></a></div>
-            <div class="item-menu"><a href="empresas.php"><button class="button-header"><p class="texto_menu" style="margin: 0px;">empresas</p></button></a></div>
-            <div class="item-menu"><a href="cursos.php"><button class="button-header"><p class="texto_menu" style="margin: 0px;">cursos</p></button></a></div>
-            <div class="item-menu"><a href="galeria.php"><button class="button-header"><p class="texto_menu" style="margin: 0px;">galeria</p></button></a></div>
-            <div class="item-menu"><a href="contato.php"><button class="button-header"><p class="texto_menu" style="margin: 0px;">contato</p></button></a></div>
+            <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="index.php"><button class="button-header" style="padding: 0px;"><p class="texto_menu" style="margin: 0px;">home</p></button></a></div>
+            <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="ferramentas_ebook.php"><button class="button-header" style="padding: 0px;"><p class="texto_menu" style="margin: 0px;">ferramentas grátis</p></button></a></div>
+            <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="quem_sou.php"><button class="button-header" style="padding: 0px;"><p class="texto_menu" style="margin: 0px;">sobre</p></button></a></div>
+            <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="empresas.php"><button class="button-header" style="padding: 0px;"><p class="texto_menu" style="margin: 0px;">empresas</p></button></a></div>
+            <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="cursos.php"><button class="button-header" style="padding: 0px;"><p class="texto_menu" style="margin: 0px;">cursos</p></button></a></div>
+            <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="galeria.php"><button class="button-header" style="padding: 0px;"><p class="texto_menu" style="margin: 0px;">galeria</p></button></a></div>
+            <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="contato.php"><button class="button-header" style="padding: 0px;"><p class="texto_menu" style="margin: 0px;">contato</p></button></a></div>
           </div>
         </div>  
       </nav>
