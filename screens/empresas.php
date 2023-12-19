@@ -21,14 +21,22 @@
 
     <style>
 
+      body {
+        min-height: 100vh;
+      }
+
       h1 {
         font-family: Montserrat, sans-serif;
+      }
+
+      .lista_empresas {
+        margin-bottom: 6px;
       }
 
       .div_lista_empresas {
         display: flex;
         justify-content: center; 
-        align-items: center; 
+        align-items: center;
       }
 
       .div_lista_empresas button {
@@ -40,6 +48,10 @@
         align-items: center;
       }
 
+      .content {
+        flex: 1; /* Cresce para ocupar o espaço restante */
+      }
+
     </style>
 
   </head>
@@ -49,7 +61,6 @@
 
     <!-- TITULO - INICIO -->
     <h5 style="text-align: center; padding-top: 20px;">Empresas</h5>
-
     <!-- TEXTO - INICIO -->
 
     <!-- LISTA DE EMPRESAS - INICIO -->
@@ -74,6 +85,8 @@
       </div>
     </div>
     <!-- LISTA DE EMPRESAS - FIM -->
+
+    <div class="content"></div>
 
     <!-- RODAPÉ -->
     <?php include("footer.php"); ?>
