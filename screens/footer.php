@@ -151,10 +151,10 @@
         </div>
         <div class="footer-menu">
           <ul class="list-menu">
-            <li class="item-menu"><a href="https://wa.me/5519994636818"><button class="footer-button"><svg width="15" height="15"><use xlink:href="#whatsapp"/></svg></button></a></li>
-            <li class="item-menu"><a href="https://www.instagram.com/clodoaldoaraujoo/?igshid=MzRlODBiNWFlZA%3D%3D"><button class="footer-button"><svg width="15" height="15"><use xlink:href="#instagram"/></svg></button></a></li>
-            <li class="item-menu"><a href="https://www.facebook.com/clodoaldo.araujo/"><button class="footer-button"><svg width="15" height="15"><use xlink:href="#facebook"/></svg></button></a></li>
-            <li class="item-menu"><a href="https://www.linkedin.com/in/clodoaldoaraujo/"><button class="footer-button"><svg width="15" height="15"><use xlink:href="#linkedin"/></svg></button></a></li>
+            <li class="item-menu"><a target="_blank" href="https://wa.me/5519994636818"><button class="footer-button"><svg width="15" height="15"><use xlink:href="#whatsapp"/></svg></button></a></li>
+            <li class="item-menu"><a target="_blank" href="https://www.instagram.com/clodoaldoaraujoo/?igshid=MzRlODBiNWFlZA%3D%3D"><button class="footer-button"><svg width="15" height="15"><use xlink:href="#instagram"/></svg></button></a></li>
+            <li class="item-menu"><a target="_blank" href="https://www.facebook.com/clodoaldo.araujo/"><button class="footer-button"><svg width="15" height="15"><use xlink:href="#facebook"/></svg></button></a></li>
+            <li class="item-menu"><a target="_blank" href="https://www.linkedin.com/in/clodoaldoaraujo/"><button class="footer-button"><svg width="15" height="15"><use xlink:href="#linkedin"/></svg></button></a></li>
             <li class="item-menu"><a href="contato.php"><button class="footer-button"><svg width="15" height="15"><use xlink:href="#email"/></svg></button></a></li>
           </ul>
         </div>
