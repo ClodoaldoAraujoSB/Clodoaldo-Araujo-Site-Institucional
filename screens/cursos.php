@@ -1,199 +1,195 @@
-<?php    
-    
-include("../bd/bd.php");
-$sql_ferramenta = $conn->query("SELECT * FROM curso");
+<?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+include_once("cursos/conselho.php");
+include_once("cursos/ebook.php");
+include_once("cursos/empreendedores_elite.php");
+include_once("cursos/jac.php");
+include_once("cursos/mapa_sucesso.php");
+include_once("cursos/master_mind.php");
+include_once("cursos/missao_china.php");
+include_once("cursos/missao_turquia.php");
+include_once("cursos/mma.php");
+include_once("cursos/pilares_milhao.php");
 
-    if (empty($_POST["select_pesquisa"])) {
-        $opcao = 0;
-    } else {
-        $opcao = $_POST["select_pesquisa"];
-    }
-
-    if (empty($_POST["input_pesquisa"])) {
-        $texto = "";
-    } else {
-        $texto = $_POST["input_pesquisa"];
-    }
-
-    if ($opcao == 0 && empty($texto)) {
-        $sql_ferramenta = $conn->query("SELECT * FROM curso");
-    } else if ($opcao == 0 && !empty($texto)) {
-        $sql_ferramenta = $conn->query("SELECT * FROM curso WHERE nome LIKE '%" . $texto . "%'");
-    } else if ($opcao != 0 && empty($texto)) {
-        $sql_ferramenta = $conn->query("SELECT * FROM curso WHERE ambiente = " . $opcao);
-    } else if ($opcao != 0 && !empty($texto)) {
-        $sql_ferramenta = $conn->query("SELECT * FROM curso WHERE ambiente = " . $opcao . " AND nome LIKE '%" . $texto . "%'");
-    }
-}
-
-$conn->close();
-    
 ?>
 
-    <!doctype html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Ferramentas Gratuitas || Clodoaldo Araújo</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
-        <style>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-            .titulo_ferramentas {
-                margin-top: 10px;
-                text-align: center;
-            }
+<head>
 
-            .session_pesquisa {
-                margin: 0px 0px 20px 0px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cursos || Clodoaldo Araújo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-            .container_pesquisa {
-                width: 100%;
-                display: flex;
-                margin: 0px 20px 0px 20px;
-            }
+    <style>
+        body {
+            overflow-x: hidden;
+        }
 
-            .select_pesquisa {
-                width: 20%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+        .h1 {
+            text-align: center;
+        }
 
-            .busca_pesquisa {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+        .col {
+            display: flex;
+            justify-content: center;
+        }
 
-            .session_curso_principal {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+        .row {
+            margin-bottom: 40px;
+        }
 
-            .mais_vendido_alert {
-                background-color: #c10109;
-                color: #fff;
-                width: fit-content;
-                padding: 1px 7px 1px 7px;
-                border-radius: 20px;
-            }
+        #search-container {
+            text-align: center;
+            margin-top: 50px;
+        }
 
-            .curso_principal {
-                width: 80%;
-            }
+        #search-box {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 25px;
+            width: 75%;
+        }
 
-            .descricao_cursos {
-                width: 70%;
-                padding-left: 35px;
-                font-size: 13px;
-            }
+        #suggestions-container {
+            display: none;
+            border: 1px solid #ccc;
+            max-width: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
 
-            .session_ferramentas {
-                display: flex;
-                justify-content: center;
-            }
+        .suggestion {
+            padding: 10px;
+            cursor: pointer;
+        }
 
-            .container_ferramentas {
-                width: 87%;
-                padding: 20px 5px 5px 5px;
-                border: 1px solid #c10109;
-                margin-bottom: 20px;
-                border-radius: 20px;
-            }
+        .suggestion:hover {
+            background-color: #f2f2f2;
+        }
 
-            .container-list {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-            }
+        .curso-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #c10109;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            bottom: 50px;
+        }
 
-            .div_pesquisa {
-                width: 90%;
-            }
+        /* Estilo do painel de categorias (inicialmente oculto) */
+        .categorias {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #c10109;
+            border-radius: 0 0 5px 5px;
+            padding: 10px;
+        }
 
-            .div_todos {
-                width: 15%;
-            }
+        /* Estilo do link das categorias */
+        .categorias a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 20px 0;
+        }
 
-            .form_pesquisa {
-                display: flex;
-                width: 100%;
-            }
-            .form_todos {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-            }
+        /* Exibição do painel ao passar o mouse sobre o botão */
+        .curso-btn:hover .categorias {
+            display: block;
+        }
 
-            .btn_form_pesquisa {
-                width: 8%;
-                margin: 0px 0px 0px 10px;
-                display: flex;
-                justify-content: center;
-            }
+        #search-box {
+            background-image: url('data:image/<ion-icon name="search"></ion-icon>');
+        }
 
-            .text_form_pesquisa {
-                width: 77%;
-                margin: 0px 10px 0px 10px;
-            }
+        .curso-destaque {
+            margin-left: 200px;
+            margin-top: 50px;
+        }
 
-            .drop_form_pesquisa {
-                width: 15%;
-                margin: 0px 10px 0px 0px;
-            }
+        .curso-destaque h3 {
+            display: inline-flex;
+            position: relative;
+            bottom: 100px;
+        }
 
-            .card_ferramenta{
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-            }
+        .descricao-curso-destaque {
+            display: inline-flex;
+            position: relative;
+            left: 275px;
+            bottom: 200px;
+            text-align: left;
+        }
 
-            .titulo-ferramenta {
-                padding: 10px 0px 10px 0px;
-            }
+        .curso-destaque img {
+            border: 2px solid #c10109;
+        }
 
-            .botao-ferramenta {
+        .botao-comprar-curso-destaque {
+            background-color: #c10109;
+            color: #ffffff;
+            display: flex;
+            flex-direction: inline-flex;
+            position: relative;
+            left: 500px;
+            bottom: 155px;
+            padding: 10px;
+            border: 1px solid #c10109;
+            text-decoration: none;
+        }
 
-            }
+        .botao-comprar-curso-destaque:hover {
+            background-color: #ffffff;
+            color: #282828
+        }
 
-            body {
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
-            }
+        .preco-curso-destaque {
+            display: inline-flex;
+            position: relative;
+            left: 1000px;
+            bottom: 400px;
+        }
 
-            .content {
-                flex: 1; /* Cresce para ocupar o espaço restante */
-            }
+        .titulo-catalogo {
+            text-align: center;
+            font-weight: bold;
+        }
 
-        </style>
+        .borda-catalogo {
+            align-items: center;
+            border: 1px solid #c10109;
+            padding: 100px;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
 
-        <script>
+        .catalogo-cursos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
 
-            function mostrarObrigado() {
-                alert("Obrigado!!");
-            }
 
-        </script>
-    
-    </head>
-    <body>
-        <!-- MENU SUPERIOR -->
-        <?php include("header.php"); ?>
+        .catalogo-cursos img {
+            border: 2px solid #c10109;
+        }
 
-<<<<<<< HEAD
         .botao-comprar-curso {
             background-color: #c10109;
             color: #ffffff;
@@ -213,78 +209,16 @@ $conn->close();
             background-color: #ffffff;
             color: #282828
         }
-=======
-        <div class="banner_principal">
-            <img src="../logos/Linkedin.jpg" alt="Banner Principal" style="width: -webkit-fill-available;">
-        </div>
 
-        <div class="session_pesquisa" style="margin: 10px 0px 0px 0px;">
-            <div class="container_pesquisa">
-                <div class="busca_pesquisa">
-                    <div class="div_pesquisa">
-                        <div class="drop_form_pesquisa">
-                            <h6 style="margin: 0px 0px 2px 0px;">Cursos</h6>    
-                        </div>
-                        <div class="text_form_pesquisa"></div>
-                        <div class="btn_form_pesquisa"></div>    
-                    </div>
-                </div>
-            </div>
-        </div>
->>>>>>> dc8cd8a18435c7fd2dabf20e9e644ee030da0fe2
+        .informacoes-curso {
+            margin-right: 50px;
+            margin-left: 50px;
+        }
 
-        <!-- CAMPO DE PESQUISA - INICIO -->
-        <div class="session_pesquisa">
-            <div class="container_pesquisa">
-                <div class="busca_pesquisa">
-                    <div class="div_pesquisa">
-                        <form class="form_pesquisa" action="cursos.php" method="POST">
-                            <div class="drop_form_pesquisa">
-                                <select class="form-select" aria-label="Seleção de topico" id="select_pesquisa" name="select_pesquisa">
-                                    <option selected disabled>Categoria:</option>
-                                    <option value="0">Todos</option>
-                                    <option value="2">Presencial</option>
-                                    <option value="1">Distancia</option>
-                                </select>
-                            </div>
-                            <div class="text_form_pesquisa">
-                                <input type="text" class="form-control" id="input_pesquisa" name="input_pesquisa" placeholder="Digite o curso que procura:">
-                            </div>
-                            <div class="btn_form_pesquisa">
-                                <input class="btn" style="background: #c10109; color: white;" type="submit" value="Pesquisa">
-                            </div>    
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+        .informacoes-curso:hover {
+            transform: scale(1.1);
+        }
 
-        <div class="session_curso_principal">
-            <div class="curso_principal">
-                <div class="row">
-                    <div class="col">
-                        <h6>O Mais Vendido</h6>
-                        <div class="card mb-3" style="width: 70%; border: 0px;">
-                            <div class="row g-0">
-                                <div class="col-md-3">
-                                    <img src="empresas/img/mapadosucesso.jpg" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-md-8" style="display: flex; align-items: center;">
-                                    <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px;">
-                                        <h5 class="card-title">MMA</h5>
-                                        <p class="card-text">Transforme sua empresa em um sucesso com a mentoria individual do Clodoaldo Araújo! Com ferramentas especializadas, estratégias, técnicas de gestão e vendas, o seu negócio pode alcançar novas alturas. Conte com a experiência do Clodoaldo para desenvolver uma visão extraordinária para sua empresa e atingir todos os seus objetivos. Não perca mais tempo e invista em uma mentoria especializada desenvolvida especialmente para você!</p>
-                                        <p class="card-text"><b style="color: red">R$99,99</b><br><s>R$99,99</s></p>
-                                        <p class="mais_vendido_alert">Mais vendido</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<<<<<<< HEAD
         .informacoes-curso h6 {
             position: relative;
             left: 100px;
@@ -628,62 +562,331 @@ $conn->close();
                             the card's content.</p>
                         <button type="button" class="btn btn-dark" data-bs-toggle="modal"
                             data-bs-target="#empreendedores_eliteModal">Saiba Mais</button>
-=======
-        <!-- LISTA DE FERRAMENTAS -->
-        <div class="session_ferramentas">
-            <div class="container_ferramentas">
-                <div class="descricao_cursos">
-                    <h5>Cursos</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque vulputate nisl id pretium. Aenean eget magna iaculis lorem ultricies convallis quis ac velit. Maecenas mattis nisl nec dui aliquam luctus. Quisque massa nulla, ornare sit amet consequat eget, vestibulum at mi. Morbi sit amet dui vel arcu congue finibus at ut turpis. Aenean et diam libero. Aliquam faucibus sodales pharetra. Nunc vel sapien suscipit, lacinia dui non, laoreet nibh. Quisque at lacinia tortor, a semper ex. Cras nec magna in nibh iaculis interdum vel vitae tortor. Nulla eget lorem vitae orci ultricies feugiat non eleifend lacus. Mauris egestas commodo tortor ut commodo.</p>
-                </div>
-                <div class="container-list">
-                    <div class="row" style="display: flex; justify-content: center;">
-                    <?php
-                    $contador = 0;
-                    foreach ($sql_ferramenta as $ferramenta) {
-                        $contador++;
-                    ?>
-                        <div class="col" style="display: flex; justify-content: center; width: 225px;">
-                            <div class="card mb-3" style="width: 90%; flex-direction: column; border: 0px;">
-                                <div class="row g-0" style="flex-grow: 1;">
-                                    <div class="col" style="display: flex; flex-direction: column;">
-                                        <div style="display: flex; justify-content: center;">
-                                            <img src="<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="">
-                                        </div>
-                                        <div class="card-body card_ferramenta" id="card-ferramenta" style="padding: 0px;"> <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
-                                            <div class="titulo-ferramenta">
-                                                <h5 class="card-title" style="font-size: 15px; margin: 0px;"> <?php echo $ferramenta["nome"]; ?> </h5>
-                                            </div>
-                                            <div class="botão-ferramenta">
-                                                <p style="font-size: 13px; margin: 0px; padding: 0px 0px 10px 0px;">De: <s><?php echo $ferramenta["preco_antigo"]?></s> Por: <b style="color: #c10109;"><?php echo $ferramenta["preco_atual"] ?></b></p>
-                                                <a href="" download="" class="btn" style="background: #c10109; color: white; border-radius: 7px; padding: 0px 10px 2px 10px;">Acesse Aqui</a>
-                                            </div>    
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php
-                        if ($contador == 5) {
-                        ?>
-                            </div>
-                            <div class="row" style="display: flex; justify-content: center;">
-                        <?php
-                            $contador = 0;
-                        }
-                    }
-                    ?>
->>>>>>> dc8cd8a18435c7fd2dabf20e9e644ee030da0fe2
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Jac - Descubra-se</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                            data-bs-target="#jacModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mapa do Sucesso</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                            data-bs-target="#mapa_sucessoModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Master Mind</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                            data-bs-target="#master_mindModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Missão China</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                            data-bs-target="#missao_chinaModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Missão Turquia</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                            data-bs-target="#missao_turquiaModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">MMA</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                            data-bs-target="#mmaModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mx-auto">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pilares do Milhão</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                            data-bs-target="#pilares_milhaoModal">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- CARDS - FINAL -->
 
-        <div class="content"></div>
+    <!-- INÍCIO CURSO DESTAQUE -->
+    <div class="curso-destaque">
+        <img src="../logos/mapadosucesso.jpg" alt="" class="imagem-destaque" width="270px" height="270px">
+        <h3>Curso Mapa do sucesso</h3>
+        <div class="descricao-curso-destaque">
+            <p>Lorem Ipsum is simply dummy text of the<br> printing and typesetting industry. Lorem Ipsum<br> has been
+                the industry's standard dummy text ever<br> since the 1500s, when an unknown printer took a galley of
+                type and scrambled it to make a type specimen book.</p>
+        </div>
+    </div>
+    <a href=""><button class="botao-comprar-curso-destaque">Comprar</button></a>
+    <div class="preco-curso-destaque">
+        <b>
+            <h4>R$297,00</h4>
+        </b>
+    </div>
+    <!-- FIM CURSO DESTAQUE -->
 
-        <!-- RODAPÉ -->
-        <?php include("footer.php"); ?>
-    
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    </body>
+    <h4 class="titulo-catalogo">Catálogo de cursos</h4>
+
+    <!-- INÍCIO CATÁLOGO CURSOS -->
+    <div class="borda-catalogo">
+        <div class="catalogo-cursos">
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <!--<p>Lorem Ipsum is simply<br> dummy text of the<br> printing and typesetting<br> industry. Lorem Ipsum<br> has been the industry's<br> standard dummy text<br> ever since the...</p>-->
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <!--<a href=""><button class="botao-comprar-curso">Comprar</button></a>-->
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <!--<p>Lorem Ipsum is simply<br> dummy text of the<br> printing and typesetting<br> industry. Lorem Ipsum<br> has been the industry's<br> standard dummy text<br> ever since the...</p>-->
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <!--<p>Lorem Ipsum is simply<br> dummy text of the<br> printing and typesetting<br> industry. Lorem Ipsum<br> has been the industry's<br> standard dummy text<br> ever since the...</p>-->
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <!--<p>Lorem Ipsum is simply<br> dummy text of the<br> printing and typesetting<br> industry. Lorem Ipsum<br> has been the industry's<br> standard dummy text<br> ever since the...</p>-->
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <!--<p>Lorem Ipsum is simply<br> dummy text of the<br> printing and typesetting<br> industry. Lorem Ipsum<br> has been the industry's<br> standard dummy text<br> ever since the...</p>-->
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <!--<p>Lorem Ipsum is simply<br> dummy text of the<br> printing and typesetting<br> industry. Lorem Ipsum<br> has been the industry's<br> standard dummy text<br> ever since the...</p>-->
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <!--<p>Lorem Ipsum is simply<br> dummy text of the<br> printing and typesetting<br> industry. Lorem Ipsum<br> has been the industry's<br> standard dummy text<br> ever since the...</p>-->
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <!--<p>Lorem Ipsum is simply<br> dummy text of the<br> printing and typesetting<br> industry. Lorem Ipsum<br> has been the industry's<br> standard dummy text<br> ever since the...</p>-->
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+            <div class="informacoes-curso">
+                <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                <h5><b>Curso Mapa do sucesso</b></h5>
+                <!--<p>Lorem Ipsum is simply<br> dummy text of the<br> printing and typesetting<br> industry. Lorem Ipsum<br> has been the industry's<br> standard dummy text<br> ever since the...</p>-->
+                <h5>R$297,00</h5>
+                <h6><s>R$500,00</s></h6>
+            </div>
+        </div>
+    </div>
+    <!-- FIM CATÁLOGO CURSOS -->
+
+    <!-- INÍCIO CURSOS ONLINE -->
+    <h4 class="titulo-catalogo">Cursos Online</h4>
+
+    <!-- INÍCIO CATÁLOGO CURSOS -->
+    <div id="catalog-container">
+        <div class="catalogo-wrapper" id="catalogo-cursos-online">
+            <div class="catalogo-cursos">
+                <!-- Adicione a classe 'informacoes-curso-online' para distinguir os cursos online -->
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+                <div class="informacoes-curso informacoes-curso-online">
+                    <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                    <h5><b>Curso Mapa do sucesso</b></h5>
+                    <h5>R$297,00</h5>
+                    <h6><s>R$500,00</s></h6>
+                </div>
+            </div>
+            <button id="prevBtn" onclick="moveCatalog(-1, 'online')">❮</button>
+            <button id="nextBtn" onclick="moveCatalog(1, 'online')">❯</button>
+        </div>
+        <!-- FIM CURSOS PRESENCIAIS -->
+        <h4 class="titulo-catalogo">Cursos Online</h4>
+
+        <!-- INÍCIO CATÁLOGO CURSOS -->
+        <div id="catalog-container">
+            <div class="catalogo-wrapper" id="catalogo-cursos-presencial">
+                <div class="catalogo-cursos">
+                    <!-- Adicione a classe 'informacoes-curso-presencial' para distinguir os cursos presenciais -->
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                    <div class="informacoes-curso informacoes-curso-presencial">
+                        <img src="../logos/mapadosucesso.jpg" alt="" width="135px" height="135px">
+                        <h5><b>Curso Mapa do sucesso</b></h5>
+                        <h5>R$297,00</h5>
+                        <h6><s>R$500,00</s></h6>
+                    </div>
+                </div>
+                <button id="prevBtn" onclick="moveCatalog(-1, 'presencial')">❮</button>
+                <button id="nextBtn" onclick="moveCatalog(1, 'presencial')">❯</button>
+            </div>
+            <!-- FIM CURSOS PRESENCIAIS -->
+
+            <!-- RODAPÉ -->
+            <?php include("footer.php"); ?>
+
+</body>
+
 </html>
