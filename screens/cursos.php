@@ -193,15 +193,17 @@ include_once("cursos/pilares_milhao.php");
         .botao-comprar-curso {
             background-color: #c10109;
             color: #ffffff;
-            display: flex;
-            flex-direction: inline-flex;
+            display: inline-flex;
+            /* Alterei flex-direction para inline-flex */
             position: relative;
-            left: 200px;
-            bottom: 45px;
+            /* left: 200px; */
+            /* Removi a propriedade left */
+            top: 0;
             padding: 10px;
             border: 1px solid #c10109;
             text-decoration: none;
         }
+
 
         .botao-comprar-curso:hover {
             background-color: #ffffff;
@@ -264,6 +266,33 @@ include_once("cursos/pilares_milhao.php");
             position: relative;
             left: 100px;
             bottom: 25px;
+        }
+
+        #informacoes-curso-mapadosucesso {
+            margin: 0 30px;
+            /* Ajuste conforme necessário */
+            box-sizing: border-box;
+            position: relative;
+            left: 100px;
+            top: 1px;
+        }
+
+        #informacoes-curso-elite {
+            margin: 0 30px;
+            /* Ajuste conforme necessário */
+            box-sizing: border-box;
+            position: relative;
+            left: 100px;
+            top: 1px;
+        }
+
+        #informacoes-curso-mma {
+            margin: 0 30px;
+            /* Ajuste conforme necessário */
+            box-sizing: border-box;
+            position: relative;
+            left: 100px;
+            top: 1px;
         }
 
         .prevBtn,
@@ -410,6 +439,27 @@ include_once("cursos/pilares_milhao.php");
             const translateValue = -currentIndex * cardWidth + 'px';
             catalogWrapper.style.transform = 'translateX(' + translateValue + ')';
         }
+
+        document.getElementById('search-box').addEventListener('input', function () {
+            const input = this;
+            const inputValue = input.value.toLowerCase();
+
+            // Oculta todas as divs de informação do curso
+            document.querySelectorAll('.informacoes-curso').forEach(div => {
+                div.style.display = 'none';
+            });
+
+            if (inputValue === '') {
+                // Se o valor da entrada for vazio, esconda o contêiner de sugestões
+                document.getElementById('suggestions-container').style.display = 'none';
+                return; // Pare aqui, não precisa processar as sugestões
+            }
+
+            // Exibe a div de informação do curso correto com base no nome do curso
+            if (informacoesCurso) {
+                informacoesCurso.style.display = 'block';
+            }
+        });
     </script>
 
     <!-- INÍCIO BARRA DE PESQUISA -->
