@@ -46,6 +46,10 @@ $conn->close();
                 margin-top: 10px;
                 text-align: center;
             }
+            .titulo_ferramentas {
+                margin-top: 10px;
+                text-align: center;
+            }
 
             .session_pesquisa {
                 margin: 0px 0px 20px 0px;
@@ -53,7 +57,32 @@ $conn->close();
                 align-items: center;
                 justify-content: center;
             }
+            .session_pesquisa {
+                margin: 0px 0px 20px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
+            .container_pesquisa {
+                width: 100%;
+                display: flex;
+                margin: 0px 20px 0px 20px;
+            }
+
+            .select_pesquisa {
+                width: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .busca_pesquisa {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             .container_pesquisa {
                 width: 100%;
                 display: flex;
