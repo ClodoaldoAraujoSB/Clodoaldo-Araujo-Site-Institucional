@@ -4,15 +4,6 @@ include_once("empresas/ca3.php");
 include_once("empresas/ca3_steel.php");
 include_once("empresas/circuit.php");
 
-// Verifica se o botão foi clicado
-if (isset($_POST['rocketLaunch'])) {
-  echo '<script>
-          document.addEventListener("DOMContentLoaded", function() {
-              document.getElementById("popup-container").style.display = "block";
-          });
-      </script>';
-}
-
 ?>
 
 <!doctype html>
@@ -22,693 +13,274 @@ if (isset($_POST['rocketLaunch'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pagina Inicial || Clodoaldo Araújo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="../assets/dist/css/swiper-bundle.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <style>
-    .container-quem-sou {
-      display: flex;
-      margin-top: 40px;
-      font-family: Montserrat, sans-serif;
-      background-color: #e2e2e2;
+
+    .descricao_cursos {
+      width: 100%;
+      padding-left: 35px;
+      padding-right: 35px;
+      font-size: 13px;
     }
 
-    h1 {
-      font-family: Montserrat, sans-serif;
-    }
-
-    .div-quem-sou {
-      flex: 1;
-      box-sizing: border-box;
-      margin: 0px 20px 0px 20px;
+    .session_ferramentas {
       display: flex;
-      align-items: center;
-      flex-wrap: wrap;
       justify-content: center;
+    }
+
+    .container_ferramentas {
+      width: 87%;
+      padding: 20px 5px 5px 5px;
+      border: 1px solid #c10109;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+    }
+
+    .descricao_session {
+      margin-top: 20px;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .quem_div_sobre {
+      width: 85%;
+    }
+
+    .linha_div_descricao {
+      display: flex;
+      justify-content: center;
+      background-image: url('../img/fotoimprensa3.jpg');
+      background-size: 50%;
+      background-position-x: left;
+      background-position-y: top;
+      background-repeat: no-repeat;
+    }
+
+    .coluna_div {
+      width: 55%;
+    }
+
+    .coluna_div_image {
+      width: 45%;
+    }
+
+    .titulo_sobre {
+      margin-bottom: 20px;
+    }
+
+    .titulo_sobre_h1 {
+      color: red;
+      font-size: 25px;
+      padding-left: 15%;
+    }
+
+    .descricao_sobre {
+      background-color: red;
+      color: white;
+      padding: 20px;
+      margin: 0px;
+      font-size: 12px;
+    }
+
+    .paises_div_sobre {
+      margin: 20px 0px 0px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lista_empresas {
+      margin-bottom: 6px;
     }
 
     .div_lista_empresas {
       display: flex;
-      justify-content: center;
+      justify-content: center; 
       align-items: center;
-      background-color: #c9d6ff;
     }
 
     .div_lista_empresas button {
       width: 400px;
       height: 100px;
       margin: 10px;
-    }
-
-    .titulo_principal {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .gallery {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      background-color: #c9d6ff;
-    }
-
-    .image {
-      display: inline-block;
-      margin: 1px;
-      cursor: pointer;
-    }
-
-    .image img {
-      height: 250px;
-    }
-
-    .lst-image {
-      filter: blur(3px);
-      display: inline-block;
-      margin: 1px;
-      cursor: pointer;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 24px;
-      font-weight: bold;
-      color: white;
-      text-align: center;
-      filter: none;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-
-    .modal-content {
-      display: block;
-      max-width: 90%;
-      max-height: 90%;
-      margin: auto;
-    }
-
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      color: white;
-      font-size: 30px;
-      cursor: pointer;
-    }
-
-    #overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      justify-content: center; 
       align-items: center;
+    }
+
+    .session_curso_principal {
+      display: flex;
       justify-content: center;
-      z-index: 1000;
-      /* Ajuste o valor de z-index conforme necessário */
+      align-items: center;
     }
 
-    #popup {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      transform: scale(0.8);
-      transition: transform 0.5s ease-in-out;
-      z-index: 1001;
-      /* Valor maior que o z-index do overlay */
-    }
-
-    #popup.show {
-      transform: perspective(800px) rotateX(0deg) scale(1);
-    }
-
-    #closeBtn {
+    .mais_vendido_alert {
       background-color: #c10109;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+      color: #fff;
+      width: fit-content;
+      padding: 1px 7px 1px 7px;
+      border-radius: 20px;
     }
 
-    .texto-de-abertura {
-      padding: 10px 20px;
-    }
-
-    .dez-ferramentas {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .titulo-btn-dez-ferramentas {
-      display: flex;
-      flex-direction: column;
-      font-family: 'Montserrat', sans-serif;
-      color: #c10109;
-      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
-      text-align: center;
-      margin-right: 25%;
-    }
-
-    .dez-ferramentas-img img {
-      width: 75%;
-      height: 75%;
-    }
-
-    .container {
-      padding: 50px;
-    }
-
-    .container h1 {
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 36px;
-      color: #c10109;
-      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
-    }
-
-    #catalog-container {
+    .curso_principal {
       width: 80%;
-      margin: 20px auto;
-      overflow: hidden;
-      position: relative;
     }
 
-    #course-list {
+    .galeria {
+      margin: 20px 0px 20px 0px;
+      height: 400px;
+
+      background-image: url('../logos/fotos-galeria.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
       display: flex;
-      transition: transform 0.5s ease-in-out;
+      justify-content: center;
+      align-items: flex-end;
     }
 
-    .course-card {
-      width: 200px;
-      margin-right: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-left: 90px;
-    }
-
-    .course-card:hover {
-      transform: scale(1.1);
-    }
-
-    #prevBtn,
-    #nextBtn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 18px;
-      cursor: pointer;
-      background-color: #f1f1f1;
-      padding: 10px;
-      border: none;
-      outline: none;
-      z-index: 1;
-    }
-
-    #prevBtn {
-      left: 0;
-    }
-
-    #nextBtn {
-      right: 0;
-    }
-
-    .depoimentos {
-      padding-top: 100px;
-    }
-
-    .depoimentos .col-3 {
-      text-align: center;
-      padding: 40px 20px;
-      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      display: inline-block;
-    }
-
-    .col-3 {
-      flex-basis: 30%;
-      max-width: 250px;
-      margin-bottom: 30px;
-    }
-
-    .col-3 img {
-      width: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .depoimentos .col-3:hover {
-      transform: scale(1.1);
-    }
-
-    .depoimentos .col-3 img {
-      width: 50px;
-      border-radius: 50%;
-      margin-top: 20px;
-      border: 2px solid #c10109;
-    }
-
-    .depoimento-icone {
-      font-size: 34px;
-      color: #c10109;
-    }
-
-    .col-3 p {
-      font-size: 13px;
-      color: #c10109;
-      margin: 12px 0;
-    }
-
-    .depoimentos .col-3 h3 {
-      font-size: 16px;
-      font-weight: 600;
-      color: #282828;
-    }
-
-    .classificacao ion-icon {
-      color: #c10109;
-    }
-
-    #btn-know-more {
+    .botao_acesso {
+      background: #c10109; 
+      color: white; 
+      border-radius: 7px; 
+      padding: 0px 10px 2px 10px;
+      margin-top: 10px;
       margin-bottom: 20px;
     }
+
+    .botao_acesso:hover {
+      transform: scale(1.2);
+    }
+    
   </style>
 
   <script>
-
-    function expandImage(imgElement) {
-      var modal = document.getElementById('modal');
-      var expandedImg = document.getElementById('expanded-image');
-
-      modal.style.display = 'block';
-      expandedImg.src = imgElement.src;
-      expandedImg.style.height = '80%';
-      expandedImg.style.width = 'auto';
-
-      // Centraliza horizontalmente e verticalmente
-      expandedImg.style.display = 'block';
-      expandedImg.style.margin = '0 auto';
-      expandedImg.style.position = 'relative';
-      expandedImg.style.top = '50%';
-      expandedImg.style.transform = 'translateY(-50%)';
-    }
-
-    function closeModal() {
-      var modal = document.getElementById('modal');
-      modal.style.display = 'none';
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      // Mostrar o popup ao carregar a página
-      document.getElementById("overlay").style.display = "flex";
-
-      // Adicionar evento de clique ao botão de fechar
-      document.getElementById("closeBtn").addEventListener("click", function () {
-        // Adicionar classe para aplicar os efeitos de rotação e perspectiva
-        document.getElementById("popup").classList.add("show");
-        // Ocultar o popup ao clicar no botão
-        document.getElementById("overlay").style.display = "none";
-        // Emitir som de foguete
-        playRocketSound();
-      });
-    });
-
-    function playRocketSound() {
-      // Criar elemento de áudio
-      var audio = new Audio('../sounds/rocket_sound.mp3');
-      // Reproduzir o som
-      audio.play();
-    }
-
-    let currentIndex = 0;
-
-    function moveCatalog(direction) {
-      const courseList = document.getElementById('course-list');
-      const courseCards = document.querySelectorAll('.course-card');
-      const cardWidth = courseCards[0].offsetWidth + 20; // Considerando a largura do cartão mais a margem
-
-      currentIndex = (currentIndex + direction + courseCards.length) % courseCards.length;
-      const translateValue = -currentIndex * cardWidth + 'px';
-      courseList.style.transform = 'translateX(' + translateValue + ')';
-    }
 
   </script>
 </head>
 
 <body>
-  <!-- MENU SUPERIOR -->
+
+  <!-- MENU SUPERIOR - INICIO -->
   <?php include("header.php"); ?>
-  <!--INÍCIO POPUP-->
-  <div id="overlay">
-    <div id="popup">
-      <h1><b>VOCÊ QUER SER MILIONÁRIO? VENHA COMIGO</b></h1>
-      <button id="closeBtn">QUERO!</button>
-    </div>
-  </div>
-  <!--FIM POPUP-->
+  <!-- MENU SUPERIOR - FINAL -->
 
-  <!-- CARROSEL - INICIO -->
-  <div id="carouselExampleDark" class="carousel carousel-dark slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <img src="../logos/Linkedin.JPG" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <!--<h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
-            <a><button>Botão</button></a>-->
-        </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="../logos/Linkedin.JPG" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <!--<h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-            <a><button>Botão</button></a>-->
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../logos/Linkedin.JPG" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <!--<h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-            <a><button>Botão</button></a>-->
-        </div>
+  <!-- BANNER - INICIO -->
+  <div class="banner_principal">
+    <img src="../logos/Linkedin.jpg" alt="Banner Principal" style="width: -webkit-fill-available;">
+  </div>
+  <!-- BANNER - FINAL -->
+
+  <!-- TEXTO INICIAL - INICIO -->
+  <div class="session_ferramentas">
+    <div class="container_ferramentas">
+      <div class="descricao_cursos">
+          <h5>Cursos</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque vulputate nisl id pretium. Aenean eget magna iaculis lorem ultricies convallis quis ac velit. Maecenas mattis nisl nec dui aliquam luctus. Quisque massa nulla, ornare sit amet consequat eget, vestibulum at mi. Morbi sit amet dui vel arcu congue finibus at ut turpis. Aenean et diam libero. Aliquam faucibus sodales pharetra. Nunc vel sapien suscipit, lacinia dui non, laoreet nibh. Quisque at lacinia tortor, a semper ex. Cras nec magna in nibh iaculis interdum vel vitae tortor. Nulla eget lorem vitae orci ultricies feugiat non eleifend lacus. Mauris egestas commodo tortor ut commodo.</p>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
-  <!-- CARROSEL - FINAL -->
+  <!-- TEXTO INICIAL - FINAL -->
 
-  <!--INÍCIO TEXTO DE ABERTURA-->
-  <div class="texto-de-abertura">
-    <p>What is Lorem Ipsum?
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-      of Lorem Ipsum.
-
-      Why do we use it?
-      It is a long established fact that a reader will be distracted by the readable content of a page when looking at
-      its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-      opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
-      packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
-      uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
-      accident, sometimes on purpose (injected humour and the like).</p>
-  </div>
-  <!--FIM TEXTO DE ABERTURA-->
-
-  <!--INÍCIO 10 FERRAMENTAS-->
-  <div class="dez-ferramentas">
-    <div class="dez-ferramentas-img">
-      <img src="../logos/dez-ferramentas.jpg" alt="" width="75%" height="75%">
-    </div>
-    <div class="titulo-btn-dez-ferramentas">
-      <h1><b>100 FERRAMENTAS GRATUITAS</b> QUE TE DARÃO O PRIMEIRO MILHÃO</h1>
-      <a href="../screens/ferramentas_ebook.php"><button class="btn btn-dark">Ferramentas grátis aqui!</button></a>
-    </div>
-  </div>
-  </div>
-  <!--FIM 10 FERRAMENTAS-->
-
-  <!--INÍCIO PLIARES-->
-  <div class="pilares-do-sucesso">
-    <div class="container">
-      <h1>PILARES DO SUCESSO</h1>
-    </div>
-  </div>
-  <!--FIM PLIARES-->
-
-  <!--INÍCIO CATÁLOGO DE CURSOS-->
-
-  <div id="catalog-container">
-    <button id="prevBtn" onclick="moveCatalog(-1)">❮</button>
-    <div id="course-list">
-      <div class="course-card"><img src="../logos/mapadosucesso.jpg" alt="" width="270px" height="270px"><br>
-        <center>
-          <h3>Curso Mapa do sucesso</h3>
-        </center><br><a href="#"><button class="btn btn-dark" id="btn-know-more">Saiba mais</button></a>
-      </div>
-      <div class="course-card"><img src="../logos/ede.jpg" alt="" width="270px" height="270px"><br>
-        <center>
-          <h3>Curso Empreendedores de elite</h3>
-        </center><br><a href="#"><button class="btn btn-dark" id="btn-know-more">Saiba mais</button></a>
-      </div>
-      <div class="course-card"><img src="../logos/mma.jpg" alt="" width="270px" height="270px"><br>
-        <center>
-          <h3>Curso MMA: Mindset, Metas, Ação</h3>
-        </center><br><a href="#"><button class="btn btn-dark" id="btn-know-more">Saiba mais</button></a>
-      </div>
-    </div>
-    <button id="nextBtn" onclick="moveCatalog(1)">❯</button>
-  </div>
-
-  <!--FIM CATÁLOGO DE CURSOS-->
-
-  <!--INÍCIO DEPOIMENTOS-->
-  <div class="depoimentos">
-    <div class="corpo-depoimentos">
-      <div class="linha">
-        <!--INÍCIO ITEM DEPOIMENTOS-->
-        <div class="col-3">
-          <h2>Depoimento 1</h2>
-          <ion-icon name="ribbon" class="depoimento-icone"></ion-icon>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.</p>
-          <div class="classificacao">
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
+  <!-- DESCRICAO - INICIO -->
+  <div class="descricao_session">
+    <div class="quem_div_sobre">
+      <div class="linha_div_descricao">
+        <div class="coluna_div_image"></div>
+        <div class="coluna_div">
+          <div class="titulo_sobre">
+            <span><b class="titulo_sobre_h1">Eu sou</b></span><br>
+            <span><b class="titulo_sobre_h1">Clodoaldo Araújo</b></span>
           </div>
-          <img src="../logos/cliente1.png" alt="">
-          <h3>Joelma Kelmon</h3>
-        </div>
-        <!--FIM ITEM DEPOIMENTOS-->
-        <!--INÍCIO ITEM DEPOIMENTOS-->
-        <div class="col-3">
-          <h2>Depoimento 2</h2>
-          <ion-icon name="ribbon" class="depoimento-icone"></ion-icon>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.</p>
-          <div class="classificacao">
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
+          <div class="descricao_sobre">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet mauris ut nulla tincidunt ultricies hendrerit sit amet nisi. Pellentesque viverra sit amet augue sed varius. Integer vitae egestas libero. Cras sit amet tincidunt tellus. Curabitur quis odio non nibh congue placerat sit amet at lacus. Aliquam varius convallis ligula. Phasellus consequat enim sed volutpat posuere. Nam sed enim consequat, consequat velit feugiat, vestibulum odio. Maecenas in condimentum leo, eu pellentesque enim. Fusce varius arcu velit, ut tempor ligula dictum ac. Ut pharetra sit amet ante et vestibulum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer tincidunt lacinia magna, vitae fringilla turpis tincidunt sed. Aliquam fringilla mi in ex iaculis, at consequat ante efficitur. Nullam fermentum odio quis pellentesque finibus. Maecenas nisi lectus, dignissim nec nisi eget, interdum porttitor arcu.</P>
+            <p> Donec vitae risus sed tellus molestie pretium non sit amet ligula. Maecenas sodales nisi ut odio ultricies mollis. Nam quis egestas arcu. Maecenas metus justo, ultrices euismod dictum id, accumsan eget turpis. Aenean consectetur tellus sed urna condimentum, id commodo diam maximus. Nunc non fermentum erat. Praesent suscipit arcu ut consequat sodales. Maecenas mollis bibendum cursus. Duis dignissim tristique nibh nec porttitor. Duis feugiat feugiat ultricies. Quisque tincidunt vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer vel commodo libero.</p>
+            <p style="margin-bottom: 0px;"> Nam id volutpat nunc. In ac porta lectus. Ut in placerat elit, id porttitor justo. Aenean sed augue vitae ipsum ornare cursus. Nulla ac enim sed nisi blandit malesuada eu ut tellus. Maecenas ullamcorper enim nec quam pharetra cursus. Ut at est eu diam tristique feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas sit amet blandit ante. Quisque commodo urna id pellentesque suscipit. In vestibulum risus vel purus fringilla viverra. Duis eget augue non augue egestas rhoncus. Donec pellentesque fermentum vehicula. Cras condimentum ligula vel odio suscipit pharetra. Cras dignissim augue urna, non malesuada felis rutrum vel. Nulla a ligula vulputate, gravida ligula et, dapibus libero.</p>
           </div>
-          <img src="../logos/cliente2.png" alt="">
-          <h3>Inês Jurema</h3>
         </div>
-        <!--FIM ITEM DEPOIMENTOS-->
-        <!--INÍCIO ITEM DEPOIMENTOS-->
-        <div class="col-3">
-          <h2>Depoimento 3</h2>
-          <ion-icon name="ribbon" class="depoimento-icone"></ion-icon>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.</p>
-          <div class="classificacao">
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-          </div>
-          <img src="../logos/cliente3.png" alt="">
-          <h3>Keli Guiça</h3>
-        </div>
-        <!--FIM ITEM DEPOIMENTOS-->
-        <!--INÍCIO ITEM DEPOIMENTOS-->
-        <div class="col-3">
-          <h2>Depoimento 4</h2>
-          <ion-icon name="ribbon" class="depoimento-icone"></ion-icon>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.</p>
-          <div class="classificacao">
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-          </div>
-          <img src="../logos/cliente4.png" alt="">
-          <h3>Nicéia Oliveira</h3>
-        </div>
-        <!--FIM ITEM DEPOIMENTOS-->
-        <!--INÍCIO ITEM DEPOIMENTOS-->
-        <div class="col-3">
-          <h2>Depoimento 5</h2>
-          <ion-icon name="ribbon" class="depoimento-icone"></ion-icon>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.</p>
-          <div class="classificacao">
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-          </div>
-          <img src="../logos/cliente5.png" alt="">
-          <h3>Ademir Bellomono</h3>
-        </div>
-        <!--FIM ITEM DEPOIMENTOS-->
       </div>
     </div>
   </div>
-  <!--FIM DEPOIMENTOS-->
+  <!-- DESCRICAO - FINAL -->
 
-  <!-- QUEM EU SOU? - INICIO -->
-  <div class="container-quem-sou">
-    <div class="div-quem-sou">
-      <h2 style="text-align: center;">Mentor</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.</p>
-      <a href="../screens/quem_sou.php"><button type="button" class="btn btn-dark">Quem eu sou?</button></a>
-    </div>
-    <div class="div-quem-sou">
-      <img src="../img/fotoimprensa3.jpg" alt="Imagem 2" style="width: 100%;">
-    </div>
+  <!-- PAISES - INICIO -->
+  <div class="paises_div_sobre">
+    <h3 style="margin-bottom: 20px;">Mais de 60 paises que já visitei:</h3>
+    <?php include_once("paises.php"); ?>
   </div>
-  <!-- QUEM EU SOU? - FINAL -->
+  <!-- PAISES - FINAL -->
+  
+  <!-- BOTAO DE ACESSO - INICIO -->
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <a href="quem_sou.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
+  </div>
+  <!-- BOTAO DE ACESSO - FINAL -->
 
-  <!-- EMPRESAS - INICIO -->
-  <h1 style="text-align: center; margin-top: 40px;"> Minhas empresas </h1>
+  <!-- LISTA DE EMPRESAS - INICIO -->
   <div class="lista_empresas">
     <div class="div_lista_empresas">
-      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img
-          src="../logos/logo-ca3.png" alt="ca3" style="height: 70px;"></button>
-      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img
-          src="../logos/logo-ca3_steel.png" alt="ca3 steel" style="height: 70px;"></button>
-      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#circuitModal"><img
-          src="../logos/logo-circuit.png" alt="circuit" style="height: 70px;"></button>
-    </div>
-    <div style="text-align: center;">
-      <a href="../screens/empresas.php"><button type="button" class="btn btn-dark">Empresas</button></a>
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../logos/logo-ca3.png" alt="ca3" style="height: 70px;"></button>
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../logos/logo-ca3_steel.png" alt="ca3 steel" style="height: 70px;"></button>
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#circuitModal"><img src="../logos/logo-circuit.png" alt="circuit" style="height: 70px;"></button>
     </div>
   </div>
-  <!-- EMPRESAS - FINAL -->
+  <!-- LISTA DE EMPRESAS - FINAL -->
 
-  <!-- PAISES QUE EU VISITEI - INICIO -->
-  <div class="container-quem-sou">
-    <div class="div-quem-sou">
-      <img src="../img/mapa_mundi.avif" alt="Imagem 2" style="width: 100%;">
-    </div>
-    <div class="div-quem-sou">
-      <h2 style="text-align: center;">Paises que eu visitei</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.</p>
-      <a href="../screens/mapa_mundi.php"><button type="button" class="btn btn-dark">Países que eu
-          visitei</button></a>
+  <!-- BOTAO DE ACESSO - INICIO -->
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <a href="empresas.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
+  </div>
+  <!-- BOTAO DE ACESSO - FINAL -->
+
+  <!-- MAIS VENDIDO - INICIO -->
+  <div class="session_curso_principal">
+    <div class="curso_principal">
+      <div class="row">
+        <div class="col">
+          <h6>O Mais Vendido</h6>
+          <div class="card mb-3" style="width: 70%; border: 0px;">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <img src="empresas/img/mapadosucesso.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8" style="display: flex; align-items: center;">
+                <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px;">
+                  <h5 class="card-title">MMA</h5>
+                  <p class="card-text">Transforme sua empresa em um sucesso com a mentoria individual do Clodoaldo Araújo! Com ferramentas especializadas, estratégias, técnicas de gestão e vendas, o seu negócio pode alcançar novas alturas. Conte com a experiência do Clodoaldo para desenvolver uma visão extraordinária para sua empresa e atingir todos os seus objetivos. Não perca mais tempo e invista em uma mentoria especializada desenvolvida especialmente para você!</p>
+                  <p class="card-text"><b style="color: red">R$99,99</b><br><s>R$99,99</s></p>
+                  <p class="mais_vendido_alert">Mais vendido</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <!-- PAISES QUE EU VISITEI - FINAL -->
+  <!-- MAIS VENDIDO - FINAL -->
 
   <!-- GALERIA - INICIO -->
-  <h1 class="titulo_principal">Galeria</h1>
-  <div class="gallery">
-    <div class="image">
-      <img src="../img/1.jpg" alt="Imagem 1" onclick="expandImage(this)">
+  <div class="galeria">
+    
+    <!-- BOTAO DE ACESSO - INICIO -->
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <a href="galeria.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
     </div>
-    <div class="image">
-      <img src="../img/2.jpg" alt="Imagem 2" onclick="expandImage(this)">
-    </div>
-    <div class="image">
-      <img src="../img/3.jpg" alt="Imagem 3" onclick="expandImage(this)">
-    </div>
+    <!-- BOTAO DE ACESSO - FINAL -->
+  
   </div>
-  <div class="gallery">
-    <div class="image">
-      <img src="../img/4.jpg" alt="Imagem 1" onclick="expandImage(this)">
-    </div>
-    <div class="image">
-      <img src="../img/5.jpg" alt="Imagem 2" onclick="expandImage(this)">
-    </div>
-    <div class="lst-image">
-      <div class="overlay">+50</div>
-      <a href="galeria.php">
-        <img src="../img/6.jpg" alt="Imagem 3">
-    </div>
-  </div>
-
-  <!-- IMAGEM DESTACADA - INICIO -->
-  <div class="modal" id="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="expanded-image">
-  </div>
-  <!-- IMAGEM DESTACADA - FINAL -->
-
-  <!--<script src="script.js"></script>-->
   <!-- GALERIA - FINAL -->
 
-  <!-- RODAPÉ -->
+  <!-- RODAPÉ - INICIO -->
   <?php include("footer.php"); ?>
-  <script src="../assets/js/scripts.js"></script>
-  <script src="../assets/js/swiper-bundle.min.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- RODAPÉ - FINAL -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
-
 </html>

@@ -23,7 +23,7 @@
         margin: auto;
         overflow: hidden;
         position: relative;
-        width: 960px;
+        width: 85%;
 
         &::before,
         &::after {

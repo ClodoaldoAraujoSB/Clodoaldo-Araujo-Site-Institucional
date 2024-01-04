@@ -22,7 +22,7 @@
       }
 
       .quem_div_sobre {
-        width: 90%;
+        width: 85%;
       }
 
       .linha_div_descricao {
@@ -238,41 +238,10 @@
 
           <div class="diploma_card">
             <div class="diploma_imagem_div">
-              <img class="diploma_imagem" src="../logos/2000.jpg">
+              <img class="diploma_imagem" src="../logos/universidade-california.jpg">
             </div>
             <div class="diploma_texto_div">
-              <h5>Pós-graduação em Gestão Estrategica de Negocios</h5>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="diplomas_linha">
-          
-          <div class="diploma_card">
-            <div class="diploma_imagem_div">
-              <img class="diploma_imagem" src="../logos/081999.jpg">
-            </div>
-            <div class="diploma_texto_div">
-              <h5>Empretec</h5>
-            </div>
-          </div>
-
-          <div class="diploma_card">
-            <div class="diploma_imagem_div">
-              <img class="diploma_imagem" src="../logos/1999.jpg">
-            </div>
-            <div class="diploma_texto_div">
-              <h5>Pós-graduação em Gestão Estrategica de Negocios</h5>
-            </div>
-          </div>
-
-          <div class="diploma_card">
-            <div class="diploma_imagem_div">
-              <img>
-            </div>
-            <div class="diploma_texto_div">
-              <h5>Pós-graduação em Gestão Estrategica de Negocios</h5>
+              <h5>MBI de empreendedorismo</h5>
             </div>
           </div>
 
