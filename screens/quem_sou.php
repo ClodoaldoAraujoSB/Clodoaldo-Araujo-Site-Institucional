@@ -88,7 +88,48 @@
         align-items: center;
       }
 
-      .diplomas_div_sobre {}
+      .diplomas_div_sobre {
+        margin: 20px 0px 20px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .diploma_titulo {}
+
+      .diplomas_linha {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .diploma_card {
+        margin: 5px 10px 0px 10px;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .diploma_imagem_div {
+        width: 300px;
+        height: 200px;
+      }
+
+      .diploma_imagem {
+        width: 300px;
+        height: 200px;
+      }
+
+      .diploma_texto_div {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+      }
 
     </style>
 
@@ -140,6 +181,102 @@
 
       <!-- DIPLOMAS - INICIO -->
       <div class="diplomas_div_sobre">
+        <div class="diploma_titulo">
+          <h3 style="margin-bottom: 20px;">Diplomas</h3>
+        </div>
+        
+        <div class="diplomas_linha">
+          
+          <div class="diploma_card">
+            <div class="diploma_imagem_div">
+              <img class="diploma_imagem" src="../logos/2004.jpg">
+            </div>
+            <div class="diploma_texto_div">
+              <h5>Graduação em Engenharia Civil</h5>
+            </div>
+          </div>
+
+          <div class="diploma_card">
+            <div class="diploma_imagem_div">
+              <img class="diploma_imagem" src="../logos/1997.jpg">
+            </div>
+            <div class="diploma_texto_div">
+              <h5>Graduação em Engenharia Mecanica</h5>
+            </div>
+          </div>
+
+          <div class="diploma_card">
+            <div class="diploma_imagem_div">
+              <img class="diploma_imagem" src="../logos/2000.jpg">
+            </div>
+            <div class="diploma_texto_div">
+              <h5>Pós-graduação em Gestão Estrategica de Negocios</h5>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="diplomas_linha">
+          
+          <div class="diploma_card">
+            <div class="diploma_imagem_div">
+              <img class="diploma_imagem" src="../logos/081999.jpg">
+            </div>
+            <div class="diploma_texto_div">
+              <h5>Empretec</h5>
+            </div>
+          </div>
+
+          <div class="diploma_card">
+            <div class="diploma_imagem_div">
+              <img class="diploma_imagem" src="../logos/1999.jpg">
+            </div>
+            <div class="diploma_texto_div">
+              <h5>Pós-graduação em Gestão Estrategica de Negocios</h5>
+            </div>
+          </div>
+
+          <div class="diploma_card">
+            <div class="diploma_imagem_div">
+              <img class="diploma_imagem" src="../logos/2000.jpg">
+            </div>
+            <div class="diploma_texto_div">
+              <h5>Pós-graduação em Gestão Estrategica de Negocios</h5>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="diplomas_linha">
+          
+          <div class="diploma_card">
+            <div class="diploma_imagem_div">
+              <img class="diploma_imagem" src="../logos/081999.jpg">
+            </div>
+            <div class="diploma_texto_div">
+              <h5>Empretec</h5>
+            </div>
+          </div>
+
+          <div class="diploma_card">
+            <div class="diploma_imagem_div">
+              <img class="diploma_imagem" src="../logos/1999.jpg">
+            </div>
+            <div class="diploma_texto_div">
+              <h5>Pós-graduação em Gestão Estrategica de Negocios</h5>
+            </div>
+          </div>
+
+          <div class="diploma_card">
+            <div class="diploma_imagem_div">
+              <img>
+            </div>
+            <div class="diploma_texto_div">
+              <h5>Pós-graduação em Gestão Estrategica de Negocios</h5>
+            </div>
+          </div>
+
+        </div>
 
       </div>
       <!-- DIPLOMAS - FINAL -->
