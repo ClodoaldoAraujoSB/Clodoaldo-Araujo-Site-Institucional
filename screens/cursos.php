@@ -211,13 +211,18 @@ $conn->close();
 
     </head>
     <body>
-        <!-- MENU SUPERIOR -->
-        <?php include("header.php"); ?>
 
+        <!-- MENU SUPERIOR - INICIO -->
+        <?php include("header.php"); ?>
+        <!-- MENU SUPERIOR - FINAL -->
+
+        <!-- BANNER - INICIO -->
         <div class="banner_principal">
             <img src="../logos/Linkedin.jpg" alt="Banner Principal" style="width: -webkit-fill-available;">
         </div>
+        <!-- BANNER - FINAL -->
 
+        <!--  -->
         <div class="session_pesquisa" style="margin: 10px 0px 0px 0px;">
             <div class="container_pesquisa">
                 <div class="busca_pesquisa">
@@ -257,6 +262,7 @@ $conn->close();
                 </div>
             </div>
         </div>
+        <!-- CAMPO DE PESQUISA - FINAL -->
 
         <!-- MAIS VENDIDO - INICIO -->
         <div class="session_curso_principal">
@@ -285,7 +291,7 @@ $conn->close();
         </div>
         <!-- MAIS VENDIDO - FINAL -->
 
-        <!-- LISTA DE FERRAMENTAS -->
+        <!-- LISTA DE CURSOS - INICIO -->
         <div class="session_ferramentas">
             <div class="container_ferramentas">
                 <div class="descricao_cursos">
@@ -333,11 +339,13 @@ $conn->close();
                 </div>
             </div>
         </div>
+        <!-- LISTA DE CURSOS - FINAL -->
 
         <div class="content"></div>
 
-        <!-- RODAPÉ -->
+        <!-- RODAPÉ - INICIO -->
         <?php include("footer.php"); ?>
+        <!-- RODAPÉ - FINAL -->
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
