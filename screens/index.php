@@ -96,6 +96,10 @@ include_once("empresas/circuit.php");
 
     .lista_empresas {
       margin-bottom: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
     .div_lista_empresas {
@@ -157,6 +161,85 @@ include_once("empresas/circuit.php");
     .botao_acesso:hover {
       transform: scale(1.2);
     }
+
+    .session-contato {
+      background-image: url("../logos/Formulario\ \(1\)\ \(1\).jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: -100px;
+    }
+
+    .titulo_principal {
+      text-align: center;
+      padding: 20px;
+      font-family: Montserrat, sans serif;
+    }
+
+    .container-form {
+      margin: 0 auto;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+    }
+
+    .row-50 {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0px 20px 0px;
+    }
+
+    .col {
+      width: 100%;
+    }
+
+    .style_input{
+      width: 100%;
+      padding-left: 10px;
+      border-radius: 20px;
+      color: #e2e2e2;
+      background-color: #282828;
+      border: 1px solid #BE0009;
+    }
+
+    .style_input_text {
+      width: 100%;
+      padding-left: 10px;
+      border-radius: 10px;
+      color: #e2e2e2;
+      background-color: #282828;
+      border: 1px solid #BE0009;
+    }
+
+    input:focus,
+    input:active {
+      outline: none;
+    }
+
+    textarea:focus,
+    textarea:active {
+      outline: none;
+    }
+
+    input::placeholder {
+      opacity: 50%;
+      color: white;
+    }
+
+    textarea::placeholder {
+      opacity: 50%;
+      color: white;
+    }
+
+    input[type="submit"] {
+      background-color: #BE0009;
+      color: white;
+      border: 0px;
+      padding: 1px;
+      border-radius: 20px;
+    }
     
   </style>
 
@@ -187,6 +270,41 @@ include_once("empresas/circuit.php");
     </div>
   </div>
   <!-- TEXTO INICIAL - FINAL -->
+
+  <!-- FERRAMENTAS - INICIO -->
+
+  <!-- FERRAMENTAS - FINAL -->
+
+  <!-- MAIS VENDIDO - INICIO -->
+  <div class="session_curso_principal">
+    <div class="curso_principal">
+      <div class="row">
+        <div class="col">
+          <h6>O Mais Vendido</h6>
+          <div class="card mb-3" style="width: 70%; border: 0px;">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <img src="empresas/img/mapadosucesso.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8" style="display: flex; align-items: center;">
+                <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px;">
+                  <h5 class="card-title">MMA</h5>
+                  <p class="card-text">Transforme sua empresa em um sucesso com a mentoria individual do Clodoaldo Araújo! Com ferramentas especializadas, estratégias, técnicas de gestão e vendas, o seu negócio pode alcançar novas alturas. Conte com a experiência do Clodoaldo para desenvolver uma visão extraordinária para sua empresa e atingir todos os seus objetivos. Não perca mais tempo e invista em uma mentoria especializada desenvolvida especialmente para você!</p>
+                  <p class="card-text"><b style="color: red">R$99,99</b><br><s>R$99,99</s></p>
+                  <p class="mais_vendido_alert">Mais vendido</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MAIS VENDIDO - FINAL -->
+
+  <!-- CURSOS - INICIO -->
+
+  <!-- CURSOS - FINAL -->
 
   <!-- DESCRICAO - INICIO -->
   <div class="descricao_session">
@@ -224,6 +342,7 @@ include_once("empresas/circuit.php");
 
   <!-- LISTA DE EMPRESAS - INICIO -->
   <div class="lista_empresas">
+    <h3 style="margin-bottom: 0px;">Empresas:</h3>
     <div class="div_lista_empresas">
       <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../logos/logo-ca3.png" alt="ca3" style="height: 70px;"></button>
       <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../logos/logo-ca3_steel.png" alt="ca3 steel" style="height: 70px;"></button>
@@ -238,33 +357,6 @@ include_once("empresas/circuit.php");
   </div>
   <!-- BOTAO DE ACESSO - FINAL -->
 
-  <!-- MAIS VENDIDO - INICIO -->
-  <div class="session_curso_principal">
-    <div class="curso_principal">
-      <div class="row">
-        <div class="col">
-          <h6>O Mais Vendido</h6>
-          <div class="card mb-3" style="width: 70%; border: 0px;">
-            <div class="row g-0">
-              <div class="col-md-3">
-                <img src="empresas/img/mapadosucesso.jpg" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8" style="display: flex; align-items: center;">
-                <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px;">
-                  <h5 class="card-title">MMA</h5>
-                  <p class="card-text">Transforme sua empresa em um sucesso com a mentoria individual do Clodoaldo Araújo! Com ferramentas especializadas, estratégias, técnicas de gestão e vendas, o seu negócio pode alcançar novas alturas. Conte com a experiência do Clodoaldo para desenvolver uma visão extraordinária para sua empresa e atingir todos os seus objetivos. Não perca mais tempo e invista em uma mentoria especializada desenvolvida especialmente para você!</p>
-                  <p class="card-text"><b style="color: red">R$99,99</b><br><s>R$99,99</s></p>
-                  <p class="mais_vendido_alert">Mais vendido</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- MAIS VENDIDO - FINAL -->
-
   <!-- GALERIA - INICIO -->
   <div class="galeria">
     
@@ -276,6 +368,72 @@ include_once("empresas/circuit.php");
   
   </div>
   <!-- GALERIA - FINAL -->
+
+  <!-- CONTATO - INICIO -->
+  <div class="session-contato">
+
+    <?php
+
+        include('../bd/bd.php');
+        
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+            $nome = $_POST["nome"];
+            $email = $_POST["email"];
+            $telefone = $_POST["telefone"];
+            $cidade = $_POST["cidade"];
+            $idade = $_POST["idade"];
+            $comentario = $_POST["comentario"];
+
+            date_default_timezone_set('America/Sao_Paulo');
+            $data_envio = date('d-m-Y H:i:s');
+
+            $conn->query("INSERT INTO contato (nome, email, telefone, cidade, idade, comentario, data_envio) VALUES ( '$nome', '$email', '$telefone', '$cidade', '$idade', '$comentario', '$data_envio')");
+            $conn->close();
+
+            echo '<script>alert("Formulário enviado com sucesso!");</script>';
+
+        }
+
+        ?>
+
+    <div class="container-form">
+        <div class="row-50">
+            <div class="col"></div>
+        </div>
+        <div class="row-50" style="padding-right: 15px;">
+            <form style="width: 100%;" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <div class="col" style="margin-top: 16px;">
+                    <div class="mb-3">
+                        <h5 style="color: #e2e2e2; padding-left: 7px;">Contato</h5>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="style_input" id="nome_form" name="nome" placeholder="Nome" autocomplete="off">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="style_input" id="email_form" name="email" placeholder="Email" autocomplete="off">
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="style_input" id="telefone_form" name="telefone" placeholder="Telefone" autocomplete="off">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="style_input" id="cidade_form" name="cidade" placeholder="Cidade" autocomplete="off">
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="style_input" id="cidade_form" name="idade" placeholder="Idade" autocomplete="off">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="style_input_text" id="comentario_form" name="comentario" placeholder="Comentario" rows="5" autocomplete="off" style="resize: none;"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <input type="submit" class="form-control" id="submit_form" value="Enviar">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+  <!-- CONTATO - FINAL -->
 
   <!-- RODAPÉ - INICIO -->
   <?php include("footer.php"); ?>
