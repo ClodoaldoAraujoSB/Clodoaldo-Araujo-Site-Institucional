@@ -10,7 +10,10 @@
   <body>
     
     <!-- MENU SUPERIOR -->
-    <?php include("header.php"); ?>
+    <?php 
+    $caminho = $_SERVER['PHP_SELF'];
+    include("header.php"); 
+    ?>
 
     <!-- TITULO -->
     <h1 style="text-align: center; margin: 40px;">Política de Privacidade da Super Business</h3>

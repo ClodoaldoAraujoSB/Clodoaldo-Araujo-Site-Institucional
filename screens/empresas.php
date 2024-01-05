@@ -56,8 +56,12 @@
 
   </head>
   <body>
-    <!-- MENU SUPERIOR -->
-    <?php include("header.php"); ?>
+    <!-- MENU SUPERIOR - INICIO -->
+    <?php
+    $caminho = $_SERVER['PHP_SELF']; 
+    include("header.php"); 
+    ?>
+    <!-- MENU SUPERIOR - FINAL -->
 
     <!-- TITULO - INICIO -->
     <h5 style="text-align: center; padding-top: 20px;">Empresas</h5>

@@ -271,7 +271,10 @@ include_once("empresas/circuit.php");
 <body>
 
   <!-- MENU SUPERIOR - INICIO -->
-  <?php include("header.php"); ?>
+  <?php 
+  $caminho = $_SERVER['PHP_SELF'];
+  include("header.php"); 
+  ?>
   <!-- MENU SUPERIOR - FINAL -->
 
   <!-- BANNER - INICIO -->
@@ -335,6 +338,13 @@ include_once("empresas/circuit.php");
         <?php
         include_once("slider-cursos.php");
         ?>
+      </div>
+      <div class="cursos_linha">
+        <!-- BOTAO DE ACESSO - INICIO -->
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <a href="empresas.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
+        </div>
+        <!-- BOTAO DE ACESSO - FINAL -->
       </div>
     </div>
   </div>

@@ -213,7 +213,10 @@ $conn->close();
     <body>
 
         <!-- MENU SUPERIOR - INICIO -->
-        <?php include("header.php"); ?>
+        <?php
+        $caminho = $_SERVER['PHP_SELF']; 
+        include("header.php"); 
+        ?>
         <!-- MENU SUPERIOR - FINAL -->
 
         <!-- BANNER - INICIO -->

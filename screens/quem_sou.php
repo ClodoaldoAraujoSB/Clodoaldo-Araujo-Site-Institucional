@@ -135,7 +135,10 @@
 
     <body>
     <!-- MENU - INICIO -->
-    <?php include("header.php"); ?>
+    <?php 
+    $caminho = $_SERVER['PHP_SELF'];
+    include("header.php");
+    ?>
     <!-- MENU - FINAL -->
 
     <div class="session_sobre">

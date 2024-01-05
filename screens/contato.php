@@ -104,7 +104,10 @@
 </head>
     <body>
         <!-- MENU SUPERIOR - INICIO -->
-        <?php include("header.php"); ?>
+        <?php 
+        $caminho = $_SERVER['PHP_SELF'];
+        include("header.php"); 
+        ?>
         <!-- MENU SUPERIOR - FINAL -->
 
         <div class="session-contato">

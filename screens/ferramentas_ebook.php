@@ -168,8 +168,12 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
     
     </head>
     <body>
-        <!-- MENU SUPERIOR -->
-        <?php include("header.php"); ?>
+        <!-- MENU SUPERIOR - INICIO -->
+        <?php
+        $caminho = $_SERVER['PHP_SELF'];
+        include("header.php"); 
+        ?>
+        <!-- MENU SUPERIOR - FINAL -->
 
         <!-- TITULO
             <h1 class="titulo_ferramentas">Ferramentas</h1>

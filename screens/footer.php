@@ -118,6 +118,11 @@
         margin: 2px;
       }
 
+      .footer-button.ative {
+        color: #fff;
+        border-bottom: 2px solid #fff;
+      }
+
     </style>  
 
   </head>
@@ -147,7 +152,7 @@
           <a href="index.php"><button class="footer-button-logo" style="background-color: #fff;"><b class="b_footer_icone_principal">Clodoaldo Araújo</b></button></a>
         </div>
         <div class="footer-center">
-          <a href="politica-de-privacidade.php"><button class="footer-button"><p class="texto_politica" style="margin: 0px;">Politica de privacidade</p></button></a>
+          <a href="politica-de-privacidade.php"><button class="footer-button <?php echo ($pagina == 'politica-de-privacidade.php') ? 'ative' : ''; ?>"><p class="texto_politica" style="margin: 0px;">Politica de privacidade</p></button></a>
         </div>
         <div class="footer-menu">
           <ul class="list-menu">

@@ -160,8 +160,12 @@
 </head>
 <body>
 
-    <!-- MENU SUPERIOR -->
-    <?php include("header.php"); ?>
+    <!-- MENU SUPERIOR - INICIO -->
+    <?php 
+    $caminho = $_SERVER['PHP_SELF'];
+    include("header.php"); 
+    ?>
+    <!-- MENU SUPERIOR - FINAL -->
 
     <!-- TITULO -->
     <h5 style="text-align: center; margin: 0px; padding-top: 16px;">Galeria</h5>
@@ -179,8 +183,9 @@
     </div>
     <!-- IMAGEM DESTACADA - FINAL -->
 
-    <!-- RODAPÉ -->
+    <!-- RODAPÉ - INICIO -->
     <?php include("footer.php"); ?>
+    <!-- RODAPÉ - FINAL -->
 
 </body>
 </html>
