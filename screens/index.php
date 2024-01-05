@@ -240,6 +240,26 @@ include_once("empresas/circuit.php");
       padding: 1px;
       border-radius: 20px;
     }
+
+    .cursos_session {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .cursos_linha {}
+
+    .curso_div_texto {
+      width: 70%;
+    }
+
+    .cursos_div {
+      width: 87%;
+      padding: 20px;
+      border: 1px solid #BE0009;
+      border-radius: 20px;
+    }
     
   </style>
 
@@ -303,7 +323,21 @@ include_once("empresas/circuit.php");
   <!-- MAIS VENDIDO - FINAL -->
 
   <!-- CURSOS - INICIO -->
-
+  <div class="cursos_session">
+    <div class="cursos_div">
+      <div class="cursos_linha">
+        <h3 style="font-size: 20px;">Cursos</h3>
+        <div class="curso_div_texto">
+          <p style="font-size: 13px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque vulputate nisl id pretium. Aenean eget magna iaculis lorem ultricies convallis quis ac velit. Maecenas mattis nisl nec dui aliquam luctus. Quisque massa nulla, ornare sit amet consequat eget, vestibulum at mi. Morbi sit amet dui vel arcu congue finibus at ut turpis. Aenean et diam libero. Aliquam faucibus sodales pharetra. Nunc vel sapien suscipit, lacinia dui non, laoreet nibh. Quisque at lacinia tortor, a semper ex. Cras nec magna in nibh iaculis interdum vel vitae tortor. Nulla eget lorem vitae orci ultricies feugiat non eleifend lacus. Mauris egestas commodo tortor ut commodo.</p>
+        </div>
+      </div>
+      <div class="cursos_linha">
+        <?php
+        include_once("slider-cursos.php");
+        ?>
+      </div>
+    </div>
+  </div>
   <!-- CURSOS - FINAL -->
 
   <!-- DESCRICAO - INICIO -->
