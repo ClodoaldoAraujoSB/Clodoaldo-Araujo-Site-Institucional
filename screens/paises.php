@@ -135,16 +135,34 @@
             <img src="../logos/paises/grecia.png" height="75"alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/brasil.png" height="75"alt="" />
+            <img src="../logos/paises/catar.png" height="75"alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/brasil.png" height="75"alt="" />
+            <img src="../logos/paises/emirados-arabes-unidos.png" height="75"alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/brasil.png" height="75"alt="" />
+            <img src="../logos/paises/estonia.png" height="75"alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/brasil.png" height="75"alt="" />
+            <img src="../logos/paises/israel.png" height="75"alt="" />
+        </div>
+        <div class="slide">
+            <img src="../logos/paises/jordania.png" height="75"alt="" />
+        </div>
+        <div class="slide">
+            <img src="../logos/paises/letonia.png" height="75"alt="" />
+        </div>
+        <div class="slide">
+            <img src="../logos/paises/lituania.png" height="75"alt="" />
+        </div>
+        <div class="slide">
+            <img src="../logos/paises/rep-tcheca.png" height="75"alt="" />
+        </div>
+        <div class="slide">
+            <img src="../logos/paises/turquia.png" height="75"alt="" />
+        </div>
+        <div class="slide">
+            <img src="../logos/paises/ucrania.png" height="75"alt="" />
         </div>
     </div>
 </div>
