@@ -24,6 +24,7 @@
 
         .content {
             flex: 1; /* Cresce para ocupar o espaço restante */
+            background-color: black;
         }
 
         .titulo_principal {
@@ -176,10 +177,9 @@
                     </form>
                 </div>
             </div>
-
-            <div class="content"></div>
-
         </div>
+
+        <div class="content"></div>
 
         <!-- RODAPÉ - INICIO -->
         <?php include("footer.php"); ?>
