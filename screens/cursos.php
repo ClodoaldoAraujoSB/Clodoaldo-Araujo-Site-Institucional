@@ -52,13 +52,13 @@ $conn->close();
             }
 
             .session_pesquisa {
-                margin: 0px 0px 20px 0px;
+                margin: 0px 0px 0px 0px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
             .session_pesquisa {
-                margin: 0px 0px 20px 0px;
+                margin: 0px 0px 0px 0px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -104,6 +104,7 @@ $conn->close();
             }
 
             .session_curso_principal {
+                margin: 50px 0px 50px 0px ;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -128,6 +129,7 @@ $conn->close();
             }
 
             .session_ferramentas {
+                margin-bottom: 50px;
                 display: flex;
                 justify-content: center;
             }
@@ -226,7 +228,7 @@ $conn->close();
         <!-- BANNER - FINAL -->
 
         <!--  -->
-        <div class="session_pesquisa" style="margin: 10px 0px 0px 0px;">
+        <div class="session_pesquisa" style="margin: 50px 0px 0px 0px;">
             <div class="container_pesquisa">
                 <div class="busca_pesquisa">
                     <div class="div_pesquisa">
@@ -282,7 +284,7 @@ $conn->close();
                                     <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px;">
                                         <h5 class="card-title">MMA</h5>
                                         <p class="card-text">Transforme sua empresa em um sucesso com a mentoria individual do Clodoaldo Araújo! Com ferramentas especializadas, estratégias, técnicas de gestão e vendas, o seu negócio pode alcançar novas alturas. Conte com a experiência do Clodoaldo para desenvolver uma visão extraordinária para sua empresa e atingir todos os seus objetivos. Não perca mais tempo e invista em uma mentoria especializada desenvolvida especialmente para você!</p>
-                                        <p class="card-text"><b style="color: red">R$99,99</b><br><s>R$99,99</s></p>
+                                        <p class="card-text"><span>De: <s>R$99,99</s></span><br><span>Por: <b style="color: red">R$99,99</b></span></p>
                                         <p class="mais_vendido_alert">Mais vendido</p>
                                     </div>
                                 </div>
