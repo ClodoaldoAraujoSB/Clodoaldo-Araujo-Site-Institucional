@@ -22,12 +22,13 @@
     <style>
 
       body {
+        display: flex;
+        flex-direction: column;
         min-height: 100vh;
-      }
-
-      h1 {
         font-family: Montserrat, sans-serif;
       }
+
+      h1 {}
 
       .lista_empresas {
         margin-bottom: 6px;
@@ -64,7 +65,7 @@
     <!-- MENU SUPERIOR - FINAL -->
 
     <!-- TITULO - INICIO -->
-    <h5 style="text-align: center; padding-top: 20px;">Empresas</h5>
+    <h2 style="text-align: center; padding-top: 15px;">Empresas</h2>
     <!-- TEXTO - INICIO -->
 
     <!-- LISTA DE EMPRESAS - INICIO -->
