@@ -19,8 +19,8 @@ include_once("empresas/circuit.php");
 
     .descricao_cursos {
       width: 100%;
-      padding-left: 35px;
-      padding-right: 35px;
+      padding-left: 15px;
+      padding-right: 15px;
       font-size: 13px;
     }
 
@@ -31,16 +31,16 @@ include_once("empresas/circuit.php");
 
     .container_ferramentas {
       width: 87%;
-      padding: 20px 5px 5px 5px;
+      padding: 20px 5px 10px 5px;
       border: 1px solid #c10109;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin-top: 50px;
+      margin-bottom: 25px;
       border-radius: 20px;
     }
 
     .descricao_session {
-      margin-top: 20px;
-      margin-bottom: 50px;
+      margin-top: 50px;
+      margin-bottom: 25px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -86,12 +86,20 @@ include_once("empresas/circuit.php");
       font-size: 12px;
     }
 
+    .session_paises {
+      margin: 50px 0px 50px 0px;
+    }
+
     .paises_div_sobre {
       margin: 20px 0px 0px 0px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+
+    .session_empresas {
+      margin: 50px 0px 50px 0px;
     }
 
     .lista_empresas {
@@ -118,6 +126,7 @@ include_once("empresas/circuit.php");
     }
 
     .session_curso_principal {
+      margin: 50px 0px 25px 0px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -136,7 +145,7 @@ include_once("empresas/circuit.php");
     }
 
     .galeria {
-      margin: 20px 0px 20px 0px;
+      margin: 50px 0px 50px 0px;
       height: 400px;
 
       background-image: url('../logos/fotos-galeria.jpg');
@@ -154,8 +163,7 @@ include_once("empresas/circuit.php");
       color: white; 
       border-radius: 7px; 
       padding: 0px 10px 2px 10px;
-      margin-top: 10px;
-      margin-bottom: 20px;
+      margin: 0px;
     }
 
     .botao_acesso:hover {
@@ -242,6 +250,7 @@ include_once("empresas/circuit.php");
     }
 
     .cursos_session {
+      margin: 25px 0px 25px 0px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -334,7 +343,7 @@ include_once("empresas/circuit.php");
                 <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px;">
                   <h5 class="card-title">MMA</h5>
                   <p class="card-text">Transforme sua empresa em um sucesso com a mentoria individual do Clodoaldo Araújo! Com ferramentas especializadas, estratégias, técnicas de gestão e vendas, o seu negócio pode alcançar novas alturas. Conte com a experiência do Clodoaldo para desenvolver uma visão extraordinária para sua empresa e atingir todos os seus objetivos. Não perca mais tempo e invista em uma mentoria especializada desenvolvida especialmente para você!</p>
-                  <p class="card-text"><b style="color: red">R$99,99</b><br><s>R$99,99</s></p>
+                  <p class="card-text"><span>De: <s>R$99,99</s></span><br><span>Por: <b style="color: red">R$99,99</b></span></p>
                   <p class="mais_vendido_alert">Mais vendido</p>
                 </div>
               </div>
@@ -392,35 +401,43 @@ include_once("empresas/circuit.php");
   </div>
   <!-- DESCRICAO - FINAL -->
 
-  <!-- PAISES - INICIO -->
-  <div class="paises_div_sobre">
-    <h3 style="margin-bottom: 20px;">Mais de 60 paises que já visitei:</h3>
-    <?php include_once("paises.php"); ?>
-  </div>
-  <!-- PAISES - FINAL -->
-  
-  <!-- BOTAO DE ACESSO - INICIO -->
-  <div style="display: flex; justify-content: center; align-items: center;">
-    <a href="quem_sou.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
-  </div>
-  <!-- BOTAO DE ACESSO - FINAL -->
+  <div class="session_paises">
 
-  <!-- LISTA DE EMPRESAS - INICIO -->
-  <div class="lista_empresas">
-    <h3 style="margin-bottom: 0px;">Empresas:</h3>
-    <div class="div_lista_empresas">
-      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../logos/logo-ca3.png" alt="ca3" style="height: 70px;"></button>
-      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../logos/logo-ca3_steel.png" alt="ca3 steel" style="height: 70px;"></button>
-      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#circuitModal"><img src="../logos/logo-circuit.png" alt="circuit" style="height: 70px;"></button>
+    <!-- PAISES - INICIO -->
+    <div class="paises_div_sobre">
+      <h3 style="margin-bottom: 20px;">Mais de 60 paises que já visitei:</h3>
+      <?php include_once("paises.php"); ?>
     </div>
-  </div>
-  <!-- LISTA DE EMPRESAS - FINAL -->
+    <!-- PAISES - FINAL -->
+    
+    <!-- BOTAO DE ACESSO - INICIO -->
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <a href="quem_sou.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
+    </div>
+    <!-- BOTAO DE ACESSO - FINAL -->
 
-  <!-- BOTAO DE ACESSO - INICIO -->
-  <div style="display: flex; justify-content: center; align-items: center;">
-    <a href="empresas.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
   </div>
-  <!-- BOTAO DE ACESSO - FINAL -->
+
+  <div class="session_empresas">
+
+    <!-- LISTA DE EMPRESAS - INICIO -->
+    <div class="lista_empresas">
+      <h3 style="margin-bottom: 0px;">Empresas:</h3>
+      <div class="div_lista_empresas">
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../logos/logo-ca3.png" alt="ca3" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../logos/logo-ca3_steel.png" alt="ca3 steel" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#circuitModal"><img src="../logos/logo-circuit.png" alt="circuit" style="height: 70px;"></button>
+      </div>
+    </div>
+    <!-- LISTA DE EMPRESAS - FINAL -->
+
+    <!-- BOTAO DE ACESSO - INICIO -->
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <a href="empresas.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
+    </div>
+    <!-- BOTAO DE ACESSO - FINAL -->
+
+  </div>
 
   <!-- GALERIA - INICIO -->
   <div class="galeria">

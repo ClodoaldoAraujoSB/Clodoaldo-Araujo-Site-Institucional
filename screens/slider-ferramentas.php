@@ -62,7 +62,7 @@
             font-size: 24px;
             color: #333;
             background-color: #fff;
-            padding: 10px;
+            padding: 0px 10px 0px 10px;
             border-radius: 50%;
             border: 1px solid #ddd;
             z-index: 1;

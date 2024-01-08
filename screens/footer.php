@@ -18,6 +18,9 @@
 
       .content-footer {
         width: 93%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .footer-icone-principal {
@@ -51,6 +54,7 @@
       .list-menu {
         display: flex;
         justify-content: flex-end;
+        margin: 0px;
       }
 
       .item-menu {
