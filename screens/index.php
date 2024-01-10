@@ -346,7 +346,7 @@ include_once("empresas/circuit.php");
                 <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px;">
                   <h5 class="card-title">MMA</h5>
                   <p class="card-text">Transforme sua empresa em um sucesso com a mentoria individual do Clodoaldo Araújo! Com ferramentas especializadas, estratégias, técnicas de gestão e vendas, o seu negócio pode alcançar novas alturas. Conte com a experiência do Clodoaldo para desenvolver uma visão extraordinária para sua empresa e atingir todos os seus objetivos. Não perca mais tempo e invista em uma mentoria especializada desenvolvida especialmente para você!</p>
-                  <p class="card-text"><span>De: <s>R$99,99</s></span><br><span>Por: <b style="color: red">R$99,99</b></span></p>
+                  <p class="card-text"><span>De: <s>R$99,99</s></span><br><span>Por: <b style="color:#c10109">R$99,99</b></span></p>
                   <p class="mais_vendido_alert">Mais vendido</p>
                 </div>
               </div>

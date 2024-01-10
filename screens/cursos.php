@@ -278,7 +278,7 @@ $conn->close();
                         <div class="card mb-3" style="width: 70%; border: 0px;">
                             <div class="row g-0">
                                 <div class="col-md-3">
-                                    <img src="empresas/img/mapadosucesso.jpg" class="img-fluid rounded-start" alt="...">
+                                    <img src="../cursos/mma.jpg" class="img-fluid rounded-start" alt="...">
                                 </div>
                                 <div class="col-md-8" style="display: flex; align-items: center;">
                                     <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px;">

@@ -33,47 +33,47 @@
             text-align: center;
         }
 
-        .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        .galeria {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .image {
-        display: inline-block;
-        margin: 1px;
-        cursor: pointer;
+            display: inline-block;
+            margin: 1px;
+            cursor: pointer;
         }
 
         .image img {
-        height: 250px; 
+            height: 250px; 
         }
 
         .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
         }
 
         .modal-content {
-        display: block;
-        max-width: 90%;
-        max-height: 90%;
-        margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
         }
 
         .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        color: white;
-        font-size: 30px;
-        cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
         }
 
     </style>
