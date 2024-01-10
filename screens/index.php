@@ -73,7 +73,7 @@ include_once("empresas/circuit.php");
     }
 
     .titulo_sobre_h1 {
-      color: red;
+      color: #c10109;
       font-size: 25px;
       padding-left: 15%;
     }
@@ -128,6 +128,7 @@ include_once("empresas/circuit.php");
     .session_curso_principal {
       margin: 50px 0px 25px 0px;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -141,7 +142,7 @@ include_once("empresas/circuit.php");
     }
 
     .curso_principal {
-      width: 80%;
+      width: 84%;
     }
 
     .galeria {
@@ -305,6 +306,7 @@ include_once("empresas/circuit.php");
 
   <!-- FERRAMENTAS - INICIO -->
   <div class="cursos_session">
+    <h3 style="color: #c10109;">Ferramentas</h3>
     <div class="cursos_div">
       <div class="cursos_linha">
         <h3 style="font-size: 20px;">Ferramentas</h3>
@@ -330,6 +332,7 @@ include_once("empresas/circuit.php");
 
   <!-- MAIS VENDIDO - INICIO -->
   <div class="session_curso_principal">
+    <h3 style="color: #c10109;">Cursos</h3>
     <div class="curso_principal">
       <div class="row">
         <div class="col">
@@ -337,7 +340,7 @@ include_once("empresas/circuit.php");
           <div class="card mb-3" style="width: 70%; border: 0px;">
             <div class="row g-0">
               <div class="col-md-3">
-                <img src="empresas/img/mapadosucesso.jpg" class="img-fluid rounded-start" alt="...">
+                <img src="../cursos/mapadosucesso.jpg" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8" style="display: flex; align-items: center;">
                 <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px;">
@@ -405,7 +408,7 @@ include_once("empresas/circuit.php");
 
     <!-- PAISES - INICIO -->
     <div class="paises_div_sobre">
-      <h3 style="margin-bottom: 20px;">Mais de 60 paises que já visitei:</h3>
+      <h3 style="margin-bottom: 20px; color:#c10109;">Mais de 60 paises que já visitei:</h3>
       <?php include_once("paises.php"); ?>
     </div>
     <!-- PAISES - FINAL -->
@@ -422,7 +425,7 @@ include_once("empresas/circuit.php");
 
     <!-- LISTA DE EMPRESAS - INICIO -->
     <div class="lista_empresas">
-      <h3 style="margin-bottom: 0px;">Empresas:</h3>
+      <h3 style="margin-bottom: 0px; color:#c10109;">Empresas:</h3>
       <div class="div_lista_empresas">
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../logos/logo-ca3.png" alt="ca3" style="height: 70px;"></button>
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../logos/logo-ca3_steel.png" alt="ca3 steel" style="height: 70px;"></button>

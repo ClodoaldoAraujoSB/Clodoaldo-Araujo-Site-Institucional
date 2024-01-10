@@ -87,6 +87,10 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                 border: 1px solid #c10109;
                 margin-bottom: 20px;
                 border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
 
             .container-list {
@@ -142,8 +146,12 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                 padding: 10px 0px 10px 0px;
             }
 
-            .botao-ferramenta {
+            .ferramenta_linha {
+                width: 93%;
+            }
 
+            .ferramenta_div_texto {
+                width: 70%;
             }
 
             body {
@@ -224,6 +232,12 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
         <!-- LISTA DE FERRAMENTAS -->
         <div class="session_ferramentas">
             <div class="container_ferramentas">
+                <div class="ferramenta_linha">
+                    <h3 style="font-size: 20px;">Ferramentas</h3>
+                    <div class="ferramenta_div_texto">
+                        <p style="font-size: 13px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque vulputate nisl id pretium. Aenean eget magna iaculis lorem ultricies convallis quis ac velit. Maecenas mattis nisl nec dui aliquam luctus. Quisque massa nulla, ornare sit amet consequat eget, vestibulum at mi. Morbi sit amet dui vel arcu congue finibus at ut turpis. Aenean et diam libero. Aliquam faucibus sodales pharetra. Nunc vel sapien suscipit, lacinia dui non, laoreet nibh. Quisque at lacinia tortor, a semper ex. Cras nec magna in nibh iaculis interdum vel vitae tortor. Nulla eget lorem vitae orci ultricies feugiat non eleifend lacus. Mauris egestas commodo tortor ut commodo.</p>
+                    </div>
+                </div>
                 <div class="container-list">
                     <div class="row" style="display: flex; justify-content: center;">
                     <?php
