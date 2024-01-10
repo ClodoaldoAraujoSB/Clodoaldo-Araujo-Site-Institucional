@@ -127,6 +127,7 @@
       .diploma_texto_div {
         width: 300px;
         display: flex;
+        text-align: center;
         justify-content: center;
         align-items: start;
       }
@@ -185,14 +186,14 @@
       <!-- DIPLOMAS - INICIO -->
       <div class="diplomas_div_sobre">
         <div class="diploma_titulo">
-          <h3 style="margin-bottom: 20px;">Diplomas</h3>
+          <h3 style="margin-bottom: 20px;">Formação</h3>
         </div>
         
         <div class="diplomas_linha">
           
           <div class="diploma_card">
             <div class="diploma_imagem_div">
-              <img class="diploma_imagem" src="../logos/2004.jpg">
+              <img class="diploma_imagem" src="../logos/eep_logo.jpg">
             </div>
             <div class="diploma_texto_div">
               <h5>Graduação em Engenharia Civil</h5>
@@ -201,7 +202,7 @@
 
           <div class="diploma_card">
             <div class="diploma_imagem_div">
-              <img class="diploma_imagem" src="../logos/1997.jpg">
+              <img class="diploma_imagem" src="../logos/eep_logo.jpg">
             </div>
             <div class="diploma_texto_div">
               <h5>Graduação em Engenharia Mecanica</h5>
@@ -210,7 +211,7 @@
 
           <div class="diploma_card">
             <div class="diploma_imagem_div">
-              <img class="diploma_imagem" src="../logos/2000.jpg">
+              <img class="diploma_imagem" src="../logos/inpg_logo.png">
             </div>
             <div class="diploma_texto_div">
               <h5>Pós-graduação em Gestão Estrategica de Negocios</h5>
@@ -223,7 +224,7 @@
           
           <div class="diploma_card">
             <div class="diploma_imagem_div">
-              <img class="diploma_imagem" src="../logos/081999.jpg">
+              <img class="diploma_imagem" src="../logos/empretec_logo.png">
             </div>
             <div class="diploma_texto_div">
               <h5>Empretec</h5>
@@ -232,7 +233,7 @@
 
           <div class="diploma_card">
             <div class="diploma_imagem_div">
-              <img class="diploma_imagem" src="../logos/1999.jpg">
+              <img class="diploma_imagem" src="../logos/isca_logo.jpg">
             </div>
             <div class="diploma_texto_div">
               <h5>Pós-graduação em Gestão Estrategica de Negocios</h5>
@@ -244,7 +245,7 @@
               <img class="diploma_imagem" src="../logos/universidade-california.jpg">
             </div>
             <div class="diploma_texto_div">
-              <h5>MBI de empreendedorismo</h5>
+              <h5>MBA de empreendedorismo</h5>
             </div>
           </div>
 
