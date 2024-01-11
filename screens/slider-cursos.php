@@ -110,7 +110,11 @@
                                     <h5 class="card-title" style="font-size: 15px; margin: 0px;"> <?php echo $ferramenta["nome"]; ?> </h5>
                                 </div>
                                 <div class="botão-ferramenta">
+                                <?php if (!empty($ferramenta['preço_antigo']) || $ferramenta['preco_antigo'] != "") {?>
                                     <p style="font-size: 13px; margin: 0px; padding: 0px 0px 10px 0px;">De: <s><?php echo $ferramenta["preco_antigo"]?></s> Por: <b style="color: #c10109;"><?php echo $ferramenta["preco_atual"] ?></b></p>
+                                <?php } else {?>
+                                    <p style="font-size: 13px; margin: 0px; padding: 0px 0px 10px 0px;">Preço: <b style="color: #c10109;"><?php echo $ferramenta["preco_atual"] ?></b></p>
+                                <?php } ?>
                                 </div>    
                             </div>
                         </div>
