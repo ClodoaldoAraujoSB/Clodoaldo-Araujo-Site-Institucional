@@ -122,6 +122,7 @@
       .diploma_imagem {
         width: 300px;
         height: 200px;
+        padding: 20px;
       }
 
       .diploma_texto_div {
@@ -233,7 +234,7 @@
 
           <div class="diploma_card">
             <div class="diploma_imagem_div">
-              <img class="diploma_imagem" src="../logos/isca_logo.jpg">
+              <img class="diploma_imagem" style="padding: 50px;" src="../logos/isca_logo.jpg">
             </div>
             <div class="diploma_texto_div">
               <h5>Pós-graduação em Gestão Estrategica de Negocios</h5>
