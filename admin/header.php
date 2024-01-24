@@ -51,6 +51,10 @@
           </li>
           <br>
           <li class="nav-item">
+            <a href="cursos.php"><button type="button" class="btn btn-outline-light">Cursos</button></a>
+          </li>
+          <br>
+          <li class="nav-item">
             <a href="login.php"><button type="button" class="btn btn-outline-light">Sair</button></a>
           </li>
         </ul>
