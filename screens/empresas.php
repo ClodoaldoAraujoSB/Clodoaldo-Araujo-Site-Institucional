@@ -76,7 +76,7 @@
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#circuitModal"><img src="../logos/logo-circuit.png" alt="circuit" style="height: 50px;"></button>
       </div>
       <div class="div_lista_empresas">
-      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#isteelModal"><img src="../logos/logo-isteel.png" alt="isteel" style="height: 50px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#isteelModal"><img src="../logos/logo-isteel.png" alt="isteel" style="height: 50px;"></button>
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#jacModal"><img src="../logos/logo-jac.png" alt="jac" style="height: 50px;"></button>
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#point_pixelModal"><img src="../logos/logo-point_pixel.png" alt="Point Pixel" style="width: 250px;"></button>
       </div>

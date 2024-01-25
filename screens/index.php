@@ -1,8 +1,8 @@
 <?php
 
-include_once("empresas/ca3.php");
-include_once("empresas/ca3_steel.php");
-include_once("empresas/circuit.php");
+include_once("empresas/isteel.php");
+include_once("empresas/rota_da_inovacao.php");
+include_once("empresas/super_business.php");
 
 ?>
 
@@ -79,7 +79,8 @@ include_once("empresas/circuit.php");
     }
 
     .descricao_sobre {
-      background-color: red;
+      border-radius: 10px;
+      background-color: #c10109;
       color: white;
       padding: 20px;
       margin: 0px;
@@ -245,9 +246,13 @@ include_once("empresas/circuit.php");
     input[type="submit"] {
       background-color: #BE0009;
       color: white;
-      border: 0px;
+      border: 1px solid #BE0009;
       padding: 1px;
       border-radius: 20px;
+    }
+
+    input[type="submit"]:hover {
+      transform: scale(1.1);
     }
 
     .cursos_session {
@@ -322,7 +327,7 @@ include_once("empresas/circuit.php");
       <div class="cursos_linha">
         <!-- BOTAO DE ACESSO - INICIO -->
         <div style="display: flex; justify-content: center; align-items: center;">
-          <a href="empresas.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
+          <a href="ferramentas_ebook.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
         </div>
         <!-- BOTAO DE ACESSO - FINAL -->
       </div>
@@ -340,7 +345,7 @@ include_once("empresas/circuit.php");
           <div class="card mb-3" style="width: 70%; border: 0px;">
             <div class="row g-0">
               <div class="col-md-3">
-                <img src="../cursos/mma.jpg" class="img-fluid rounded-start" alt="...">
+                <img src="../cursos/mma.jpg" class="img-fluid rounded-start" alt="..." style="border-radius: 10px;">
               </div>
               <div class="col-md-8" style="display: flex; align-items: center;">
                 <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px;">
@@ -375,7 +380,7 @@ include_once("empresas/circuit.php");
       <div class="cursos_linha">
         <!-- BOTAO DE ACESSO - INICIO -->
         <div style="display: flex; justify-content: center; align-items: center;">
-          <a href="empresas.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
+          <a href="cursos.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
         </div>
         <!-- BOTAO DE ACESSO - FINAL -->
       </div>
@@ -427,9 +432,9 @@ include_once("empresas/circuit.php");
     <div class="lista_empresas">
       <h3 style="margin-bottom: 0px; color:#c10109;">Empresas:</h3>
       <div class="div_lista_empresas">
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../logos/logo-ca3.png" alt="ca3" style="height: 70px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../logos/logo-ca3_steel.png" alt="ca3 steel" style="height: 70px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#circuitModal"><img src="../logos/logo-circuit.png" alt="circuit" style="height: 70px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#super_businessModal"><img src="../logos/logo-super_business.png" alt="Super Business" style="height: 50px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#rota_da_inovacaoModal"><img src="../logos/logo-rota.png" alt="Rota da Inovaçao" style="height: 50px;"></button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#isteelModal"><img src="../logos/logo-isteel.png" alt="isteel" style="height: 50px;"></button>
       </div>
     </div>
     <!-- LISTA DE EMPRESAS - FINAL -->

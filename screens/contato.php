@@ -100,6 +100,10 @@
             border-radius: 20px;
         }
 
+        input[type="submit"]:hover {
+            transform: scale(1.1);
+        }
+
     </style>
 
 </head>
