@@ -103,7 +103,7 @@
                     <div class="row g-0" style="flex-grow: 1;">
                         <div class="col" style="display: flex; flex-direction: column;">
                             <div style="display: flex; justify-content: center;">
-                                <img src="../<?php echo $ferramenta_f["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="height: 130px;">
+                                <img src="../<?php echo $ferramenta_f["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="height: 130px; border-radius: 10px;">
                             </div>
                             <div class="card-body card_ferramenta_f" id="card-ferramenta_f" style="padding: 0px;"> <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
                                 <div class="titulo-ferramenta_f">

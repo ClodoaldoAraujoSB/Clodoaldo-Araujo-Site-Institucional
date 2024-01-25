@@ -3,43 +3,38 @@
 session_start();
 if(isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
     include('../bd/bd.php');
-    $sql_ferramentas = $conn->query("SELECT * FROM ferramentas"); 
+    $sql_ferramentas = $conn->query("SELECT * FROM ferramentas");
 
     // Verifica se o formulário foi enviado
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['excluir_arquivo'])) {
         // Obtém os dados do formulário
-        $nome = $_POST["nome"];
+        $nome = $_POST["excluir_arquivo"];
 
-        $sql_verifica_nome = $conn->query("SELECT nome FROM ferramentas WHERE nome = '" . $nome . "'");
+        $sql_verifica_nome = $conn->query("SELECT nome, imagem, arquivo FROM ferramentas WHERE nome = '" . $nome . "'");
 
-        if ($sql_verifica_nome->num_rows <= 0) {
-            $nome_arquivo = $_POST["nome_arquivo"];
-            $descricao = $_POST["descricao"];
+        if ($sql_verifica_nome->num_rows > 0) {
+            // Obtem os dados da ferramenta
+            $ferramenta = $sql_verifica_nome->fetch_assoc();
+            $imagem_a_excluir = "../" . $ferramenta["imagem"];
+            $arquivo_a_excluir = "../" . $ferramenta["arquivo"];
+            echo $imagem_a_excluir;
+            echo $arquivo_a_excluir;
 
-            // Configurações para o upload do arquivo
-            $diretorioDestino = "../ferramentas/";
-            $diretorioDestino_img = "../ferramentas/img/";
-            $caminhoCompleto_arquivo = $diretorioDestino . basename($_FILES["arquivo"]["name"]);
-            $caminhoCompleto_imagem = $diretorioDestino_img . basename($_FILES["imagem"]["name"]);
-
-            // Move o arquivo para o diretório de destino
-            if (move_uploaded_file($_FILES["arquivo"]["tmp_name"], $caminhoCompleto_arquivo)) {
-                move_uploaded_file($_FILES["imagem"]["tmp_name"], $caminhoCompleto_imagem);
-
-                $diretorioDestino = "ferramentas/";
-                $diretorioDestino_img = "ferramentas/img/";
-                $caminhoCompleto_arquivo = $diretorioDestino . basename($_FILES["arquivo"]["name"]);
-                $caminhoCompleto_imagem = $diretorioDestino_img . basename($_FILES["imagem"]["name"]);
-
-                $query = "INSERT INTO ferramentas (nome, descricao, imagem, arquivo, nome_arquivo) VALUES ('$nome', '$descricao', '$caminhoCompleto_imagem', '$caminhoCompleto_arquivo', '$nome_arquivo')";
-                $conn->query($query);
-                // Lembre-se de ajustar os detalhes da conexão e da consulta conforme necessário
-                echo '<script> ferramentaAceita() </script>';
-
-
-            } else {
-                echo '<script> ferramentaRecusada() </script>';
+            // Exclui o arquivo de imagem
+            if (file_exists($imagem_a_excluir)) {
+                unlink($imagem_a_excluir);
             }
+
+            // Exclui o arquivo principal
+            if (file_exists($arquivo_a_excluir)) {
+                unlink($arquivo_a_excluir);
+            }
+
+            // Exclui a entrada no banco de dados
+            $query_excluir = "DELETE FROM ferramentas WHERE nome = '$nome'";
+            $conn->query($query_excluir);
+
+            header('Refresh:0');
         }
     }
 ?>
@@ -48,7 +43,7 @@ if(isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Envio de Arquivo</title>
+    <title>Ferramentas Admin || Clodoaldo Araújo</title>
 
     <style>
 
@@ -79,6 +74,24 @@ if(isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
         body {
             background-color: #c9d6ff;
             background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+        }
+
+        .meu-botao {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .meu-botao:hover {
+            background-color: black;
+            color: white;
         }
 
         .file-form {
@@ -121,15 +134,12 @@ if(isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
 <body>
   <?php include("../admin/header.php"); ?>
 
-    <h2>Envio de Arquivo</h2>
+    <h2 style="margin-top: 50px; display: flex; justify-content: center; align-items: center;">Envio de Arquivo</h2>
 
-    <form class="file-form" method="post" enctype="multipart/form-data">
+    <form class="file-form" method="post" action="upload_ferramenta.php" enctype="multipart/form-data">
         
         <label for="nome">Nome:</label>
         <input class="form-field" type="text" name="nome" required><br>
-
-        <label for="descricao">Descrição:</label>
-        <input class="form-field" type="text" name="descricao" required><br>
 
         <label for="arquivo">Nome do arquivo:</label>
         <input class="form-field" type="text" name="nome_arquivo" required><br>
@@ -147,10 +157,10 @@ if(isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
         <thead>
             <tr>
                 <th>Nome</th>
-                <th>Descrição</th>
                 <th>Nome do Arquivo</th>
                 <th>Arquivo</th>
                 <th>Imagem</th>
+                <th>Excluir</th>
             </tr>
         </thead>
         <tbody>
@@ -158,13 +168,20 @@ if(isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
             <?php
             
             foreach ( $sql_ferramentas as $ferramenta ) {
+
+                $nome = $ferramenta["nome"];
                 echo "<tr>";
 
-                echo "<td>" . $ferramenta["nome"] . "</td>";
-                echo "<td>" . $ferramenta["descricao"] . "</td>";
+                echo "<td>" . $nome . "</td>";
                 echo "<td>" . $ferramenta["nome_arquivo"] . "</td>";
                 echo "<td>" . $ferramenta["arquivo"] . "</td>";
                 echo "<td><img src=../" . $ferramenta["imagem"] .  "></td>";
+
+                echo    "<td>
+                            <form method='post'>
+                                <button type='submit' name='excluir_arquivo' style='width: 150px; height: 50px;' class='meu-botao' value='$nome'>$nome</button>
+                            </form>
+                        </td>";
 
                 echo "</tr>";
             }

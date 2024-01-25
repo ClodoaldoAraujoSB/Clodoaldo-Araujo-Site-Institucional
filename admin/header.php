@@ -51,7 +51,7 @@
           </li>
           <br>
           <li class="nav-item">
-            <a href="videos.php"><button type="button" class="btn btn-outline-light">Videos</button></a>
+            <a href="cursos.php"><button type="button" class="btn btn-outline-light">Cursos</button></a>
           </li>
           <br>
           <li class="nav-item">

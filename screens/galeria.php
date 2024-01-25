@@ -16,7 +16,7 @@
 
         .grid-container {
             width: 24%;
-            display: grid;
+            /*display: grid;*/
             padding: 10px;
             justify-items: center;
         }
@@ -126,7 +126,7 @@
                             array4.push(...array);
                         }
 
-                        // Exibe as imagens na página (substitua conforme necessário)
+                        // Exibe as imagens na página
                         const div = document.createElement('div');
                         div.classList.add('grid-container');
 
