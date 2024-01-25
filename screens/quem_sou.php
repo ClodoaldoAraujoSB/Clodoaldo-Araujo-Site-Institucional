@@ -59,25 +59,27 @@
       }
 
       .titulo_sobre_h1 {
-        color: red;
+        color: #BE0009;
         font-size: 25px;
         padding-left: 15%;
       }
 
       .descricao_sobre {
-        background-color: red;
+        background-color: #BE0009;
         color: white;
         padding: 20px;
         margin: 0px;
         font-size: 12px;
+        border-radius: 10px;
       }
 
       .continuacao_sobre {
-        background-color: red;
+        background-color: #BE0009;
         color: white;
         padding: 20px;
         margin: 100px 0px 0px 0px;
         font-size: 12px;
+        border-radius: 10px;
       }
 
       .paises_div_sobre {
@@ -155,9 +157,15 @@
               <span><b class="titulo_sobre_h1">Clodoaldo Araújo</b></span>
             </div>
             <div class="descricao_sobre">
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet mauris ut nulla tincidunt ultricies hendrerit sit amet nisi. Pellentesque viverra sit amet augue sed varius. Integer vitae egestas libero. Cras sit amet tincidunt tellus. Curabitur quis odio non nibh congue placerat sit amet at lacus. Aliquam varius convallis ligula. Phasellus consequat enim sed volutpat posuere. Nam sed enim consequat, consequat velit feugiat, vestibulum odio. Maecenas in condimentum leo, eu pellentesque enim. Fusce varius arcu velit, ut tempor ligula dictum ac. Ut pharetra sit amet ante et vestibulum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer tincidunt lacinia magna, vitae fringilla turpis tincidunt sed. Aliquam fringilla mi in ex iaculis, at consequat ante efficitur. Nullam fermentum odio quis pellentesque finibus. Maecenas nisi lectus, dignissim nec nisi eget, interdum porttitor arcu.</P>
-              <p> Donec vitae risus sed tellus molestie pretium non sit amet ligula. Maecenas sodales nisi ut odio ultricies mollis. Nam quis egestas arcu. Maecenas metus justo, ultrices euismod dictum id, accumsan eget turpis. Aenean consectetur tellus sed urna condimentum, id commodo diam maximus. Nunc non fermentum erat. Praesent suscipit arcu ut consequat sodales. Maecenas mollis bibendum cursus. Duis dignissim tristique nibh nec porttitor. Duis feugiat feugiat ultricies. Quisque tincidunt vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer vel commodo libero.</p>
-              <p style="margin-bottom: 0px;"> Nam id volutpat nunc. In ac porta lectus. Ut in placerat elit, id porttitor justo. Aenean sed augue vitae ipsum ornare cursus. Nulla ac enim sed nisi blandit malesuada eu ut tellus. Maecenas ullamcorper enim nec quam pharetra cursus. Ut at est eu diam tristique feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas sit amet blandit ante. Quisque commodo urna id pellentesque suscipit. In vestibulum risus vel purus fringilla viverra. Duis eget augue non augue egestas rhoncus. Donec pellentesque fermentum vehicula. Cras condimentum ligula vel odio suscipit pharetra. Cras dignissim augue urna, non malesuada felis rutrum vel. Nulla a ligula vulputate, gravida ligula et, dapibus libero.</p>
+              <p> Clodoaldo Araújo, mineiro. </p>
+              <p> Apaixonado pela cidade de Limeira, onde mora desde a infância. </p>
+              <p> Nascido numa família humilde batalhou e conseguiu realizar o sonho da graduação, se formou Engenheiro Mecânico. </p>
+              <p> Imparável, mudou-se para os Estados Unidos para fazer MBA na Universidade da Califórnia. </p>
+              <p> Voltando ao Brasil fundou sua primeira empresa, a metalúrgica do ramo de aço CA3 Laminação. </p>
+              <p> Ampliou seus investimentos indo para construção civil, voltou aos bancos escolares e se graduou Engenheiro Civil para gerenciar sua construtora, foi quando construiu o primeiro condomínio empresarial de Limeira – CONEL. </p>
+              <p> Buscando constantemente aprimorar suas habilidades, cursou também pós-graduação em Gestão Estratégica de Negócios e depois em pós-graduação em Gestão Empresarial. </p>
+              <p> Em um momento desafiador, menos afortunado, um amigo o inscreveu para o programa “O Aprendiz 5” da rede Record.  Venceu uma disputa com milhares de pessoas, ingressou no programa e se consagrou vencedor e sócio do renomado empresário Roberto Justus. </p>
+              <p style="margin-bottom: 0px;">Foi convidado para palestrar por todo o país, disseminando a mensagem de empreendedorismo em mais de 150 cidades. Assumindo o papel de apresentador do programa “Rota da Inovação”, que percorreu o mundo passando por 61 países em busca das maiores inovações da atualidade, Clodoaldo ampliou sua influência global. </p>
             </div>
           </div>
         </div>
@@ -166,9 +174,11 @@
         <div class="coluna_div">
             <div class="titulo_sobre"></div>
             <div class="continuacao_sobre">
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet mauris ut nulla tincidunt ultricies hendrerit sit amet nisi. Pellentesque viverra sit amet augue sed varius. Integer vitae egestas libero. Cras sit amet tincidunt tellus. Curabitur quis odio non nibh congue placerat sit amet at lacus. Aliquam varius convallis ligula. Phasellus consequat enim sed volutpat posuere. Nam sed enim consequat, consequat velit feugiat, vestibulum odio. Maecenas in condimentum leo, eu pellentesque enim. Fusce varius arcu velit, ut tempor ligula dictum ac. Ut pharetra sit amet ante et vestibulum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer tincidunt lacinia magna, vitae fringilla turpis tincidunt sed. Aliquam fringilla mi in ex iaculis, at consequat ante efficitur. Nullam fermentum odio quis pellentesque finibus. Maecenas nisi lectus, dignissim nec nisi eget, interdum porttitor arcu.</P>
-              <p> Donec vitae risus sed tellus molestie pretium non sit amet ligula. Maecenas sodales nisi ut odio ultricies mollis. Nam quis egestas arcu. Maecenas metus justo, ultrices euismod dictum id, accumsan eget turpis. Aenean consectetur tellus sed urna condimentum, id commodo diam maximus. Nunc non fermentum erat. Praesent suscipit arcu ut consequat sodales. Maecenas mollis bibendum cursus. Duis dignissim tristique nibh nec porttitor. Duis feugiat feugiat ultricies. Quisque tincidunt vulputate purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer vel commodo libero.</p>
-              <p style="margin-bottom: 0px;"> Nam id volutpat nunc. In ac porta lectus. Ut in placerat elit, id porttitor justo. Aenean sed augue vitae ipsum ornare cursus. Nulla ac enim sed nisi blandit malesuada eu ut tellus. Maecenas ullamcorper enim nec quam pharetra cursus. Ut at est eu diam tristique feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas sit amet blandit ante. Quisque commodo urna id pellentesque suscipit. In vestibulum risus vel purus fringilla viverra. Duis eget augue non augue egestas rhoncus. Donec pellentesque fermentum vehicula. Cras condimentum ligula vel odio suscipit pharetra. Cras dignissim augue urna, non malesuada felis rutrum vel. Nulla a ligula vulputate, gravida ligula et, dapibus libero.</p>
+              <p>Tornou-se sócio da Spyder Race, uma empresa que fabrica carros de corrida. Hoje é também a quinta escola de pilotos de carro de corrida do Brasil, com planos de retornar ao campeonato brasileiro em 2025. </p>
+              <p>Antecipando-se ao seu tempo, Clodoaldo idealizou uma nova empresa que promete revolucionar o mercado do ferro e aço, com o aplicativo para celular iSteel. Uma ferramenta será o ponto de encontro do aço. Essa plataforma inovadora conecta fabricantes e distribuidores de aço aos clientes finais, garantindo eficiência nos processos, agilidade na entrega e redução de custos. </p>
+              <p>Novos empreendimentos estão a todo vapor em sua empresa CA3 Incorporadora, incluindo a idealização de um prédio de apartamentos de alto padrão, um loteamento residencial e um novo condomínio empresarial, um dos poucos endereços na cidade com heliporto. </p>
+              <p>Seu desejo de apoiar novos empreendedores sempre teve lugar especial em seu dia a dia, com uma parceria com a renomada universidade Unicamp, campus de Limeira, foi fundada a empresa Startup School Ventures. Uma iniciativa que irá fomentar o desenvolvimento nas áreas de tecnologia, inteligência artificial e educação. Reduzindo a distância entre a escola e o mercado de trabalho. </p>
+              <p style="margin-bottom: 0px;">Sua agência de marketing e publicidade, a Point Pixel, atende Limeira e região e as empresas do grupo empresarial de Clodoaldo. Uma agência 360graus que tem foco em solucionar os problemas dos clientes, inovar ideias e garantindo uma comunicação eficaz. Uma de suas atividades é atender a alta demanda dos cursos e treinamentos que Clodoaldo ministra no Brasil e no mundo. Todos centrados nos quatro pilares para o sucesso: Autoconhecimento, empreendedorismo, gestão e inovação. </p>
             </div>
           </div>
           <div class="coluna_div_image"></div>

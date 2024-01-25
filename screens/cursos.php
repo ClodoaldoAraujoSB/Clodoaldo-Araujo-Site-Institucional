@@ -209,6 +209,18 @@ $conn->close();
                 flex: 1; /* Cresce para ocupar o espaço restante */
             }
 
+            .btn2 {
+                background: #c10109; 
+                color: white; 
+                border-radius: 7px; 
+                padding: 0px 10px 2px 10px;
+                border: 1px solid #c10109;
+            }
+
+            .btn2:hover {
+                transform: scale(1.2);
+            }
+
         </style>
 
     </head>
@@ -278,13 +290,13 @@ $conn->close();
                         <div class="card mb-3" style="width: 70%; border: 0px;">
                             <div class="row g-0">
                                 <div class="col-md-3">
-                                    <img src="../cursos/mma.jpg" class="img-fluid rounded-start" alt="...">
+                                    <img src="../cursos/ede.jpg" class="img-fluid rounded-start" alt="..." style="border-radius: 10px;">
                                 </div>
                                 <div class="col-md-8" style="display: flex; align-items: center;">
                                     <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px;">
-                                        <h5 class="card-title">MMA</h5>
+                                        <h5 class="card-title">Empreendedores de Elite</h5>
                                         <p class="card-text">Transforme sua empresa em um sucesso com a mentoria individual do Clodoaldo Araújo! Com ferramentas especializadas, estratégias, técnicas de gestão e vendas, o seu negócio pode alcançar novas alturas. Conte com a experiência do Clodoaldo para desenvolver uma visão extraordinária para sua empresa e atingir todos os seus objetivos. Não perca mais tempo e invista em uma mentoria especializada desenvolvida especialmente para você!</p>
-                                        <p class="card-text"><!--<span>De: <s>R$99,99</s></span><br>--><span>Preço: <b style="color: red">R$5.000,00</b></span></p>
+                                        <p class="card-text"><span>De: <s>R$5.000,00</s></span><br><span>Por: <b style="color: red">R$3.000,00</b></span></p>
                                         <p class="mais_vendido_alert">Mais vendido</p>
                                     </div>
                                 </div>
@@ -315,7 +327,7 @@ $conn->close();
                                 <div class="row g-0" style="flex-grow: 1;">
                                     <div class="col" style="display: flex; flex-direction: column;">
                                         <div style="display: flex; justify-content: center;">
-                                            <img src="<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="">
+                                            <img src="<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="border-radius: 10px;">
                                         </div>
                                         <div class="card-body card_ferramenta" id="card-ferramenta" style="padding: 0px;"> <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
                                             <div class="titulo-ferramenta">
@@ -327,7 +339,7 @@ $conn->close();
                                                 <?php } else {?>
                                                     <p style="font-size: 13px; margin: 0px; padding: 0px 0px 10px 0px;">Preço: <b style="color: #c10109;"><?php echo $ferramenta["preco_atual"] ?></b></p>
                                                 <?php } ?>
-                                                    <a href="" download="" class="btn" style="background: #c10109; color: white; border-radius: 7px; padding: 0px 10px 2px 10px;">Acesse Aqui</a>
+                                                    <a href="" download=""><button class="btn2">Acesse aqui</button></a>
                                             </div>    
                                         </div>
                                     </div>
