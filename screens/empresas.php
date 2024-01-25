@@ -113,18 +113,6 @@ include_once("empresas/super_business.php");
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#super_businessModal"><img src="../logos/logo-super_business.png" alt="Super Business" style="height: 50px;"></button>
       </div>
     </div>
-    <div class="div_lista_empresas">
-      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#rota_da_inovacaoModal"><img
-          src="../logos/logo-rota.png" alt="Rota da Inovaçao" style="height: 50px;"></button>
-      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#spyder_raceModal"><img
-          src="../logos/logo-spyderrace.png" alt="Spyder Race" style="height: 50px;"></button>
-      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#startup_schoolModal"><img
-          src="../logos/logo ss_resized.png" alt="Startup School" style="width: 120px;"></button>
-    </div>
-    <div class="div_lista_empresas" style="display:flex; justify-content:center">
-      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#super_businessModal"><img
-          src="../logos/logo-super_business.png" alt="Super Business" style="height: 50px;"></button>
-    </div>
   </div>
   <!-- LISTA DE EMPRESAS - FIM -->
 

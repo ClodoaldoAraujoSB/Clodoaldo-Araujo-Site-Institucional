@@ -347,7 +347,7 @@ $conn->close();
                             </div>
                         </div>
                     <?php
-                        if ($contador == 5) {
+                        if ($contador == 4) {
                         ?>
                             </div>
                             <div class="row" style="display: flex; justify-content: center;">

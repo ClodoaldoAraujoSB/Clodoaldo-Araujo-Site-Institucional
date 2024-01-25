@@ -17,6 +17,7 @@
       margin-top: 50px;
       margin-bottom: 50px;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -55,17 +56,20 @@
     }
 
     .titulo_sobre {
+      font-size: 20px;
       margin-bottom: 20px;
+      margin-left: 70px;
+      color: #BE0009;
     }
 
     .titulo_sobre h1 {
-      color: red;
+      color: #BE0009;
       font-size: 25px;
       padding-left: 15%;
     }
 
     .descricao_sobre {
-      background-color: red;
+      background-color: #BE0009;
       color: white;
       padding: 20px;
       margin: 0px;
@@ -73,7 +77,7 @@
     }
 
     .continuacao_sobre {
-      background-color: red;
+      background-color: #BE0009;
       color: white;
       padding: 20px;
       margin: 100px 0px 0px 0px;
@@ -133,7 +137,7 @@
       align-items: start;
     }
 
-    @media only screen and (max-width: 768px) {
+    /*@media only screen and (max-width: 768px) {
       .diplomas_div_sobre {
         margin: 20px 0px;
         display: flex;
@@ -147,13 +151,13 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
-        /* Espaço entre os diplomas */
+        
       }
 
       .diploma_card {
         margin: 5px;
         width: 300px;
-        /* Largura dos diplomas */
+        
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -164,7 +168,6 @@
       .diploma_imagem_div {
         width: 100%;
         max-width: 300px;
-        /* Largura máxima da imagem */
         height: 200px;
       }
 
@@ -172,19 +175,19 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* Para ajustar a imagem dentro do contêiner mantendo a proporção */
         border-radius: 8px;
-        /* Adicione bordas arredondadas se desejar */
       }
 
       .diploma_texto_div {
         width: 100%;
         text-align: center;
         margin-top: 10px;
-        /* Espaço entre a imagem e o texto */
       }
+    }
+    */
 
     </style>
+</head>
 
     <body>
     <!-- MENU - INICIO -->
@@ -218,21 +221,20 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="linha_div_continuacao">
-        <div class="coluna_div">
-            <div class="titulo_sobre"></div>
-            <div class="continuacao_sobre">
-              <p>Tornou-se sócio da Spyder Race, uma empresa que fabrica carros de corrida. Hoje é também a quinta escola de pilotos de carro de corrida do Brasil, com planos de retornar ao campeonato brasileiro em 2025. </p>
-              <p>Antecipando-se ao seu tempo, Clodoaldo idealizou uma nova empresa que promete revolucionar o mercado do ferro e aço, com o aplicativo para celular iSteel. Uma ferramenta será o ponto de encontro do aço. Essa plataforma inovadora conecta fabricantes e distribuidores de aço aos clientes finais, garantindo eficiência nos processos, agilidade na entrega e redução de custos. </p>
-              <p>Novos empreendimentos estão a todo vapor em sua empresa CA3 Incorporadora, incluindo a idealização de um prédio de apartamentos de alto padrão, um loteamento residencial e um novo condomínio empresarial, um dos poucos endereços na cidade com heliporto. </p>
-              <p>Seu desejo de apoiar novos empreendedores sempre teve lugar especial em seu dia a dia, com uma parceria com a renomada universidade Unicamp, campus de Limeira, foi fundada a empresa Startup School Ventures. Uma iniciativa que irá fomentar o desenvolvimento nas áreas de tecnologia, inteligência artificial e educação. Reduzindo a distância entre a escola e o mercado de trabalho. </p>
-              <p style="margin-bottom: 0px;">Sua agência de marketing e publicidade, a Point Pixel, atende Limeira e região e as empresas do grupo empresarial de Clodoaldo. Uma agência 360graus que tem foco em solucionar os problemas dos clientes, inovar ideias e garantindo uma comunicação eficaz. Uma de suas atividades é atender a alta demanda dos cursos e treinamentos que Clodoaldo ministra no Brasil e no mundo. Todos centrados nos quatro pilares para o sucesso: Autoconhecimento, empreendedorismo, gestão e inovação. </p>
-            </div>
+        <div class="linha_div_continuacao">
+          <div class="coluna_div">
+              <div class="titulo_sobre"></div>
+              <div class="continuacao_sobre">
+                <p>Tornou-se sócio da Spyder Race, uma empresa que fabrica carros de corrida. Hoje é também a quinta escola de pilotos de carro de corrida do Brasil, com planos de retornar ao campeonato brasileiro em 2025. </p>
+                <p>Antecipando-se ao seu tempo, Clodoaldo idealizou uma nova empresa que promete revolucionar o mercado do ferro e aço, com o aplicativo para celular iSteel. Uma ferramenta será o ponto de encontro do aço. Essa plataforma inovadora conecta fabricantes e distribuidores de aço aos clientes finais, garantindo eficiência nos processos, agilidade na entrega e redução de custos. </p>
+                <p>Novos empreendimentos estão a todo vapor em sua empresa CA3 Incorporadora, incluindo a idealização de um prédio de apartamentos de alto padrão, um loteamento residencial e um novo condomínio empresarial, um dos poucos endereços na cidade com heliporto. </p>
+                <p>Seu desejo de apoiar novos empreendedores sempre teve lugar especial em seu dia a dia, com uma parceria com a renomada universidade Unicamp, campus de Limeira, foi fundada a empresa Startup School Ventures. Uma iniciativa que irá fomentar o desenvolvimento nas áreas de tecnologia, inteligência artificial e educação. Reduzindo a distância entre a escola e o mercado de trabalho. </p>
+                <p style="margin-bottom: 0px;">Sua agência de marketing e publicidade, a Point Pixel, atende Limeira e região e as empresas do grupo empresarial de Clodoaldo. Uma agência 360graus que tem foco em solucionar os problemas dos clientes, inovar ideias e garantindo uma comunicação eficaz. Uma de suas atividades é atender a alta demanda dos cursos e treinamentos que Clodoaldo ministra no Brasil e no mundo. Todos centrados nos quatro pilares para o sucesso: Autoconhecimento, empreendedorismo, gestão e inovação. </p>
+              </div>
           </div>
+          <div class="coluna_div_image"></div>
         </div>
-        <div class="coluna_div_image"></div>
       </div>
     </div>
   </div>

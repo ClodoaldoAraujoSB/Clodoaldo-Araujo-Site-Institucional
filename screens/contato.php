@@ -221,23 +221,8 @@
                                 <input type="submit" class="form-control" id="submit_form" value="Enviar">
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <input type="text" class="style_input" id="cidade_form" name="cidade" placeholder="Cidade"
-                                autocomplete="off">
-                        </div>
-                        <div class="mb-3">
-                            <input type="number" class="style_input" id="cidade_form" name="idade" placeholder="Idade"
-                                autocomplete="off">
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="style_input_text" id="comentario_form" name="comentario"
-                                placeholder="Comentario" rows="5" autocomplete="off" style="resize: none;"></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <input type="submit" class="form-control" id="submit_form" value="Enviar">
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
