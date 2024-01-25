@@ -13,10 +13,10 @@ include_once("empresas/super_business.php");
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pagina Inicial || Clodoaldo Araújo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <style>
-
     .descricao_cursos {
       width: 100%;
       padding-left: 15px;
@@ -113,7 +113,7 @@ include_once("empresas/super_business.php");
 
     .div_lista_empresas {
       display: flex;
-      justify-content: center; 
+      justify-content: center;
       align-items: center;
     }
 
@@ -122,7 +122,7 @@ include_once("empresas/super_business.php");
       height: 100px;
       margin: 10px;
       display: flex;
-      justify-content: center; 
+      justify-content: center;
       align-items: center;
     }
 
@@ -161,9 +161,9 @@ include_once("empresas/super_business.php");
     }
 
     .botao_acesso {
-      background: #c10109; 
-      color: white; 
-      border-radius: 7px; 
+      background: #c10109;
+      color: white;
+      border-radius: 7px;
       padding: 0px 10px 2px 10px;
       margin: 0px;
     }
@@ -205,7 +205,7 @@ include_once("empresas/super_business.php");
       width: 100%;
     }
 
-    .style_input{
+    .style_input {
       width: 100%;
       padding-left: 10px;
       border-radius: 20px;
@@ -275,7 +275,52 @@ include_once("empresas/super_business.php");
       border: 1px solid #BE0009;
       border-radius: 20px;
     }
-    
+
+    /***************************************************** HOME RESPONSIVA ****************************************************************************/
+
+    @media only screen and (max-width: 768px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      .titulo_sobre {
+        margin-bottom: 20px;
+        margin-left: 20px;
+        justify-content: center;
+      }
+
+      .lista_empresas {
+        margin-bottom: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .lista_empresas .div_lista_empresas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .lista_empresas .div_lista_empresas button {
+        width: 400px;
+        height: 100px;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .session-contato {
+        background-image: url("../logos/bg_mobile_forms.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: 0px;
+        background-color: #181816;
+      }
+
+    }
   </style>
 
   <script>
@@ -286,9 +331,9 @@ include_once("empresas/super_business.php");
 <body>
 
   <!-- MENU SUPERIOR - INICIO -->
-  <?php 
+  <?php
   $caminho = $_SERVER['PHP_SELF'];
-  include("header.php"); 
+  include("header.php");
   ?>
   <!-- MENU SUPERIOR - FINAL -->
 
@@ -302,8 +347,14 @@ include_once("empresas/super_business.php");
   <div class="session_ferramentas">
     <div class="container_ferramentas">
       <div class="descricao_cursos">
-          <h5>Cursos</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque vulputate nisl id pretium. Aenean eget magna iaculis lorem ultricies convallis quis ac velit. Maecenas mattis nisl nec dui aliquam luctus. Quisque massa nulla, ornare sit amet consequat eget, vestibulum at mi. Morbi sit amet dui vel arcu congue finibus at ut turpis. Aenean et diam libero. Aliquam faucibus sodales pharetra. Nunc vel sapien suscipit, lacinia dui non, laoreet nibh. Quisque at lacinia tortor, a semper ex. Cras nec magna in nibh iaculis interdum vel vitae tortor. Nulla eget lorem vitae orci ultricies feugiat non eleifend lacus. Mauris egestas commodo tortor ut commodo.</p>
+        <h5>Cursos</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque vulputate nisl id pretium. Aenean
+          eget magna iaculis lorem ultricies convallis quis ac velit. Maecenas mattis nisl nec dui aliquam luctus.
+          Quisque massa nulla, ornare sit amet consequat eget, vestibulum at mi. Morbi sit amet dui vel arcu congue
+          finibus at ut turpis. Aenean et diam libero. Aliquam faucibus sodales pharetra. Nunc vel sapien suscipit,
+          lacinia dui non, laoreet nibh. Quisque at lacinia tortor, a semper ex. Cras nec magna in nibh iaculis interdum
+          vel vitae tortor. Nulla eget lorem vitae orci ultricies feugiat non eleifend lacus. Mauris egestas commodo
+          tortor ut commodo.</p>
       </div>
     </div>
   </div>
@@ -316,7 +367,13 @@ include_once("empresas/super_business.php");
       <div class="cursos_linha">
         <h3 style="font-size: 20px;">Ferramentas</h3>
         <div class="curso_div_texto">
-          <p style="font-size: 13px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque vulputate nisl id pretium. Aenean eget magna iaculis lorem ultricies convallis quis ac velit. Maecenas mattis nisl nec dui aliquam luctus. Quisque massa nulla, ornare sit amet consequat eget, vestibulum at mi. Morbi sit amet dui vel arcu congue finibus at ut turpis. Aenean et diam libero. Aliquam faucibus sodales pharetra. Nunc vel sapien suscipit, lacinia dui non, laoreet nibh. Quisque at lacinia tortor, a semper ex. Cras nec magna in nibh iaculis interdum vel vitae tortor. Nulla eget lorem vitae orci ultricies feugiat non eleifend lacus. Mauris egestas commodo tortor ut commodo.</p>
+          <p style="font-size: 13px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque vulputate
+            nisl id pretium. Aenean eget magna iaculis lorem ultricies convallis quis ac velit. Maecenas mattis nisl nec
+            dui aliquam luctus. Quisque massa nulla, ornare sit amet consequat eget, vestibulum at mi. Morbi sit amet
+            dui vel arcu congue finibus at ut turpis. Aenean et diam libero. Aliquam faucibus sodales pharetra. Nunc vel
+            sapien suscipit, lacinia dui non, laoreet nibh. Quisque at lacinia tortor, a semper ex. Cras nec magna in
+            nibh iaculis interdum vel vitae tortor. Nulla eget lorem vitae orci ultricies feugiat non eleifend lacus.
+            Mauris egestas commodo tortor ut commodo.</p>
         </div>
       </div>
       <div class="cursos_linha">
@@ -369,7 +426,13 @@ include_once("empresas/super_business.php");
       <div class="cursos_linha">
         <h3 style="font-size: 20px;">Cursos</h3>
         <div class="curso_div_texto">
-          <p style="font-size: 13px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque vulputate nisl id pretium. Aenean eget magna iaculis lorem ultricies convallis quis ac velit. Maecenas mattis nisl nec dui aliquam luctus. Quisque massa nulla, ornare sit amet consequat eget, vestibulum at mi. Morbi sit amet dui vel arcu congue finibus at ut turpis. Aenean et diam libero. Aliquam faucibus sodales pharetra. Nunc vel sapien suscipit, lacinia dui non, laoreet nibh. Quisque at lacinia tortor, a semper ex. Cras nec magna in nibh iaculis interdum vel vitae tortor. Nulla eget lorem vitae orci ultricies feugiat non eleifend lacus. Mauris egestas commodo tortor ut commodo.</p>
+          <p style="font-size: 13px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque vulputate
+            nisl id pretium. Aenean eget magna iaculis lorem ultricies convallis quis ac velit. Maecenas mattis nisl nec
+            dui aliquam luctus. Quisque massa nulla, ornare sit amet consequat eget, vestibulum at mi. Morbi sit amet
+            dui vel arcu congue finibus at ut turpis. Aenean et diam libero. Aliquam faucibus sodales pharetra. Nunc vel
+            sapien suscipit, lacinia dui non, laoreet nibh. Quisque at lacinia tortor, a semper ex. Cras nec magna in
+            nibh iaculis interdum vel vitae tortor. Nulla eget lorem vitae orci ultricies feugiat non eleifend lacus.
+            Mauris egestas commodo tortor ut commodo.</p>
         </div>
       </div>
       <div class="cursos_linha">
@@ -399,7 +462,7 @@ include_once("empresas/super_business.php");
             <span><b class="titulo_sobre_h1">Clodoaldo Araújo</b></span>
           </div>
           <div class="descricao_sobre">
-          <p> Clodoaldo Araújo, mineiro. </p>
+              <p> Clodoaldo Araújo, mineiro. </p>
               <p> Apaixonado pela cidade de Limeira, onde mora desde a infância. </p>
               <p> Nascido numa família humilde batalhou e conseguiu realizar o sonho da graduação, se formou Engenheiro Mecânico. </p>
               <p> Imparável, mudou-se para os Estados Unidos para fazer MBA na Universidade da Califórnia. </p>
@@ -423,7 +486,7 @@ include_once("empresas/super_business.php");
       <?php include_once("paises.php"); ?>
     </div>
     <!-- PAISES - FINAL -->
-    
+
     <!-- BOTAO DE ACESSO - INICIO -->
     <div style="display: flex; justify-content: center; align-items: center;">
       <a href="quem_sou.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
@@ -455,13 +518,13 @@ include_once("empresas/super_business.php");
 
   <!-- GALERIA - INICIO -->
   <div class="galeria">
-    
+
     <!-- BOTAO DE ACESSO - INICIO -->
     <div style="display: flex; justify-content: center; align-items: center;">
       <a href="galeria.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
     </div>
     <!-- BOTAO DE ACESSO - FINAL -->
-  
+
   </div>
   <!-- GALERIA - FINAL -->
 
@@ -470,63 +533,68 @@ include_once("empresas/super_business.php");
 
     <?php
 
-        include('../bd/bd.php');
-        
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    include('../bd/bd.php');
 
-            $nome = $_POST["nome"];
-            $email = $_POST["email"];
-            $telefone = $_POST["telefone"];
-            $cidade = $_POST["cidade"];
-            $idade = $_POST["idade"];
-            $comentario = $_POST["comentario"];
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-            date_default_timezone_set('America/Sao_Paulo');
-            $data_envio = date('d-m-Y H:i:s');
+      $nome = $_POST["nome"];
+      $email = $_POST["email"];
+      $telefone = $_POST["telefone"];
+      $cidade = $_POST["cidade"];
+      $idade = $_POST["idade"];
+      $comentario = $_POST["comentario"];
 
-            $conn->query("INSERT INTO contato (nome, email, telefone, cidade, idade, comentario, data_envio) VALUES ( '$nome', '$email', '$telefone', '$cidade', '$idade', '$comentario', '$data_envio')");
-            $conn->close();
+      date_default_timezone_set('America/Sao_Paulo');
+      $data_envio = date('d-m-Y H:i:s');
 
-            echo '<script>alert("Formulário enviado com sucesso!");</script>';
+      $conn->query("INSERT INTO contato (nome, email, telefone, cidade, idade, comentario, data_envio) VALUES ( '$nome', '$email', '$telefone', '$cidade', '$idade', '$comentario', '$data_envio')");
+      $conn->close();
 
-        }
+      echo '<script>alert("Formulário enviado com sucesso!");</script>';
 
-        ?>
+    }
+
+    ?>
 
     <div class="container-form">
-        <div class="row-50">
-            <div class="col"></div>
-        </div>
-        <div class="row-50" style="padding-right: 15px;">
-            <form style="width: 100%;" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                <div class="col" style="margin-top: 16px;">
-                    <div class="mb-3">
-                        <h5 style="color: #e2e2e2; padding-left: 7px;">Contato</h5>
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="style_input" id="nome_form" name="nome" placeholder="Nome" autocomplete="off">
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" class="style_input" id="email_form" name="email" placeholder="Email" autocomplete="off">
-                    </div>
-                    <div class="mb-3">
-                        <input type="tel" class="style_input" id="telefone_form" name="telefone" placeholder="Telefone" autocomplete="off">
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="style_input" id="cidade_form" name="cidade" placeholder="Cidade" autocomplete="off">
-                    </div>
-                    <div class="mb-3">
-                        <input type="number" class="style_input" id="cidade_form" name="idade" placeholder="Idade" autocomplete="off">
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="style_input_text" id="comentario_form" name="comentario" placeholder="Comentario" rows="5" autocomplete="off" style="resize: none;"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <input type="submit" class="form-control" id="submit_form" value="Enviar">
-                    </div>
-                </div>
-            </form>
-        </div>
+      <div class="row-50">
+        <div class="col"></div>
+      </div>
+      <div class="row-50" style="padding-right: 15px;">
+        <form style="width: 100%;" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+          <div class="col" style="margin-top: 16px;">
+            <div class="mb-3">
+              <h5 style="color: #e2e2e2; padding-left: 7px;">Contato</h5>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="style_input" id="nome_form" name="nome" placeholder="Nome" autocomplete="off">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="style_input" id="email_form" name="email" placeholder="Email"
+                autocomplete="off">
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="style_input" id="telefone_form" name="telefone" placeholder="Telefone"
+                autocomplete="off">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="style_input" id="cidade_form" name="cidade" placeholder="Cidade"
+                autocomplete="off">
+            </div>
+            <div class="mb-3">
+              <input type="number" class="style_input" id="cidade_form" name="idade" placeholder="Idade"
+                autocomplete="off">
+            </div>
+            <div class="mb-3">
+              <textarea class="style_input_text" id="comentario_form" name="comentario" placeholder="Comentario"
+                rows="5" autocomplete="off" style="resize: none;"></textarea>
+            </div>
+            <div class="mb-3">
+              <input type="submit" class="form-control" id="submit_form" value="Enviar">
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
   <!-- CONTATO - FINAL -->
@@ -535,6 +603,9 @@ include_once("empresas/super_business.php");
   <?php include("footer.php"); ?>
   <!-- RODAPÉ - FINAL -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
