@@ -68,13 +68,17 @@ include_once("empresas/super_business.php");
       }
 
       .div_lista_empresas button {
-        width: 400px;
+        width: 90%;
         height: 100px;
         margin: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
       }
+
+      /*.btn {
+        width: 100%;
+      }*/
 
     }
   </style>

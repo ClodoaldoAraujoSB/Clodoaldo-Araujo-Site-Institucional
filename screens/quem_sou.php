@@ -137,6 +137,69 @@
       align-items: start;
     }
 
+    .h_paises {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      
+      .diplomas_linha {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+      }
+
+      .h_paises {
+        font-size: 20px;
+      }
+
+      .descricao_session {
+        width: 100%;
+      }
+
+      .quem_div_sobre {
+        width: 100%;
+      }
+
+      .linha_div_descricao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-position-x: center;
+        background-size: 100%;
+      }
+
+      .coluna_div_image {
+        height: 0px;
+      }
+
+      .coluna_div {
+        width: 90%;
+        margin: 100px 0px 0px 0px;
+      }
+
+      .linha_div_continuacao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-position-x: center;
+        background-size: 100%;
+      }
+
+      .continuacao_sobre {
+        /*margin: 170px 0px 0px 0px;*/
+      }
+
+      .session_sobre {
+        margin-top: 0px;
+      }
+
+    }
+
     /*@media only screen and (max-width: 768px) {
       .diplomas_div_sobre {
         margin: 20px 0px;
@@ -242,7 +305,7 @@
 
   <!-- PAISES - INICIO -->
   <div class="paises_div_sobre">
-    <h3 style="margin-bottom: 20px;">Mais de 60 paises que já visitei:</h3>
+    <h3 class="h_paises">Mais de 60 paises que já visitei:</h3>
     <?php include_once("paises.php"); ?>
   </div>
   <!-- PAISES - FINAL -->

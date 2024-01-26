@@ -17,6 +17,11 @@ include_once("empresas/super_business.php");
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <style>
+
+    body {
+      width: 100%;
+    }
+
     .descricao_cursos {
       width: 100%;
       padding-left: 15px;
@@ -263,8 +268,6 @@ include_once("empresas/super_business.php");
       flex-direction: column;
     }
 
-    .cursos_linha {}
-
     .curso_div_texto {
       width: 70%;
     }
@@ -276,48 +279,57 @@ include_once("empresas/super_business.php");
       border-radius: 20px;
     }
 
-    /***************************************************** HOME RESPONSIVA ****************************************************************************/
-
     @media only screen and (max-width: 768px) {
-      body {
-        overflow-x: hidden;
+      
+      .curso_div_texto {
+        width: 100%;
       }
 
-      .titulo_sobre {
-        margin-bottom: 20px;
-        margin-left: 20px;
-        justify-content: center;
+      .descricao_session {
+        width: 100%;
       }
 
-      .lista_empresas {
-        margin-bottom: 6px;
+      .quem_div_sobre {
+        width: 100%;
+      }
+
+      .linha_div_descricao {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        background-position-x: center;
+        background-size: 100%;
       }
 
-      .lista_empresas .div_lista_empresas {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      .coluna_div_image {
+        height: 170px;
+      }
+
+      .coluna_div {
+        width: 90%;
+      }
+
+      .session_paises {
+        margin: 0px;
+      }
+
+      .div_lista_empresas {
         flex-direction: column;
       }
 
-      .lista_empresas .div_lista_empresas button {
-        width: 400px;
-        height: 100px;
-        margin: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      .session-contato {
+        background-color: #282828;
+        background-image: none;
       }
 
-      .session-contato {
-        background-image: url("../logos/bg_mobile_forms.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position-y: 0px;
-        background-color: #181816;
+      .container-form {
+        flex-direction: column;
+      }
+
+      .row-50 {
+        width: 100%;
       }
 
     }
@@ -399,7 +411,7 @@ include_once("empresas/super_business.php");
       <div class="row">
         <div class="col">
           <h6>O Mais Vendido</h6>
-          <div class="card mb-3" style="width: 70%; border: 0px;">
+          <div class="card mb-3" style="width: 100%; border: 0px;">
             <div class="row g-0">
               <div class="col-md-3">
                 <img src="../cursos/ede.jpg" class="img-fluid rounded-start" alt="..." style="border-radius: 10px;">

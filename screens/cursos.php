@@ -221,6 +221,57 @@ $conn->close();
                 transform: scale(1.2);
             }
 
+            .div_pesquisa_form {
+                display: flex;
+            }
+
+            .mb-3 {
+                width: 70%; 
+                border: 0px;
+            }
+
+            @media screen and (max-width: 768px) {
+
+                .form_pesquisa {
+                    flex-direction: column;
+                }
+
+                .drop_form_pesquisa {
+                    width: 100%;
+                }
+
+                .text_form_pesquisa {
+                    margin: 0px;
+                    margin-right: 10px;
+                    width: 60%;
+                }
+
+                .btn_form_pesquisa {
+                    width: 40%;
+                }
+
+                .ferramenta_div_texto {
+                    width: 100%;
+                }
+
+                .mb-3 {
+                    width: 100%;
+                    border: 0px solid white;
+                }
+
+                .descricao_cursos {
+                    width: 100%;
+                    padding: 15px;
+                }
+
+                .row {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+
+            }
+
         </style>
 
     </head>
@@ -268,12 +319,14 @@ $conn->close();
                                     <option value="1">Distancia</option>
                                 </select>
                             </div>
-                            <div class="text_form_pesquisa">
-                                <input type="text" class="form-control" id="input_pesquisa" name="input_pesquisa" placeholder="Digite o curso que procura:">
+                            <div class="div_pesquisa_form">
+                                <div class="text_form_pesquisa">
+                                    <input type="text" class="form-control" id="input_pesquisa" name="input_pesquisa" placeholder="Digite o curso que procura:">
+                                </div>
+                                <div class="btn_form_pesquisa">
+                                    <input class="btn" style="background: #c10109; color: white;" type="submit" value="Pesquisa">
+                                </div>
                             </div>
-                            <div class="btn_form_pesquisa">
-                                <input class="btn" style="background: #c10109; color: white;" type="submit" value="Pesquisa">
-                            </div>    
                         </form>
                     </div>
                 </div>
@@ -287,7 +340,7 @@ $conn->close();
                 <div class="row">
                     <div class="col">
                         <h6>O Mais Vendido</h6>
-                        <div class="card mb-3" style="width: 70%; border: 0px;">
+                        <div class="card mb-3" style="border: 0px;">
                             <div class="row g-0">
                                 <div class="col-md-3">
                                     <img src="../cursos/ede.jpg" class="img-fluid rounded-start" alt="..." style="border-radius: 10px;">

@@ -62,6 +62,15 @@
             height: 100%;
         }
     }
+
+    @media only screen and (max-width: 768px) {
+
+        .slider {
+            width: 100%;
+        }
+
+    }
+
 </style>
 
 <div class="slider">

@@ -16,6 +16,7 @@ $pagina = basename($caminho);
 
   <style>
     .header-menu {
+      width: 100%;
       display: flex;
       justify-content: center;
       padding: 20px;
@@ -46,6 +47,7 @@ $pagina = basename($caminho);
 
     .item_menu {
       margin: 0px;
+      padding: 0px 0px 0px 30px;
     }
 
     .itemMenu {
@@ -135,9 +137,36 @@ $pagina = basename($caminho);
       border-bottom: 2px solid #fff;
     }
 
-        /***************************************************** HEADER RESPONSIVA ****************************************************************************/
+    @media screen and (max-width: 768px) {
 
-        @media only screen and (max-width: 768px) {}
+      .navbar-menu {
+        width: 100%;
+      }
+
+      .navbar-site {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .list-menu {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+    }
+
   </style>
 
 </head>
@@ -147,94 +176,49 @@ $pagina = basename($caminho);
     <nav class="navbar-site">
       <div class="navbar-icone-principal">
         <div class="list-menu" style="display: flex; justify-content: flex-start;">
-          <div class="item_menu_logo"><a href="index.php"><button class="button-header-logo"><b
-                  class="b_icone_principal">CLODOALDO ARAÚJO</b></button></a></div>
+          <div class="item_menu_logo"><a href="index.php"><button class="button-header-logo"><b class="b_icone_principal">CLODOALDO ARAÚJO</b></button></a></div>
         </div>
       </div>
       <div class="navbar-menu">
         <div class="list-menu">
-          <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="index.php"><button
-                class="button-header <?php echo ($pagina == 'index.php') ? 'ative' : ''; ?>" style="padding: 0px;">
-                <p class="texto_menu" style="margin: 0px;">home</p>
-              </button></a></div>
-          <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="ferramentas_ebook.php"><button
-                class="button-header <?php echo ($pagina == 'ferramentas_ebook.php') ? 'ative' : ''; ?>"
-                style="padding: 0px;">
-                <p class="texto_menu" style="margin: 0px;">ferramentas grátis</p>
-              </button></a></div>
-          <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="quem_sou.php"><button
-                class="button-header <?php echo ($pagina == 'quem_sou.php') ? 'ative' : ''; ?>" style="padding: 0px;">
-                <p class="texto_menu" style="margin: 0px;">sobre</p>
-              </button></a></div>
-          <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="empresas.php"><button
-                class="button-header <?php echo ($pagina == 'empresas.php') ? 'ative' : ''; ?>" style="padding: 0px;">
-                <p class="texto_menu" style="margin: 0px;">empresas</p>
-              </button></a></div>
-          <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="cursos.php"><button
-                class="button-header <?php echo ($pagina == 'cursos.php') ? 'ative' : ''; ?>" style="padding: 0px;">
-                <p class="texto_menu" style="margin: 0px;">cursos</p>
-              </button></a></div>
-          <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="galeria.php"><button
-                class="button-header <?php echo ($pagina == 'galeria.php') ? 'ative' : ''; ?>" style="padding: 0px;">
-                <p class="texto_menu" style="margin: 0px;">galeria</p>
-              </button></a></div>
-          <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="contato.php"><button
-                class="button-header <?php echo ($pagina == 'contato.php') ? 'ative' : ''; ?>" style="padding: 0px;">
-                <p class="texto_menu" style="margin: 0px;">contato</p>
-              </button></a></div>
+          <div class="item-menu" style=""><a href="index.php">
+            <button class="button-header <?php echo ($pagina == 'index.php') ? 'ative' : ''; ?>" style="padding: 0px;">
+              <p class="texto_menu" style="margin: 0px;">home</p>
+            </button></a>
+          </div>
+          <div class="item-menu" style=""><a href="ferramentas_ebook.php">
+            <button class="button-header <?php echo ($pagina == 'ferramentas_ebook.php') ? 'ative' : ''; ?>" style="padding: 0px;">
+              <p class="texto_menu" style="margin: 0px;">ferramentas grátis</p>
+            </button></a>
+          </div>
+          <div class="item-menu" style=""><a href="quem_sou.php">
+            <button class="button-header <?php echo ($pagina == 'quem_sou.php') ? 'ative' : ''; ?>" style="padding: 0px;">
+              <p class="texto_menu" style="margin: 0px;">sobre</p>
+            </button></a>
+          </div>
+          <div class="item-menu" style=""><a href="empresas.php">
+            <button class="button-header <?php echo ($pagina == 'empresas.php') ? 'ative' : ''; ?>" style="padding: 0px;">
+              <p class="texto_menu" style="margin: 0px;">empresas</p>
+            </button></a>
+          </div>
+          <div class="item-menu" style=""><a href="cursos.php">
+            <button class="button-header <?php echo ($pagina == 'cursos.php') ? 'ative' : ''; ?>" style="padding: 0px;">
+              <p class="texto_menu" style="margin: 0px;">cursos</p>
+            </button></a>
+          </div>
+          <div class="item-menu" style=""><a href="galeria.php">
+            <button class="button-header <?php echo ($pagina == 'galeria.php') ? 'ative' : ''; ?>" style="padding: 0px;">
+              <p class="texto_menu" style="margin: 0px;">galeria</p>
+            </button></a>
+          </div>
+          <div class="item-menu" style=""><a href="contato.php">
+            <button class="button-header <?php echo ($pagina == 'contato.php') ? 'ative' : ''; ?>" style="padding: 0px;">
+              <p class="texto_menu" style="margin: 0px;">contato</p>
+            </button></a>
+          </div>
         </div>
       </div>
     </nav>
-
-    <!--<div class="navbar">
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <nav class="navbar-site">
-          <div class="navbar-icone-principal">
-            <div class="list-menu" style="display: flex; justify-content: flex-start;">
-              <div class="item_menu_logo"><a href="index.php"><button class="button-header-logo"><b
-                      class="b_icone_principal">CLODOALDO ARAÚJO</b></button></a></div>
-            </div>
-          </div>
-          <div class="navbar-menu">
-            <div class="list-menu">
-              <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="index.php"><button
-                    class="button-header <?php echo ($pagina == 'index.php') ? 'ative' : ''; ?>" style="padding: 0px;">
-                    <p class="texto_menu" style="margin: 0px;">home</p>
-                  </button></a></div>
-              <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="ferramentas_ebook.php"><button
-                    class="button-header <?php echo ($pagina == 'ferramentas_ebook.php') ? 'ative' : ''; ?>"
-                    style="padding: 0px;">
-                    <p class="texto_menu" style="margin: 0px;">ferramentas grátis</p>
-                  </button></a></div>
-              <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="quem_sou.php"><button
-                    class="button-header <?php echo ($pagina == 'quem_sou.php') ? 'ative' : ''; ?>"
-                    style="padding: 0px;">
-                    <p class="texto_menu" style="margin: 0px;">sobre</p>
-                  </button></a></div>
-              <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="empresas.php"><button
-                    class="button-header <?php echo ($pagina == 'empresas.php') ? 'ative' : ''; ?>"
-                    style="padding: 0px;">
-                    <p class="texto_menu" style="margin: 0px;">empresas</p>
-                  </button></a></div>
-              <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="cursos.php"><button
-                    class="button-header <?php echo ($pagina == 'cursos.php') ? 'ative' : ''; ?>" style="padding: 0px;">
-                    <p class="texto_menu" style="margin: 0px;">cursos</p>
-                  </button></a></div>
-              <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="galeria.php"><button
-                    class="button-header <?php echo ($pagina == 'galeria.php') ? 'ative' : ''; ?>"
-                    style="padding: 0px;">
-                    <p class="texto_menu" style="margin: 0px;">galeria</p>
-                  </button></a></div>
-              <div class="item-menu" style="padding: 0px 0px 0px 30px;"><a href="contato.php"><button
-                    class="button-header <?php echo ($pagina == 'contato.php') ? 'ative' : ''; ?>"
-                    style="padding: 0px;">
-                    <p class="texto_menu" style="margin: 0px;">contato</p>
-                  </button></a></div>
-            </div>
-          </div>
-        </nav>-->
-      </div>
-      <script src="../assets/js/menu_hamburguer.js"></script>
+  </div>
 </body>
-
 </html>

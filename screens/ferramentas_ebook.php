@@ -164,6 +164,36 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                 flex: 1; /* Cresce para ocupar o espaço restante */
             }
 
+            .div_pesquisa_form {
+                display: flex;
+            }
+
+            @media only screen and (max-width: 768px) {
+
+                .form_pesquisa {
+                    flex-direction: column;
+                }
+
+                .drop_form_pesquisa {
+                    width: 100%;
+                }
+
+                .text_form_pesquisa {
+                    margin: 0px;
+                    margin-right: 10px;
+                    width: 60%;
+                }
+
+                .btn_form_pesquisa {
+                    width: 40%;
+                }
+
+                .ferramenta_div_texto {
+                    width: 100%;
+                }
+
+            }
+
         </style>
 
         <script>
@@ -217,11 +247,13 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                                     <option value="4">Negociação e Vendas</option>
                                 </select>
                             </div>
-                            <div class="text_form_pesquisa">
-                                <input type="text" class="form-control" id="input_pesquisa" name="input_pesquisa" placeholder="Digite a ferramenta que procura:">
-                            </div>
-                            <div class="btn_form_pesquisa">
-                                <input class="btn" style="background: #c10109; color: white;" type="submit" value="Pesquisa">
+                            <div class="div_pesquisa_form">
+                                <div class="text_form_pesquisa">
+                                    <input type="text" class="form-control" id="input_pesquisa" name="input_pesquisa" placeholder="Digite a ferramenta que procura:">
+                                </div>
+                                <div class="btn_form_pesquisa">
+                                    <input class="btn" style="background: #c10109; color: white;" type="submit" value="Pesquisa">
+                                </div>
                             </div>    
                         </form>
                     </div>

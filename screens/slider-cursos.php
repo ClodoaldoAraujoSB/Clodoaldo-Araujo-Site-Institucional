@@ -86,6 +86,34 @@
             opacity: 0; /* Torna as setas invisíveis */
             pointer-events: none; /* Impede que as setas sejam clicadas quando invisíveis */
         }
+
+        .p_preco {
+            font-size: 13px; 
+            margin: 0px; 
+            padding: 0px 0px 10px 0px;
+        }
+
+        .h_titulo {
+            font-size: 15px; 
+            margin: 0px;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            /*.card-cursos {
+                width: 110px;
+            }
+
+            .p_preco {
+                font-size: 8px;
+            }
+
+            .h_titulo {
+                font-size: 10px;
+            }*/
+
+        }
+
     </style>
 </head>
 <body>
@@ -107,13 +135,13 @@
                             </div>
                             <div class="card-body card_ferramenta" id="card-ferramenta" style="padding: 0px;"> <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
                                 <div class="titulo-ferramenta">
-                                    <h5 class="card-title" style="font-size: 15px; margin: 0px;"> <?php echo $ferramenta["nome"]; ?> </h5>
+                                    <h5 class="h_titulo"> <?php echo $ferramenta["nome"]; ?> </h5>
                                 </div>
                                 <div class="botão-ferramenta">
                                 <?php if (!empty($ferramenta['preço_antigo']) || $ferramenta['preco_antigo'] != "") {?>
-                                    <p style="font-size: 13px; margin: 0px; padding: 0px 0px 10px 0px;">De: <s><?php echo $ferramenta["preco_antigo"]?></s> Por: <b style="color: #c10109;"><?php echo $ferramenta["preco_atual"] ?></b></p>
+                                    <p class="p_preco">De: <s><?php echo $ferramenta["preco_antigo"]?></s> Por: <b style="color: #c10109;"><?php echo $ferramenta["preco_atual"] ?></b></p>
                                 <?php } else {?>
-                                    <p style="font-size: 13px; margin: 0px; padding: 0px 0px 10px 0px;">Preço: <b style="color: #c10109;"><?php echo $ferramenta["preco_atual"] ?></b></p>
+                                    <p class="p_preco">Preço: <b style="color: #c10109;"><?php echo $ferramenta["preco_atual"] ?></b></p>
                                 <?php } ?>
                                 </div>    
                             </div>

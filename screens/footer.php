@@ -235,6 +235,8 @@
         color: #fff;
         border-bottom: 2px solid #fff;
       }
+
+    }
   </style>
 
 </head>
