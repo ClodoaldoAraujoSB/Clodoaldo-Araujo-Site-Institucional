@@ -33,7 +33,7 @@
     }
 
     .footer-center {
-      width: 23%;
+      width: 50%;
       display: inline-block;
       align-items: center;
       justify-content: center;
@@ -46,12 +46,12 @@
     }
 
     .footer-menu {
-      width: 38%;
+      width: 50%;
       display: inline-block;
       float: right;
     }
 
-    .list-menu {
+    .list-menu-footer {
       display: flex;
       justify-content: flex-end;
       margin: 0px;
@@ -127,116 +127,43 @@
       border-bottom: 2px solid #fff;
     }
 
-    @media only screen and (max-width: 768px) {
+    .content-footer-div {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+
       .footer-site {
-        padding: 20px;
-        background-color: #c10109;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 10px;
       }
-
-      .content-footer {
-        width: 93%;
-        display: flex;
-        flex-direction: column;
-        /* Empilhar elementos verticalmente */
-        align-items: center;
-        text-align: center;
-        /* Centralizar o conteúdo horizontalmente */
-      }
-
-      .footer-icone-principal {
-        width: 38%;
-        margin-bottom: 10px;
-        /* Adicionar margem inferior para espaçamento */
-      }
-
-      .b_footer_icone_principal {
-        color: #c10109;
-      }
-
+      
       .footer-center {
-        width: 23%;
-        text-align: center;
-        margin-bottom: 10px;
-        /* Adicionar margem inferior para espaçamento */
-      }
-
-      .texto_politica {
-        font-size: 15px;
-        text-transform: capitalize;
+        width: 30%;
       }
 
       .footer-menu {
-        width: 38%;
-        margin-top: 10px;
-        /* Adicionar margem superior para espaçamento */
-      }
-
-      .list-menu {
+        width: 70%;
         display: flex;
         justify-content: flex-end;
-        margin: 0;
+      }
+
+      .content-footer {
+        flex-direction: column;
+      }
+
+      .list-menu-footer {
+        flex-direction: row;
+        padding: 0px;
+        margin: 0px;
       }
 
       .item-menu {
-        padding: 0 10px;
+        padding: 0px 2px 0px 2px;
       }
-
-      .footer-button-logo,
-      .footer-button {
-        font-size: 15px;
-        color: #e1e1e1;
-        font-family: inherit;
-        font-weight: 500;
-        cursor: pointer;
-        border: none;
-        background: none;
-        text-transform: uppercase;
-        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-        transition-duration: 400ms;
-        transition-property: color;
-
-        /* Adicionado para centralizar verticalmente */
-        align-self: center;
-      }
-
-      .footer-button:focus,
-      .footer-button:hover {
-        color: #fff;
-      }
-
-      .footer-button:focus:after,
-      .footer-button:hover:after {
-        width: 100%;
-        left: 0%;
-      }
-
-      .footer-button:after {
-        content: "";
-        pointer-events: none;
-        bottom: -2px;
-        left: 50%;
-        position: absolute;
-        width: 0%;
-        height: 2px;
-        background-color: #fff;
-        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-        transition-duration: 400ms;
-        transition-property: width, left;
-      }
-
-      .footer-button svg {
-        fill: #fff;
-      }
-
-      .footer-button.ative {
-        color: #fff;
-        border-bottom: 2px solid #fff;
-      }
-
     }
+
   </style>
 
 </head>
@@ -272,39 +199,41 @@
         <a href="index.php"><button class="footer-button-logo" style="background-color: #fff;"><b
               class="b_footer_icone_principal">Clodoaldo Araújo</b></button></a>
       </div>
-      <div class="footer-center">
-        <a href="politica-de-privacidade.php"><button
-            class="footer-button <?php echo ($pagina == 'politica-de-privacidade.php') ? 'ative' : ''; ?>">
-            <p class="texto_politica" style="margin: 0px;">Politica de privacidade</p>
-          </button></a>
-      </div>
-      <div class="footer-menu">
-        <ul class="list-menu">
-          <li class="item-menu"><a target="_blank" href="https://wa.me/5519994636818"><button class="footer-button"><svg
-                  width="17" height="17">
-                  <use xlink:href="#whatsapp" />
-                </svg></button></a></li>
-          <li class="item-menu"><a target="_blank"
-              href="https://www.instagram.com/clodoaldoaraujoo/?igshid=MzRlODBiNWFlZA%3D%3D"><button
-                class="footer-button"><svg width="17" height="17">
-                  <use xlink:href="#instagram" />
-                </svg></button></a></li>
-          <li class="item-menu"><a target="_blank" href="https://www.facebook.com/clodoaldo.araujo/"><button
-                class="footer-button"><img
-                  style="width: 16px; height: 16px; padding: 0px; margin: 3px 3px 2px 3px; border-radius: 0px;"
-                  src="../logos/facebook (1) (1).png" width="17" height="17">
-                <use xlink:href="#facebook" /></img>
-              </button></a></li>
-          <li class="item-menu"><a target="_blank" href="https://www.linkedin.com/in/clodoaldoaraujo/"><button
-                class="footer-button"><img
-                  style="width: 16px; height: 16px; padding: 0px; margin: 3px 3px 2px 3px; border-radius: 0px;"
-                  src="../logos/linkedin (2) (1).png" width="20" height="20">
-                <use xlink:href="#linkedin" /></img>
-              </button></a></li>
-          <li class="item-menu"><a href="contato.php"><button class="footer-button"><svg width="17" height="17">
-                  <use xlink:href="#email" />
-                </svg></button></a></li>
-        </ul>
+      <div class="content-footer-div">
+        <div class="footer-center">
+          <a href="politica-de-privacidade.php"><button
+              class="footer-button <?php echo ($pagina == 'politica-de-privacidade.php') ? 'ative' : ''; ?>">
+              <p class="texto_politica" style="margin: 0px;">Politica de privacidade</p>
+            </button></a>
+        </div>
+        <div class="footer-menu">
+          <ul class="list-menu-footer">
+            <li class="item-menu"><a target="_blank" href="https://wa.me/5519994636818"><button class="footer-button"><svg
+                    width="17" height="17">
+                    <use xlink:href="#whatsapp" />
+                  </svg></button></a></li>
+            <li class="item-menu"><a target="_blank"
+                href="https://www.instagram.com/clodoaldoaraujoo/?igshid=MzRlODBiNWFlZA%3D%3D"><button
+                  class="footer-button"><svg width="17" height="17">
+                    <use xlink:href="#instagram" />
+                  </svg></button></a></li>
+            <li class="item-menu"><a target="_blank" href="https://www.facebook.com/clodoaldo.araujo/"><button
+                  class="footer-button"><img
+                    style="width: 16px; height: 16px; padding: 0px; margin: 3px 3px 2px 3px; border-radius: 0px;"
+                    src="../logos/facebook (1) (1).png" width="17" height="17">
+                  <use xlink:href="#facebook" /></img>
+                </button></a></li>
+            <li class="item-menu"><a target="_blank" href="https://www.linkedin.com/in/clodoaldoaraujo/"><button
+                  class="footer-button"><img
+                    style="width: 16px; height: 16px; padding: 0px; margin: 3px 3px 2px 3px; border-radius: 0px;"
+                    src="../logos/linkedin (2) (1).png" width="20" height="20">
+                  <use xlink:href="#linkedin" /></img>
+                </button></a></li>
+            <li class="item-menu"><a href="contato.php"><button class="footer-button"><svg width="17" height="17">
+                    <use xlink:href="#email" />
+                  </svg></button></a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </footer>
