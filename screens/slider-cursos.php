@@ -38,7 +38,7 @@
 
         .card-cursos {
             width: 206px;
-            margin-right: 20px;
+            margin-right: 60px;
             border-radius: 10px;
             background-color: transparent;
             overflow: hidden;

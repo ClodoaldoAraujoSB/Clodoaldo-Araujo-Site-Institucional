@@ -37,7 +37,8 @@
         }
 
         .card-cursos_f {
-            width: 206px;
+            height: 260px;
+            width: 260px;
             margin-right: 20px;
             border-radius: 10px;
             overflow: hidden;
@@ -45,7 +46,8 @@
         }
 
         .card_f img {
-            width: 100%;
+            height: 260px;
+            width: 260px;
             border-radius: 10px 10px 0 0;
         }
 
@@ -102,7 +104,7 @@
                     <div class="row g-0" style="flex-grow: 1;">
                         <div class="col" style="display: flex; flex-direction: column;">
                             <div style="display: flex; justify-content: center;">
-                                <img src="../<?php echo $ferramenta_f["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="height: 130px; border-radius: 10px;">
+                                <img src="../<?php echo $ferramenta_f["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="width: 260px; height: 260px; border-radius: 10px;">
                             </div>
                             <div class="card-body card_ferramenta_f" id="card-ferramenta_f" style="padding: 0px;"> <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
                                 <div class="titulo-ferramenta_f">
@@ -147,7 +149,7 @@
 
     function toggleArrows_f() {
         arrowLeft_f.classList.toggle('arrow-hidden_f', currentIndex_f === 0);
-        arrowRight_f.classList.toggle('arrow-hidden_f', currentIndex_f === document.querySelectorAll('.card-cursos_f').length - 5);
+        arrowRight_f.classList.toggle('arrow-hidden_f', currentIndex_f >= totalCards_f - cardsInViewport_f);
     }
 </script>
 
