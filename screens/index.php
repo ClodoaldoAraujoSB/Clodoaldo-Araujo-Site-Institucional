@@ -20,6 +20,7 @@ include_once("empresas/super_business.php");
 
     body {
       width: 100%;
+      background-color: #282828;
     }
 
     .descricao_cursos {
@@ -32,6 +33,8 @@ include_once("empresas/super_business.php");
     .session_ferramentas {
       display: flex;
       justify-content: center;
+      background-color: #282828;
+      color: #e2e2e2;
     }
 
     .container_ferramentas {
@@ -41,14 +44,16 @@ include_once("empresas/super_business.php");
       margin-top: 50px;
       margin-bottom: 25px;
       border-radius: 20px;
+      background-color: #161616;
+      color: #e2e2e2;
     }
 
     .descricao_session {
-      margin-top: 50px;
-      margin-bottom: 25px;
+      padding: 50px 0px 25px 0px;
       display: flex;
       justify-content: center;
       align-items: center;
+      background-color: #282828;
     }
 
     .quem_div_sobre {
@@ -93,7 +98,8 @@ include_once("empresas/super_business.php");
     }
 
     .session_paises {
-      margin: 50px 0px 50px 0px;
+      padding: 50px 0px 50px 0px;
+      background-color: #282828;
     }
 
     .paises_div_sobre {
@@ -105,7 +111,8 @@ include_once("empresas/super_business.php");
     }
 
     .session_empresas {
-      margin: 50px 0px 50px 0px;
+      padding: 50px 0px 50px 0px;
+      background-color: #282828;
     }
 
     .lista_empresas {
@@ -132,11 +139,12 @@ include_once("empresas/super_business.php");
     }
 
     .session_curso_principal {
-      margin: 50px 0px 25px 0px;
+      padding: 50px 0px 25px 0px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      background-color: #282828;
     }
 
     .mais_vendido_alert {
@@ -149,10 +157,11 @@ include_once("empresas/super_business.php");
 
     .curso_principal {
       width: 84%;
+      color: #e2e2e2;
     }
 
     .galeria {
-      margin: 50px 0px 50px 0px;
+      padding: 50px 0px 50px 0px;
       height: 400px;
 
       background-image: url('../logos/fotos-galeria.jpg');
@@ -182,6 +191,7 @@ include_once("empresas/super_business.php");
       background-size: cover;
       background-repeat: no-repeat;
       background-position-y: -100px;
+      background-color: #282828;
     }
 
     .titulo_principal {
@@ -215,7 +225,7 @@ include_once("empresas/super_business.php");
       padding-left: 10px;
       border-radius: 20px;
       color: #e2e2e2;
-      background-color: #282828;
+      background-color: #161616;
       border: 1px solid #BE0009;
     }
 
@@ -224,7 +234,7 @@ include_once("empresas/super_business.php");
       padding-left: 10px;
       border-radius: 10px;
       color: #e2e2e2;
-      background-color: #282828;
+      background-color: #161616;
       border: 1px solid #BE0009;
     }
 
@@ -261,11 +271,13 @@ include_once("empresas/super_business.php");
     }
 
     .cursos_session {
-      margin: 25px 0px 25px 0px;
+      /*margin: 25px 0px 25px 0px;*/
+      padding: 25px 0px 25px 0px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      background-color: #282828;
     }
 
     .curso_div_texto {
@@ -277,6 +289,8 @@ include_once("empresas/super_business.php");
       padding: 20px;
       border: 1px solid #BE0009;
       border-radius: 20px;
+      background-color: #161616;
+      color: #e2e2e2;
     }
 
     @media only screen and (max-width: 768px) {
@@ -374,7 +388,7 @@ include_once("empresas/super_business.php");
 
   <!-- FERRAMENTAS - INICIO -->
   <div class="cursos_session">
-    <h3 style="color: #c10109;">Ferramentas</h3>
+    <h3 style="color: #c10109;">Ferramentas Gratuitas</h3>
     <div class="cursos_div">
       <div class="cursos_linha">
         <h3 style="font-size: 20px;">Ferramentas</h3>
@@ -411,13 +425,13 @@ include_once("empresas/super_business.php");
       <div class="row">
         <div class="col">
           <h6>O Mais Vendido</h6>
-          <div class="card mb-3" style="width: 100%; border: 0px;">
+          <div class="card mb-3" style="width: 100%; border: 0px; background-color:transparent;">
             <div class="row g-0">
               <div class="col-md-3">
                 <img src="../cursos/ede.jpg" class="img-fluid rounded-start" alt="..." style="border-radius: 10px;">
               </div>
               <div class="col-md-8" style="display: flex; align-items: center;">
-                <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px;">
+                <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px; color:#e2e2e2;">
                   <h5 class="card-title">Empreendedores de Elite</h5>
                   <p class="card-text">Transforme sua empresa em um sucesso com a mentoria individual do Clodoaldo Araújo! Com ferramentas especializadas, estratégias, técnicas de gestão e vendas, o seu negócio pode alcançar novas alturas. Conte com a experiência do Clodoaldo para desenvolver uma visão extraordinária para sua empresa e atingir todos os seus objetivos. Não perca mais tempo e invista em uma mentoria especializada desenvolvida especialmente para você!</p>
                   <p class="card-text"><span>De: <s>R$5.000,00</s></span><br><span>Por: <b style="color:#c10109">R$3.000,00</b></span></p>
@@ -513,9 +527,9 @@ include_once("empresas/super_business.php");
     <div class="lista_empresas">
       <h3 style="margin-bottom: 0px; color:#c10109;">Empresas:</h3>
       <div class="div_lista_empresas">
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#super_businessModal"><img src="../logos/logo-super_business.png" alt="Super Business" style="height: 50px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#rota_da_inovacaoModal"><img src="../logos/logo-rota.png" alt="Rota da Inovaçao" style="height: 50px;"></button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#isteelModal"><img src="../logos/logo-isteel.png" alt="isteel" style="height: 50px;"></button>
+        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#super_businessModal"><img src="../logos/logo-super_business.png" alt="Super Business" style="height: 50px;"></button>
+        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#rota_da_inovacaoModal"><img src="../logos/logo-rota.png" alt="Rota da Inovaçao" style="height: 50px;"></button>
+        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#isteelModal"><img src="../logos/logo-isteel.png" alt="isteel" style="height: 50px;"></button>
       </div>
     </div>
     <!-- LISTA DE EMPRESAS - FINAL -->

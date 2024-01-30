@@ -20,7 +20,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
+            background-color: transparent;
         }
 
         .slider-container_f {
@@ -40,7 +40,6 @@
             width: 206px;
             margin-right: 20px;
             border-radius: 10px;
-            background-color: #fff;
             overflow: hidden;
             display: inline-block;
         }

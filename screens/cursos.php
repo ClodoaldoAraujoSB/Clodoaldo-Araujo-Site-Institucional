@@ -56,12 +56,8 @@ $conn->close();
                 display: flex;
                 align-items: center;
                 justify-content: center;
-            }
-            .session_pesquisa {
-                margin: 0px 0px 0px 0px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                background-color: #282828;
+                color: #e2e2e2;
             }
 
             .container_pesquisa {
@@ -104,10 +100,11 @@ $conn->close();
             }
 
             .session_curso_principal {
-                margin: 50px 0px 50px 0px ;
+                padding: 50px 0px 50px 0px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                background-color: #282828;
             }
 
             .mais_vendido_alert {
@@ -126,12 +123,14 @@ $conn->close();
                 width: 70%;
                 padding-left: 35px;
                 font-size: 13px;
+                color: #e2e2e2;
             }
 
             .session_ferramentas {
-                margin-bottom: 50px;
+                padding-bottom: 50px;
                 display: flex;
                 justify-content: center;
+                background-color: #282828;
             }
 
             .container_ferramentas {
@@ -140,6 +139,7 @@ $conn->close();
                 border: 1px solid #c10109;
                 margin-bottom: 20px;
                 border-radius: 20px;
+                background-color: #161616;
             }
 
             .container-list {
@@ -169,14 +169,14 @@ $conn->close();
             }
 
             .btn_form_pesquisa {
-                width: 8%;
+                width: 10%;
                 margin: 0px 0px 0px 10px;
                 display: flex;
                 justify-content: center;
             }
 
             .text_form_pesquisa {
-                width: 77%;
+                width: 90%;
                 margin: 0px 10px 0px 10px;
             }
 
@@ -222,12 +222,17 @@ $conn->close();
             }
 
             .div_pesquisa_form {
+                width: 85%;
                 display: flex;
             }
 
             .mb-3 {
                 width: 70%; 
                 border: 0px;
+            }
+
+            .curso_principal_titulo {
+                color: #e2e2e2;
             }
 
             @media screen and (max-width: 768px) {
@@ -291,7 +296,7 @@ $conn->close();
         <!-- BANNER - FINAL -->
 
         <!--  -->
-        <div class="session_pesquisa" style="margin: 50px 0px 0px 0px;">
+        <div class="session_pesquisa" style="padding: 50px 0px 0px 0px;">
             <div class="container_pesquisa">
                 <div class="busca_pesquisa">
                     <div class="div_pesquisa">
@@ -339,14 +344,14 @@ $conn->close();
             <div class="curso_principal">
                 <div class="row">
                     <div class="col">
-                        <h6>O Mais Vendido</h6>
-                        <div class="card mb-3" style="border: 0px;">
+                        <h6 class="curso_principal_titulo">O Mais Vendido</h6>
+                        <div class="card mb-3" style="border: 0px; background-color: transparent;">
                             <div class="row g-0">
                                 <div class="col-md-3">
                                     <img src="../cursos/ede.jpg" class="img-fluid rounded-start" alt="..." style="border-radius: 10px;">
                                 </div>
                                 <div class="col-md-8" style="display: flex; align-items: center;">
-                                    <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px;">
+                                    <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px; color: #e2e2e2;">
                                         <h5 class="card-title">Empreendedores de Elite</h5>
                                         <p class="card-text">Transforme sua empresa em um sucesso com a mentoria individual do Clodoaldo Araújo! Com ferramentas especializadas, estratégias, técnicas de gestão e vendas, o seu negócio pode alcançar novas alturas. Conte com a experiência do Clodoaldo para desenvolver uma visão extraordinária para sua empresa e atingir todos os seus objetivos. Não perca mais tempo e invista em uma mentoria especializada desenvolvida especialmente para você!</p>
                                         <p class="card-text"><span>De: <s>R$5.000,00</s></span><br><span>Por: <b style="color: red">R$3.000,00</b></span></p>
@@ -376,9 +381,9 @@ $conn->close();
                         $contador++;
                     ?>
                         <div class="col" style="display: flex; justify-content: center; width: 225px;">
-                            <div class="card mb-3" style="width: 90%; flex-direction: column; border: 0px;">
+                            <div class="card mb-3" style="width: 90%; flex-direction: column; border: 0px; background-color: #161616;">
                                 <div class="row g-0" style="flex-grow: 1;">
-                                    <div class="col" style="display: flex; flex-direction: column;">
+                                    <div class="col" style="display: flex; flex-direction: column; color: #e2e2e2;">
                                         <div style="display: flex; justify-content: center;">
                                             <img src="<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="border-radius: 10px;">
                                         </div>
@@ -400,7 +405,7 @@ $conn->close();
                             </div>
                         </div>
                     <?php
-                        if ($contador == 4) {
+                        if ($contador == 5) {
                         ?>
                             </div>
                             <div class="row" style="display: flex; justify-content: center;">

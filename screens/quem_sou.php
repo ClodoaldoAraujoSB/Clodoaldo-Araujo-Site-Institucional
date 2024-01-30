@@ -14,12 +14,12 @@
     }
 
     .session_sobre {
-      margin-top: 50px;
-      margin-bottom: 50px;
+      padding: 50px 0px 50px 0px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      background-color: #282828;
     }
 
     .quem_div_sobre {
@@ -85,22 +85,26 @@
     }
 
     .paises_div_sobre {
-      margin: 20px 0px 20px 0px;
+      padding: 20px 0px 20px 0px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      background-color: #282828;
     }
 
     .diplomas_div_sobre {
-      margin: 20px 0px 20px 0px;
+      padding: 20px 0px 20px 0px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      background-color: #282828;
     }
 
-    .diploma_titulo {}
+    .diploma_titulo {
+      color: #e2e2e2;
+    }
 
     .diplomas_linha {
       display: flex;
@@ -139,6 +143,7 @@
 
     .h_paises {
       margin-bottom: 20px;
+      color: #e2e2e2;
     }
 
     @media screen and (max-width: 768px) {
@@ -199,55 +204,6 @@
       }
 
     }
-
-    /*@media only screen and (max-width: 768px) {
-      .diplomas_div_sobre {
-        margin: 20px 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .diplomas_linha {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        
-      }
-
-      .diploma_card {
-        margin: 5px;
-        width: 300px;
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 20px;
-      }
-
-      .diploma_imagem_div {
-        width: 100%;
-        max-width: 300px;
-        height: 200px;
-      }
-
-      .diploma_imagem {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
-      }
-
-      .diploma_texto_div {
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
-      }
-    }
-    */
 
     </style>
 </head>

@@ -44,16 +44,21 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
     
         <style>
 
+            body {
+                background-color: #282828;
+            }
+
             .titulo_ferramentas {
                 margin-top: 10px;
                 text-align: center;
             }
 
             .session_pesquisa {
-                margin: 0px 0px 20px 0px;
+                padding: 0px 0px 20px 0px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                background-color: #282828;
             }
 
             .container_pesquisa {
@@ -79,6 +84,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
             .session_ferramentas {
                 display: flex;
                 justify-content: center;
+                background-color: #282828;
             }
 
             .container_ferramentas {
@@ -91,6 +97,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                background-color: #161616;
             }
 
             .container-list {
@@ -120,15 +127,17 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
             }
 
             .btn_form_pesquisa {
-                width: 8%;
+                width: 10%;
                 margin: 0px 0px 0px 10px;
                 display: flex;
                 justify-content: center;
             }
 
             .text_form_pesquisa {
-                width: 77%;
+                width: 90%;
                 margin: 0px 10px 0px 10px;
+                background-color: #161616;
+                color: #e2e2e2;
             }
 
             .drop_form_pesquisa {
@@ -144,6 +153,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
 
             .titulo-ferramenta {
                 padding: 10px 0px 10px 0px;
+                color: #e2e2e2;
             }
 
             .ferramenta_linha {
@@ -152,6 +162,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
 
             .ferramenta_div_texto {
                 width: 70%;
+                color: #e2e2e2;
             }
 
             body {
@@ -166,6 +177,12 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
 
             .div_pesquisa_form {
                 display: flex;
+                width: 85%;
+            }
+
+            .form-control {
+                background-color: #161616;
+                color: #e2e2e2;
             }
 
             @media only screen and (max-width: 768px) {
@@ -190,6 +207,10 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
 
                 .ferramenta_div_texto {
                     width: 100%;
+                }
+
+                .row {
+                    flex-direction: column;
                 }
 
             }
@@ -217,7 +238,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
             <h1 class="titulo_ferramentas">Ferramentas</h1>
         -->
 
-        <div class="session_pesquisa" style="margin: 10px 0px 0px 0px;">
+        <div class="session_pesquisa" style="padding: 10px 0px 0px 0px;">
             <div class="container_pesquisa">
                 <div class="busca_pesquisa">
                     <div class="div_pesquisa">
@@ -265,7 +286,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
         <div class="session_ferramentas">
             <div class="container_ferramentas">
                 <div class="ferramenta_linha">
-                    <h3 style="font-size: 20px;">Ferramentas</h3>
+                    <h3 style="font-size: 20px; color: #e2e2e2;">Ferramentas</h3>
                     <div class="ferramenta_div_texto">
                         <p style="font-size: 13px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque vulputate nisl id pretium. Aenean eget magna iaculis lorem ultricies convallis quis ac velit. Maecenas mattis nisl nec dui aliquam luctus. Quisque massa nulla, ornare sit amet consequat eget, vestibulum at mi. Morbi sit amet dui vel arcu congue finibus at ut turpis. Aenean et diam libero. Aliquam faucibus sodales pharetra. Nunc vel sapien suscipit, lacinia dui non, laoreet nibh. Quisque at lacinia tortor, a semper ex. Cras nec magna in nibh iaculis interdum vel vitae tortor. Nulla eget lorem vitae orci ultricies feugiat non eleifend lacus. Mauris egestas commodo tortor ut commodo.</p>
                     </div>
@@ -278,7 +299,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                         $contador++;
                     ?>
                         <div class="col" style="display: flex; justify-content: center; width: 225px;">
-                            <div class="card mb-3" style="width: 90%; flex-direction: column; border: 0px;">
+                            <div class="card mb-3" style="width: 90%; flex-direction: column; border: 0px; background-color: transparent">
                                 <div class="row g-0" style="flex-grow: 1;">
                                     <div class="col" style="display: flex; flex-direction: column;">
                                         <div style="display: flex; justify-content: center;">
@@ -297,7 +318,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                             </div>
                         </div>
                     <?php
-                        if ($contador == 4) {
+                        if ($contador == 5) {
                         ?>
                             </div>
                             <div class="row" style="display: flex; justify-content: center;">

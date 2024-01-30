@@ -168,10 +168,10 @@
     <!-- MENU SUPERIOR - FINAL -->
 
     <!-- TITULO -->
-    <h5 style="text-align: center; margin: 0px; padding-top: 16px;">Galeria</h5>
+    <h5 style="text-align: center; margin: 0px; padding-top: 16px; background-color: #282828; color: #e2e2e2;">Galeria</h5>
 
     <!-- GALERIA - INICIO -->
-    <div>
+    <div style="background-color: #282828;">
         <div id="galeria" style="display: flex; justify-content: center;"></div>
     </div>
     <!-- GALERIA - FINAL -->

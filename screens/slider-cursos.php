@@ -40,7 +40,7 @@
             width: 206px;
             margin-right: 20px;
             border-radius: 10px;
-            background-color: #fff;
+            background-color: transparent;
             overflow: hidden;
             display: inline-block;
         }
