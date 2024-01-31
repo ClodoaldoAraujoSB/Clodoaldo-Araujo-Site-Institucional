@@ -102,7 +102,7 @@ include_once("empresas/super_business.php");
     <!-- LISTA DE EMPRESAS - INICIO -->
     <div class="lista_empresas">
       <div class="div_lista_empresas">
-        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../logos/logo-ca3.png" alt="ca3" style="height: 50px;"></button>
+        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#ca3Modal"><img src="../logos/logo-ca3.png" alt="ca3" style="height: 60px;"></button>
         <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#ca3_steelModal"><img src="../logos/logo-ca3_steel.png" alt="ca3 steel" style="height: 50px;"></button>
         <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#circuitModal"><img src="../logos/logo-circuit.png" alt="circuit" style="height: 50px;"></button>
       </div>
@@ -114,10 +114,10 @@ include_once("empresas/super_business.php");
       <div class="div_lista_empresas">
         <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#rota_da_inovacaoModal"><img src="../logos/logo-rota.png" alt="Rota da Inovaçao" style="height: 50px;"></button>
         <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#spyder_raceModal"><img src="../logos/logo-spyderrace.png" alt="Spyder Race" style="height: 50px;"></button>
-        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#startup_schoolModal"><img src="../logos/logo ss_resized.png" alt="Startup School" style="width: 120px;"></button>
+        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#startup_schoolModal"><img src="../logos/logo ss_resized.png" alt="Startup School" style="width: 140px;"></button>
       </div>
       <div class="div_lista_empresas" style="display:flex; justify-content:center">
-        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#super_businessModal"><img src="../logos/logo-super_business.png" alt="Super Business" style="height: 50px;"></button>
+        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#super_businessModal"><img src="../logos/logo-super_business.png" alt="Super Business" style="height: 60px;"></button>
       </div>
     </div>
   </div>
