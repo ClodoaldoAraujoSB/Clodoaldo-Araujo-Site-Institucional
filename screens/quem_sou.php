@@ -311,7 +311,7 @@
 
       <div class="diploma_card">
         <div class="diploma_imagem_div">
-          <img class="diploma_imagem" src="../logos/empretec.png">
+          <img class="diploma_imagem" src="../logos/logo-empretec-branco.png">
         </div>
         <div class="diploma_texto_div">
           <h5>Empretec</h5>
@@ -320,7 +320,7 @@
 
       <div class="diploma_card">
         <div class="diploma_imagem_div">
-          <img class="diploma_imagem" src="../logos/isca-faculdades.webp">
+          <img class="diploma_imagem" src="../logos/isca-logo-white.png">
         </div>
         <div class="diploma_texto_div">
           <h5>Pós-graduação em Gestão Estrategica de Negocios</h5>
@@ -329,7 +329,7 @@
 
       <div class="diploma_card">
         <div class="diploma_imagem_div">
-          <img class="diploma_imagem" src="../logos/university_california_logo.png">
+          <img class="diploma_imagem" src="../logos/California_State_University,_Fresno_seal.svg.png">
         </div>
         <div class="diploma_texto_div">
           <h5>MBA de empreendedorismo</h5>

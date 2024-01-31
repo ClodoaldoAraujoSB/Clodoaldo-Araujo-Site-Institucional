@@ -60,7 +60,7 @@ include_once("empresas/super_business.php");
 
     @media only screen and (max-width: 768px) {
       .lista_empresas {
-        margin-bottom: 6px;
+        padding-bottom: 6px;
       }
 
       .div_lista_empresas {

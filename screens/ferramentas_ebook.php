@@ -161,7 +161,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
             }
 
             .ferramenta_div_texto {
-                width: 70%;
+                width: 100%;
                 color: #e2e2e2;
             }
 
@@ -193,16 +193,17 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
 
                 .drop_form_pesquisa {
                     width: 100%;
+                    margin-bottom: 10px;
                 }
 
                 .text_form_pesquisa {
                     margin: 0px;
                     margin-right: 10px;
-                    width: 60%;
+                    width: 70%;
                 }
 
                 .btn_form_pesquisa {
-                    width: 40%;
+                    width: 30%;
                 }
 
                 .ferramenta_div_texto {
@@ -211,6 +212,14 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
 
                 .row {
                     flex-direction: column;
+                }
+
+                .div_pesquisa_form {
+                    width: 100%;
+                }
+
+                .div_pesquisa {
+                    width: 100%;
                 }
 
             }
