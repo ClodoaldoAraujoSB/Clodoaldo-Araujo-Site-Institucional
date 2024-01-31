@@ -17,7 +17,6 @@ include_once("empresas/super_business.php");
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <style>
-
     body {
       width: 100%;
       background-color: #282828;
@@ -153,6 +152,8 @@ include_once("empresas/super_business.php");
       width: fit-content;
       padding: 1px 7px 1px 7px;
       border-radius: 20px;
+      display: block;
+      text-align: center;
     }
 
     .curso_principal {
@@ -164,7 +165,7 @@ include_once("empresas/super_business.php");
       padding: 50px 0px 50px 0px;
       height: 400px;
 
-      background-image: url('../logos/fotos-galeria.jpg');
+      background-image: url('../logos/galeriapreview.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -196,7 +197,7 @@ include_once("empresas/super_business.php");
 
     .titulo_principal {
       text-align: center;
-      padding: 20px;
+      /*padding: 20px;*/
       font-family: Montserrat, sans serif;
     }
 
@@ -294,7 +295,7 @@ include_once("empresas/super_business.php");
     }
 
     @media only screen and (max-width: 768px) {
-      
+
       .curso_div_texto {
         width: 100%;
       }
@@ -312,7 +313,7 @@ include_once("empresas/super_business.php");
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
+        
         background-position-x: center;
         background-size: 100%;
       }
@@ -333,6 +334,14 @@ include_once("empresas/super_business.php");
         flex-direction: column;
       }
 
+      .div_lista_empresas button {
+        width: 200px;
+      }
+
+      .lista_empresas {
+        width: 475px;
+      }
+
       .session-contato {
         background-color: #282828;
         background-image: none;
@@ -344,6 +353,100 @@ include_once("empresas/super_business.php");
 
       .row-50 {
         width: 100%;
+      }
+
+      .session_ferramentas {
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+      }
+
+      .cursos_session {
+        border-bottom: 20px solid transparent;
+      }
+
+      .session_curso_principal {
+        border-bottom: 20px solid transparent;
+      }
+
+      .cursos_session {
+        border-bottom: 20px solid transparent;
+      }
+
+      .descricao_session {
+        border-bottom: 20px solid transparent;
+      }
+
+      .session_paises {
+        border-bottom: 20px solid transparent;
+      }
+
+      .session_empresas {
+        border-bottom: 20px solid transparent;
+      }
+
+      .galeria {
+        border-bottom: 20px solid transparent;
+      }
+
+      .session-contato {
+        border-bottom: 20px solid transparent;
+      }
+
+      /*.titulo_sobre_h1 {
+        display: block;
+        text-align: center;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+      }*/
+
+      .session-contato {
+        background-image: url("../logos/bg_mobile_forms.jpg");
+        background-position-y: bottom;
+        background-position-x: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        /*background-position-y: 0px;*/
+        background-color: #181816;
+      }
+
+      .container-form {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .row {
+        width: 100%;
+        min-height: 300px;
+        padding-left: 15px;
+      }
+
+      input[type="submit"]:hover {
+        transform: scale(1.1);
+      }
+
+      .descricao_cursos p {
+        text-align: center;
+      }
+
+      .descricao_cursos p {
+        text-align: center;
+      }
+
+      .curso_div_texto {
+        text-align: center;
+      }
+
+      .card-title {
+        text-align: center;
+      }
+
+      .card-text {
+        text-align: center;
+      }
+
+      .descricao_sobre p {
+        text-align: center;
       }
 
     }
@@ -391,7 +494,7 @@ include_once("empresas/super_business.php");
     <h3 style="color: #c10109;">Ferramentas Gratuitas</h3>
     <div class="cursos_div">
       <div class="cursos_linha">
-        <h3 style="font-size: 20px;">Ferramentas</h3>
+        <!--<h3 style="font-size: 20px;">Ferramentas</h3>-->
         <div class="curso_div_texto">
           <p style="font-size: 13px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque vulputate
             nisl id pretium. Aenean eget magna iaculis lorem ultricies convallis quis ac velit. Maecenas mattis nisl nec
@@ -433,8 +536,13 @@ include_once("empresas/super_business.php");
               <div class="col-md-8" style="display: flex; align-items: center;">
                 <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px; color:#e2e2e2;">
                   <h5 class="card-title">Empreendedores de Elite</h5>
-                  <p class="card-text">Transforme sua empresa em um sucesso com a mentoria individual do Clodoaldo Araújo! Com ferramentas especializadas, estratégias, técnicas de gestão e vendas, o seu negócio pode alcançar novas alturas. Conte com a experiência do Clodoaldo para desenvolver uma visão extraordinária para sua empresa e atingir todos os seus objetivos. Não perca mais tempo e invista em uma mentoria especializada desenvolvida especialmente para você!</p>
-                  <p class="card-text"><span>De: <s>R$5.000,00</s></span><br><span style="font-size: 30px;">Por: <b style="color:#c10109; font-size: 30px;">R$3.000,00</b></span></p>
+                  <p class="card-text">Transforme sua empresa em um sucesso com a mentoria individual do Clodoaldo
+                    Araújo! Com ferramentas especializadas, estratégias, técnicas de gestão e vendas, o seu negócio pode
+                    alcançar novas alturas. Conte com a experiência do Clodoaldo para desenvolver uma visão
+                    extraordinária para sua empresa e atingir todos os seus objetivos. Não perca mais tempo e invista em
+                    uma mentoria especializada desenvolvida especialmente para você!</p>
+                  <p class="card-text"><span>De: <s>R$5.000,00</s></span><br><span style="font-size: 30px;">Por: <b
+                        style="color:#c10109; font-size: 30px;">R$3.000,00</b></span></p>
                   <p class="mais_vendido_alert">Mais vendido</p>
                 </div>
               </div>
@@ -484,19 +592,27 @@ include_once("empresas/super_business.php");
         <div class="coluna_div_image"></div>
         <div class="coluna_div">
           <div class="titulo_sobre">
-            <span><b class="titulo_sobre_h1">Eu sou</b></span><br>
-            <span><b class="titulo_sobre_h1">Clodoaldo Araújo</b></span>
+            <!--<span><b class="titulo_sobre_h1">Eu sou Clodoaldo Araújo</b></span>-->
           </div>
           <div class="descricao_sobre">
-              <p> Clodoaldo Araújo, mineiro. </p>
-              <p> Apaixonado pela cidade de Limeira, onde mora desde a infância. </p>
-              <p> Nascido numa família humilde batalhou e conseguiu realizar o sonho da graduação, se formou Engenheiro Mecânico. </p>
-              <p> Imparável, mudou-se para os Estados Unidos para fazer MBA na Universidade da Califórnia. </p>
-              <p> Voltando ao Brasil fundou sua primeira empresa, a metalúrgica do ramo de aço CA3 Laminação. </p>
-              <p> Ampliou seus investimentos indo para construção civil, voltou aos bancos escolares e se graduou Engenheiro Civil para gerenciar sua construtora, foi quando construiu o primeiro condomínio empresarial de Limeira – CONEL. </p>
-              <p> Buscando constantemente aprimorar suas habilidades, cursou também pós-graduação em Gestão Estratégica de Negócios e depois em pós-graduação em Gestão Empresarial. </p>
-              <p> Em um momento desafiador, menos afortunado, um amigo o inscreveu para o programa “O Aprendiz 5” da rede Record.  Venceu uma disputa com milhares de pessoas, ingressou no programa e se consagrou vencedor e sócio do renomado empresário Roberto Justus. </p>
-              <p style="margin-bottom: 0px;">Foi convidado para palestrar por todo o país, disseminando a mensagem de empreendedorismo em mais de 150 cidades. Assumindo o papel de apresentador do programa “Rota da Inovação”, que percorreu o mundo passando por 61 países em busca das maiores inovações da atualidade, Clodoaldo ampliou sua influência global. </p>
+            <p> Clodoaldo Araújo, mineiro. </p>
+            <p> Apaixonado pela cidade de Limeira, onde mora desde a infância. </p>
+            <p> Nascido numa família humilde batalhou e conseguiu realizar o sonho da graduação, se formou Engenheiro
+              Mecânico. </p>
+            <p> Imparável, mudou-se para os Estados Unidos para fazer MBA na Universidade da Califórnia. </p>
+            <p> Voltando ao Brasil fundou sua primeira empresa, a metalúrgica do ramo de aço CA3 Laminação. </p>
+            <p> Ampliou seus investimentos indo para construção civil, voltou aos bancos escolares e se graduou
+              Engenheiro Civil para gerenciar sua construtora, foi quando construiu o primeiro condomínio empresarial de
+              Limeira – CONEL. </p>
+            <p> Buscando constantemente aprimorar suas habilidades, cursou também pós-graduação em Gestão Estratégica de
+              Negócios e depois em pós-graduação em Gestão Empresarial. </p>
+            <p> Em um momento desafiador, menos afortunado, um amigo o inscreveu para o programa “O Aprendiz 5” da rede
+              Record. Venceu uma disputa com milhares de pessoas, ingressou no programa e se consagrou vencedor e sócio
+              do renomado empresário Roberto Justus. </p>
+            <p style="margin-bottom: 0px;">Foi convidado para palestrar por todo o país, disseminando a mensagem de
+              empreendedorismo em mais de 150 cidades. Assumindo o papel de apresentador do programa “Rota da Inovação”,
+              que percorreu o mundo passando por 61 países em busca das maiores inovações da atualidade, Clodoaldo
+              ampliou sua influência global. </p>
           </div>
         </div>
       </div>
@@ -508,7 +624,8 @@ include_once("empresas/super_business.php");
 
     <!-- PAISES - INICIO -->
     <div class="paises_div_sobre">
-      <h3 style="margin-bottom: 20px; color:#c10109;">Mais de 60 paises que já visitei:</h3>
+      <h3 style="margin-bottom: 20px; color:#ffffff;">Mais de</h3>
+      <h3 style="color:#c10109;">60 paises que já visitei:</h3>
       <?php include_once("paises.php"); ?>
     </div>
     <!-- PAISES - FINAL -->
@@ -527,9 +644,14 @@ include_once("empresas/super_business.php");
     <div class="lista_empresas">
       <h3 style="margin-bottom: 0px; color:#c10109;">Empresas:</h3>
       <div class="div_lista_empresas">
-        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#super_businessModal"><img src="../logos/logo-super_business.png" alt="Super Business" style="height: 50px;"></button>
-        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#rota_da_inovacaoModal"><img src="../logos/logo-rota.png" alt="Rota da Inovaçao" style="height: 50px;"></button>
-        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#isteelModal"><img src="../logos/logo-isteel.png" alt="isteel" style="height: 50px;"></button>
+        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal"
+          data-bs-target="#super_businessModal"><img src="../logos/logo-super_business.png" alt="Super Business"
+            style="height: 50px;"></button>
+        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal"
+          data-bs-target="#rota_da_inovacaoModal"><img src="../logos/logo-rota.png" alt="Rota da Inovaçao"
+            style="height: 50px;"></button>
+        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal"
+          data-bs-target="#isteelModal"><img src="../logos/logo-isteel.png" alt="isteel" style="height: 50px;"></button>
       </div>
     </div>
     <!-- LISTA DE EMPRESAS - FINAL -->
@@ -583,11 +705,11 @@ include_once("empresas/super_business.php");
     ?>
 
     <div class="container-form">
-      <div class="row-50">
+      <div class="row">
         <div class="col"></div>
       </div>
-      <div class="row-50" style="padding-right: 15px;">
-        <form style="width: 100%;" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+      <div class="row" style="padding-right: 15px;">
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
           <div class="col" style="margin-top: 16px;">
             <div class="mb-3">
               <h5 style="color: #e2e2e2; padding-left: 7px;">Contato</h5>
