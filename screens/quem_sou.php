@@ -279,8 +279,8 @@
           <div class="coluna_div_image"></div>
           <div class="coluna_div">
             <div class="titulo_sobre">
-              <span><b class="titulo_sobre_h1">Eu sou</b></span>
-              <span><b class="titulo_sobre_h1">Clodoaldo Araújo</b></span>
+              <!--<span><b class="titulo_sobre_h1">Eu sou</b></span>
+              <span><b class="titulo_sobre_h1">Clodoaldo Araújo</b></span>-->
             </div>
             <div class="descricao_sobre">
               <p> Clodoaldo Araújo, mineiro. </p>
