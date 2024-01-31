@@ -18,6 +18,14 @@
     width: 40%;
   }
 
+  @media only screen and (max-width: 768px) {
+    
+    #div_centro_titulo {
+      display: none;
+    }
+
+  }
+
 </style>
 
 <!-- MODAL - INICIO -->
@@ -26,13 +34,13 @@
         <div class="modal-content bg-dark">
           <div class="modal-header" style="border: 0px;">
             <div id="div_lateral_titulo">
-                <img src="../logos/logo-point_pixel.png" alt="Logo Super Business" style="height: 30px;">
+                <img src="../logos/logo-point_pixel.png" alt="Logo Super Business" style="height: 20px;">
             </div>
             <div id="div_centro_titulo">
                 <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Point Pixel</h1>
             </div>
             <div id="div_lateral_titulo" style="text-align: right;">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" style="background-color: #fafafa;" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
           </div>
           <div class="modal-body text-light" style="text-align: center;">

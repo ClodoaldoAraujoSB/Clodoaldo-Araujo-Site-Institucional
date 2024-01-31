@@ -76,6 +76,22 @@
             cursor: pointer;
         }
 
+        @media screen and (max-width: 768px) {
+            
+            #galeria {
+                flex-wrap: wrap;
+            }
+
+            .grid-container {
+                width: 48%; /* Two columns for mobile */
+            }
+
+            img {
+                height: auto; /* Adjust the image height as needed */
+            }
+        }
+
+
     </style>
 
     <script>
@@ -98,7 +114,7 @@
 
                     modal.style.display = 'block';
                     expandedImg.src = img.src;
-                    expandedImg.style.height = '80%';
+                    expandedImg.style.height = 'auto';
                     expandedImg.style.width = 'auto';
 
                     // Centraliza horizontalmente e verticalmente

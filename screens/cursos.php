@@ -120,8 +120,9 @@ $conn->close();
             }
 
             .descricao_cursos {
-                width: 70%;
+                width: 100%;
                 padding-left: 35px;
+                padding-right: 35px;
                 font-size: 13px;
                 color: #e2e2e2;
             }
@@ -237,6 +238,11 @@ $conn->close();
 
             @media screen and (max-width: 768px) {
 
+                .card_ferramenta {
+                    text-align: center;
+                    align-items: center;
+                }
+
                 .form_pesquisa {
                     flex-direction: column;
                 }
@@ -248,11 +254,13 @@ $conn->close();
                 .text_form_pesquisa {
                     margin: 0px;
                     margin-right: 10px;
-                    width: 60%;
+                    width: 70%;
                 }
 
                 .btn_form_pesquisa {
-                    width: 40%;
+                    width: 30%;
+                    display: flex;
+                    justify-content: end;
                 }
 
                 .ferramenta_div_texto {
@@ -267,12 +275,27 @@ $conn->close();
                 .descricao_cursos {
                     width: 100%;
                     padding: 15px;
+                    text-align: center;
                 }
 
                 .row {
                     display: flex;
                     justify-content: center;
                     flex-direction: column;
+                }
+
+                .div_pesquisa {
+                    width: 100%;
+                }
+
+                .div_pesquisa_form {
+                    margin-top: 10px;
+                    width: 100%;
+                }
+
+                .card-body {
+                    text-align: center;
+                    align-items: center;
                 }
 
             }
@@ -345,12 +368,12 @@ $conn->close();
                 <div class="row">
                     <div class="col">
                         <h6 class="curso_principal_titulo">O Mais Vendido</h6>
-                        <div class="card mb-3" style="border: 0px; background-color: transparent;">
+                        <div class="card" style="border: 0px; background-color: transparent;">
                             <div class="row g-0">
                                 <div class="col-md-3">
                                     <img src="../cursos/ede.jpg" class="img-fluid rounded-start" alt="..." style="border-radius: 10px;">
                                 </div>
-                                <div class="col-md-8" style="display: flex; align-items: center;">
+                                <div class="col" style="display: flex; align-items: center;">
                                     <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px; color: #e2e2e2;">
                                         <h5 class="card-title">Empreendedores de Elite</h5>
                                         <p class="card-text">Transforme sua empresa em um sucesso com a mentoria individual do Clodoaldo Araújo! Com ferramentas especializadas, estratégias, técnicas de gestão e vendas, o seu negócio pode alcançar novas alturas. Conte com a experiência do Clodoaldo para desenvolver uma visão extraordinária para sua empresa e atingir todos os seus objetivos. Não perca mais tempo e invista em uma mentoria especializada desenvolvida especialmente para você!</p>

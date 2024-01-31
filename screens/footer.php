@@ -140,17 +140,26 @@
       }
       
       .footer-center {
-        width: 30%;
+        width: 100%;
       }
 
       .footer-menu {
-        width: 70%;
+        width: 90%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
 
       .content-footer {
         flex-direction: column;
+      }
+
+      .content-footer-div {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
       }
 
       .list-menu-footer {
@@ -160,7 +169,7 @@
       }
 
       .item-menu {
-        padding: 0px 2px 0px 2px;
+        padding: 0px 5px 0px 5px;
       }
     }
 
