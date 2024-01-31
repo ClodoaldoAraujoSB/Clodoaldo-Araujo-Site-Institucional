@@ -102,7 +102,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
 
             .container-list {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 justify-content: center;
                 flex-direction: column;
             }

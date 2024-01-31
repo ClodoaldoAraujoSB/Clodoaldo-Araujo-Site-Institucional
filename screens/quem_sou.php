@@ -125,11 +125,14 @@
     .diploma_imagem_div {
       width: 300px;
       height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .diploma_imagem {
-      width: 300px;
-      height: 200px;
+      max-width: 250px;
+      max-height: 200px;
       padding: 20px;
     }
 
@@ -139,6 +142,7 @@
       text-align: center;
       justify-content: center;
       align-items: start;
+      color: #e2e2e2;
     }
 
     .h_paises {
@@ -276,7 +280,7 @@
 
       <div class="diploma_card">
         <div class="diploma_imagem_div">
-          <img class="diploma_imagem" src="../logos/eep_logo.jpg">
+          <img class="diploma_imagem" src="../logos/eep-faculdades.webp">
         </div>
         <div class="diploma_texto_div">
           <h5>Graduação em Engenharia Civil</h5>
@@ -285,7 +289,7 @@
 
       <div class="diploma_card">
         <div class="diploma_imagem_div">
-          <img class="diploma_imagem" src="../logos/eep_logo.jpg">
+          <img class="diploma_imagem" src="../logos/eep-faculdades.webp">
         </div>
         <div class="diploma_texto_div">
           <h5>Graduação em Engenharia Mecanica</h5>
@@ -294,7 +298,7 @@
 
       <div class="diploma_card">
         <div class="diploma_imagem_div">
-          <img class="diploma_imagem" src="../logos/inpg_logo.png">
+          <img class="diploma_imagem" src="../logos/inpg-faculdade.png">
         </div>
         <div class="diploma_texto_div">
           <h5>Pós-graduação em Gestão Estrategica de Negocios</h5>
@@ -307,7 +311,7 @@
 
       <div class="diploma_card">
         <div class="diploma_imagem_div">
-          <img class="diploma_imagem" src="../logos/empretec_logo.png">
+          <img class="diploma_imagem" src="../logos/empretec.png">
         </div>
         <div class="diploma_texto_div">
           <h5>Empretec</h5>
@@ -316,7 +320,7 @@
 
       <div class="diploma_card">
         <div class="diploma_imagem_div">
-          <img class="diploma_imagem" style="padding: 50px;" src="../logos/isca_logo.jpg">
+          <img class="diploma_imagem" src="../logos/isca-faculdades.webp">
         </div>
         <div class="diploma_texto_div">
           <h5>Pós-graduação em Gestão Estrategica de Negocios</h5>
@@ -325,7 +329,7 @@
 
       <div class="diploma_card">
         <div class="diploma_imagem_div">
-          <img class="diploma_imagem" src="../logos/universidade-california.jpg">
+          <img class="diploma_imagem" src="../logos/university_california_logo.png">
         </div>
         <div class="diploma_texto_div">
           <h5>MBA de empreendedorismo</h5>
