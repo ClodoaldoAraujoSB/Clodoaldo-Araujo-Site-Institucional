@@ -51,6 +51,10 @@
       width: 55%;
     }
 
+    .coluna_div_continuacao {
+      width: 55%;
+    }
+
     .coluna_div_image {
       width: 45%;
     }
@@ -60,6 +64,8 @@
       margin-bottom: 20px;
       margin-left: 70px;
       color: #BE0009;
+      display: flex;
+      flex-direction: column;
     }
 
     .titulo_sobre h1 {
@@ -151,6 +157,11 @@
     }
 
     @media screen and (max-width: 768px) {
+
+      .diploma_titulo {
+        margin: 0px;
+        padding: 0px;
+      }
       
       .diplomas_linha {
         flex-direction: column;
@@ -186,7 +197,20 @@
 
       .coluna_div {
         width: 90%;
+        margin: 210px 0px 0px 0px;
+      }
+
+      .coluna_div_continuacao {
+        width: 90%;
         margin: 100px 0px 0px 0px;
+      }
+
+      .titulo_sobre {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
 
       .linha_div_continuacao {
@@ -205,6 +229,33 @@
 
       .session_sobre {
         margin-top: 0px;
+      }
+
+      .paises_div_sobre {
+        padding: 20px 0px 0px 0px;
+      }
+
+      .diplomas_div_sobre {
+        padding: 0px 0px 20px 0px;
+      }
+
+      .diploma_card {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .diploma_imagem {
+        padding: 0px;
+        max-width: 150px;
+        max-height: 100px;
+      }
+
+      .diploma_imagem_div {
+        height: 100px;
+      }
+
+      .diploma_texto_div {
+        margin-bottom: 50px;
       }
 
     }
@@ -228,7 +279,7 @@
           <div class="coluna_div_image"></div>
           <div class="coluna_div">
             <div class="titulo_sobre">
-              <span><b class="titulo_sobre_h1">Eu sou</b></span><br>
+              <span><b class="titulo_sobre_h1">Eu sou</b></span>
               <span><b class="titulo_sobre_h1">Clodoaldo Araújo</b></span>
             </div>
             <div class="descricao_sobre">
@@ -246,7 +297,7 @@
         </div>
 
         <div class="linha_div_continuacao">
-          <div class="coluna_div">
+          <div class="coluna_div_continuacao">
               <div class="titulo_sobre"></div>
               <div class="continuacao_sobre">
                 <p>Tornou-se sócio da Spyder Race, uma empresa que fabrica carros de corrida. Hoje é também a quinta escola de pilotos de carro de corrida do Brasil, com planos de retornar ao campeonato brasileiro em 2025. </p>
@@ -273,7 +324,7 @@
   <!-- DIPLOMAS - INICIO -->
   <div class="diplomas_div_sobre">
     <div class="diploma_titulo">
-      <h3 style="margin-bottom: 20px;">Formação</h3>
+      <h3>Formação</h3>
     </div>
 
     <div class="diplomas_linha">

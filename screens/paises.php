@@ -67,6 +67,20 @@
 
         .slider {
             width: 100%;
+            height: 100px;
+
+            &::before,
+            &::after {
+                @include white-gradient;
+                z-index: 2;
+            }
+
+            .slide {
+                height: 50px;
+                width: 60px;
+                margin-right: 15px;
+            }
+
         }
 
     }
@@ -76,209 +90,209 @@
 <div class="slider">
     <div class="slide-track" onanimationiteration="restartAnimation()">
         <div class="slide">
-            <img src="../logos/paises/brasil.png" height="75"alt="" />
+            <img src="../logos/paises/brasil.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/china.png" height="75"alt="" />
+            <img src="../logos/paises/china.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/egito.png" height="75"alt="" />
+            <img src="../logos/paises/egito.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/espanha.png" height="75"alt="" />
+            <img src="../logos/paises/espanha.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/franca.png" height="75"alt="" />
+            <img src="../logos/paises/franca.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/mexico.png" height="75"alt="" />
+            <img src="../logos/paises/mexico.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/paises-baixos.png" height="75"alt="" />
+            <img src="../logos/paises/paises-baixos.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/portugal.png" height="75"alt="" />
+            <img src="../logos/paises/portugal.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/suica.png" height="75"alt="" />
+            <img src="../logos/paises/suica.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/alemanha.png" height="75"alt="" />
+            <img src="../logos/paises/alemanha.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/argentina.png" height="75"alt="" />
+            <img src="../logos/paises/argentina.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/colombia.png" height="75"alt="" />
+            <img src="../logos/paises/colombia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/italia.png" height="75"alt="" />
+            <img src="../logos/paises/italia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/estados-unidos.png" height="75"alt="" />
+            <img src="../logos/paises/estados-unidos.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/dinamarca.png" height="75"alt="" />
+            <img src="../logos/paises/dinamarca.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/inglaterra.png" height="75"alt="" />
+            <img src="../logos/paises/inglaterra.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/uruguai.png" height="75"alt="" />
+            <img src="../logos/paises/uruguai.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/chile.png" height="75"alt="" />
+            <img src="../logos/paises/chile.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/peru.png" height="75"alt="" />
+            <img src="../logos/paises/peru.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/bolivia.png" height="75"alt="" />
+            <img src="../logos/paises/bolivia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/paraguai.png" height="75"alt="" />
+            <img src="../logos/paises/paraguai.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/panama.png" height="75"alt="" />
+            <img src="../logos/paises/panama.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/finlandia.png" height="75"alt="" />
+            <img src="../logos/paises/finlandia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/grecia.png" height="75"alt="" />
+            <img src="../logos/paises/grecia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/catar.png" height="75"alt="" />
+            <img src="../logos/paises/catar.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/emirados-arabes-unidos.png" height="75"alt="" />
+            <img src="../logos/paises/emirados-arabes-unidos.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/estonia.png" height="75"alt="" />
+            <img src="../logos/paises/estonia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/israel.png" height="75"alt="" />
+            <img src="../logos/paises/israel.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/jordania.png" height="75"alt="" />
+            <img src="../logos/paises/jordania.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/letonia.png" height="75"alt="" />
+            <img src="../logos/paises/letonia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/lituania.png" height="75"alt="" />
+            <img src="../logos/paises/lituania.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/rep-tcheca.png" height="75"alt="" />
+            <img src="../logos/paises/rep-tcheca.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/turquia.png" height="75"alt="" />
+            <img src="../logos/paises/turquia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/ucrania.png" height="75"alt="" />
+            <img src="../logos/paises/ucrania.png" alt="" />
         </div>
 
         <div class="slide">
-            <img src="../logos/paises/brasil.png" height="75"alt="" />
+            <img src="../logos/paises/brasil.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/china.png" height="75"alt="" />
+            <img src="../logos/paises/china.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/egito.png" height="75"alt="" />
+            <img src="../logos/paises/egito.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/espanha.png" height="75"alt="" />
+            <img src="../logos/paises/espanha.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/franca.png" height="75"alt="" />
+            <img src="../logos/paises/franca.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/mexico.png" height="75"alt="" />
+            <img src="../logos/paises/mexico.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/paises-baixos.png" height="75"alt="" />
+            <img src="../logos/paises/paises-baixos.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/portugal.png" height="75"alt="" />
+            <img src="../logos/paises/portugal.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/suica.png" height="75"alt="" />
+            <img src="../logos/paises/suica.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/alemanha.png" height="75"alt="" />
+            <img src="../logos/paises/alemanha.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/argentina.png" height="75"alt="" />
+            <img src="../logos/paises/argentina.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/colombia.png" height="75"alt="" />
+            <img src="../logos/paises/colombia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/italia.png" height="75"alt="" />
+            <img src="../logos/paises/italia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/estados-unidos.png" height="75"alt="" />
+            <img src="../logos/paises/estados-unidos.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/dinamarca.png" height="75"alt="" />
+            <img src="../logos/paises/dinamarca.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/inglaterra.png" height="75"alt="" />
+            <img src="../logos/paises/inglaterra.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/uruguai.png" height="75"alt="" />
+            <img src="../logos/paises/uruguai.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/chile.png" height="75"alt="" />
+            <img src="../logos/paises/chile.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/peru.png" height="75"alt="" />
+            <img src="../logos/paises/peru.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/bolivia.png" height="75"alt="" />
+            <img src="../logos/paises/bolivia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/paraguai.png" height="75"alt="" />
+            <img src="../logos/paises/paraguai.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/panama.png" height="75"alt="" />
+            <img src="../logos/paises/panama.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/finlandia.png" height="75"alt="" />
+            <img src="../logos/paises/finlandia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/grecia.png" height="75"alt="" />
+            <img src="../logos/paises/grecia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/catar.png" height="75"alt="" />
+            <img src="../logos/paises/catar.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/emirados-arabes-unidos.png" height="75"alt="" />
+            <img src="../logos/paises/emirados-arabes-unidos.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/estonia.png" height="75"alt="" />
+            <img src="../logos/paises/estonia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/israel.png" height="75"alt="" />
+            <img src="../logos/paises/israel.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/jordania.png" height="75"alt="" />
+            <img src="../logos/paises/jordania.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/letonia.png" height="75"alt="" />
+            <img src="../logos/paises/letonia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/lituania.png" height="75"alt="" />
+            <img src="../logos/paises/lituania.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/rep-tcheca.png" height="75"alt="" />
+            <img src="../logos/paises/rep-tcheca.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/turquia.png" height="75"alt="" />
+            <img src="../logos/paises/turquia.png" alt="" />
         </div>
         <div class="slide">
-            <img src="../logos/paises/ucrania.png" height="75"alt="" />
+            <img src="../logos/paises/ucrania.png" alt="" />
         </div>
 
     </div>

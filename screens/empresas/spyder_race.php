@@ -25,6 +25,14 @@
     width: 40%;
   }
 
+  @media only screen and (max-width: 768px) {
+    
+    #div_centro_titulo {
+      display: none;
+    }
+
+  }
+
 </style>
 
 <!-- MODAL - INICIO -->
@@ -39,7 +47,7 @@
               <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Spyder Race</h1>
           </div>
           <div id="div_lateral_titulo" style="text-align: right;">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" style="background-color: #fafafa;" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
         </div>
         <div class="modal-body text-light" style="text-align: center;">

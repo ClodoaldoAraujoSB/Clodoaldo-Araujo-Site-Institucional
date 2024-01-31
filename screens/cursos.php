@@ -238,6 +238,11 @@ $conn->close();
 
             @media screen and (max-width: 768px) {
 
+                .card_ferramenta {
+                    text-align: center;
+                    align-items: center;
+                }
+
                 .form_pesquisa {
                     flex-direction: column;
                 }
@@ -249,11 +254,13 @@ $conn->close();
                 .text_form_pesquisa {
                     margin: 0px;
                     margin-right: 10px;
-                    width: 60%;
+                    width: 70%;
                 }
 
                 .btn_form_pesquisa {
-                    width: 40%;
+                    width: 30%;
+                    display: flex;
+                    justify-content: end;
                 }
 
                 .ferramenta_div_texto {
@@ -268,12 +275,27 @@ $conn->close();
                 .descricao_cursos {
                     width: 100%;
                     padding: 15px;
+                    text-align: center;
                 }
 
                 .row {
                     display: flex;
                     justify-content: center;
                     flex-direction: column;
+                }
+
+                .div_pesquisa {
+                    width: 100%;
+                }
+
+                .div_pesquisa_form {
+                    margin-top: 10px;
+                    width: 100%;
+                }
+
+                .card-body {
+                    text-align: center;
+                    align-items: center;
                 }
 
             }

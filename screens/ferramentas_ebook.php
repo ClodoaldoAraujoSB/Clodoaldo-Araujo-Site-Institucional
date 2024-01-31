@@ -204,6 +204,8 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
 
                 .btn_form_pesquisa {
                     width: 30%;
+                    display: flex;
+                    justify-content: end;
                 }
 
                 .ferramenta_div_texto {
@@ -220,6 +222,15 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
 
                 .div_pesquisa {
                     width: 100%;
+                }
+
+                .ferramenta_linha {
+                    text-align: center;
+                }
+                
+                .card_ferramenta {
+                    align-items: center;
+                    text-align: center;
                 }
 
             }
@@ -307,7 +318,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                     foreach ($sql_ferramenta as $ferramenta) {
                         $contador++;
                     ?>
-                        <div class="col" style="display: flex; justify-content: center; width: 225px;">
+                        <div class="col" style="display: flex; justify-content: center; width: 225px; margin-bottom: 15px;">
                             <div class="card mb-3" style="width: 90%; flex-direction: column; border: 0px; background-color: transparent">
                                 <div class="row g-0" style="flex-grow: 1;">
                                     <div class="col" style="display: flex; flex-direction: column;">
