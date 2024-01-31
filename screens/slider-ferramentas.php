@@ -39,7 +39,7 @@
         .card-cursos_f {
             height: 260px;
             width: 260px;
-            margin-right: 20px;
+            margin-right: 80px;
             border-radius: 10px;
             overflow: hidden;
             display: inline-block;
@@ -104,7 +104,7 @@
                     <div class="row g-0" style="flex-grow: 1;">
                         <div class="col" style="display: flex; flex-direction: column;">
                             <div style="display: flex; justify-content: center;">
-                                <img src="../<?php echo $ferramenta_f["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="width: 260px; height: 260px; border-radius: 10px;">
+                                <img src="../<?php echo $ferramenta_f["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="width: 300px; height: 168px; border-radius: 10px;">
                             </div>
                             <div class="card-body card_ferramenta_f" id="card-ferramenta_f" style="padding: 0px;"> <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
                                 <div class="titulo-ferramenta_f">
