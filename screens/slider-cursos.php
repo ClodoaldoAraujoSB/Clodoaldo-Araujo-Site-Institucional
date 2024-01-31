@@ -1,13 +1,14 @@
 <?php
 
-    include("../bd/bd.php");
-    $sql_ferramenta = $conn->query("SELECT * FROM curso LIMIT 7");
-    $conn->close();
+include("../bd/bd.php");
+$sql_ferramenta = $conn->query("SELECT * FROM curso LIMIT 7");
+$conn->close();
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +29,7 @@
             margin: auto;
             overflow-x: hidden;
             white-space: nowrap;
-            position: relative; 
+            position: relative;
         }
 
         .slider-wrapper {
@@ -38,7 +39,7 @@
 
         .card-cursos {
             width: 206px;
-            margin-right: 20px;
+            margin-right: 60px;
             border-radius: 10px;
             background-color: transparent;
             overflow: hidden;
@@ -83,18 +84,20 @@
         }
 
         .arrow-hidden {
-            opacity: 0; /* Torna as setas invisíveis */
-            pointer-events: none; /* Impede que as setas sejam clicadas quando invisíveis */
+            opacity: 0;
+            /* Torna as setas invisíveis */
+            pointer-events: none;
+            /* Impede que as setas sejam clicadas quando invisíveis */
         }
 
         .p_preco {
-            font-size: 13px; 
-            margin: 0px; 
+            font-size: 13px;
+            margin: 0px;
             padding: 0px 0px 10px 0px;
         }
 
         .h_titulo {
-            font-size: 15px; 
+            font-size: 15px;
             margin: 0px;
         }
 
@@ -113,79 +116,90 @@
             }*/
 
         }
-
     </style>
 </head>
+
 <body>
 
-<div class="slider-container">
-    
-    <div class="arrow arrow-left arrow-hidden" onclick="prevCard()" tabindex="0">❮</div>
-    <div class="slider-wrapper">
-        
-        <!-- CARDS - INICIO -->
+    <div class="slider-container">
 
-        <?php foreach ($sql_ferramenta as $ferramenta) { ?>
-            <div class="col">
-                <div class="card-cursos mb-3">
-                    <div class="row g-0" style="flex-grow: 1;">
-                        <div class="col" style="display: flex; flex-direction: column;">
-                            <div style="display: flex; justify-content: center;">
-                                <img src="<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="border-radius: 10px;">
-                            </div>
-                            <div class="card-body card_ferramenta" id="card-ferramenta" style="padding: 0px;"> <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
-                                <div class="titulo-ferramenta">
-                                    <h5 class="h_titulo"> <?php echo $ferramenta["nome"]; ?> </h5>
+        <div class="arrow arrow-left arrow-hidden" onclick="prevCard()" tabindex="0">❮</div>
+        <div class="slider-wrapper">
+
+            <!-- CARDS - INICIO -->
+
+            <?php foreach ($sql_ferramenta as $ferramenta) { ?>
+                <div class="col">
+                    <div class="card-cursos mb-3">
+                        <div class="row g-0" style="flex-grow: 1;">
+                            <div class="col" style="display: flex; flex-direction: column;">
+                                <div style="display: flex; justify-content: center;">
+                                    <img src="<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="..."
+                                        style="border-radius: 10px;">
                                 </div>
-                                <div class="botão-ferramenta">
-                                <?php if (!empty($ferramenta['preço_antigo']) || $ferramenta['preco_antigo'] != "") {?>
-                                    <p class="p_preco">De: <s><?php echo $ferramenta["preco_antigo"]?></s> Por: <b style="color: #c10109;"><?php echo $ferramenta["preco_atual"] ?></b></p>
-                                <?php } else {?>
-                                    <p class="p_preco">Preço: <b style="color: #c10109;"><?php echo $ferramenta["preco_atual"] ?></b></p>
-                                <?php } ?>
-                                </div>    
+                                <div class="card-body card_ferramenta" id="card-ferramenta" style="padding: 0px;">
+                                    <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
+                                    <div class="titulo-ferramenta">
+                                        <h5 class="h_titulo">
+                                            <?php echo $ferramenta["nome"]; ?>
+                                        </h5>
+                                    </div>
+                                    <div class="botão-ferramenta">
+                                        <?php if (!empty($ferramenta['preço_antigo']) || $ferramenta['preco_antigo'] != "") { ?>
+                                            <p class="p_preco">De: <s>
+                                                    <?php echo $ferramenta["preco_antigo"] ?>
+                                                </s> Por: <b style="color: #c10109;">
+                                                    <?php echo $ferramenta["preco_atual"] ?>
+                                                </b></p>
+                                        <?php } else { ?>
+                                            <p class="p_preco">Preço: <b style="color: #c10109;">
+                                                    <?php echo $ferramenta["preco_atual"] ?>
+                                                </b></p>
+                                        <?php } ?>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        <?php } ?>
+            <?php } ?>
 
-        <!-- CARDS - INICIO -->
+            <!-- CARDS - INICIO -->
 
+        </div>
+        <div class="arrow arrow-right" onclick="nextCard()" tabindex="0">❯</div>
     </div>
-    <div class="arrow arrow-right" onclick="nextCard()" tabindex="0">❯</div>
-</div>
 
-<script>
-    const sliderWrapper = document.querySelector('.slider-wrapper');
-    const arrowLeft = document.querySelector('.arrow-left');
-    const arrowRight = document.querySelector('.arrow-right');
-    let currentIndex = 0;
+    <script>
+        const sliderWrapper = document.querySelector('.slider-wrapper');
+        const arrowLeft = document.querySelector('.arrow-left');
+        const arrowRight = document.querySelector('.arrow-right');
+        let currentIndex = 0;
 
-    function showCard(index) {
-        const cards = document.querySelectorAll('.card-cursos');
-        const cardWidth = cards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(cards[0]).marginRight);
-        sliderWrapper.style.transform = `translateX(${-index * cardWidth}px)`;
-        currentIndex = index;
-        toggleArrows();
-    }
+        function showCard(index) {
+            const cards = document.querySelectorAll('.card-cursos');
+            const cardWidth = cards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(cards[0]).marginRight);
+            sliderWrapper.style.transform = `translateX(${-index * cardWidth}px)`;
+            currentIndex = index;
+            toggleArrows();
+        }
 
-    function nextCard() {
-        currentIndex = (currentIndex + 1) % (document.querySelectorAll('.card-cursos').length);
-        showCard(currentIndex);
-    }
+        function nextCard() {
+            currentIndex = (currentIndex + 1) % (document.querySelectorAll('.card-cursos').length);
+            showCard(currentIndex);
+        }
 
-    function prevCard() {
-        currentIndex = (currentIndex - 1 + document.querySelectorAll('.card-cursos').length) % (document.querySelectorAll('.card-cursos').length);
-        showCard(currentIndex);
-    }
+        function prevCard() {
+            currentIndex = (currentIndex - 1 + document.querySelectorAll('.card-cursos').length) % (document.querySelectorAll('.card-cursos').length);
+            showCard(currentIndex);
+        }
 
-    function toggleArrows() {
-        arrowLeft.classList.toggle('arrow-hidden', currentIndex === 0);
-        arrowRight.classList.toggle('arrow-hidden', currentIndex === document.querySelectorAll('.card-cursos').length - 5);
-    }
-</script>
+        function toggleArrows() {
+            arrowLeft.classList.toggle('arrow-hidden', currentIndex === 0);
+            arrowRight.classList.toggle('arrow-hidden', currentIndex >= document.querySelectorAll('.card-cursos').length - 1);
+        }
+    </script>
 
 </body>
+
 </html>
