@@ -62,7 +62,7 @@ include_once("empresas/super_business.php");
     .linha_div_descricao {
       display: flex;
       justify-content: center;
-      background-image: url('../img/fotoimprensa3.jpg');
+      background-image: url('../img/1.jpg');
       background-size: 50%;
       background-position-x: left;
       background-position-y: top;
@@ -299,9 +299,17 @@ include_once("empresas/super_business.php");
       background-color: #161616;
       width: 33%;
     }
+    
+    #form-contato-id {
+      width: 50%;
+    }
 
     @media only screen and (max-width: 768px) {
 
+      #form-contato-id {
+        width: 90%;
+      }
+      
       .curso_div_texto {
         width: 100%;
       }
@@ -391,7 +399,7 @@ include_once("empresas/super_business.php");
       }
 
       .galeria {
-        border-bottom: 20px solid transparent;
+        /*border-bottom: 20px solid transparent;*/
       }
 
       .session-contato {
@@ -718,7 +726,7 @@ include_once("empresas/super_business.php");
       <div class="row">
         <div class="col"></div>
       </div>
-      <div class="row" style="padding-right: 15px; width: 50%;">
+      <div class="row" id="form-contato-id" style="padding-right: 15px;">
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
           <div class="col" style="margin-top: 16px;">
             <div class="mb-3">

@@ -29,7 +29,7 @@
     .linha_div_descricao {
       display: flex;
       justify-content: center;
-      background-image: url('../img/fotoimprensa3.jpg');
+      background-image: url('../img/1.jpg');
       background-size: 50%;
       background-position-x: left;
       background-position-y: top;
@@ -40,7 +40,7 @@
       margin-top: 50px;
       display: flex;
       justify-content: center;
-      background-image: url('../img/fotoimprensa3.jpg');
+      background-image: url('../img/1.jpg');
       background-size: 50%;
       background-position-x: right;
       background-position-y: top;

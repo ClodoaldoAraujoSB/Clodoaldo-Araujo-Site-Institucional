@@ -1,11 +1,11 @@
 <style>
 
-  .modal-content {
+  /*.modal-content {
     background-image: url("../../logos/logo-spyderrace.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
-  }
+  }*/
 
   #btn-empresa {
     border: 0px;

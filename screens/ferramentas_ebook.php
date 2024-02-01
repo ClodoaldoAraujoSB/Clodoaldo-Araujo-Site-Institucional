@@ -173,6 +173,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
 
             .content {
                 flex: 1; /* Cresce para ocupar o espaço restante */
+                background-color: #282828; 
             }
 
             .div_pesquisa_form {
