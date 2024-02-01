@@ -37,7 +37,6 @@
         }
 
         .card-cursos_f {
-            height: 260px;
             width: 260px;
             margin-right: 80px;
             border-radius: 10px;
@@ -87,6 +86,16 @@
             opacity: 0; /* Torna as setas invisíveis */
             pointer-events: none; /* Impede que as setas sejam clicadas quando invisíveis */
         }
+
+        @media screen and (max-width: 768px) {
+
+            .card-cursos_f {
+                width: 200px;
+                margin-right: 40px; 
+            }
+
+        }
+
     </style>
 </head>
 <body>
@@ -149,7 +158,7 @@
 
     function toggleArrows_f() {
         arrowLeft_f.classList.toggle('arrow-hidden_f', currentIndex_f === 0);
-        arrowRight_f.classList.toggle('arrow-hidden_f', currentIndex_f >= totalCards_f - cardsInViewport_f);
+        arrowRight_f.classList.toggle('arrow-hidden_f', currentIndex_f >= document.querySelectorAll('.card-cursos_f').length - 4);
     }
 </script>
 

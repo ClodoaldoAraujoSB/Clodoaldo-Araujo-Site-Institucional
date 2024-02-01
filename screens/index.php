@@ -126,6 +126,7 @@ include_once("empresas/super_business.php");
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
     }
 
     .div_lista_empresas button {
@@ -192,7 +193,7 @@ include_once("empresas/super_business.php");
       background-size: cover;
       background-repeat: no-repeat;
       background-position-y: -100px;
-      background-color: #282828;
+      background-color: #000000;
     }
 
     .titulo_principal {
@@ -206,7 +207,7 @@ include_once("empresas/super_business.php");
       width: 90%;
       display: flex;
       justify-content: space-between;
-      margin-top: 25px;
+      padding-top: 25px;
     }
 
     .row-50 {
@@ -294,6 +295,11 @@ include_once("empresas/super_business.php");
       color: #e2e2e2;
     }
 
+    #btn_custon_emp {
+      background-color: #161616;
+      width: 33%;
+    }
+
     @media only screen and (max-width: 768px) {
 
       .curso_div_texto {
@@ -339,7 +345,7 @@ include_once("empresas/super_business.php");
       }
 
       .lista_empresas {
-        width: 475px;
+        width: 100%;
       }
 
       .session-contato {
@@ -447,6 +453,10 @@ include_once("empresas/super_business.php");
 
       .descricao_sobre p {
         text-align: center;
+      }
+
+      #btn_custon_emp {
+        width: 80%;
       }
 
     }
@@ -644,13 +654,13 @@ include_once("empresas/super_business.php");
     <div class="lista_empresas">
       <h3 style="margin-bottom: 0px; color:#c10109;">Empresas:</h3>
       <div class="div_lista_empresas">
-        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal"
+        <button type="button" class="btn btn-dark" id="btn_custon_emp" data-bs-toggle="modal"
           data-bs-target="#super_businessModal"><img src="../logos/logo-super_business.png" alt="Super Business"
             style="height: 50px;"></button>
-        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal"
+        <button type="button" class="btn btn-dark" id="btn_custon_emp" data-bs-toggle="modal"
           data-bs-target="#rota_da_inovacaoModal"><img src="../logos/logo-rota.png" alt="Rota da Inovaçao"
             style="height: 50px;"></button>
-        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal"
+        <button type="button" class="btn btn-dark" id="btn_custon_emp" data-bs-toggle="modal"
           data-bs-target="#isteelModal"><img src="../logos/logo-isteel.png" alt="isteel" style="height: 50px;"></button>
       </div>
     </div>
@@ -708,7 +718,7 @@ include_once("empresas/super_business.php");
       <div class="row">
         <div class="col"></div>
       </div>
-      <div class="row" style="padding-right: 15px;">
+      <div class="row" style="padding-right: 15px; width: 50%;">
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
           <div class="col" style="margin-top: 16px;">
             <div class="mb-3">

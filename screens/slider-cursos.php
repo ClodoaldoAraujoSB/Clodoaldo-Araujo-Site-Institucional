@@ -196,7 +196,7 @@ $conn->close();
 
         function toggleArrows() {
             arrowLeft.classList.toggle('arrow-hidden', currentIndex === 0);
-            arrowRight.classList.toggle('arrow-hidden', currentIndex >= document.querySelectorAll('.card-cursos').length - 1);
+            arrowRight.classList.toggle('arrow-hidden', currentIndex >= document.querySelectorAll('.card-cursos').length - 5);
         }
     </script>
 
