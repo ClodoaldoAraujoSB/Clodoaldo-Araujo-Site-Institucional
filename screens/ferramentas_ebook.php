@@ -323,7 +323,7 @@ if (isset($_SESSION['autorizado']) && $_SESSION['autorizado'] == true) {
                                 <div class="row g-0" style="flex-grow: 1;">
                                     <div class="col" style="display: flex; flex-direction: column;">
                                         <div style="display: flex; justify-content: center;">
-                                            <img src="../<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="height: 100px; width: 225px;">
+                                            <img src="../<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="height: 100px; width: 225px; border-radius: 5px;">
                                         </div>
                                         <div class="card-body card_ferramenta" id="card-ferramenta" style="padding: 0px;"> <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
                                             <div class="titulo-ferramenta">

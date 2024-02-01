@@ -197,7 +197,7 @@
 
       .coluna_div {
         width: 90%;
-        margin: 210px 0px 0px 0px;
+        margin: 230px 0px 0px 0px;
       }
 
       .coluna_div_continuacao {
@@ -211,6 +211,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 20px;
       }
 
       .linha_div_continuacao {
@@ -229,6 +230,7 @@
 
       .session_sobre {
         margin-top: 0px;
+        padding-top: 0px;
       }
 
       .paises_div_sobre {
@@ -256,6 +258,14 @@
 
       .diploma_texto_div {
         margin-bottom: 50px;
+      }
+
+      .descricao_sobre {
+        text-align: center;
+      }
+
+      .continuacao_sobre {
+        text-align: center;
       }
 
     }

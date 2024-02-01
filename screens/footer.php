@@ -135,6 +135,13 @@
 
     @media screen and (max-width: 768px) {
 
+      .footer-icone-principal {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .footer-site {
         padding: 10px;
       }
