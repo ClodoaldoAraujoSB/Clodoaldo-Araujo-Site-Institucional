@@ -164,7 +164,7 @@ include_once("empresas/super_business.php");
 
     .galeria {
       padding: 50px 0px 50px 0px;
-      height: 400px;
+      height: 275px;
 
       background-image: url('../logos/galeriapreview.png');
       background-size: cover;
@@ -302,6 +302,13 @@ include_once("empresas/super_business.php");
     
     #form-contato-id {
       width: 50%;
+    }
+
+    #corpo_card_vendido {
+      display: flex; 
+      flex-direction: column; 
+      font-size: 14px;
+      color:#e2e2e2;
     }
 
     @media only screen and (max-width: 768px) {
@@ -467,6 +474,10 @@ include_once("empresas/super_business.php");
         width: 80%;
       }
 
+      #corpo_card_vendido {
+        align-items: center;
+      }
+
     }
   </style>
 
@@ -552,7 +563,7 @@ include_once("empresas/super_business.php");
                 <img src="../cursos/ede.jpg" class="img-fluid rounded-start" alt="..." style="border-radius: 10px;">
               </div>
               <div class="col-md-8" style="display: flex; align-items: center;">
-                <div class="card-body" style="display: flex; flex-direction: column; font-size: 14px; color:#e2e2e2;">
+                <div class="card-body" id="corpo_card_vendido">
                   <h5 class="card-title">Empreendedores de Elite</h5>
                   <p class="card-text">Transforme sua empresa em um sucesso com a mentoria individual do Clodoaldo
                     Araújo! Com ferramentas especializadas, estratégias, técnicas de gestão e vendas, o seu negócio pode
@@ -683,16 +694,16 @@ include_once("empresas/super_business.php");
   </div>
 
   <!-- GALERIA - INICIO -->
-  <div class="galeria">
+  <div class="galeria"></div>
+  <!-- GALERIA - FINAL -->
 
+  <div style="background-color: #282828; padding: 20px 0px 50px 0px">
     <!-- BOTAO DE ACESSO - INICIO -->
     <div style="display: flex; justify-content: center; align-items: center;">
       <a href="galeria.php" class="botao_acesso" style="text-decoration: none;">Acesse aqui</a>
     </div>
     <!-- BOTAO DE ACESSO - FINAL -->
-
   </div>
-  <!-- GALERIA - FINAL -->
 
   <!-- CONTATO - INICIO -->
   <div class="session-contato">
