@@ -1,13 +1,14 @@
 <?php
 
-    include("../bd/bd.php");
-    $sql_ferramenta = $conn->query("SELECT * FROM ferramentas LIMIT 7");
-    $conn->close();
+include("../bd/bd.php");
+$sql_ferramenta = $conn->query("SELECT * FROM ferramentas LIMIT 7");
+$conn->close();
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +29,7 @@
             margin: auto;
             overflow-x: hidden;
             white-space: nowrap;
-            position: relative; 
+            position: relative;
         }
 
         .slider-wrapper_f {
@@ -83,84 +84,164 @@
         }
 
         .arrow-hidden_f {
-            opacity: 0; /* Torna as setas invisíveis */
-            pointer-events: none; /* Impede que as setas sejam clicadas quando invisíveis */
+            opacity: 0;
+            /* Torna as setas invisíveis */
+            pointer-events: none;
+            /* Impede que as setas sejam clicadas quando invisíveis */
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (min-width: 2560px) {
+            .arrow-left_f {
+                display: none;
+            }
 
-            .card-cursos_f {
-                width: 200px;
-                margin-right: 40px; 
+            .arrow-right_f {
+                display: none;
+            }
+
+            .slider-wrapper_f {
+                width: 300px;
+            }
+        }
+
+        @media screen and (min-width: 1440px) {
+            .slider-wrapper_f {
+                width: 300px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .slider-wrapper_f {
+                width: 250px;
+            }
+
+            .indv-card {
+                margin-right: 30px;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .slider-wrapper_f {
+                width: 225px;
+            }
+
+            .indv-card {
+                margin-right: 40px;
             }
 
         }
 
+        @media screen and (min-width: 425px) {
+            .slider-wrapper_f {
+                width: 175px;
+            }
+
+            .indv-card {
+                margin-right: 80px;
+            }
+
+        }
+
+        @media screen and (min-width: 375px) {
+            .slider-wrapper_f {
+                width: 175px;
+            }
+
+            .indv-card {
+                margin-right: 90px;
+            }
+
+        }
+
+        @media screen and (min-width: 320px) {
+            .slider-wrapper_f {
+                width: 175px;
+            }
+
+            .indv-card {
+                margin-right: 90px;
+            }
+
+            .card-title {
+                text-align: left;
+            }
+
+            .titulo-ferramenta {
+                margin-left: 10px;
+            }
+
+        }
     </style>
 </head>
+
 <body>
 
-<div class="slider-container_f">
-    
-    <div class="arrow_f arrow-left_f arrow-hidden_f" onclick="prevCard_f()" tabindex="0">❮</div>
-    <div class="slider-wrapper_f">
-        
-        <!-- CARDS - INICIO -->
+    <div class="slider-container_f">
 
-        <?php foreach ($sql_ferramenta as $ferramenta_f) { ?>
-            <div class="col">
-                <div class="card-cursos_f mb-3">
-                    <div class="row g-0" style="flex-grow: 1;">
-                        <div class="col" style="display: flex; flex-direction: column;">
-                            <div style="display: flex; justify-content: center;">
-                                <img src="../<?php echo $ferramenta_f["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="width: 300px; height: 168px; border-radius: 10px;">
-                            </div>
-                            <div class="card-body card_ferramenta_f" id="card-ferramenta_f" style="padding: 0px;"> <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
-                                <div class="titulo-ferramenta_f">
-                                    <h5 class="card-title" style="font-size: 15px; margin: 0px;"> <?php echo $ferramenta_f["nome"]; ?> </h5>
-                                </div>    
+        <div class="arrow_f arrow-left_f arrow-hidden_f" onclick="prevCard_f()" tabindex="0">❮</div>
+        <div class="slider-wrapper_f">
+
+            <!-- CARDS - INICIO -->
+
+            <?php foreach ($sql_ferramenta as $ferramenta_f) { ?>
+                <div class="col">
+                    <div class="card-cursos_f mb-3">
+                        <div class="row g-0" style="flex-grow: 1;">
+                            <div class="col" style="display: flex; flex-direction: column;">
+                                <div class="indv-card" style="display: flex; justify-content: center;">
+                                    <img src="../<?php echo $ferramenta_f["imagem"] ?>" class="img-fluid rounded-start"
+                                        alt="..." style="width: 300px; height: 168px; border-radius: 10px;">
+                                </div>
+                                <div class="card-body card_ferramenta_f" id="card-ferramenta_f" style="padding: 0px;">
+                                    <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
+                                    <div class="titulo-ferramenta_f">
+                                        <h5 class="card-title" style="font-size: 15px; margin: 0px;">
+                                            <?php echo $ferramenta_f["nome"]; ?>
+                                        </h5>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        <?php } ?>
+            <?php } ?>
 
-        <!-- CARDS - INICIO -->
+            <!-- CARDS - INICIO -->
 
+        </div>
+        <div class="arrow_f arrow-right_f" onclick="nextCard_f()" tabindex="0">❯</div>
     </div>
-    <div class="arrow_f arrow-right_f" onclick="nextCard_f()" tabindex="0">❯</div>
-</div>
 
-<script>
-    const sliderWrapper_f = document.querySelector('.slider-wrapper_f');
-    const arrowLeft_f = document.querySelector('.arrow-left_f');
-    const arrowRight_f = document.querySelector('.arrow-right_f');
-    let currentIndex_f = 0;
+    <script>
+        const sliderWrapper_f = document.querySelector('.slider-wrapper_f');
+        const arrowLeft_f = document.querySelector('.arrow-left_f');
+        const arrowRight_f = document.querySelector('.arrow-right_f');
+        let currentIndex_f = 0;
 
-    function showCard_f(index) {
-        const cards_f = document.querySelectorAll('.card-cursos_f');
-        const cardWidth_f = cards_f[0].getBoundingClientRect().width + parseFloat(getComputedStyle(cards_f[0]).marginRight);
-        sliderWrapper_f.style.transform = `translateX(${-index * cardWidth_f}px)`;
-        currentIndex_f = index;
-        toggleArrows_f();
-    }
+        function showCard_f(index) {
+            const cards_f = document.querySelectorAll('.card-cursos_f');
+            const cardWidth_f = cards_f[0].getBoundingClientRect().width + parseFloat(getComputedStyle(cards_f[0]).marginRight);
+            sliderWrapper_f.style.transform = `translateX(${-index * cardWidth_f}px)`;
+            currentIndex_f = index;
+            toggleArrows_f();
+        }
 
-    function nextCard_f() {
-        currentIndex_f = (currentIndex_f + 1) % (document.querySelectorAll('.card-cursos_f').length);
-        showCard_f(currentIndex_f);
-    }
+        function nextCard_f() {
+            currentIndex_f = (currentIndex_f + 1) % (document.querySelectorAll('.card-cursos_f').length);
+            showCard_f(currentIndex_f);
+        }
 
-    function prevCard_f() {
-        currentIndex_f = (currentIndex_f - 1 + document.querySelectorAll('.card-cursos_f').length) % (document.querySelectorAll('.card-cursos_f').length);
-        showCard_f(currentIndex_f);
-    }
+        function prevCard_f() {
+            currentIndex_f = (currentIndex_f - 1 + document.querySelectorAll('.card-cursos_f').length) % (document.querySelectorAll('.card-cursos_f').length);
+            showCard_f(currentIndex_f);
+        }
 
-    function toggleArrows_f() {
-        arrowLeft_f.classList.toggle('arrow-hidden_f', currentIndex_f === 0);
-        arrowRight_f.classList.toggle('arrow-hidden_f', currentIndex_f >= document.querySelectorAll('.card-cursos_f').length - 4);
-    }
-</script>
+        function toggleArrows_f() {
+            arrowLeft_f.classList.toggle('arrow-hidden_f', currentIndex_f === 0);
+            arrowRight_f.classList.toggle('arrow-hidden_f', currentIndex_f >= document.querySelectorAll('.card-cursos_f').length - 4);
+        }
+    </script>
 
 </body>
+
 </html>
