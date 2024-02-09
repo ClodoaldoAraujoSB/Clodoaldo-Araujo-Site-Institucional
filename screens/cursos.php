@@ -1,7 +1,7 @@
 <?php    
 
 include("../bd/bd.php");
-$sql_ferramenta = $conn->query("SELECT * FROM curso");
+$cursos = $conn->query("SELECT * FROM curso");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -18,13 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($opcao == 0 && empty($texto)) {
-        $sql_ferramenta = $conn->query("SELECT * FROM curso");
+        $cursos = $conn->query("SELECT * FROM curso");
     } else if ($opcao == 0 && !empty($texto)) {
-        $sql_ferramenta = $conn->query("SELECT * FROM curso WHERE nome LIKE '%" . $texto . "%'");
+        $cursos = $conn->query("SELECT * FROM curso WHERE nome LIKE '%" . $texto . "%'");
     } else if ($opcao != 0 && empty($texto)) {
-        $sql_ferramenta = $conn->query("SELECT * FROM curso WHERE ambiente = " . $opcao);
+        $cursos = $conn->query("SELECT * FROM curso WHERE ambiente = " . $opcao);
     } else if ($opcao != 0 && !empty($texto)) {
-        $sql_ferramenta = $conn->query("SELECT * FROM curso WHERE ambiente = " . $opcao . " AND nome LIKE '%" . $texto . "%'");
+        $cursos = $conn->query("SELECT * FROM curso WHERE ambiente = " . $opcao . " AND nome LIKE '%" . $texto . "%'");
     }
 }
 
@@ -389,59 +389,155 @@ $conn->close();
         </div>
         <!-- MAIS VENDIDO - FINAL -->
 
-        <!-- LISTA DE CURSOS - INICIO -->
-        <div class="session_ferramentas">
-            <div class="container_ferramentas">
-                <div class="descricao_cursos">
-                    <h5>Cursos</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque vulputate nisl id pretium. Aenean eget magna iaculis lorem ultricies convallis quis ac velit. Maecenas mattis nisl nec dui aliquam luctus. Quisque massa nulla, ornare sit amet consequat eget, vestibulum at mi. Morbi sit amet dui vel arcu congue finibus at ut turpis. Aenean et diam libero. Aliquam faucibus sodales pharetra. Nunc vel sapien suscipit, lacinia dui non, laoreet nibh. Quisque at lacinia tortor, a semper ex. Cras nec magna in nibh iaculis interdum vel vitae tortor. Nulla eget lorem vitae orci ultricies feugiat non eleifend lacus. Mauris egestas commodo tortor ut commodo.</p>
-                </div>
-                <div class="container-list">
-                    <div class="row" style="display: flex; justify-content: center;">
-                    <?php
-                    $contador = 0;
-                    foreach ($sql_ferramenta as $ferramenta) {
-                        $contador++;
-                    ?>
-                        <div class="col" style="display: flex; justify-content: center; width: 225px;">
-                            <div class="card mb-3" style="width: 90%; flex-direction: column; border: 0px; background-color: #161616;">
-                                <div class="row g-0" style="flex-grow: 1;">
-                                    <div class="col" style="display: flex; flex-direction: column; color: #e2e2e2;">
-                                        <div style="display: flex; justify-content: center;">
-                                            <img src="<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="border-radius: 10px;">
+<!-- LISTA DE CURSOS - INICIO -->
+
+<?php 
+$cursos = [
+    [
+        'nome' => 'e-book',
+        'link' => 'https://cursos.clodoaldoaraujo.com.br/courses/e-book/',
+        'imagem' => '../cursos/ebook.jpg', // Substitua pela URL real da imagem
+        'preco_antigo' => '',
+        'preco_atual' => '67,00',
+    ],
+
+    [
+        'nome' => 'Mapa para o Sucesso Online',
+        'link' => 'https://cursos.clodoaldoaraujo.com.br/courses/mapa-para-o-sucesso-online//',
+        'imagem' => '../cursos/mapadosucesso.jpg', // Substitua pela URL real da imagem
+        'preco_antigo' => '3.000,00',
+        'preco_atual' => '1.000,00',
+    ],
+
+    [
+        'nome' => 'Mapa para o Sucesso Presencial',
+        'link' => 'https://cursos.clodoaldoaraujo.com.br/courses/mapa-para-o-sucesso-presencial/',
+        'imagem' => '../cursos/mapadosucesso.jpg', // Substitua pela URL real da imagem
+        'preco_antigo' => '3.000,00',
+        'preco_atual' => '1.000,00',
+    ],
+
+    [
+        'nome' => 'Pilares para o Milhão',
+        'link' => 'https://cursos.clodoaldoaraujo.com.br/courses/pilares-para-o-milhao/',
+        'imagem' => '../cursos/mapadosucesso.jpg', // Substitua pela URL real da imagem
+        'preco_antigo' => '3.000,00',
+        'preco_atual' => '1.000,00',
+    ],
+
+    [
+        'nome' => 'Empreendedores de Elite',
+        'link' => 'https://cursos.clodoaldoaraujo.com.br/courses/empreendedores-de-elite/',
+        'imagem' => '../cursos/ede.jpg', // Substitua pela URL real da imagem
+        'preco_antigo' => '3.000,00',
+        'preco_atual' => '1.000,00',
+    ],
+
+    [
+        'nome' => 'Descubra-se',
+        'link' => 'https://cursos.clodoaldoaraujo.com.br/courses/descubra-se/',
+        'imagem' => '../cursos/descubra-se.jpg', // Substitua pela URL real da imagem
+        'preco_antigo' => '5.000,00',
+        'preco_atual' => '3.000,00',
+    ],
+
+    [
+        'nome' => 'MMA',
+        'link' => 'https://cursos.clodoaldoaraujo.com.br/courses/mma/',
+        'imagem' => '../cursos/mma.jpg', // Substitua pela URL real da imagem
+        'preco_antigo' => '',
+        'preco_atual' => '5.000,00',
+    ],
+
+    [
+        'nome' => 'Missão China',
+        'link' => 'https://cursos.clodoaldoaraujo.com.br/courses/missao-china/',
+        'imagem' => '../cursos/imersao_china.jpg', // Substitua pela URL real da imagem
+        'preco_antigo' => '',
+        'preco_atual' => '10.000,00',
+    ],
+
+    [
+        'nome' => 'Missão Turquia',
+        'link' => 'https://cursos.clodoaldoaraujo.com.br/courses/missao-turquia/',
+        'imagem' => '../cursos/MT.jpg', // Substitua pela URL real da imagem
+        'preco_antigo' => '',
+        'preco_atual' => '20.000,00',
+    ],
+
+    [
+        'nome' => 'O Conselho',
+        'link' => 'https://cursos.clodoaldoaraujo.com.br/courses/o-conselho/',
+        'imagem' => '../cursos/conselho.jpg', // Substitua pela URL real da imagem
+        'preco_antigo' => '',
+        'preco_atual' => '48.000,00',
+    ],
+
+    [
+        'nome' => 'Master Mind',
+        'link' => 'https://cursos.clodoaldoaraujo.com.br/courses/master-mind/',
+        'imagem' => '../cursos/mapadosucesso.jpg', // Substitua pela URL real da imagem
+        'preco_antigo' => '',
+        'preco_atual' => '120.000,00',
+    ],
+];
+
+?>
+
+<div class="session_ferramentas">
+    <div class="container_ferramentas">
+        <div class="descricao_cursos">
+            <h5>Cursos</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="container-list">
+            <div class="row" style="display: flex; justify-content: center;">
+
+                <?php
+                $contador = 0;
+                foreach ($cursos as $curso) {
+                    $contador++;
+                ?>
+                    <div class="col" style="display: flex; justify-content: center; width: 225px;">
+                        <div class="card mb-3" style="width: 90%; flex-direction: column; border: 0px; background-color: #161616;">
+                            <div class="row g-0" style="flex-grow: 1;">
+                                <div class="col" style="display: flex; flex-direction: column; color: #e2e2e2;">
+                                    <div style="display: flex; justify-content: center;">
+                                        <img src="<?php echo $curso["imagem"] ?>" class="img-fluid rounded-start" alt="..." style="border-radius: 10px;">
+                                    </div>
+                                    <div class="card-body card_ferramenta" id="card-ferramenta" style="padding: 0px;">
+                                        <div class="titulo-ferramenta">
+                                            <h5 class="card-title" style="font-size: 15px; margin: 0px;"><?php echo $curso['nome']; ?></h5>
                                         </div>
-                                        <div class="card-body card_ferramenta" id="card-ferramenta" style="padding: 0px;"> <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->
-                                            <div class="titulo-ferramenta">
-                                                <h5 class="card-title" style="font-size: 15px; margin: 0px;"> <?php echo $ferramenta["nome"]; ?> </h5>
-                                            </div>
-                                            <div class="botão-ferramenta">
-                                                <?php if (!empty($ferramenta['preço_antigo']) || $ferramenta['preco_antigo'] != "") {?>
-                                                    <p style="font-size: 13px; margin: 0px; padding: 0px 0px 10px 0px;">De: <s><?php echo $ferramenta["preco_antigo"]?></s> Por: <b style="color: #c10109;"><?php echo $ferramenta["preco_atual"] ?></b></p>
-                                                <?php } else {?>
-                                                    <p style="font-size: 13px; margin: 0px; padding: 0px 0px 10px 0px;">Preço: <b style="color: #c10109;"><?php echo $ferramenta["preco_atual"] ?></b></p>
-                                                <?php } ?>
-                                                    <a href="" download=""><button class="btn2">Acesse aqui</button></a>
-                                            </div>    
+                                        <div class="botão-ferramenta">
+                                            <?php if (!empty($curso['preco_antigo'])) : ?>
+                                                <p style="font-size: 13px; margin: 0px; padding: 0px 0px 10px 0px;">De: <s><?php echo $curso["preco_antigo"] ?></s> Por: <b style="color: #c10109;"><?php echo $curso["preco_atual"] ?></b></p>
+                                            <?php else : ?>
+                                                <p style="font-size: 13px; margin: 0px; padding: 0px 0px 10px 0px;">Preço: <b style="color: #c10109;"><?php echo $curso["preco_atual"] ?></b></p>
+                                            <?php endif; ?>
+                                            <a href="<?php echo $curso['link']; ?>"><button class="btn2">Acesse aqui</button></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <?php
-                        if ($contador == 5) {
-                        ?>
-                            </div>
-                            <div class="row" style="display: flex; justify-content: center;">
-                        <?php
-                            $contador = 0;
-                        }
-                    }
-                    ?>
                     </div>
-                </div>
+
+                <?php
+                    if ($contador == 5) {
+                ?>
+            </div>
+            <div class="row" style="display: flex; justify-content: center;">
+                <?php
+                        $contador = 0;
+                    }
+                }
+                ?>
             </div>
         </div>
-        <!-- LISTA DE CURSOS - FINAL -->
+    </div>
+</div>
+<!-- LISTA DE CURSOS - FINAL -->
 
         <div class="content"></div>
 

@@ -101,21 +101,70 @@ $conn->close();
             margin: 0px;
         }
 
-        @media screen and (max-width: 768px) {
-
-            /*.card-cursos {
-                width: 110px;
+        @media screen and (min-width: 2560px) {
+            .arrow-left {
+                display: none;
             }
 
-            .p_preco {
-                font-size: 8px;
+            .arrow-right {
+                display: none;
             }
 
-            .h_titulo {
-                font-size: 10px;
-            }*/
-
+            .slider-wrapper {
+                width: 300px;
+            }
         }
+
+        @media screen and (min-width: 1440px) {
+            .slider-wrapper {
+                width: 125px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .slider-wrapper {
+                width: 150px;
+            }
+
+            .col {
+                margin-right: 50px;
+            }
+
+            .indv-card {
+                height: 300px;
+                width: 150px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .slider-wrapper {
+                width: 40px;
+            }
+
+            .col {
+                margin-right: 125px;
+            }
+
+            .indv-card {
+                height: 300px;
+                width: 150px;
+            }
+        }
+
+            @media screen and (max-width: 425px) {
+                .slider-wrapper {
+                    width: 40px;
+                }
+
+                .col {
+                    margin-right: 160px;
+                }
+
+                .indv-card {
+                    height: 300px;
+                    width: 150px;
+                }
+            }
     </style>
 </head>
 
@@ -133,7 +182,7 @@ $conn->close();
                     <div class="card-cursos mb-3">
                         <div class="row g-0" style="flex-grow: 1;">
                             <div class="col" style="display: flex; flex-direction: column;">
-                                <div style="display: flex; justify-content: center;">
+                                <div class="indv-card" style="display: flex; justify-content: center;">
                                     <img src="<?php echo $ferramenta["imagem"] ?>" class="img-fluid rounded-start" alt="..."
                                         style="border-radius: 10px;">
                                 </div>

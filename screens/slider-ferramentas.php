@@ -112,11 +112,11 @@ $conn->close();
 
         @media screen and (min-width: 1024px) {
             .slider-wrapper_f {
-                width: 250px;
+                 width: 200px;
             }
 
             .indv-card {
-                margin-right: 30px;
+                margin-right: 50px;
             }
         }
 
