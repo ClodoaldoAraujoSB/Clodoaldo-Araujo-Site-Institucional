@@ -190,7 +190,7 @@ $conn->close();
                             <div class="col" style="display: flex; flex-direction: column;">
                                 <div class="indv-card" style="display: flex; justify-content: center;">
                                     <img src="../<?php echo $ferramenta_f["imagem"] ?>" class="img-fluid rounded-start"
-                                        alt="..." style="width: 300px; height: 168px; border-radius: 10px;">
+                                        alt="..." style="width: 300px; height: 300px; border-radius: 10px;">
                                 </div>
                                 <div class="card-body card_ferramenta_f" id="card-ferramenta_f" style="padding: 0px;">
                                     <!-- style="display: flex; flex-direction: column; align-items: center; text-align:center;" -->

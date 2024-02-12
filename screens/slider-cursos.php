@@ -151,20 +151,20 @@ $conn->close();
             }
         }
 
-            @media screen and (max-width: 425px) {
-                .slider-wrapper {
-                    width: 40px;
-                }
-
-                .col {
-                    margin-right: 160px;
-                }
-
-                .indv-card {
-                    height: 300px;
-                    width: 150px;
-                }
+        @media screen and (max-width: 425px) {
+            .slider-wrapper {
+                width: 40px;
             }
+
+            .col {
+                margin-right: 130px;
+            }
+
+            .indv-card {
+                height: 300px;
+                width: 150px;
+            }
+        }
     </style>
 </head>
 
