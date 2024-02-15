@@ -44,11 +44,10 @@
             </div>
           </div>
           <div class="modal-body text-light" style="text-align: center;">
-          iSteel é uma empresa brasileira de tecnologia. Desenvolvemos um aplicativo para celular com uma plataforma web que conecta empresas do ramo de ferro e aço aos consumidores e empresas transportadoras ou motoristas autônomos.
-          <br>
-          O objetivo do aplicativo é facilitar a compra e venda de aço, sendo uma solução totalmente inovadora para o setor, automatizando o processo comercial e de logística dos distribuidores e garantindo um atendimento ágil e de qualidade para todos os clientes.
-          <br>
-          O iSteel para lojistas permite a gestão completa dos pedidos. Além de receber os pedidos através dele, também dá acesso a estatísticas de vendas, dados de pagamentos e opções de transportes, automatizando todo o processo comercial e logístico.
+          A iSteel é uma startup do ramo de Tecnologia. É um aplicativo para celular com uma plataforma web para conectar as empresas do ramo de ferro e aço aos consumidores e às empresas transportadoras ou motoristas autônomos. 
+O objetivo do aplicativo é facilitar a transação entre o consumidor, o lojista e o processo de entrega.
+Clodoaldo Araújo é um empreendedor visionário. Em 1997, após concluir seu MBA na University of California, trouxe ao Brasil uma ideia inovadora: reformular as transações comerciais no setor de ferro e aço. Originalmente, propôs a criação de sites para lojistas, uma ação revolucionária na época em que poucas pessoas entendiam o conceito de site e muitas não tinham acesso à internet. O site da Web 1.0, carente de interação, permitia aos lojistas listar produtos e condições de negociação, exigindo que consumidores interessados enviassem confirmações por fax. Entretanto, devido ao cenário tecnológico inadequado no Brasil na época, com muitos lojistas e consumidores sem acesso a computadores, a ideia não prosperou.
+Em 2018, durante uma temporada da Rota da Inovação gravada na Suíça, Clodoaldo viu a oportunidade de reviver a ideia. Introduziu no Brasil um aplicativo, adaptado às necessidades atuais do público, e assim nasceu o App iSteel.
           </div>
           <!--<div class="modal-footer" id="btn-empresa">
             <button type="button" class="btn btn-light text-dark">Save changes</button>
