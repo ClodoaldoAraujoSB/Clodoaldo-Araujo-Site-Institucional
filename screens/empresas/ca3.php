@@ -44,7 +44,10 @@
             </div>
           </div>
           <div class="modal-body text-light" style="text-align: center;">
-          A empresa Ca3 Laminacao De Ferro E Aco, aberta em 21/01/2021, é uma filial do tipo Sociedade Empresária Limitada que está situada em Limeira – SP. Sua atividade econômica principal é a fabricação de outros produtos de metal não especificados anteriormente.
+          CA3 Laminação de Ferro e Aço é a realização de um sonho que se transformou em uma jornada inspiradora. Nascida no início dos anos 90, a empresa é o fruto de anos de dedicação da família Araújo, que é natural de Minas Gerais e de origem humilde, mudou-se para Limeira em busca da prosperidade, culminando na abertura desta notável indústria metalúrgica.
+Essa história é um testemunho de resiliência e determinação, onde a família superou desafios para criar uma empresa que se destaca na conformação de metais, especialmente ferro e aço. Utilizando o processo de laminação, a CA3 comprime o metal entre dois rolos rotativos, reduzindo espessuras e ampliando comprimentos para atingir as medidas desejadas.
+Clodoaldo, sempre empenhado em seu aprimoramento, obteve formação em engenharia e, buscando excelência, mudou-se para os Estados Unidos para concluir seu MBA na Universidade da Califórnia. Ao retornar ao Brasil, assumiu a liderança da empresa, aplicando integralmente os conhecimentos adquiridos para impulsionar o crescimento e a eficiência do negócio.
+Além de ser uma referência no setor, a CA3 Laminação de Ferro e Aço orgulha-se de ser amiga do meio ambiente. Contribuindo para a sustentabilidade, a empresa transforma sucata de ferro em produtos finais, atendendo às necessidades de consumidor em diversas aplicações. 
           </div>
           <!--<div class="modal-footer" id="btn-empresa">
             <button type="button" class="btn btn-light text-dark">Save changes</button>
