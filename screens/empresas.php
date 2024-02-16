@@ -3,12 +3,12 @@ include_once("empresas/ca3.php");
 include_once("empresas/ca3_steel.php");
 include_once("empresas/circuit.php");
 include_once("empresas/isteel.php");
-include_once("empresas/jac.php");
 include_once("empresas/point_pixel.php");
 include_once("empresas/rota_da_inovacao.php");
 include_once("empresas/spyder_race.php");
 include_once("empresas/startup_school.php");
 include_once("empresas/super_business.php");
+include_once("empresas/ca3inc.php");
 ?>
 
 <!doctype html>
@@ -29,8 +29,6 @@ include_once("empresas/super_business.php");
       font-family: Montserrat, sans-serif;
       background-color: #282828;
     }
-
-    h1 {}
 
     .lista_empresas {
       padding-bottom: 6px;
@@ -108,8 +106,8 @@ include_once("empresas/super_business.php");
       </div>
       <div class="div_lista_empresas">
         <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#isteelModal"><img src="../logos/logo-isteel.png" alt="isteel" style="height: 50px;"></button>
-        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#jacModal"><img src="../logos/logo-JAC.png" alt="jac" style="height: 50px;"></button>
         <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#point_pixelModal"><img src="../logos/logo-point_pixel.png" alt="Point Pixel" style="width: 230px;"></button>
+        <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#ca3_incModal"><img src="../logos/logo-ca3_inc.png" alt="ca3" style="height: 100px; width: 350px;"></button>
       </div>
       <div class="div_lista_empresas">
         <button type="button" class="btn btn-dark" style="background-color: #161616;" data-bs-toggle="modal" data-bs-target="#rota_da_inovacaoModal"><img src="../logos/logo-rota.png" alt="Rota da Inovaçao" style="height: 50px;"></button>
