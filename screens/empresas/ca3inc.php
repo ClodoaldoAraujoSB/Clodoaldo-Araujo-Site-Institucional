@@ -45,11 +45,11 @@
           </div>
           <div class="modal-body text-light" style="text-align: center;">
           A incorporadora nasceu do desejo de contribuir com a cidade de Limeira com a construção do primeiro condomínio industrial, o CONEL – Condomínio dos Empreendedores de Limeira.
-Sua pedra fundamental foi lançada em 2003, marcando um antes e depois no desenvolvimento da área industrial da cidade.
-No portfólio, destaca-se a  construção do mencionado condomínio que conta com 30 galpões de 200m2 cada e 10 salas comerciais, somando-se a outros barracões e residências finalizados e entregues.
-Atualmente está imersa no desenvolvimento de um segundo condomínio industrial, composto com 12 galpões de 350m2 cada e um heliponto, que será um dos poucos endereços da cidade a oferecer essa exclusividade.
-Além disso trabalha na construção de um prédio com 100 apartamentos de luxo, um loteamento com 500 lotes e diversas outras residências.
-Dessa forma, continua comprometida a transformar sonhos em realidade e contribuir ainda mais para o desenvolvimento da cidade de Limeira.
+          Sua pedra fundamental foi lançada em 2003, marcando um antes e depois no desenvolvimento da área industrial da cidade.
+          No portfólio, destaca-se a  construção do mencionado condomínio que conta com 30 galpões de 200m2 cada e 10 salas comerciais, somando-se a outros barracões e residências finalizados e entregues.
+          Atualmente está imersa no desenvolvimento de um segundo condomínio industrial, composto com 12 galpões de 350m2 cada e um heliponto, que será um dos poucos endereços da cidade a oferecer essa exclusividade.
+          Além disso trabalha na construção de um prédio com 100 apartamentos de luxo, um loteamento com 500 lotes e diversas outras residências.
+          Dessa forma, continua comprometida a transformar sonhos em realidade e contribuir ainda mais para o desenvolvimento da cidade de Limeira.
           </div>
           <!--<div class="modal-footer" id="btn-empresa">
             <button type="button" class="btn btn-light text-dark">Save changes</button>
