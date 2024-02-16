@@ -181,37 +181,37 @@ $pagina = basename($caminho);
       </div>
       <div class="navbar-menu">
         <div class="list-menu">
-          <div class="item-menu" style=""><a href="index.php">
+          <div class="item-menu"><a href="index.php">
             <button class="button-header <?php echo ($pagina == 'index.php') ? 'ative' : ''; ?>" style="padding: 0px;">
               <p class="texto_menu" style="margin: 0px;">home</p>
             </button></a>
           </div>
-          <div class="item-menu" style=""><a href="ferramentas_ebook.php">
+          <div class="item-menu"><a href="ferramentas_ebook.php">
             <button class="button-header <?php echo ($pagina == 'ferramentas_ebook.php') ? 'ative' : ''; ?>" style="padding: 0px;">
               <p class="texto_menu" style="margin: 0px;">ferramentas grátis</p>
             </button></a>
           </div>
-          <div class="item-menu" style=""><a href="quem_sou.php">
+          <div class="item-menu"><a href="quem_sou.php">
             <button class="button-header <?php echo ($pagina == 'quem_sou.php') ? 'ative' : ''; ?>" style="padding: 0px;">
               <p class="texto_menu" style="margin: 0px;">sobre</p>
             </button></a>
           </div>
-          <div class="item-menu" style=""><a href="empresas.php">
+          <div class="item-menu"><a href="empresas.php">
             <button class="button-header <?php echo ($pagina == 'empresas.php') ? 'ative' : ''; ?>" style="padding: 0px;">
               <p class="texto_menu" style="margin: 0px;">empresas</p>
             </button></a>
           </div>
-          <div class="item-menu" style=""><a href="cursos.php">
+          <div class="item-menu"><a href="cursos.php">
             <button class="button-header <?php echo ($pagina == 'cursos.php') ? 'ative' : ''; ?>" style="padding: 0px;">
               <p class="texto_menu" style="margin: 0px;">cursos</p>
             </button></a>
           </div>
-          <div class="item-menu" style=""><a href="galeria.php">
+          <div class="item-menu"><a href="galeria.php">
             <button class="button-header <?php echo ($pagina == 'galeria.php') ? 'ative' : ''; ?>" style="padding: 0px;">
               <p class="texto_menu" style="margin: 0px;">galeria</p>
             </button></a>
           </div>
-          <div class="item-menu" style=""><a href="contato.php">
+          <div class="item-menu"><a href="contato.php">
             <button class="button-header <?php echo ($pagina == 'contato.php') ? 'ative' : ''; ?>" style="padding: 0px;">
               <p class="texto_menu" style="margin: 0px;">contato</p>
             </button></a>

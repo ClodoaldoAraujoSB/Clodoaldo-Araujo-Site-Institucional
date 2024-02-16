@@ -405,10 +405,6 @@ include_once("empresas/super_business.php");
         border-bottom: 20px solid transparent;
       }
 
-      .galeria {
-        /*border-bottom: 20px solid transparent;*/
-      }
-
       .session-contato {
         border-bottom: 20px solid transparent;
       }
